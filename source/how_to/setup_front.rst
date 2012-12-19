@@ -1,68 +1,68 @@
-How to set up the front-office
-=====================================
+Comment mettre en place le front office
+=======================================
 
-If you want to create a website, you need to use the **Pages** application. There is an icon on the home tab.
+Si vous voulez créer un site web, vous devez utiliser l'application **Pages**. Un icône est disponible sur l'onglet d'accueil.
 
-.. image:: /how_to/1-home-tab.png 
-	:alt: The age application on the home tab
+.. image:: /how_to/1-home-tab.png
+	:alt: L'application page sur l'onglet d'accueil
 
-Templates
----------
+Gabarits
+--------
 
-But pages need templates to define how they are displayed. So the first thing you need to do is installing a template. They are created by designers and developers.
+Mais les pages ont besoin de gabarits, qui définissent comment elles vont s'afficher. Donc la première chose à faire, c'est installer un gabarit. Ils sont creés par les graphistes et les développeurs.
 
-If you just installed Novius OS, you can install a default template from the application manager:
+Si vous venez d'installer Novius OS, un gabarit par défaut est installable depuis le gestionnaire d'application (il est intitulé "Default template").
 
-Access the application manager
+Ouvrir le gestionnaire d'applications
 ------------------------------
 
-.. image:: /how_to/2-app-manager.png 
-	:alt: Application manager is in the tray
+.. image:: /how_to/2-app-manager.png
+	:alt: Le gestionnaire d'applications sur la droite de la barre d'onglets
 
-Install the application which provide the default template
-----------------------------------------------------------
+Installer l'application qui fournit le gabarit par défaut
+---------------------------------------------------------
 
 .. image:: /how_to/3-install.png
-	:alt: Click Install
+	:alt: Cliquez sur "Installer"
 
 .. image:: /how_to/4-installed.png
-	:alt: It's done
+	:alt: C'est fait !
 
-Open the page application
+Ouvrir l'application page
 -------------------------
 
-You can access it from the home tab (see above).
+Vous pouvez y accéder depuis l'onglet d'accueil (voir ci-dessus).
 
-Add a page (your first one)
----------------------------
+Ajouter une page (votre première)
+---------------------------------
 
 .. image:: /how_to/5-page-appdesk.png
-	:alt: Add a page
+	:alt: Ajouter une page
 
-Write some content and "Add"
-----------------------------
+Écrire du contenu et "Ajouter"
+------------------------------
 
 .. image:: /how_to/6-page-add.png
-	:alt: Page content
+	:alt: Contenu de la page
 
-Preview what you've done
-------------------------
+Aperçu de votre travail
+-----------------------
 
-The **Visualise** action allows you to preview the page, even when it's not published yet.
+L'action **Visualiser** vous permet d'avoir un aperçu de la page avant qu'elle ne soit publiée.
 
 .. image:: /how_to/7-page-visualise.png
-	:alt: Visualise a page
+	:alt: Aperçu d'une page
 
-Publish your page
------------------
+Publier votre page
+------------------
 
-When you're happy with the content, you can publish the page and save it.
+Une fois que vous êtes satisfait du contenu, vous pouvez publier la page puis la sauvegarder.
 
-Have a look at the wonderful work you've just done:
+Admirez le travail remarquable que vous venez de faire :
 
 .. image:: /how_to/8-it-works.png
-	:alt: Your new front office
- 
+	:alt: Votre nouveau front-office
+
 
 
 

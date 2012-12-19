@@ -1,7 +1,7 @@
-How to install Novius OS
-========================
+Comment installer Novius OS
+===========================
 
-This guide provides instructions to run on Ubuntu. Be sure to adapt the commands for your own OS.
+Tout au long de la procédure, nous donnons les commandes dans le cas d'une installation sur Ubuntu. Pensez à les adapter selon votre système d'exploitation.
 
 
 
@@ -9,7 +9,7 @@ This guide provides instructions to run on Ubuntu. Be sure to adapt the commands
 
 	* :ref:`install_download-github`
 	* :ref:`install_download-zip`
-	
+
 * :ref:`install_server-configuration`
 
 	* :ref:`install_server-dedicated`
@@ -18,25 +18,25 @@ This guide provides instructions to run on Ubuntu. Be sure to adapt the commands
 
 .. _install_download:
 
-Step 1: download Novius OS source code
---------------------------------------
+Étape 1 : Télécharger les sources de Novius OS
+----------------------------------------------
 
 .. _install_download-github:
 
-Method A: Git and GitHub
-^^^^^^^^^^^^^^^^^^^^^^^^
+Méthode A : Via Git et GitHub
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Step A-1: prerequisites - install GIT
-"""""""""""""""""""""""""""""""""""""
+Étape A-1 : Prérequis - Installation de Git
+"""""""""""""""""""""""""""""""""""""""""""
 
 ::
 
     sudo apt-get install git
 
-Step A-2: clone the sample website repository
-"""""""""""""""""""""""""""""""""""""""""""""
+Étape A-2 : Cloner le dépôt
+"""""""""""""""""""""""""""
 
-We use submodules, so be sure to fetch them properly. The ``--recursive`` option does everything you need.
+Novius OS utilise les submodules Git, faites attention à bien les récupérer. L'option ``--recursive`` fait le nécessaire.
 
 ::
 
@@ -44,22 +44,23 @@ We use submodules, so be sure to fetch them properly. The ``--recursive`` option
     git clone --recursive git://github.com/novius-os/novius-os.git
     sudo mv novius-os /var/www/
 
-This will download a sample repository, with several submodules:
+Cette commande télécharge le dépôt d'exemple, avec plusieurs submodules :
 
-* novius-os : the core of Novius OS, which has other submodules, like fuel-core or fuel-orm ;
-* Other submodules in the local/applications folder: blog, news and comments.
+* novius-os : le cœur de Novius OS, qui contient lui-même des submodules, comme fuel-core ou fuel-orm ;
+* Différents submodules dans local/applications : les applications blog, news et comments
 
 
-Step A-3 (optional): change the version you want to use (if you're gutsy)
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-We configured the cloning of the repository to point to the latest available release (it's **master/0.1.4*** at the time I'm writing this).
+Étape A-3 facultative : Changer la version que vous voulez utiliser (pour les téméraires)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-| When we deploy a version, we create a new branch for it.
-| For now, we keep synchronised all the dependant repositories. Hence, an application provided on our Github will follow the same version number as the core. So if you're using novius-os/core version 0.3 (not yet released!), you need to use novius-os/app in the same version 0.3 too.
+Le dépôt est configuré pour que lors d'un clone, il pointe vers la dernière version stable (c'est la **master/0.1.4*** au moment de l'écriture de cette page).
 
-| To change the version you're using after cloning, *don't forget to update the git submodules*.
-| Example to use the latest nightly from the 'dev' branch
+| Lorsqu'une nouvelle version est disponible, on la créé dans une branche.
+| Pour le moment, tous les dépôts dépendants de novius-os/novius-os sont synchronisés au niveau des numéros de version. C'est-à-dire qu'une application disponible sur notre compte Github suit les mêmes numéros de version que le cœur de Novius OS. Donc si vous utilisez novius-os/core en version 0.3 (qui n'est pas encore sorti !), alors vous devriez aussi utiliser novius-os/app dans le même numéro de version 0.3.
+
+| Pour changer la version que vous voulez utiliser après un clone, *n'oubliez pas de mettre à jour les submodules* !
+| Exemple qui utilise la dernière nightly de la branche ``dev`` :
 
 ::
 
@@ -69,8 +70,8 @@ We configured the cloning of the repository to point to the latest available rel
 
 .. _install_download-zip:
 
-Method B: from a .zip file
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Méthode B : Depuis un fichier Zip
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ::
 
@@ -79,40 +80,44 @@ Method B: from a .zip file
     unzip novius-os.0.1.4.zip
     sudo mv novius-os /var/www/
 
-Or download the file `nos-014 <http://nova.li/nos-014>`_ and unzip it with your favourite program.
+Ou téléchargez le fichier `nos-014 <http://nova.li/nos-014>`_ et dézippez avec votre logiciel favori.
 
 .. _install_server-configuration:
 
-Step 2: Server configuration
-----------------------------
+Étape 2: Configuration du serveur
+---------------------------------
 
-We'll be discussing 2 cases:
+Nous allons étudier 2 cas :
 
-* installation on a server you control (either your local machine, a VM or a dedicated external server) ;
-* installation on a shared hosting service, without SSH command-line access or the possibility to change Apache configuration.
+* une installation sur un serveur que vous maîtrisé (votre machine locale, une VM ou un serveur externe dédié)
+* une installation sur une hébergement mutualisé, donc sans accès à la ligne de commande et au paramétrage Apache
+
 
 .. _install_server-dedicated:
 
-Method A: you control the server
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Méthode A : Vous maîtrisez le serveur
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Step A-1: make sure Apache's mod_rewrite is enabled
-"""""""""""""""""""""""""""""""""""""""""""""""""""
+Nous allons configurer Apache pour accéder au site
+
+Étape A-1 : S'assurer que le `mod_rewrite` d'Apache est activé
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 ::
 
     sudo a2enmod rewrite
 
-Step A-2: configure a VirtualHost
-"""""""""""""""""""""""""""""""""
+Étape A-2: Configurer un `VirtualHost`
+""""""""""""""""""""""""""""""""""""""
 
-Create a new ``VirtualHost`` for Novius OS (replace ``nano`` with your favourite text editor in the following commands)
+Créer un ``VirtualHost`` pour Novius OS (remplacer ``nano`` par votre éditeur de texte favori dans les commandes suivantes)
 
 ::
 
     sudo nano /etc/apache2/sites-available/novius-os
 
-Copy the following configuration in the file, and save it. Adapt the ``ServerName`` line with your own domain when installing on a production server.
+Copiez la configuration suivant dans le fichier que vous venez d'ouvrir et sauvegardez. Adaptez la ligne ``ServerName`` avec votre nom de domaine dans le cas d'une installation en production.
+
 
 ::
 
@@ -125,34 +130,34 @@ Copy the following configuration in the file, and save it. Adapt the ``ServerNam
         </Directory>
     </VirtualHost>
 
-The default configuration contains a *public* directory. The webroot should points to this directory.
+La configuration par défaut contient un répertoire ``public``. La racine web doit pointer vers ce répertoire.
 
 
-Enable the freshly created ``VirtualHost``
+Activez votre nouveau ``VirtualHost``
 
 ::
 
     sudo a2ensite novius-os
 
 
-Reload Apache (or your other web server) to take the new configuration into account.
+Relancez ensuite Apache (ou votre autre serveur web) pour prendre en compte la nouvelle configuration.
 
 ::
 
     sudo service apache2 reload
 
 
-Step A-3: configure the ``hosts`` file, when installing on your local machine
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Étape A-3 : Configurer le fichier `hosts`, dans le cas d'installation sur votre machine
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-If the ``ServerName`` is different than ``localhost`` (``novius-os`` in the above example), you should add the server name into your ``hosts`` file.
+Si le ``ServerName`` est différent de ``localhost`` (``novius-os`` dans l'exemple ci-desssus), vous devez l'ajouter dans votre fichiers ``hosts``.
 
 ::
 
     sudo nano /etc/hosts
 
 
-Add the following line:
+Ajouter la ligne suivante :
 
 ::
 
@@ -161,39 +166,39 @@ Add the following line:
 
 .. _install_server-shared:
 
-Method B: Shared hosting
-^^^^^^^^^^^^^^^^^^^^^^^^
+Méthode B : Hébergement mutualisé
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Step B-1: upload the source code to your server
-"""""""""""""""""""""""""""""""""""""""""""""""
+Étape B-1 : Transférer les sources du logiciel sur le serveur
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-You can choose the way you do it, depending on your shared hosting provider (FTP, SSH, Git...)
+Utilisez la méthode de votre choix en fonction des possibilités offertes par votre hébergeur (FTP, SSH, Git...).
 
-Step B-2: ``.htaccess`` files
-"""""""""""""""""""""""""""""
+Étape B-2 : Fichiers ``.htaccess``
+""""""""""""""""""""""""""""""""""
 
-Novius OS needs an ``.htaccess`` file to run.
+Pour fonctionner Novius OS a besoin d'un fichier ``.htaccess``.
 
-In a classic installation, the ``DOCUMENT_ROOT`` should point to the ``public`` directory of Novius OS (see step A-2 above). On a shared hosting, you don't choose the location for ``DOCUMENT_ROOT``. So you need to delete the ``public/.htaccess`` file and rename the ``.htaccess.shared-hosting`` inside the Novius OS root folder into ``.htaccess``.
+Dans une installation classique, le ``DOCUMENT_ROOT`` doit pointer vers le répertoire ``public`` de Novius OS (voir Étape A-2 au dessus). Dans le cas d'un hébergement mutualisé, vous n'avez pas le choix du ``DOCUMENT_ROOT``. Il faut donc supprimer le fichier ``public/.htaccess`` et renommer le fichier ``.htaccess.shared-hosting`` à la racine de Novius OS en ``.htaccess``.
 
-Then, edit this ``.htaccess`` file, and change the line beginning with ``ErrorDocument`` depending on where you installed Novius OS::
+Éditez ensuite ce fichier ``.htaccess``, modifiez la ligne commençant par ``ErrorDocument`` en adaptant le répertoire d'installation de Novius OS à votre cas :
 
     ErrorDocument 404 /novius-os-install-dir/public/htdocs/novius-os/404.php
 
-If Novius OS has been installed in the root directory of your hosting::
+Si Novius OS est installé directement à la racine de votre hébergement :
 
     ErrorDocument 404 /public/htdocs/novius-os/404.php
 
 
-Step B-3: ``local/config/config.php`` file
-""""""""""""""""""""""""""""""""""""""""""
+Étape B-3 : Fichier ``local/config/config.php``
+"""""""""""""""""""""""""""""""""""""""""""""""
 
-Edit the ``local/config/config.php`` file, un-comment and adapt the following line to your case::
+Éditez le fichier ``local/config/config.php``, dé-commentez et adaptez la ligne suivante à votre cas
 
     'base_url' => 'http://www.yourdomain.com/novius-os-install-dir/',
 
 
-Step 3: Finish the installation
--------------------------------
+Étape 3 : Terminer l'installation
+---------------------------------
 
-You've done the hardest. Now you just need to go through the :doc:`setup-wizard` to enjoy your Novius OS.
+Le plus difficile est passé. Il ne reste plus qu'à suivre :doc:`l'assistant de paramétrage <setup-wizard>` pour profiter de votre Novius OS

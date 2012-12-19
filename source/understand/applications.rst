@@ -1,199 +1,63 @@
-How to install Novius OS
-========================
+Fondamentaux des applications
+=============================
 
-This guide provides instructions to run on Ubuntu. Be sure to adapt the commands for your own OS.
+Une application se définit par ses modèles, mais aussi par les contrôleurs et vues associés. Ils dépendent de la nature de l’application. Néanmoins, certains éléments / principes sont génériques et réutilisables dans tous les cas.
 
+Définition
+----------
 
+Pour pouvoir ajouter une application au gestionnaire d'applications, il faut créer un fichier metadata.php situé immédiatement dans le dossier “config” de votre application. Ce fichier doit contenir le namespace de l'application, qui doit être de la forme Provider\\NomApplication. Il faut y ajouter le nom de l’application, une version et le provider (caractérisé au minimum par un nom).
 
-* :ref:`install_download`
+Il est également possible de définir d’autres éléments dans ce fichier metadata :
 
-	* :ref:`install_download-github`
-	* :ref:`install_download-zip`
-	
-* :ref:`install_server-configuration`
+* **Launchers** : icônes de l'onglet d'accueil permet de lancer une application. Ils sont définis par un nom et l'URL du contrôleur appelé pour afficher la vue associée.
+* **Data catchers** : composant d'une application permettant d'exploiter les données partagées par d'autres (dites sharable data)
+* **Enhancers** : grâce aux enhancers, une application vient enrichir le contenu édité dans un WYSIWYG.
+* **Templates** : modèles de pages pour le front-office.
 
-	* :ref:`install_server-dedicated`
-	* :ref:`install_server-shared`
+`Voir aussi l'infographie 'Comprendre les applications' <http://novius-os.github.com/docs/fr/applications.html>`_
 
+L’App Desk
+----------
 
-.. _install_download:
+Avant tout, :doc:`consulter les principes ergonomiques <ergonomie>` pour comprendre l'App Desk.
 
-Step 1: download Novius OS source code
---------------------------------------
 
-.. _install_download-github:
+La configuration de l’App Desk
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Method A: Git and GitHub
-^^^^^^^^^^^^^^^^^^^^^^^^
+L’App Desk est caractérisé par plusieurs éléments configurables :
 
-Step A-1: prerequisites - install GIT
-"""""""""""""""""""""""""""""""""""""
+- Le type d’affichage des données
+- Les données à afficher
+- Les actions principales et secondaires
 
-::
+Le tableau principal peut proposer plusieurs vues (à ne pas confondre avec le V de MVC) : liste, arborescence, vignettes.
 
-    sudo apt-get install git
+Ces vues sont définies via un fichier de configuration PHP et un fichier JS. Le fichier de configuration PHP précise les données à afficher, là où le fichier JS définit l’organisation de l’App Desk d’un point de vue UI. Cependant, il s'agit là d'une explication rapide, simplifiée. En rentrant dans le détail, vous verrez que certaines éléments liés à l'affichage ont à être configurés dans le fichier PHP.
 
-Step A-2: clone the sample website repository
-"""""""""""""""""""""""""""""""""""""""""""""
+Le fichier JS permet également de définir les actions principales et secondaires. Ces actions sont obligatoirement définies par un lien vers un contrôleur.
 
-We use submodules, so be sure to fetch them properly. The ``--recursive`` option does everything you need.
+Les inspecteurs sont également définis dans les deux fichiers. La configuration PHP permet d'indiquer sur quel attribut ou relation les données du tableau principal seront triées. Le fichier JS définit, en plus de l’UI, les actions associées aux éléments de l’inspecteur. A noter que les inspecteurs sont basés :
+- Soit sur le même modèle que celui du tableau principal, l'inspecteur fait alors référence à des attributs (ex : date de création pour des billets de blog),
+- Soit sur un autre modèle (ex : auteur pour des billets de blog).
 
-::
+Contrôleurs, formulaires et modèles
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    cd ~
-    git clone --recursive git://github.com/novius-os/novius-os.git
-    sudo mv novius-os /var/www/
+Depuis l’App Desk, il est possible d’appeler des contrôleurs qui réalisent des opérations sur les données concernées.
 
-This will download a sample repository, with several submodules:
+Certaines opérations s'effectuent directement (ex : la suppression, seule une confirmation est demandée). Elles sont, dans ce cas, attribuées au contrôleur de l’App Desk.
 
-* novius-os : the core of Novius OS, which has other submodules, like fuel-core or fuel-orm ;
-* Other submodules in the local/applications folder: blog, news and comments.
+D'autres opérations appelent une vue et sont alors attribuées au contrôleur du modèle. Généralement, la vue appelée est un formulaire (ajout / édition). Ce formulaire est construit grâce au fichier de configuration du modèle, qui peut être rempli grâce à une instance du modèle. Le contrôleur est de nouveau appelé lors de l’envoi du formulaire pour enregistrer les données.
 
+Observers et behaviours
+-----------------------
 
-Step A-3 (optional): change the version you want to use (if you're gutsy)
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Les observers sont issus du framework `FuelPHP <http://dev-docs.fuelphp.com/packages/orm/observers/intro.html>`_.
 
-We configured the cloning of the repository to point to the latest available release (it's **master/0.1.4*** at the time I'm writing this).
+Ce sont des procédures liées directement à un modèle. Elles sont appelées lorsque qu'un évènement identifié est déclenché. Ces procédures sont utilisées pour formater, modifier ou valider des propriétés du modèle (ex : reformatage des données avant l'insertion en base de données).
 
-| When we deploy a version, we create a new branch for it.
-| For now, we keep synchronised all the dependant repositories. Hence, an application provided on our Github will follow the same version number as the core. So if you're using novius-os/core version 0.3 (not yet released!), you need to use novius-os/app in the same version 0.3 too.
+Les behaviours, implémentés pour Novius OS, reprennent et étendent ce principe. Là où les observers effectuent une action sur une propriété du modèle, les behaviours définissent un ensemble de méthodes qui établissent un comportement particulier sur le modèle (ex : translatable, publishable). Ces méthodes sont également déclenchées via des évènements.
 
-| To change the version you're using after cloning, *don't forget to update the git submodules*.
-| Example to use the latest nightly from the 'dev' branch
-
-::
-
-    cd /var/www/novius-os/
-    git checkout dev
-    git submodule update --recursive
-
-.. _install_download-zip:
-
-Method B: from a .zip file
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-::
-
-    cd ~
-    wget http://nova.li/nos-014 -O novius-os.0.1.4.zip
-    unzip novius-os.0.1.4.zip
-    sudo mv novius-os /var/www/
-
-Or download the file `nos-014 <http://nova.li/nos-014>`_ and unzip it with your favourite program.
-
-.. _install_server-configuration:
-
-Step 2: Server configuration
-----------------------------
-
-We'll be discussing 2 cases:
-
-* installation on a server you control (either your local machine, a VM or a dedicated external server) ;
-* installation on a shared hosting service, without SSH command-line access or the possibility to change Apache configuration.
-
-.. _install_server-dedicated:
-
-Method A: you control the server
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Step A-1: make sure Apache's mod_rewrite is enabled
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-
-::
-
-    sudo a2enmod rewrite
-
-Step A-2: configure a VirtualHost
-"""""""""""""""""""""""""""""""""
-
-Create a new ``VirtualHost`` for Novius OS (replace ``nano`` with your favourite text editor in the following commands)
-
-::
-
-    sudo nano /etc/apache2/sites-available/novius-os
-
-Copy the following configuration in the file, and save it. Adapt the ``ServerName`` line with your own domain when installing on a production server.
-
-::
-
-    <VirtualHost *:80>
-        DocumentRoot /var/www/novius-os/public
-        ServerName   novius-os
-        <Directory /var/www/novius-os/public>
-            AllowOverride All
-            Options FollowSymLinks
-        </Directory>
-    </VirtualHost>
-
-The default configuration contains a *public* directory. The webroot should points to this directory.
-
-
-Enable the freshly created ``VirtualHost``
-
-::
-
-    sudo a2ensite novius-os
-
-
-Reload Apache (or your other web server) to take the new configuration into account.
-
-::
-
-    sudo service apache2 reload
-
-
-Step A-3: configure the ``hosts`` file, when installing on your local machine
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-If the ``ServerName`` is different than ``localhost`` (``novius-os`` in the above example), you should add the server name into your ``hosts`` file.
-
-::
-
-    sudo nano /etc/hosts
-
-
-Add the following line:
-
-::
-
-    127.0.0.1   novius-os
-
-
-.. _install_server-shared:
-
-Method B: Shared hosting
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-Step B-1: upload the source code to your server
-"""""""""""""""""""""""""""""""""""""""""""""""
-
-You can choose the way you do it, depending on your shared hosting provider (FTP, SSH, Git...)
-
-Step B-2: ``.htaccess`` files
-"""""""""""""""""""""""""""""
-
-Novius OS needs an ``.htaccess`` file to run.
-
-In a classic installation, the ``DOCUMENT_ROOT`` should point to the ``public`` directory of Novius OS (see step A-2 above). On a shared hosting, you don't choose the location for ``DOCUMENT_ROOT``. So you need to delete the ``public/.htaccess`` file and rename the ``.htaccess.shared-hosting`` inside the Novius OS root folder into ``.htaccess``.
-
-Then, edit this ``.htaccess`` file, and change the line beginning with ``ErrorDocument`` depending on where you installed Novius OS::
-
-    ErrorDocument 404 /novius-os-install-dir/public/htdocs/novius-os/404.php
-
-If Novius OS has been installed in the root directory of your hosting::
-
-    ErrorDocument 404 /public/htdocs/novius-os/404.php
-
-
-Step B-3: ``local/config/config.php`` file
-""""""""""""""""""""""""""""""""""""""""""
-
-Edit the ``local/config/config.php`` file, un-comment and adapt the following line to your case::
-
-    'base_url' => 'http://www.yourdomain.com/novius-os-install-dir/',
-
-
-Step 3: Finish the installation
--------------------------------
-
-You've done the hardest. Now you just need to go through the :doc:`setup-wizard` to enjoy your Novius OS.
+Ces outils ont pour intérêt de mutualiser des méthodes pour plusieurs modèles distincts.

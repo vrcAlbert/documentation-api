@@ -1,199 +1,51 @@
-How to install Novius OS
-========================
+Principes ergonomiques
+======================
 
-This guide provides instructions to run on Ubuntu. Be sure to adapt the commands for your own OS.
+L’interface de Novius OS est construite autour de grands principes ergonomiques. Deux d’entre eux sont à connaitre pour le développement d’applications : la navigation par onglets et l’App Desk.
 
+Navigation par onglets
+----------------------
 
+`Voir le screencast consacré à la navigation par onglets <http://youtu.be/l1TKuP3TomA>`_
 
-* :ref:`install_download`
+Les onglets structurent le travail de l’utilisateur du back-office. Le but est de le faire gagner en productivité, en limitant les tâches répétitives et les chargement de pages.
 
-	* :ref:`install_download-github`
-	* :ref:`install_download-zip`
-	
-* :ref:`install_server-configuration`
+On distingue deux types d’onglets :
 
-	* :ref:`install_server-dedicated`
-	* :ref:`install_server-shared`
+* **Onglet d’application** : Les onglets d’application n’ont pas de titre, ils sont uniquement représentés par l’icône de l’application, en grand. Dans cet onglet, on trouve l’App Desk de l’application (voir plus bas).
+* **Onglet d’item** : depuis l’onglet d’application, on accède à l’édition ou la visualisation d’un item, dans un nouvel onglet. Les onglets d’item portent le titre de l’item et l’icône de l’application, en petit.
 
+.. image:: /understand/ergonomie-tabs.png
+	:alt: Navigation par onglets
 
-.. _install_download:
+Les avantages de la navigation par onglets sont multiples. On retiendra :
 
-Step 1: download Novius OS source code
---------------------------------------
+-   plusieurs items d’une même application peuvent être modifiés en parallèle,
+-   les aller-retours entre items ou applications sont extrêmement rapides,
+-   l’utilisateur reprend son travail là où elle / il l’avait laissé, l’ouverture des onglets étant conservée d’une session à une autre.
 
-.. _install_download-github:
+Les **pop-ups** doivent être limités au cas modal, c’est-à-dire quand une action doit impérativement être accomplie (ou annulée) avant que le travail ne puisse se poursuivre (ex : confirmation d’une suppression, ajout d’un lien ou image à un contenu WYSIWYG).
 
-Method A: Git and GitHub
-^^^^^^^^^^^^^^^^^^^^^^^^
+L’App Desk
+----------
 
-Step A-1: prerequisites - install GIT
-"""""""""""""""""""""""""""""""""""""
+`Voir le screencast consacré à l’App Desk <http://youtu.be/opuOAS_XRrA>`_
 
-::
+L’App Desk est l’accueil d’une application, il permet l’accès aux différents items. Il est constitué des éléments suivants :
 
-    sudo apt-get install git
+* **Tableau principal** : il liste les items d’une application, une ou plusieurs vues sont proposées (vignettes, tableau, arborescence, etc.). Son contenu est filtré par les inspecteurs et / ou une recherche full-text. Il ne peut y avoir qu’un seul tableau principal par application.
+* **Inspecteurs** : les inspecteurs regroupent les éléments meta d’une application (ex : auteurs pour un blog, dossiers pour la médiathèque). Les inspecteurs permettent de filtrer le contenu du tableau principal (ex : voir uniquement les billets d’un auteur précis). Certains inspecteurs permettent aussi de gérer des données (ex : supprimer un dossier).
 
-Step A-2: clone the sample website repository
-"""""""""""""""""""""""""""""""""""""""""""""
+	* Inspecteur de prévisualisation : l’inspecteur de prévisualisation est un cas particulier. Contrairement aux autres inspecteurs, il n'agit pas sur le tableau principal, c'est le tableau principal qui agit sur lui : quand un item est sélectionné, ses détails sont affichés dans l'inspecteur de prévisualisation (image, propriétés, récapitulatif des actions possibles pour l’item).
 
-We use submodules, so be sure to fetch them properly. The ``--recursive`` option does everything you need.
+* **Actions** : dans la vaste majorité des cas, chaque App Desk doit proposer une et une seule action principale, généralement l’ajout d’un nouvel item. Des actions secondaires peuvent aussi être  proposées, sous forme de liens : ajout d’un élément meta (ex : ajout d'un dossier) ou action fréquente (ex : export).
 
-::
+.. image:: /understand/ergonomie-app-desk.png
+	:alt: App Desk
 
-    cd ~
-    git clone --recursive git://github.com/novius-os/novius-os.git
-    sudo mv novius-os /var/www/
+L’App Desk offre de nombreuses possibilités de mise en page aux développeurs, comme à l’utilisateur final. Néanmoins, nous recommandons de proposer comme mise en page par défaut une `Three-Pane Interface <http://en.wikipedia.org/wiki/Three-pane_interface>`_ :
 
-This will download a sample repository, with several submodules:
+.. image:: /understand/ergonomie-tpi-fr.png
+	:alt: Three-Pane Interface
 
-* novius-os : the core of Novius OS, which has other submodules, like fuel-core or fuel-orm ;
-* Other submodules in the local/applications folder: blog, news and comments.
-
-
-Step A-3 (optional): change the version you want to use (if you're gutsy)
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-We configured the cloning of the repository to point to the latest available release (it's **master/0.1.4*** at the time I'm writing this).
-
-| When we deploy a version, we create a new branch for it.
-| For now, we keep synchronised all the dependant repositories. Hence, an application provided on our Github will follow the same version number as the core. So if you're using novius-os/core version 0.3 (not yet released!), you need to use novius-os/app in the same version 0.3 too.
-
-| To change the version you're using after cloning, *don't forget to update the git submodules*.
-| Example to use the latest nightly from the 'dev' branch
-
-::
-
-    cd /var/www/novius-os/
-    git checkout dev
-    git submodule update --recursive
-
-.. _install_download-zip:
-
-Method B: from a .zip file
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-::
-
-    cd ~
-    wget http://nova.li/nos-014 -O novius-os.0.1.4.zip
-    unzip novius-os.0.1.4.zip
-    sudo mv novius-os /var/www/
-
-Or download the file `nos-014 <http://nova.li/nos-014>`_ and unzip it with your favourite program.
-
-.. _install_server-configuration:
-
-Step 2: Server configuration
-----------------------------
-
-We'll be discussing 2 cases:
-
-* installation on a server you control (either your local machine, a VM or a dedicated external server) ;
-* installation on a shared hosting service, without SSH command-line access or the possibility to change Apache configuration.
-
-.. _install_server-dedicated:
-
-Method A: you control the server
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Step A-1: make sure Apache's mod_rewrite is enabled
-"""""""""""""""""""""""""""""""""""""""""""""""""""
-
-::
-
-    sudo a2enmod rewrite
-
-Step A-2: configure a VirtualHost
-"""""""""""""""""""""""""""""""""
-
-Create a new ``VirtualHost`` for Novius OS (replace ``nano`` with your favourite text editor in the following commands)
-
-::
-
-    sudo nano /etc/apache2/sites-available/novius-os
-
-Copy the following configuration in the file, and save it. Adapt the ``ServerName`` line with your own domain when installing on a production server.
-
-::
-
-    <VirtualHost *:80>
-        DocumentRoot /var/www/novius-os/public
-        ServerName   novius-os
-        <Directory /var/www/novius-os/public>
-            AllowOverride All
-            Options FollowSymLinks
-        </Directory>
-    </VirtualHost>
-
-The default configuration contains a *public* directory. The webroot should points to this directory.
-
-
-Enable the freshly created ``VirtualHost``
-
-::
-
-    sudo a2ensite novius-os
-
-
-Reload Apache (or your other web server) to take the new configuration into account.
-
-::
-
-    sudo service apache2 reload
-
-
-Step A-3: configure the ``hosts`` file, when installing on your local machine
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-If the ``ServerName`` is different than ``localhost`` (``novius-os`` in the above example), you should add the server name into your ``hosts`` file.
-
-::
-
-    sudo nano /etc/hosts
-
-
-Add the following line:
-
-::
-
-    127.0.0.1   novius-os
-
-
-.. _install_server-shared:
-
-Method B: Shared hosting
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-Step B-1: upload the source code to your server
-"""""""""""""""""""""""""""""""""""""""""""""""
-
-You can choose the way you do it, depending on your shared hosting provider (FTP, SSH, Git...)
-
-Step B-2: ``.htaccess`` files
-"""""""""""""""""""""""""""""
-
-Novius OS needs an ``.htaccess`` file to run.
-
-In a classic installation, the ``DOCUMENT_ROOT`` should point to the ``public`` directory of Novius OS (see step A-2 above). On a shared hosting, you don't choose the location for ``DOCUMENT_ROOT``. So you need to delete the ``public/.htaccess`` file and rename the ``.htaccess.shared-hosting`` inside the Novius OS root folder into ``.htaccess``.
-
-Then, edit this ``.htaccess`` file, and change the line beginning with ``ErrorDocument`` depending on where you installed Novius OS::
-
-    ErrorDocument 404 /novius-os-install-dir/public/htdocs/novius-os/404.php
-
-If Novius OS has been installed in the root directory of your hosting::
-
-    ErrorDocument 404 /public/htdocs/novius-os/404.php
-
-
-Step B-3: ``local/config/config.php`` file
-""""""""""""""""""""""""""""""""""""""""""
-
-Edit the ``local/config/config.php`` file, un-comment and adapt the following line to your case::
-
-    'base_url' => 'http://www.yourdomain.com/novius-os-install-dir/',
-
-
-Step 3: Finish the installation
--------------------------------
-
-You've done the hardest. Now you just need to go through the :doc:`setup-wizard` to enjoy your Novius OS.
+Alternativement, l’inspecteur de prévisualisation peut être placé sous le tableau principal.
