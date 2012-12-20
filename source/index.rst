@@ -10,6 +10,7 @@ Tutos
 	:maxdepth: 2
 
 	how_to/install
+	how_to/setup-wizard
 	how_to/setup_front
 
 
@@ -22,3 +23,10 @@ Comprendre Novius OS
 * :doc:`understand/ergonomie`
 * `Glossaire <http://novius-os.github.com/docs/glossary.html>`_, apprenez le jargon Novius OS
 
+Les nouveautés de la 0.2
+------------------------
+
+.. toctree::
+	:maxdepth: 2
+
+	release/0.2

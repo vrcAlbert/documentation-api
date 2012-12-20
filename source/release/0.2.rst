@@ -1,0 +1,53 @@
+Notes de la version 0.2
+===================================
+
+Nouveautés
+----------
+
+* Une instance de Novius Os peut-être multi-contexte : gérer de un à plusieurs sites, chacun dans une ou plusieurs langues
+* Intégration de l'application **Slideshow**
+* Intégration de l'application **Form**
+* Intégration du ``sharer`` **Simple Google+** sur le même modèle que Facebook et Twitter
+* | Les onglets du back-office sont fermables avec un click sur le bouton du milieu de la souris
+  | Nouveau bouton *Close all other tabs*
+
+Développeur
+-----------
+
+* Conséquences du passage de multi-languages à multi-contextes
+
+	* Toutes les colonnes ``lang``, ``lang_common_id``, ``lang_is_main`` de la base de données ont été renommées avec ``context``
+	* Les nouvelles colonnes ``context`` ont été agrandies, de 5 à 25 caractères
+	* Le ``behaviour`` ``Translatable`` a été renommé en ``Twinnable``
+	* La configuration se fait dans un fichier dédié (plus dans ``config.php``). Deux nouvelles clé ``contexts`` et ``sites`` en plus de ``locales``
+	* Dans le ``CRUD``, la notion de ``context`` est remplacée celle d'``environment`` pour éviter les confusions (``context_relation`` -> ``environment_relation``, ``item_context`` -> ``item_environment``)
+	* Toutes les variables liées ont, elles aussi, été renommées
+
+* Mise à jour des librairies tierces :
+
+	* **jQuery**, de la 1.7.2 à **1.8.2**
+	* **jQuery UI**, de la 1.8.22 à la **1.8.24**
+	* **Wijmo**, de la 2.1.4 à la **2.2.2**
+	* **tinyMCE**, de la 3.5.6 à la **3.5.7**
+	* **FuelPHP** et ses packages (dont ``email``), de la 1.2 à la **1.4**
+
+* Modification de l'API des pages :
+
+	* Nouvelle classe outil ``Tools_Url``
+	* ``Model_Page->get_link()`` -> ``Model_Page->link()``
+	* ``Model_Page->get_href()`` -> ``Model_Page->url()``
+	* ``Model_Page::get_url()`` -> ``Tools_Url::page()``
+	* Suppression de ``Model_Page::get_url_absolute()``
+	* Toutes les méthodes retournent des URLs absolues
+
+* Fusion et amélioration de la configuration des ``app-desk``, des ``inspector`` et des ``CRUD`` :
+
+	* Fichier de configuration commun pour les données propres aux models
+	* Possibilité de formatter une colonne d'une ``grid`` via la configuration PHP (et plus seulement en Javascript)
+
+* Dans le ``Controller_CRUD``, la méthode ``from_item`` devient ``init_item`` et n'est appellée que si l'item est nouveau
+* Nouvelle class ``Attachment`` pour gérer des fichiers attachés à un item que l'on ne pas mettre dans la médiathèque
+* Disparition de la notion de ``widget`` au profit de ``renderer``. Renommage de classes et de chemin de vues
+* Toutes les vues et fichiers de configuration sont surchargeables dans le répertoire ``config`` du site
+* Création d'un ``controller`` de popup d'``enhancer`` pour le WYSIWYG avec prévisualisation par défaut
+* La clé de configuration ``upload.disabled_extensions`` est déplacée dans ``novius-os.upload.disabled_extensions``
