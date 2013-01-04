@@ -1,94 +1,77 @@
-JavaScript actions
-==================
+API de définition des actions
+=============================
 
-Our JavaScript API provides a centralised way to execute actions without closures.
+La configuration d'un back-office d'application se fait en PHP, mais une fois dans le navigateur le code est propulsé par du Javascript.
+Les principales actions Javascript sont donc définissables par des tableaux de configuration en PHP.
 
-Those actions are defined only using plain JSON objects (or PHP arrays).
+Cette synthaxe est notamment utilisée pour définir les actions :
 
-The ``$(context).nosAction()`` currently works for following actions:
+* des launchers dans le :doc:`metadata </technical/applications/metadata>`
+* des :doc:`data catchers </technical/sharing>`
+* des boutons et menus des :doc:`appdesk` et des :doc:`onglets d'édition <crud>`
 
-* :ref:`javascript_actions_tabs`
-* :ref:`javascript_actions_ajax`
-* :ref:`javascript_actions_window-open`
+Synthaxe générique
+------------------
 
-Generic syntax
---------------
+.. code-block:: php
 
-.. code-block:: js
+	'action' => array(
+		'action' => 'actionName',
+		// les autres clés dépendent de l'action
+	),
 
-	$(context).nosAction({
-		action: 'actionName'
-		// other keys depending on the action
-	}, data);
+Paramètres à remplacer
+----------------------
 
+Certaines valeurs de clé peuvent dépendre du contexte dans lequel l'action va être exécutée.
+Par exemple, les actions définies pour chaque ligne d'un tableau d':doc:`AppDesk <appdesk>` : les données de l'item sur lequel porte l'action sont passées à l'action qui s'exécute et servent pour remplacer les paramètres.
 
-``data`` is a JSON object used to replace ``{{placeholders}}`` in the first parameter.
+Les paramètres à remplacer ont la forme : ``{{nom_du_paramètre}}``.
 
-Placeholders
-^^^^^^^^^^^^
+.. code-block:: php
 
-.. code-block:: js
+	'action' => array(
+		'action' => 'nosTabs',
+		'tab' => array(
+			'url' => 'admin/nos/page/page/insert_update/{{id}}',
+			'label' => '{{title}}',
+		),
+	),
 
-	// Define an action using placeholders
-	var myActionWithPlaceholders = {
-		action: 'nosTabs',
-		tab: {
-			url: 'admin/nos/page/page/insert_update/{{id}}',
-			label: '{{title}}',
-			iconUrl => 'static/novius-os/admin/novius-os/img/16/page.png'
-		}
-	};
+Listes des actions
+------------------
 
-	// Define data to fill-in the placehoders
-	var page = {
-		id: 2,
-		title: 'Homepage'
-	};
+nosTabs
+^^^^^^^
 
-	// Call the action, {{placeholders}} will be replaced before execution
-	$(context).nosAction(myActionWithPlaceholders, page);
+.. code-block:: php
 
+    // Paramétrage complet
+	'action' => array(
+		'action' => 'nosTabs',
+		'method' => 'add',
+		'tab' => array(
+			'url' => 'une/url',
+			'label' => 'un titre',
+			'iconUrl' => 'url/de/icon.png',
+		),
+		'dialog' => array(
+			'width' => 800, // Largeur de la popup modal si l'action déjà est exécuté depuis une popup modal.
+			'height' => 400 // Hauteur
+		),
+	),
 
-	// This is equivalent
-	var myActionNoPlaceholders = {
-		action: 'nosTabs',
-		tab: {
-			url: 'admin/nos/page/page/insert_update/2',
-			label: 'Homepage',
-			iconUrl => 'static/novius-os/admin/novius-os/img/16/page.png'
-		}
-	};
-	$(context).nosAction(myActionNoPlaceholders);
+    // Paramétrage minimal
+	'action' => array(
+		'action' => 'nosTabs',
+		'tab' => array(
+			'url' => 'une/url',
+		),
+	),
 
-
-
-.. _javascript_actions_tabs:
-
-nosTabs (wrapper)
------------------
 
 :ref:`Documentation for nosTabs() <javascript_api_tabs>`
 
-Example
-^^^^^^^
-
-.. code-block:: js
-
-	// 1. Define a JSON action
-	var myAction = {
-		action: 'nosTabs',
-		params: {}, // Params, as defined in the nosTabs() API
-		method: '' // Optional. Examples: 'add', 'open', 'update', 'close'
-	};
-
-	// 2. Called it using the nosAction() wrapper
-	$(context).nosAction(myAction);
-
-	// The above is equivalent to
-	$(context).nosTabs(myAction.method || 'open', myAction.params); 
-
-
-.. _javascript_actions_ajax:
 
 nosAjax (wrapper)
 -----------------
@@ -110,7 +93,7 @@ Example
 	$(context).nosAction(myAction);
 
 	// The above is equivalent to
-	$(context).nosAjax(myAction.params); 
+	$(context).nosAjax(myAction.params);
 
 
 
@@ -134,7 +117,7 @@ Example
 	$(context).nosAction(myAction);
 
 	// The above is equivalent to
-	window.open(myAction.url); 
+	window.open(myAction.url);
 
 
 

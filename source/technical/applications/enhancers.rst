@@ -180,7 +180,7 @@ The controller must in this case implement a ``get_url_model()`` static function
 	}
 
 
-This function is related with the Urlenhancer behaviour implemented in the objects (see :doc:`behaviours`). Indeed, ``urls($params = array())``, ``url_canonical($params = array())`` and ``url($params = array())`` indirectly call the controller static function ``get_url_model($item, $params = array())``.
+This function is related with the Urlenhancer behaviour implemented in the objects (see :doc:`/technical/orm/behaviours`). Indeed, ``urls($params = array())``, ``url_canonical($params = array())`` and ``url($params = array())`` indirectly call the controller static function ``get_url_model($item, $params = array())``.
 
 Lets say the monkey enhancer is located on both "first-page.html" and "page-2.html", and we loaded a monkey object ``$monkey``. If we call ``$monkey->urls();``, the Urlenhancer behaviour will iterate on each published page (of the same language if the object has the translatable behaviour) and complete the URL by calling the ``get_url_model()`` function (the ``$item`` parameter will then be ``$monkey``, and the ``$params`` parameter will be the ``$params`` parameter of the ``urls($params = array())`` function).
 

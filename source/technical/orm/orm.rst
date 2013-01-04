@@ -29,3 +29,7 @@ Néanmoins, Novius OS ajoute une sur-couche à l'ORM.
 	* Gestion des wysiwyg et des médias
 	* Fichier de config pour Model
 
+.. toctree::
+	:maxdepth: 2
+
+	behaviours

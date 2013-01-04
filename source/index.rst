@@ -43,7 +43,6 @@ Documentation technique
 
 	technical/multi-context
 	technical/orm/orm
-	technical/orm/behaviours
 	technical/sharing
 
 	technical/applications/general
