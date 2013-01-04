@@ -14,7 +14,7 @@ Mais les pages ont besoin de gabarits, qui définissent comment elles vont s'aff
 Si vous venez d'installer Novius OS, un gabarit par défaut est installable depuis le gestionnaire d'application (il est intitulé "Default template").
 
 Ouvrir le gestionnaire d'applications
-------------------------------
+-------------------------------------
 
 .. image:: /how_to/2-app-manager.png
 	:alt: Le gestionnaire d'applications sur la droite de la barre d'onglets

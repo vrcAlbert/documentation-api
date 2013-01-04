@@ -82,7 +82,7 @@ The bold text is the value of the ``type`` property.
 * ``type = button`` generates ``<input type="button">``
 
 The ``tag`` property can be used to enforce the HTML tag, so we can generate ``<button type="submit">``.
-FuelPHP will automatically use the value as text when rendering a ``<button>`` 
+FuelPHP will automatically use the value as text when rendering a ``<button>``
 
 .. code-block:: php
 
@@ -116,7 +116,7 @@ Widget options
 """"""""""""""
 
 * ``mode`` : Possible values are ``all`` (default) or ``image``
-* ``inputFileThumb``: options for the inputFileThumb widget used to render the UI. See the `documentation <http://www.novius-labs.com/contributions/jquery-plugin-inputfile/documentation.html>`_ of the plugin for all available options.
+* ``inputFileThumb``: options for the inputFileThumb widget used to render the UI. See the `inputFileThumb documentation <http://www.novius-labs.com/contributions/jquery-plugin-inputfile/documentation.html>`_ for all available options.
 
 The ``inputFileThumb.file`` key will automatically be populated with the URL of the media if a ``value`` is provided in the widget.
 
@@ -151,7 +151,7 @@ This widget uses the jQuery UI widget called ``datepicker``.
 Widget options
 """"""""""""""
 
-* ``datepicker``: options for the datepicker widget used to render the UI. See the `documentation <http://jqueryui.com/demos/datepicker/>`_ of the plugin for all available options.
+* ``datepicker``: options for the datepicker widget used to render the UI. See the `documentation datepicker <http://jqueryui.com/demos/datepicker/>`_ for all available options.
 * ``wrapper`` : HTML string to wrap the ``<input>`` + the generated image to open the datepicker.
 
 Default values
