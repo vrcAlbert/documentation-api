@@ -1,27 +1,52 @@
-Bienvenue dans la documentation de Novius OS
-============================================
+Bienvenue dans la documentation de Novius OS !
+==============================================
 
-We host Novius OS' documentation on a wiki for anyone to contribute. Do not hesitate to modify a page if you spot an error. You're also very welcome if you want to take part in its translation. `Contact us <http://www.novius-os.org/en/more-info/contacts.html>`_ for further details.
+La documentation de Novius OS est hébergé et généré par `Read The Docs <http://readthedocs.org/>`_.
+Les sources sont disponibles dans `un dépôt sur Git Hub <https://github.com/novius-os/documentation-fr>`_.
+N'hésitez pas à proposer des modification (si vous découvrez une erreur) via des ``Pull Request``.
+Vous êtes aussi bienvenue si vous voulez prendre part à sa traduction. `Contactez nous <http://www.novius-os.org/fr/footer/contacts.html>`_ pour plus de détails.
+
+ .. todolist::
 
 Tutos
 -----
 
 .. toctree::
-	:maxdepth: 2
+	:maxdepth: 1
 
 	how_to/install
 	how_to/setup-wizard
 	how_to/setup_front
 
-
 Comprendre Novius OS
 --------------------
 
-* :doc:`understand/fondamentaux_os`
-* :doc:`understand/applications`
+.. toctree::
+	:maxdepth: 1
+
+
+	understand/fondamentaux_os
+	understand/applications
+	understand/ergonomie
+
 * Infographie `Comprendre les applications <http://novius-os.github.com/docs/fr/applications.html>`_
-* :doc:`understand/ergonomie`
 * `Glossaire <http://novius-os.github.com/docs/glossary.html>`_, apprenez le jargon Novius OS
+
+Documentation technique
+-----------------------
+
+.. toctree::
+	:maxdepth: 3
+	:titlesonly:
+
+	technical/coding_standards
+
+	technical/multi-context
+	technical/orm/orm
+	technical/orm/behaviours
+	technical/sharing
+
+	technical/applications/general
 
 Les nouveautés de la 0.2
 ------------------------
