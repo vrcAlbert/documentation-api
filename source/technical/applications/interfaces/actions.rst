@@ -10,6 +10,10 @@ Cette synthaxe est notamment utilisée pour définir les actions :
 * des :doc:`data catchers </technical/sharing>`
 * des boutons et menus des :doc:`appdesk` et des :doc:`onglets d'édition <crud>`
 
+.. contents::
+	:local:
+	:backlinks: top
+
 Synthaxe générique
 ------------------
 
@@ -44,6 +48,8 @@ Listes des actions
 nosTabs
 ^^^^^^^
 
+:ref:`Documentation de nosTabs() <javascript_api_tabs>`
+
 .. code-block:: php
 
     // Paramétrage complet
@@ -70,56 +76,101 @@ nosTabs
 	),
 
 
-:ref:`Documentation for nosTabs() <javascript_api_tabs>`
+nosDialog
+^^^^^^^^^
+
+:ref:`Documentation de nosDialog() <javascript_api_dialog>`
+
+.. code-block:: php
+
+	'action' => array(
+		'action' => 'nosDialog',
+		'dialog' => array(
+			'ajax' => true,
+			'contentUrl' => 'une/url/,
+			'title' => 'un titre',
+			'width' => 500, // Largeur de la popup
+			'height' => 200, // Hauteur de la popup
+		),
+	),
+
+confirmationDialog
+^^^^^^^^^^^^^^^^^^
+
+Une forme particulière de ``nosDialog`` pour les popups de confirmation.
+
+.. code-block:: php
+
+	'action' => array(
+		'action' => 'confirmationDialog',
+		'dialog' => array(
+			'contentUrl' => 'une/url',
+			'title' => 'un titre',
+		),
+	),
 
 
-nosAjax (wrapper)
------------------
-
-:ref:`Documentation for nosAjax() <javascript_api_ajax>`
-
-Example
+nosAjax
 ^^^^^^^
 
-.. code-block:: js
+:ref:`Documentation de nosAjax() <javascript_api_ajax>`
 
-	// 1. Define a JSON action
-	var myAction = {
-		action: 'nosAjax',
-		params: {} // Params, as defined in the nosAjax() API
-	};
+.. code-block:: php
 
-	// 2. Called it using the nosAction() wrapper
-	$(context).nosAction(myAction);
-
-	// The above is equivalent to
-	$(context).nosAjax(myAction.params);
-
-
-
-.. _javascript_actions_window-open:
+	'action' => array(
+		'action' => 'nosAjax',
+		'params' => array(
+			'url' => 'une/url',
+			'method' => 'POST',
+			'data' => array(
+				'id' => '{{_id}}',
+			),
+		),
+	),
 
 window.open
------------
+^^^^^^^^^^^
 
-Example
-^^^^^^^
+Ouvre une nouvelle fenêtre du navigateur.
 
-.. code-block:: js
+.. code-block:: php
 
-	// 1. Define a JSON action
-	var myAction = {
-		action: 'window.open',
-		url: 'http://...'
-	};
+	'action' => array(
+		'action' => 'window.open',
+		'url' => 'une/url/,
+	),
 
-	// 2. Called it using the nosAction() wrapper
-	$(context).nosAction(myAction);
+document.location
+^^^^^^^^^^^^^^^^^
 
-	// The above is equivalent to
-	window.open(myAction.url);
+Change l'URL de la fenêtre du navigateur.
+
+.. code-block:: php
+
+	'action' => array(
+		'action' => 'document.location',
+		'url' => 'une/url/,
+	),
 
 
+nosMediaVisualise
+^^^^^^^^^^^^^^^^^
 
+L'action ``nosMediaVisualise`` dépend entièrement des données contextuelles passées à l'action.
 
+.. code-block:: php
+
+	'action' => array(
+		'action' => 'nosMediaVisualise',
+	),
+
+dialogPick
+^^^^^^^^^^
+
+.. code-block:: php
+
+	'action' => array(
+		'action' => 'dialogPick',
+		'event' => 'nom_de_l_evenement',
+	),
 

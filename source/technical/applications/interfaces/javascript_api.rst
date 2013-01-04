@@ -1,111 +1,118 @@
 JavaScript API
 ==============
 
-Summary
--------
+.. contents::
+	:local:
+	:backlinks: top
+	:depth: 2
 
-* :ref:`javascript_api_notifications`
-* :ref:`javascript_api_tabs`
-* :ref:`javascript_api_ajax`
-* :ref:`javascript_api_dialog`
-* :ref:`javascript_api_events`
-* :ref:`javascript_api_forms`
-* :ref:`javascript_api_onshow`
 
+Dans les exemples de cette page, le ``context`` est un élément du DOM ou un selecteur jQuery.
 
 .. _javascript_api_notifications:
 
 Notifications
 -------------
 
-Wrapper around the jQuery `Pines Notify <http://pinesframework.org/pnotify/>`_ plugin.
-
-Usage
-^^^^^
-
-``$.nosNotify(message, type);``
-
-Examples
-^^^^^^^^
+Un simple wrapper du plugin jQuery `Pines Notify <http://pinesframework.org/pnotify/>`_.
 
 .. code-block:: js
 
-	// Simple notification
-	$.nosNotify('Hello notification');
+	$.nosNotify('message');
+	// L'exemple suivant est identique à la ligne précédente
+	$.nosNotify('message', 'notice');
 
-	// Error notification
-	$.nosNotify('Error message', 'error');
+	$.nosNotify('message', 'error');
+
+	$.nosNotify('message', 'success');
+
+	$.nosNotify('message', 'info');
+	// L'exemple suivant est identique à la ligne précédente
+	$.nosNotify({
+		title : 'message',
+		type : 'info'
+	});
 
 
 .. _javascript_api_tabs:
 
-Tabs
-----
+Onglets
+-------
 
-Usage
-^^^^^
+Gestion des onglets du back-office.
 
-``$(context).nosTabs(action, params)``
+Open
+^^^^
 
-1. add / open
-^^^^^^^^^^^^^
-
-``add`` will always create a new tab.
-``open`` will either create a new tab, or refocus an existing tab with the same URL.
-
-The icon size is 16*16px. It can be provided either as:
-
-* an image URL
-* CSS classes (background-image / sprite)
-
-Options
-"""""""
+L'action ``open`` ouvre un nouvel onglet ou ré-ouvre un onglet existant s'il a la même URL.
 
 .. code-block:: js
 
-	{
-		url: '',
-		iframe: false,
-		label: '',
-		iconClasses: 'ui-icon ui-icon-document',
-		iconUrl: ''
-	}
+	$(context).nosTabs('open', {
+		url: 'une/url', // L'URL de l'onglet. Seul paramètre obligatoire
+		iframe: false, // Si true, l'onglet sera une iframe
+		label: 'un titre', // Le libellé de l'onglet
+		labelDisplay: true, // Si false, l'onglet n'affichera que l'icône
+		iconUrl: 'url/de/l/icon.png', // L'URL de l'icône
+		iconSize: 16 // Taille en pixel de l'icône (carré)
+	});
 
 
-If the URL content returns a valid JSON value, it will be parsed by our native Ajax response handler rather than opening a new tab.
+Add
+^^^^
 
-2. close
-^^^^^^^^
+L'action ``add`` ouvre systématiquement un nouvel onglet à la différence d'``open``.
 
-Closes the current tab.
+.. code-block:: js
+
+	$(context).nosTabs(
+		'add',
+		{
+			url: 'une/url', // L'URL de l'onglet. Seul paramètre obligatoire
+			iframe: false, // Si true, l'onglet sera une iframe
+			label: 'un titre', // Le libellé de l'onglet
+			labelDisplay: true, // Si false, l'onglet n'affichera que l'icône
+			iconUrl: 'url/de/l/icon.png', // L'URL de l'icône
+			iconSize: 16 // Taille en pixel de l'icône (carré)
+		},
+		'end' // Paramètre facultatif. Si 'before' ou 'after' ouvre l'onglet avant ou après l'onglet courant.
+	);
+
+Close
+^^^^^
+
+Ferme l'onglet courant.
 
 .. code-block:: js
 
 	$(context).nosTabs('close');
 
-3. update
-^^^^^^^^^
+Update
+^^^^^^
 
-Update tab informations (URL, label and icon, see ``options`` from ``add / open``).
+Mets à jour l'affichage de l'onglet courant, voir charge une nouvelle URL.
 
-If an URL is provided, the tab won't be reloaded (replaced) unless you set the ``reload: true`` option.
+.. code-block:: js
+   :emphasize-lines: 9
 
-Options
-"""""""
+	$(context).nosTabs('update', {
+		url: 'une/url', // L'URL de l'onglet.
+		label: 'un titre', // Le libellé de l'onglet
+		labelDisplay: true, // Si false, l'onglet n'affichera que l'icône
+		iconUrl: 'url/de/l/icon.png', // L'URL de l'icône
+		iconSize: 16, // Taille en pixel de l'icône (carré)
+		reload: false // Si true et qu'une URL est fournie, cette URL sera chargée dans l'onglet courant
+	});
 
-* All options from ``add`` / ``open``
-* ``reload``: false
+Current
+^^^^^^^^
 
-Example
-"""""""
+Retourne l'index de l'onglet courant.
 
 .. code-block:: js
 
-	$(context).nosTabs('open', {
-		'url' => 'admin/nos/page/page/insert_update/2',
-		'label' => "Page's title",
-		'iconUrl' => 'static/novius-os/admin/novius-os/img/16/page.png',
-	});
+	var current = $(context).nosTabs('current');
+
 
 .. _javascript_api_ajax:
 
@@ -214,7 +221,7 @@ Usage
 		contentUrl: 'http://...',
 		ajax: true,
 		// optional data
-		ajaxData: {} 
+		ajaxData: {}
 	});
 
 
