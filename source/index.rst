@@ -36,7 +36,7 @@ Documentation technique
 -----------------------
 
 .. toctree::
-	:maxdepth: 3
+	:maxdepth: 4
 	:titlesonly:
 
 	technical/coding_standards

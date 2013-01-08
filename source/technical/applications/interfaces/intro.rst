@@ -7,5 +7,4 @@ Back-office d'application
 	appdesk
 	crud
 	form_generation
-	actions
 	javascript_api

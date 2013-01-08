@@ -162,7 +162,7 @@ Traite un JSON de retour de requête AJAX à la recherche de clés spécifiques.
 
 * ``notify`` : ``string`` / ``[string]``. Appel à :ref:`javascript_api_notifications` avec le ou les messages.
 * ``error`` : ``string`` / ``[string]``. Appel à :ref:`javascript_api_notifications` avec le ou les messages et un type de notification ``'error'``.
-* ``action`` : ``string`` / ``[string]``. Appel à :ref:`javascript_api_nosaction` avec la ou les actions.
+* ``action`` : ``string`` / ``[string]``. Appel à :ref:`nosAction <javascript_action_nosaction>` avec la ou les actions.
 * ``closeDialog`` : ``bool``. Ferme la popup, si l'élément du DOM ``domContext`` est dans une popup. Voir :ref:`javascript_api_dialogclose`.
 * ``closeTab`` : ``bool``. Ferme l'onglet dans lequel se trouve l'élément du DOM ``domContext``. Voir :ref:`javascript_api_tabsclose`.
 * ``replaceTab`` : ``{}``. Met à jour l'onglet dans lequel se trouve l'élément du DOM ``domContext``. Voir :ref:`javascript_api_tabsupdate`.
@@ -407,7 +407,7 @@ Les éléments suivant sont mis en forme :
 Pour ne pas qu'un élément soit mis en forme, il suffit de lui donner la classe CSS ``.notransform``.
 
 nosFormAjax
-^^^^^^^^^^^
+-----------
 
 La soumission des formulaires, contenus dans l'élément du DOM ``domContext``, se fera en AJAX grace au plugin `jquery-form <http://malsup.com/jquery/form/>`_.
 
@@ -419,7 +419,7 @@ Le type de données en retour est par défaut ``json``, et les ``callbacks`` ``s
 
 
 nosFormValidate
-^^^^^^^^^^^^^^^
+---------------
 
 Les formulaires contenus dans l'élément du DOM ``domContext``, seront validés côté client (dans le navigateur) avant soumission.
 
@@ -505,7 +505,7 @@ Affiche un média, dans un popup pour les images, dans une nouvelle fenêtre de 
 .. code-block:: js
 
 	$.nosMediaVisualise({
-		path: 'url/du/media/'
+		path: 'url/du/media/',
 		image: true
 	});
 
@@ -522,14 +522,14 @@ Renvoi un élément graphique, non rattaché au DOM.
 
  	* ``type`` : ``string``. ``button`` (par défaut) ou ``link``. Voir :ref:`javascript_api_forms` pour les ``data`` des ``buttons``, ceux des ``link`` sont quasiment les mêmes.
  	* ``label`` : ``string``. Libellé de l'élément.
- 	* ``action`` : ``{}``. L'action a attaché à l'événement click. Voir :ref:`javascript_api_nosaction`.
+ 	* ``action`` : ``{}``. L'action a attaché à l'événement click. Voir :ref:`nosAction <javascript_action_nosaction>`.
  	* ``bind`` : ``{}``. Le ou les événements à attacher à l'élément. Voir `$().bind() <http://api.jquery.com/bind/>`_.
  	* ``disabled`` : ``bool``. Si ``true``, l'élément est désactivé.
  	* ``menu`` : ``{}``. Si présent, attache un menu contextuel à l'élément.
 
  		* ``menus`` : ``[{}]``. Tableau contenant chaque ligne du menu
 
- 			* ``action`` : ``{}``. L'action a attaché à la ligne du menu. Voir :ref:`javascript_api_nosaction`.
+ 			* ``action`` : ``{}``. L'action a attaché à la ligne du menu. Voir :ref:`nosAction <javascript_action_nosaction>`.
  			* ``content`` : ``string``. Contenu HTML de la ligne du menu.
  			* ``label`` : ``string``. Libellé de la ligne du menu.
 			* ``icon`` : `Nom de l'icône jQuery UI <http://jqueryui.com/themeroller/>`_ (sans ``ui-icon-``).
@@ -538,7 +538,7 @@ Renvoi un élément graphique, non rattaché au DOM.
 
 		* ``options`` : ``{}``. Paramétrage du `widget wijmenu de Wijmo <http://wijmo.com/wiki/index.php/Menu>`_.
 
-* ``data`` : ``{}``. Données rattachés à l'élément et passées en paramètre de l'action. Voir :ref:`javascript_api_nosaction`.
+* ``data`` : ``{}``. Données rattachés à l'élément et passées en paramètre de l'action. Voir :ref:`nosAction <javascript_action_nosaction>`.
 
 
 nosDataReplace
@@ -610,5 +610,10 @@ L'élément est ajouté à la barre d'outils dont dépend l'élément du DOM ``d
 	$(domContext).nosToolbar($a);
 
 
-nosAction
----------
+API des actions
+---------------
+
+.. toctree::
+	:maxdepth: 2
+
+	actions

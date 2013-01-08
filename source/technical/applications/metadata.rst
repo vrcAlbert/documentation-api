@@ -68,10 +68,6 @@ Le fichier de configuration ``metadata`` retourne un tableau clé => valeur :
 	* ``name``
 	* ``action`` : Tableau clé => valeur de définition de l'action. Voir :doc:`interfaces/actions`.
 
-.. todo::
-
-	Créer une page des définitions des nosActions disponibles
-
 * ``enhancers`` : Voir :doc:`enhancers`
 * ``data-catchers`` : Voir :doc:`/technical/sharing`
 * ``template`` : Tableau clé => valeur de définition des gabarits
