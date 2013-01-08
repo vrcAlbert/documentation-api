@@ -156,7 +156,8 @@ Change l'URL de la fenêtre du navigateur.
 nosMediaVisualise
 ^^^^^^^^^^^^^^^^^
 
-L'action ``nosMediaVisualise`` dépend entièrement des données contextuelles passées à l'action.
+| L'action ``nosMediaVisualise`` dépend entièrement des données contextuelles passées à l'action.
+| :ref:`Documentation de nosMediaVisualise() <javascript_api_mediavisualise>`
 
 .. code-block:: php
 
