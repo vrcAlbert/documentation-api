@@ -17,6 +17,7 @@ Tutos
 	how_to/install
 	how_to/setup-wizard
 	how_to/setup_front
+	how_to/extend_application
 
 Comprendre Novius OS
 --------------------
@@ -46,6 +47,8 @@ Documentation technique
 	technical/sharing
 
 	technical/applications/general
+
+	technical/events
 
 Les nouveautés de la 0.2
 ------------------------
