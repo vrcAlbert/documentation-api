@@ -15,12 +15,12 @@ Dans votre navigateur préféré, appelez la page install.php de votre Novius OS
 
 Cette étape peut-être une simple formalité si vous avez installé Novius OS sur un hébergement mutualisé. Dans les autres cas, si vous voyez beaucoup de rouge, ne vous inquiétez pas ! Le site a juste besoin de droits en écriture dans certains répertoires. Cette étape vous donne des explications et les commandes à exécuter pour corriger tous les points.
 
-.. image:: /how_to/step-1a.png
+.. image:: images//step-1a.png
 	:alt: Étape 1a
 
 Si vous ne voulez pas vous embêter, copiez / collez le résumé des commandes disponibles en bas de la page dans un terminal : c'est fini !
 
-.. image:: /how_to/step-1b.png
+.. image:: images//step-1b.png
 	:alt: Étape 1b
 
 Étape 2 : configurer la base de données MySQL
@@ -36,7 +36,7 @@ Prérequis à cette étape, avoir crée une base dans MySQL avec un utilisateur 
 
 Remplissez simplement les 4 champs en fonction de votre configuration. Prenez note que la base de données doit exister, et que vous aurez peut-être besoin de la créer avant de continuer.
 
-.. image:: /how_to/step-2.png
+.. image:: images/step-2.png
 	:alt: Étape 2
 
 Ceci va créer les 2 fichiers *local/config/db.php* et *local/config/crypt.php* et surtout créer les tables nécessaires dans votre base de données.
@@ -44,14 +44,14 @@ Ceci va créer les 2 fichiers *local/config/db.php* et *local/config/crypt.php* 
 Étape 3 : créer le premier compte administrateur
 ------------------------------------------------
 
-.. image:: /how_to/step-3.png
+.. image:: images//step-3.png
 	:alt: Étape 3
 
 
 Étape 4: terminer l'installation
 --------------------------------
 
-.. image:: /how_to/step-4.png
+.. image:: images//step-4.png
 	:alt: Étape 4
 
 
@@ -59,12 +59,12 @@ Ceci va créer les 2 fichiers *local/config/db.php* et *local/config/crypt.php* 
 Se connecter à Novius OS
 ------------------------
 
-.. image:: /how_to/step-login.png
+.. image:: images//step-login.png
 	:alt: Écran de connexion
 
 Vous devriez arriver sur le gestionnaire d'applications après votre première connexion (parce que vous êtes administrateur). C'est ici que vous pouvez installer les applications que vous souhaitez utiliser.
 
-.. image:: /how_to/step-appmanager.png
+.. image:: images//step-appmanager.png
 	:alt: Applications manager
 
 * *Blog / News* est une application "librairie" indispensable pour faire fonctionner les applications Blog et Actualités ( *News stories* )
