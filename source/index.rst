@@ -57,3 +57,4 @@ Les nouveautés de la 0.2
 	:maxdepth: 2
 
 	release/0.2
+	release/migrate_from_0.1_to_0.2
