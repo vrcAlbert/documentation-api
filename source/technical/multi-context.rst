@@ -252,3 +252,82 @@ Ajouter des contextes
 
 Vous pouvez ajouter à n'importe quel moment de nouveaux contextes, sites ou langues à votre configuration.
 Modifiez simplement votre fichier ``contexts.config.php`` comme expliqué ci-dessus, les nouveaux contextes sont aussitôt pris en compte.
+
+API PHP
+=======
+
+Pour accéder à vos contextes, sites et locales, utilisez la classe ``\Nos\Tools_Context``.
+
+::contexts()
+------------
+
+Renvoie un tableau de tous vos contextes valides.
+
+.. code-block:: php
+
+	$contexts = \Nos\Tools_Context::contexts();
+	foreach ($contexts as $context_key => $context_urls) {
+		// ....
+	}
+
+::sites()
+---------
+
+Renvoie un tableau de tous vos sites valides. Chaque site ayant un ``title`` et un ``alias``.
+
+.. code-block:: php
+
+	$sites = \Nos\Tools_Context::sites();
+	foreach ($sites as $site_key => $site_params) {
+		$titre = $site_params['title'];
+		$alias = $site_params['alias'];
+	}
+
+::locales()
+-----------
+
+Renvoie un tableau de tous vos locales valides. Chaque locale ayant un ``title`` et un code drapeau ``flag``.
+
+.. code-block:: php
+
+	$locales = \Nos\Tools_Context::locales();
+	foreach ($locales as $locale_key => $locale_params) {
+		$titre = $locale_params['title'];
+		$drapeau = $locale_params['flag'];
+	}
+
+::defaultContext()
+------------------
+
+Renvoie le code du contexte par défaut de votre instance de Novius OS.
+
+.. code-block:: php
+
+	$default_context_code = \Nos\Tools_Context::defaultContext();
+
+::locale($context)
+------------------
+
+Prend en paramètre un code contexte et retourne le tableau de la locale lui étant associée.
+
+.. code-block:: php
+
+	$locale = \Nos\Tools_Context::locale('main::en_GB');
+	$titre = $locale['title'];
+	$code_drapeau = $locale['flag'];
+
+::site($context)
+----------------
+
+Prend en paramètre un code contexte et retourne le tableau du site lui étant associé.
+
+.. code-block:: php
+
+	$site = \Nos\Tools_Context::site('main::en_GB');
+	$titre = $site['title'];
+	$alias = $site['alias'];
+
+
+
+
+
