@@ -51,3 +51,4 @@ Développeur
 * Toutes les vues et fichiers de configuration sont surchargeables dans le répertoire ``config`` du site
 * Création d'un ``controller`` de popup d'``enhancer`` pour le WYSIWYG avec prévisualisation par défaut
 * La clé de configuration ``upload.disabled_extensions`` est déplacée dans ``novius-os.upload.disabled_extensions``
+* Les variables $page et $main_controller sont disponible dans le template
