@@ -23,18 +23,27 @@ Modification de l'API des pages
 	* Suppression de ``Model_Page::get_url_absolute()``
 	* Toutes les méthodes retournent des URLs absolues
 
+Modification de l'API des évènements
+====================================
+
+    * ``front.start`` prend désormais en paramètre un tableau contenant la clé ``url``
+
 Procédure à suivre
 ==================
 
-* Créer le fichier ``contexts.config.php`` (se baser sur le sample).
-* Modifier ``config.php`` pour rajouter la clé ``novius-os`` (se baser sur le sample).
+    * Créer le fichier ``contexts.config.php`` (se baser sur le sample).
+    * Modifier ``config.php`` pour rajouter la clé ``novius-os`` (se baser sur le sample).
 
-* Rechercher ``_lang`` et remplacer par ``_context`` (c-à-d ``page_lang => page_context``)
-* Rechercher ``Nos\Model_`` et remplacer par ``Nos\{{app}}\Model_`` (c-à-d ``Nos\Model_Page => Nos\Page\Model_Page``, ``Nos\Model_Media => Nos\Media\Model_Media``)
-* Rechercher ``Translatable`` et remplacer par ``Contextable``
-* Rechercher  ``Model_Page->get_link()`` et remplacer par ``Model_Page->link()``
-* Rechercher ``Model_Page->get_href()`` et remplacer par ``Model_Page->url()``
-* Rechercher ``Model_Page::get_url()`` et remplacer par ``Tools_Url::page()``
+    * Rechercher ``_lang`` et remplacer par ``_context`` (c-à-d ``page_lang => page_context``)
+    * Rechercher ``Nos\Model_`` et remplacer par ``Nos\{{app}}\Model_`` (c-à-d ``Nos\Model_Page => Nos\Page\Model_Page``, ``Nos\Model_Media => Nos\Media\Model_Media``)
+    * Rechercher ``Translatable`` et remplacer par ``Contextable``
+    * Rechercher  ``Model_Page->get_link()`` et remplacer par ``Model_Page->link()``
+    * Rechercher ``Model_Page->get_href()`` et remplacer par ``Model_Page->url()``
+    * Rechercher ``Model_Page::get_url()`` et remplacer par ``Tools_Url::page()``
+
+    * Rechercher ``Nos\Widget_Page_Selector`` et remplacer par ``Nos\Page\Renderer_Selector``
+    * Rechercher ``Nos\Widget_Media`` et remplacer par ``Nos\Renderer_Media``
+    * Rechercher ``Nos\Widget_`` et remplacer par ``Nos\{{Renderer_Version}}``
 
 
 Changement dans les applications

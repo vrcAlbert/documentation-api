@@ -72,7 +72,7 @@ Ci-dessous le fichier de configuration de l'App Desk de l'application ``Monkey``
 	* Ajouter un Voir vers une documentation sur I18n
 	* Ajouter un description de l'organisation des fichiers de config, avec les common
 	* Lister toutes les clés possibles
-	* Lister toutes les clés de i18n
+	* Lister toutes les clés de i18n (besoin de 'common')
 
 
 * ``model`` :

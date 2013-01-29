@@ -120,8 +120,9 @@ Modification possible de l'URL.
     /**
      * @param  string  $url  URL de la page courante (sans le nom de domaine et avec le .html)
      */
-	Event::register_function('front.start', function(&$url)
+	Event::register_function('front.start', function(&$params)
 	{
+	    $url =& $params['url'];
 	    // ...
 	});
 
@@ -245,7 +246,7 @@ Il permet de modifier le ``layout`` et les ``fields``. Les variables ``item`` (i
     /**
      * @param  array  $args  Tableau contenant 'fields', 'layout', 'form' et 'enhancer_args'
      */
-    Event::register_function('email.after_send', function(array &$args)
+    Event::register_function('noviusos_form::rendering', function(array &$args)
     {
         $fields =& $args['fields'];
         $layout =& $args['layout'];
