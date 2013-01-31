@@ -1,40 +1,36 @@
-Comment installer Novius OS
-===========================
+Installation sur le serveur
+###########################
 
 Tout au long de la procédure, nous donnons les commandes dans le cas d'une installation sur Ubuntu. Pensez à les adapter selon votre système d'exploitation.
 
 
+.. contents::
 
-* :ref:`install_download`
+Télécharger les sources de Novius OS
+------------------------------------
 
-	* :ref:`install_download-github`
-	* :ref:`install_download-zip`
+Vous avez le choix entre deux méthodes pour récupérer les sources de Novius OS :
 
-* :ref:`install_server-configuration`
+* |En utilisant **Git**.
+  |Avantage : vous pourrez utiliser Git pour faire les mises à jours du logiciel.
+  |A prévilégier si vous installer sur votre machine locale ou un serveur dédié.
+* |En téléchargeant le **Zip**.
 
-	* :ref:`install_server-dedicated`
-	* :ref:`install_server-shared`
 
+Via Git et GitHub
+^^^^^^^^^^^^^^^^^
 
-.. _install_download:
+Prérequis - Installation de Git
+"""""""""""""""""""""""""""""""
 
-Étape 1 : Télécharger les sources de Novius OS
-----------------------------------------------
-
-.. _install_download-github:
-
-Méthode A : Via Git et GitHub
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Étape A-1 : Prérequis - Installation de Git
-"""""""""""""""""""""""""""""""""""""""""""
+Si Git n'est pas installé sur votre machine, voici la commande pour l'installer pour une distribution utilisant ``apt-get`` comme gestionnaire de paquet (ex : Ubuntu)
 
 ::
 
     sudo apt-get install git
 
-Étape A-2 : Cloner le dépôt
-"""""""""""""""""""""""""""
+Cloner le dépôt
+"""""""""""""""
 
 Novius OS utilise les submodules Git, faites attention à bien les récupérer. L'option ``--recursive`` fait le nécessaire.
 
