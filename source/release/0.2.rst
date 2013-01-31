@@ -7,7 +7,9 @@ Nouveautés
 * Une instance de Novius Os peut-être multi-contexte : gérer de un à plusieurs sites, chacun dans une ou plusieurs langues
 * Intégration de l'application **Slideshow**
 * Intégration de l'application **Form**
+* Intégration de l'application **Assistant 'Créer mon appli'**
 * Intégration du ``sharer`` **Simple Google+** sur le même modèle que Facebook et Twitter
+* Le back-office est disponible en français et en anglais
 * | Les onglets du back-office sont fermables avec un click sur le bouton du milieu de la souris
   | Nouveau bouton *Close all other tabs*
 
@@ -52,3 +54,5 @@ Développeur
 * Création d'un ``controller`` de popup d'``enhancer`` pour le WYSIWYG avec prévisualisation par défaut
 * La clé de configuration ``upload.disabled_extensions`` est déplacée dans ``novius-os.upload.disabled_extensions``
 * Les variables $page et $main_controller sont disponible dans le template
+* Le ``renderer Time Picker`` peut être utiliser en dehors d'un ``Fieldset``
+* L'événement PHP ``front.start`` prend le paramètre ``cache_path`` en plus
