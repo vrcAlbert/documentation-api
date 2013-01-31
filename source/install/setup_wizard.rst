@@ -5,7 +5,7 @@ Les :doc:`fichiers de Novius OS sont installés, le serveur paramétré <install
 
 Dans votre navigateur préféré, appelez la page install.php de votre Novius OS et laissez vous guider par l'assistant :
 
-* http://novius-os/install.php si vous avez suivi la procédure d'installation locale
+* http://localhost/nom_du_site si vous avez suivi la procédure d'installation locale
 * http://www.votredomaine.com/install.php pour une installation classique sur un serveur externe
 * http://www.votrehébergement.com/rep-novius-os/install.php pour une installation dans un sous-répertoire d'un hébergement mutualisé
 
@@ -13,20 +13,22 @@ Dans votre navigateur préféré, appelez la page install.php de votre Novius OS
 Étape 1 : vérification des pré-requis
 -------------------------------------
 
-Cette étape peut-être une simple formalité si vous avez installé Novius OS sur un hébergement mutualisé. Dans les autres cas, si vous voyez beaucoup de rouge, ne vous inquiétez pas ! Le site a juste besoin de droits en écriture dans certains répertoires. Cette étape vous donne des explications et les commandes à exécuter pour corriger tous les points.
+Cette étape peut-être une simple formalité si vous avez installé Novius OS avec la procédure d'installation locale. Dans les autres cas, si vous voyez beaucoup de rouge, ne vous inquiétez pas ! Le site a juste besoin de droits en écriture dans certains répertoires. Cette étape vous donne des explications et les commandes à exécuter pour corriger tous les points.
 
 .. image:: images//step-1a.png
 	:alt: Étape 1a
+	:align: center
 
 Si vous ne voulez pas vous embêter, copiez / collez le résumé des commandes disponibles en bas de la page dans un terminal : c'est fini !
 
 .. image:: images//step-1b.png
 	:alt: Étape 1b
+	:align: center
 
 Étape 2 : configurer la base de données MySQL
 ---------------------------------------------
 
-Prérequis à cette étape, avoir crée une base dans MySQL avec un utilisateur associé ayant les droits dessus. Dans le cas d'un hébergement mutualisé, ces paramètres ont dû vous être fournis par votre hébergeur. Dans les autres cas, voici un exemple pour une base en ``localhost``.
+Prérequis à cette étape, avoir créé une base dans MySQL avec un utilisateur associé ayant les droits dessus. Dans le cas d'un hébergement mutualisé, ces paramètres ont dû vous être fournis par votre hébergeur. Dans les autres cas, voici un exemple pour une base en ``localhost``.
 
 .. code-block:: sql
 
@@ -38,6 +40,7 @@ Remplissez simplement les 4 champs en fonction de votre configuration. Prenez no
 
 .. image:: images/step-2.png
 	:alt: Étape 2
+	:align: center
 
 Ceci va créer les 2 fichiers *local/config/db.php* et *local/config/crypt.php* et surtout créer les tables nécessaires dans votre base de données.
 
@@ -46,6 +49,7 @@ Ceci va créer les 2 fichiers *local/config/db.php* et *local/config/crypt.php* 
 
 .. image:: images//step-3.png
 	:alt: Étape 3
+	:align: center
 
 
 Étape 4: terminer l'installation
@@ -53,23 +57,30 @@ Ceci va créer les 2 fichiers *local/config/db.php* et *local/config/crypt.php* 
 
 .. image:: images//step-4.png
 	:alt: Étape 4
+	:align: center
 
 
 
-Se connecter à Novius OS
-------------------------
+Applications
+------------
 
-.. image:: images//step-login.png
-	:alt: Écran de connexion
-
-Vous devriez arriver sur le gestionnaire d'applications après votre première connexion (parce que vous êtes administrateur). C'est ici que vous pouvez installer les applications que vous souhaitez utiliser.
+Vous devriez arriver sur le gestionnaire d'applications. C'est ici que vous pouvez installer les applications que vous souhaitez utiliser.
 
 .. image:: images//step-appmanager.png
 	:alt: Applications manager
+	:align: center
 
-* *Blog / News* est une application "librairie" indispensable pour faire fonctionner les applications Blog et Actualités ( *News stories* )
-* *Comments* est une application "librairie" fournissant la couche commentaires en front pour faire fonctionner les applications Blog et Actualités
-* *Simple Facebook share* et *Simple Twitter share* sont des `Data catchers <http://novius-os.github.com/docs/applications.html#sharing>`_ permettant de partager simplement vos :ref:`Content nuggets <en:sharing_content-nuggets>` sur Facebook et Twitter
+Se déconnecter / connecter
+------------------------
 
-Vous voilà dans votre Novius OS. Amusez-vous bien !
+Pour vous déconnecter de l'interface d'administration, cliquez en haut à droit sur votre prénom. Un menu apparait alors,
 
+.. image:: images//step-login-a.png
+	:alt: Se déconnecter
+	:align: center
+
+Vous être alors redirigé sur le formulaire de connexion.
+
+.. image:: images//step-login-b.png
+	:alt: Se connecter
+	:align: center

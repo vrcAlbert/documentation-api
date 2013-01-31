@@ -5,4 +5,4 @@ Installation
 
 	install
 	setup_wizard
-	setup_front
+	first_page
