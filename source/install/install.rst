@@ -63,7 +63,7 @@ Installation via Zip
 
 Cette procédure est à privilégier si vous souhaitez installer Novius OS sur un hébergement mutualisé.
 
-* Téléchargez  `novius-os.0.1.4.zip <http://nova.li/nos-014>`_.
+* Téléchargez  `novius-os.0.1.4.zip <http://www.novius-os.org/download-novius-os-zip.html>`_.
 * Dézippez le fichier.
 * Uploadez (ou déplacer) le répertoire ``novius-os`` dans le ``DOCUMENT_ROOT`` de votre serveur (par exemple via FTP).
 * Ouvrez votre navigateur à l'URL http://votredomaine/novius-os/ (remplacez ``novius-os`` par le nom du répertoire où vous avez dézippé Novius OS).
