@@ -8,3 +8,10 @@ You're also very welcome if you want to take part in its translation. `Contact u
 
  .. todolist::
 
+Summary
+=======
+
+.. toctree::
+	:maxdepth: 2
+
+	configuration/index
