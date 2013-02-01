@@ -24,7 +24,7 @@ Each value / key => value defines a column.
         // Full example.
         'column_d' => array(
 
-            // title of the grid column.
+            // Title of the grid column.
             'title' => 'Column C',
 
             // Default value is key. Will display $item->col_d if value key is empty.
