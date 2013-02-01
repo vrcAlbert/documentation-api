@@ -9,7 +9,6 @@ This key contains all common translations.
     return array(
         'i18n' => array(
             // Crud
-            // Note to translator: Default copy meant to be overwritten by applications (e.g. The item has been deleted > The page has been deleted). The word 'item' is not to feature in Novius OS.
             'notification item added' => __('Done! The item has been added.'),
             'notification item saved' => __('OK, all changes are saved.'),
             'notification item deleted' => __('The item has been deleted.'),
