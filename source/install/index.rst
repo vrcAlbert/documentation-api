@@ -1,5 +1,5 @@
-Installation
-############
+Installer Novius OS
+###################
 
 .. toctree::
 

@@ -1,5 +1,5 @@
-Installation sur le serveur
-###########################
+Installation
+############
 
 .. contents::
 	:depth: 2
