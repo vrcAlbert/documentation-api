@@ -14,7 +14,7 @@ Pour y accéder, cliquez sur le launcher Gestion des applications.
 	:alt: Le gestionnaire d'applications
 	:align: center
 
-Une interface apparaît alors vous permettant d'installer / mettre à jour / désinstaller votre configuration.
+Une interface apparaît alors vous permettant d'installer / mettre à jour / désinstaller vos applications.
 
 .. image:: images/applications/application-manager.png
 	:alt: Le gestionnaire d'applications
