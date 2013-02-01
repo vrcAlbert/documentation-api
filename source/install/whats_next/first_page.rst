@@ -1,16 +1,14 @@
 Première page
 =============
 
-Ouvrir l'application page
--------------------------
+Ouvrir l'application Pages web
+------------------------------
 
-Si vous voulez créer un site web, vous devez utiliser l'application **Pages web**. Un icône est disponible sur l'onglet d'accueil.
+Si vous voulez créer un site web, vous devez utiliser l'application **Pages web**&nbsp;:
 
 .. image:: images/first_page/home-tab.png
-	:alt: L'application page sur l'onglet d'accueil
+	:alt: L'application Pages web sur l'onglet d'accueil
 	:align: center
-
-Cliquez dessus pour y accéder.
 
 Ajouter une page (votre première)
 ---------------------------------
@@ -19,7 +17,7 @@ Ajouter une page (votre première)
 	:alt: Ajouter une page
 	:align: center
 
-Écrire du contenu et “Ajouter”
+Écrire du contenu et cliquer « Ajouter »
 ---------------------------------
 
 .. image:: images/first_page/page-add.png
@@ -38,7 +36,7 @@ L'action **Visualiser** vous permet d'avoir un aperçu de la page avant qu'elle 
 Publier votre page
 ------------------
 
-Une fois que vous êtes satisfait du contenu, vous pouvez publier la page puis la sauvegarder.
+Une fois que vous êtes satisfait du contenu, choisissez « Sera publié » et enregistrez.
 
 Admirez le travail remarquable que vous venez de faire :
 

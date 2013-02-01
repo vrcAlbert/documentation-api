@@ -1,16 +1,16 @@
-Gabarits
-========
+Templates
+=========
 
-Les pages ont besoin de gabarits, qui définissent comment elles vont s'afficher.
+Pages need templates. They contains the content written in the back-office and set the style.
 
 .. image:: images/templates/layout.png
-	:alt: Gabarits
+	:alt: Template
 	:align: center
 
-Il est possible de changer le gabarit d'une page en particulier.
+The template is chosen when adding or modifying a page.
 
 .. image:: images/templates/choose.png
-	:alt: Choisir son gabarit
+	:alt: Choose a template
 	:align: center
 
-Il est aussi possible d'ajouter de nouveaux templates. Cela se fait lors de l'installation d'application.
+New templates can be added. Templates are embedded in the applications. To add a template, one must therefore add an application (with the :doc:`applications manager <applications>`).
