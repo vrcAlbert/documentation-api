@@ -8,12 +8,12 @@ Prérequis généraux
 ******************
 
 * Disposer d'un serveur **LAMP**
-	.. code-block:: guess
+	.. code-block:: bash
 
 			sudo apt-get install apache2 php5 mysql-server libapache2-mod-php5 php5-mysql
 
 * Avoir le **mod_rewrite d’Apache** est activé.
-	.. code-block:: guess
+	.. code-block:: bash
 
 			sudo a2enmod rewrite
 
@@ -39,7 +39,7 @@ Installation
 
 Ouvrez un terminal et saisissez :
 
-.. code-block:: guess
+.. code-block:: bash
 
     cd /var/www
     sudo wget https://raw.github.com/novius-os/ci/master/0.2/tools/install.sh && sh install.sh
@@ -78,7 +78,7 @@ Configuration d'un Virtual Host
 
 Les commandes suivantes sont données à titre d'exemple si vous voulez installer Novius OS sur Ubuntu, adaptez les en fonction de votre distribution.
 
-.. code-block:: guess
+.. code-block:: bash
 
 	sudo nano /etc/apache2/sites-available/novius-os
 
@@ -89,7 +89,7 @@ Les commandes suivantes sont données à titre d'exemple si vous voulez installe
 | Adaptez la ligne ``ServerName`` avec votre nom de domaine dans le cas d'une installation en production.
 | De même, remplacez ``/var/www/novius-os`` par le répertoire dans lequel vous avez installé Novius OS.
 
-.. code-block:: guess
+.. code-block:: apache
 
 	<VirtualHost *:80>
 		DocumentRoot /var/www/novius-os/public
@@ -104,13 +104,13 @@ La configuration par défaut contient un répertoire public. La racine web doit 
 
 Activez votre nouveau VirtualHost
 
-.. code-block:: guess
+.. code-block:: bash
 
 	sudo a2ensite novius-os
 
 Relancez ensuite Apache pour prendre en compte la nouvelle configuration.
 
-.. code-block:: guess
+.. code-block:: bash
 
 	sudo service apache2 reload
 
@@ -119,13 +119,13 @@ Configurer le fichier hosts, dans le cas d'installation sur votre machine
 
 Si vous installez Novius OS sur votre machine locale, la valeur du ``ServerName`` (``novius-os`` dans l'exemple ci-desssus) doit être ajoutée dans votre fichiers ``hosts``.
 
-.. code-block:: guess
+.. code-block:: bash
 
 	sudo nano /etc/hosts
 
 Ajouter la ligne suivante :
 
-.. code-block:: guess
+.. code-block:: bash
 
 	127.0.0.1   novius-os
 
@@ -134,7 +134,7 @@ Installation avancée avec Git
 
 Pour cloner Novius OS :
 
-.. code-block:: guess
+.. code-block:: bash
 
 	git clone --recursive git://github.com/novius-os/novius-os.git
 
@@ -149,7 +149,7 @@ Cette commande télécharge le dépôt principal, avec plusieurs submodules :
 | Pour changer la version que vous voulez utiliser après un clone, n'oubliez pas de mettre à jour les submodules !
 | Exemple qui utilise la dernière nightly de la branche dev :
 
-.. code-block:: guess
+.. code-block:: bash
 
 	cd /var/www/novius-os/
 	git checkout dev
