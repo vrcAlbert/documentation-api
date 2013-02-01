@@ -1,5 +1,5 @@
-Novius OS - Documentation française
-===================================
+Novius OS - API Documentation
+=============================
 
 Create Once Publish Everywhere with Novius OS, a Cross-Channel Open Source CMS.
 
