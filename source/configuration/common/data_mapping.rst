@@ -10,13 +10,13 @@ Each value / key => value defines a column.
     <?php
     return array(
 
-        // $model->column_a is sent in json (but must be processed to be of any use).
+        // $item->column_a is sent in json (but must be processed to be of any use).
         'column_a',
 
-        // $model->col_b is sent in json under the column_b key (but must be processed to be of any use).
+        // $item->col_b is sent in json under the column_b key (but must be processed to be of any use).
         'column_b' => 'col_b',
 
-        // $model->column_c is displayed in the grid under column which title is "Column C".
+        // $item->column_c is displayed in the grid under column which title is "Column C".
         'column_c' => array(
             'title' => 'Column C'
         ),
@@ -27,7 +27,7 @@ Each value / key => value defines a column.
             // title of the grid column.
             'title' => 'Column C',
 
-            // Default value is key. Will display $model->col_d if value key is empty.
+            // Default value is key. Will display $item->col_d if value key is empty.
             'column' => 'col_d',
 
             // Default value is column key value. Defines where on which sql column search / order.
