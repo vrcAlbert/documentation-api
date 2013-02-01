@@ -7,7 +7,7 @@ Installation
 Prérequis généraux
 ******************
 
-* Disposer d'un serveur **LAMP**
+* Disposer d'un serveur **LAMP** avec PHP 5.3+.
 	.. code-block:: bash
 
 			sudo apt-get install apache2 php5 mysql-server libapache2-mod-php5 php5-mysql
@@ -17,8 +17,8 @@ Prérequis généraux
 
 			sudo a2enmod rewrite
 
-| Les commandes sont données à titre d'exemple si vous voulez installer Novius OS sur votre machine locale ou sur un serveur sur lequel vous avez les droits d'administration.
-| Elles sont valables pour installation sur Ubuntu, adaptez les en fonction de votre distribution.
+| Les commandes sont données à titre d'exemple si vous installez Novius OS sur votre machine locale ou un serveur sur lequel vous avez les droits d'administration.
+| Elles sont valables pour installation sur Ubuntu, adaptez-les en fonction de votre distribution.
 
 
 .. note::
@@ -44,11 +44,11 @@ Ouvrez un terminal et saisissez :
     cd /var/www
     sudo wget https://raw.github.com/novius-os/ci/master/0.2/tools/install.sh && sh install.sh
 
-A la question « *Enter the directory name where you want to install Novius OS (default novius-os)* »,
+À la question « *Enter the directory name where you want to install Novius OS (default novius-os)* »,
 indiquez le nom du répertoire dans lequel vous voulez installer votre instance de Novius OS.
 Laissez vide pour l'installer dans un répertoire novius-os.
 
-Une fois l'installation terminée :,
+Une fois l'installation terminée :
 
 * Ouvrez votre navigateur à l'URL http://votredomaine/novius-os/ (remplacez ``novius-os`` par le nom du répertoire que vous avez saisi).
 * Poursuivez l'installation avec :doc:`l'assistant de paramétrage <setup_wizard>`.
@@ -56,12 +56,12 @@ Une fois l'installation terminée :,
 .. note::
 
 	* Pour une installation en local, l'URL sera probablement http://localhost/novius-os/ .
-	* Si le ``DOCUMENT_ROOT`` de votre serveur n'est pas ``/var/www/`` modifiez la première ligne en conséquence.
+	* Si le ``DOCUMENT_ROOT`` de votre serveur n'est pas ``/var/www/``, modifiez la première ligne en conséquence.
 
 Installation via Zip
 ********************
 
-Cette procédure est à privilégier si vous souhaitez installer Novius OS sur un hébergement mutualisé.
+Cette procédure est à privilégier si vous souhaitez installer Novius OS sur un hébergement mutualisé :
 
 * Téléchargez  `novius-os.0.2.zip <http://nova.li/nos-02>`_.
 * Dézippez le fichier.

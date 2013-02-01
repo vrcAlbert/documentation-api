@@ -1,16 +1,16 @@
 Gabarits
 ========
 
-Les pages ont besoin de gabarits, qui définissent comment elles vont s'afficher.
+Les pages ont besoin de gabarits qui englobent le contenu ajouté en back-office et définissent le style.
 
 .. image:: images/templates/layout.png
-	:alt: Gabarits
+	:alt: Template
 	:align: center
 
-Il est possible de changer le gabarit d'une page en particulier.
+Au moment d'ajouter ou modifier une page, on précise son gabarit.
 
 .. image:: images/templates/choose.png
 	:alt: Choisir son gabarit
 	:align: center
 
-Il est aussi possible d'ajouter de nouveaux templates. Cela se fait lors de l'installation d'application.
+Il est aussi possible d'ajouter de nouveaux gabarits. Les gabarits sont embarqués avec les applications. Ajouter un gabarit passe donc par l'ajout d'une application (via le :doc:`gestionnaire d'application <applications>`).
