@@ -4,7 +4,7 @@ Première page
 Ouvrir l'application Pages web
 ------------------------------
 
-Si vous voulez créer un site web, vous devez utiliser l'application **Pages web**&nbsp;:
+Si vous voulez créer un site web, vous devez utiliser l'application **Pages web** :
 
 .. image:: images/first_page/home-tab.png
 	:alt: L'application Pages web sur l'onglet d'accueil
@@ -18,7 +18,7 @@ Ajouter une page (votre première)
 	:align: center
 
 Écrire du contenu et cliquer « Ajouter »
----------------------------------
+----------------------------------------
 
 .. image:: images/first_page/page-add.png
     :alt: Ajouter une page
