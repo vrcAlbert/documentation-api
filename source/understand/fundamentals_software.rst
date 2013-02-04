@@ -103,18 +103,15 @@ Cela s'explique par la grande importance donnée à l'interface utilisateur et �
 Pour proproser des interfaces et interactions riches, Novius OS utilise plusieurs librairies JS :
 
 **jQuery**
-	Ce framework facilite l'écriture du code JS pour l'édition du contenu HTML. Il n'est pas directement orienté UI.
-
-	`Documentation <http://api.jquery.com/>`_
+	| Ce framework facilite l'écriture du code JS pour l'édition du contenu HTML. Il n'est pas directement orienté UI.
+	| `Documentation <http://api.jquery.com/>`__
 
 **jQuery UI**
-	Ce complément de jQuery permet d'ajouter des éléments d'interface. Une majorité de l'UI de Novius OS est issue de cette librairie.
-
-	`Documentation <http://api.jqueryui.com/>`_
+	| Ce complément de jQuery permet d'ajouter des éléments d'interface. Une majorité de l'UI de Novius OS est issue de cette librairie.
+	| `Documentation <http://api.jqueryui.com/>`__
 
 **Wijmo**
-	Cette librairie est basée sur jQuery UI et fournit des éléments d'interface complémentaires, appelés widgets.
-
-	`Documentation <http://wijmo.com/wiki/index.php/Main_Page>`_ et `Exemples <http://wijmo.com/demo/explore/>`_
+	| Cette librairie est basée sur jQuery UI et fournit des éléments d'interface complémentaires, appelés widgets.
+	| `Documentation <http://wijmo.com/wiki/index.php/Main_Page>`__ et `Exemples <http://wijmo.com/demo/explore/>`__
 
 Il y a une hiérarchie entre ces librairies, Wijmo est la plus impactante sur l'ergonomie de Novius OS.
