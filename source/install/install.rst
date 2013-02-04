@@ -3,6 +3,8 @@ Installation
 
 .. contents::
 	:depth: 2
+	:backlinks: top
+	:local:
 
 Prérequis généraux
 ******************

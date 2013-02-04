@@ -15,4 +15,5 @@ Sommaire
 	:maxdepth: 2
 
 	install/index
+	understand/index
 	release/index
