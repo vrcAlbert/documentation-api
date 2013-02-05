@@ -465,7 +465,8 @@ En 0.1, les inspecteurs sont configurés à 3 endroits :
 * Le fichier de configuration ``inspector/{{model}}.config.php``
 
 EN 0.2, les ``inputs`` doivent désormais être déplacé dans leur fichier ``inspector/{{model}}.config.php`` correspondant.
-
+Chaque clé de ``appdesk.appdesk.inspectors`` sera déplacée sur une clé ``appdesk`` du fichier ``inspector/{{model}}.config.php`` correspondant.
+La clé ``appdesk.appdesk.inspectors`` est remplacée par une clé ``inspectors`` qui contient le nom des fichiers ``inspector/{{model}}.config.php``.
 
 
 Category
@@ -536,8 +537,22 @@ Date
     );
 
 
-Ici l'inspecteur date n'a pas encore de fichier de configuration, on va en créer un :
+Ici l'inspecteur date n'a pas encore de fichier de configuration, on va en créer un et modifier le fichier de configuration de l'appdesk.
 
+
+.. code-block:: php
+
+    <?php
+
+    // Nouveau code dans appdesk.config.php
+    return array(
+        // ...
+        'inspectors' => array(
+	     'date',
+             // ...
+        ),
+        // ...
+    );
 
 .. code-block:: php
 
@@ -654,6 +669,20 @@ L'inspecteur ``published`` a déjà un fichier de configuration, complétons le 
                 ),
             ),
         ),
+    );
+
+.. code-block:: php
+
+    <?php
+
+    // Nouveau code dans appdesk.config.php
+    return array(
+        // ...
+        'inspectors' => array(
+	     'published',
+             // ...
+        ),
+        // ...
     );
 
 
