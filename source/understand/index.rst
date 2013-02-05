@@ -6,3 +6,4 @@ Comprendre Novius OS
 	fundamentals_software
 	ergonomie
 	applications
+	media_centre
