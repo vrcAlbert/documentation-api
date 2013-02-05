@@ -1,10 +1,12 @@
 Installation
 ############
 
-.. contents::
-	:depth: 2
-	:backlinks: top
-	:local:
+.. sidebar:: Sommaire
+
+	.. contents::
+		:backlinks: top
+		:depth: 2
+		:local:
 
 Prérequis généraux
 ******************

@@ -4,9 +4,11 @@ Fichier de configuration ``metadata``
 Le fichier de configuration ``metadata`` est obligatoire. Il indique au moteur les informations clés dont il a besoin pour utiliser l'application.
 Ci-dessous, le fichier ``metadata`` de l'application ``Monkey`` :
 
-.. todo::
+.. only:: not_rtd
 
-	Mettre à jour le metadata en exemple avec la dernière version de Monkey
+	.. todo::
+
+		Mettre à jour le metadata en exemple avec la dernière version de Monkey
 
 .. code-block:: php
 

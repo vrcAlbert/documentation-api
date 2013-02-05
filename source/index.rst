@@ -9,7 +9,9 @@ N'hésitez pas à proposer des modifications via des ``Pull Request`` (si vous d
 
 Vous êtes aussi bienvenus si vous voulez prendre part à sa traduction. `Contactez nous <http://www.novius-os.org/fr/footer/contacts.html>`_ pour plus de détails.
 
- .. todolist::
+.. only:: not_rtd
+
+	.. todolist::
 
 Sommaire
 ========

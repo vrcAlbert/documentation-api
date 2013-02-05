@@ -24,10 +24,12 @@ Novius OS est basé sur `l'ORM de FuelPHP <http://www.fuelphp.com/docs/packages/
 
 Néanmoins, Novius OS ajoute une sur-couche à l'ORM.
 
-.. todo::
+.. only:: not_rtd
 
-	* Gestion des wysiwyg et des médias
-	* Fichier de config pour Model
+	.. todo::
+
+		* Gestion des wysiwyg et des médias
+		* Fichier de config pour Model
 
 .. toctree::
 	:maxdepth: 2

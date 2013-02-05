@@ -7,9 +7,11 @@
 	:depth: 2
 
 
-.. todo::
+.. only:: not_rtd
 
-	Déplacer la partie Formulaires dans une page dédiée à l'application (quand ça existera).
+	.. todo::
+
+		Déplacer la partie Formulaires dans une page dédiée à l'application (quand ça existera).
 
 Novius OS fournit un mécanisme d'évènements destiné à interagir avec le moteur.
 
