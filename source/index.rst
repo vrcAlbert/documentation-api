@@ -15,4 +15,4 @@ Summary
 	:maxdepth: 2
 
 	configuration/index
-	test
+	php/index
