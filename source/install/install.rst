@@ -33,7 +33,7 @@ Installation rapide
 Prérequis
 =========
 
-* Avoir un accès ligne de commande sur le serveur et disposer des droits d'administation ``sudo``.
+* Avoir un accès ligne de commande sur le serveur et disposer des droits d'administation :command:`sudo`.
 * Avoir **Git** installé.
 
 Installation
