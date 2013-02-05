@@ -7,11 +7,7 @@ Les sources sont disponibles dans `un dépôt sur GitHub <https://github.com/nov
 
 N'hésitez pas à proposer des modifications via des ``Pull Request`` (si vous découvrez une erreur ou vous avez des suggestions d'amélioration).
 
-Vous êtes aussi bienvenus si vous voulez prendre part à sa traduction. `Contactez nous <http://www.novius-os.org/fr/footer/contacts.html>`_ pour plus de détails.
-
-.. only:: not_rtd
-
-	.. todolist::
+Vous êtes aussi bienvenus si vous voulez prendre part à sa traduction. `Contactez nous <http://www.novius-os.org/fr/footer/contacts.html>`__ pour plus de détails.
 
 Sommaire
 ========
@@ -22,3 +18,5 @@ Sommaire
 	install/index
 	understand/index
 	release/index
+
+.. todolist::
