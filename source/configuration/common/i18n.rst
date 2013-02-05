@@ -1,0 +1,22 @@
+I18n
+####
+
+This key contains all common translations.
+
+.. code-block:: php
+
+    <?php
+    return array(
+        'i18n' => array(
+            // Crud
+            'notification item added' => __('Done! The item has been added.'),
+            'notification item saved' => __('OK, all changes are saved.'),
+            'notification item deleted' => __('The item has been deleted.'),
+
+            // General errors
+            'notification item does not exist anymore' => __('This item doesn’t exist any more. It has been deleted.'),
+            'notification item not found' => __('We cannot find this item.'),
+
+            // ... extends /framework/config/i18n_common.config.php
+        ),
+    );
