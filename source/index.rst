@@ -15,3 +15,4 @@ Summary
 	:maxdepth: 2
 
 	configuration/index
+	test
