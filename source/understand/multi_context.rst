@@ -33,6 +33,8 @@ Configuration
 
 	Lien vers la configuration de la doc d'API
 
+	:ref:`api:configuration_common_multi_contexts`
+
 Cas particuliers
 ****************
 

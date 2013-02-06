@@ -248,7 +248,10 @@ texinfo_documents = [
 # How to display URL addresses: 'footnote', 'no', or 'inline'.
 #texinfo_show_urls = 'footnote'
 
-
-intersphinx_mapping = {'en': ('https://novius-os.readthedocs.org/en/latest/', None)}
-
-todo_include_todos = True
+if on_rtd:
+	intersphinx_mapping = {'api': ('https://docs-api.novius-os.org/en/latest/', None)}
+	todo_include_todos = False
+else:
+	intersphinx_mapping = {'api': ('http://novius-os-docs-api/', None)}
+	todo_include_todos = True
+	intersphinx_cache_limit = -1

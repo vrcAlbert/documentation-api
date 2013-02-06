@@ -1,5 +1,5 @@
-Version
-#######
+Notes de versions
+#################
 
 .. toctree::
 
