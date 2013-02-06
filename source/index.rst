@@ -17,8 +17,8 @@ Sommaire
 
 	install/index
 	understand/index
-	release/index
 	extend/index
-	application/index
+	release/index
+	contribute/index
 
 .. todolist::
