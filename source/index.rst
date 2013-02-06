@@ -6,8 +6,6 @@ Sources are available in a `repository on Git Hub <https://github.com/novius-os/
 Do not hesitate to propose modifications (if you spot an error) via ``Pull Request``.
 You're also very welcome if you want to take part in its translation. `Contact us <http://www.novius-os.org/en/more-info/contacts.html>`_ for further details.
 
- .. todolist::
-
 Summary
 =======
 
@@ -17,3 +15,5 @@ Summary
 	configuration/index
 	php/index
 	javascript/index
+
+.. todolist::

@@ -1,3 +1,5 @@
+.. _configuration_common_multi_contexts:
+
 Multi-Contexts
 ##############
 
