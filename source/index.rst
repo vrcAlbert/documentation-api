@@ -16,3 +16,4 @@ Summary
 
 	configuration/index
 	php/index
+	javascript/index
