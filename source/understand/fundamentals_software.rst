@@ -13,8 +13,8 @@ Une architecture MVC
 
 Novius OS répond aux standards de découpage `Modèle-Vue-Contrôleur <http://fr.wikipedia.org/wiki/Mod%C3%A8le-Vue-Contr%C3%B4leur>`_, qui définissent des logiques de travail :
 
-- dans la conception des applications
-- dans l’organisation d'un projet sous Novius OS
+- dans la conception des applications ;
+- dans l’organisation d'un projet sous Novius OS.
 
 Organisation des fichiers
 *************************
@@ -85,7 +85,7 @@ ORM pour object-relational mapping. En français `mapping objet-relationnel <htt
 Novius OS est basé sur `l'ORM de FuelPHP <http://www.fuelphp.com/docs/packages/orm/intro.html>`_. Veillez vous référer à sa documentation.
 
 | Néanmoins, Novius OS ajoute une sur-couche notable à l'ORM : les ``Behaviours``.
-| En français, ``Behaviours`` veut dire comportements. Les ``Behaviours`` permettent d'étendre des ``Model`` en y ajoutant des comportements standardisés.
+| En français, ``Behaviour`` veut dire comportement. Les ``Behaviours`` permettent d'étendre des ``Model`` en y ajoutant des comportements standardisés.
 
 Ils sont similaire aux `Observers <http://docs.fuelphp.com/packages/orm/observers/intro.html>`_ de FuelPHP mais plus puissant :
 
