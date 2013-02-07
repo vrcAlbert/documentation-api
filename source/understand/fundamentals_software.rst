@@ -21,6 +21,9 @@ Organisation des fichiers
 
 Tout Novius OS reprend les principes de segmentation issus de l’architecture MVC. Ils s'appliquent aussi bien au core qu'aux applications.
 
+.. image:: images/files_organisation.png
+	:alt: Organisation des fichiers
+
 On distingue 5 dossiers principaux :
 
 :file:`classes`
@@ -82,7 +85,7 @@ ORM pour object-relational mapping. En français `mapping objet-relationnel <htt
 	$monkey = Model_Monkey::find(4);
 	$monkey->delete();
 
-Novius OS est basé sur `l'ORM de FuelPHP <http://www.fuelphp.com/docs/packages/orm/intro.html>`_. Veillez vous référer à sa documentation.
+Novius OS est basé sur `l'ORM de FuelPHP <http://www.fuelphp.com/docs/packages/orm/intro.html>`_. Veuillez vous référer à sa documentation.
 
 | Néanmoins, Novius OS ajoute une sur-couche notable à l'ORM : les ``Behaviours``.
 | En français, ``Behaviour`` veut dire comportement. Les ``Behaviours`` permettent d'étendre des ``Model`` en y ajoutant des comportements standardisés.
