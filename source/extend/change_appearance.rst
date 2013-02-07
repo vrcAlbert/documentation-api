@@ -30,7 +30,7 @@ Modification de la vue
 ==========================================
 
 Grâce à la cascade du système de fichiers, on peut copier le fichier original
-:file:`noviusos_blognews::views/front/post/item.view.php` dans notre dossier :file`local` :
+:file:`noviusos_blognews::views/front/post/item.view.php` dans notre dossier :file:`local` :
 :file:`local::views/apps/noviusos_blognews/front/post/item.view.php`
 
 .. code-block:: html+php
