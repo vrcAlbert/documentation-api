@@ -17,4 +17,3 @@ Summary
 	javascript/index
 
 .. todolist::
-
