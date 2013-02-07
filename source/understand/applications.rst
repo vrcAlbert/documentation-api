@@ -32,19 +32,24 @@ Avant tout, :doc:`consulter les principes ergonomiques <ergonomie>` pour compren
 La configuration de l’App Desk
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+
+.. image:: images/appdesk_ergonomy.png
+	:alt: App Desk
+	:align: center
+
 L’App Desk est caractérisé par plusieurs éléments configurables :
 
 - le type d’affichage des données ;
 - les données à afficher ;
 - les actions principales et secondaires.
 
-Le :ref:`tableau principal <understand/ergnonomie/app_desk>` peut proposer plusieurs vues (à ne pas confondre avec
+Le :guilabel:`tableau principal` peut proposer plusieurs :guilabel:`vues` (à ne pas confondre avec
 le V de MVC) : liste, arborescence ou vignettes.
 
-Ces vues sont définies via des fichiers de configuration, qui précisent les données à afficher ainsi que les actions
-principales et secondaires.
+Ces vues sont définies via des fichiers de configuration, qui précisent les données à afficher ainsi que les
+:guilabel:`actions` principales et secondaires.
 
-Les inspecteurs sont également définis via des fichiers de configuration. Ils indiquent sur quel attribut ou relation
+Les :guilabel:`inspecteurs` sont également définis via des fichiers de configuration. Ils indiquent sur quel attribut ou relation
 les données du tableau principal seront triées, ainsi que les actions associées aux éléments de l’inspecteur. À noter
 que les inspecteurs sont basés :
 

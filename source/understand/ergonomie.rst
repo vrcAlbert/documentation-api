@@ -22,6 +22,7 @@ On distingue deux types d’onglets :
 
 .. image:: images/ergonomie-tabs.png
 	:alt: Navigation par onglets
+	:align: center
 
 Les avantages de la navigation par onglets sont multiples. On retiendra :
 
@@ -64,6 +65,7 @@ suivants :
 
 .. image:: images/ergonomie-app-desk.png
 	:alt: App Desk
+	:align: center
 
 L’App Desk offre de nombreuses possibilités de mise en page aux développeurs, comme à l’utilisateur final. Néanmoins,
 nous recommandons de proposer comme mise en page par défaut une
@@ -71,5 +73,6 @@ nous recommandons de proposer comme mise en page par défaut une
 
 .. image:: images/ergonomie-tpi-fr.png
 	:alt: Three-Pane Interface
+	:align: center
 
 Alternativement, l’inspecteur de prévisualisation peut être placé sous le tableau principal.

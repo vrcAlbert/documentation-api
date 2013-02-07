@@ -23,6 +23,7 @@ Tout Novius OS reprend les principes de segmentation issus de l’architecture M
 
 .. image:: images/files_organisation.png
 	:alt: Organisation des fichiers
+	:align: center
 
 On distingue 5 dossiers principaux :
 
