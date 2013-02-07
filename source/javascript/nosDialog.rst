@@ -29,16 +29,16 @@ nosDialog('open')
 
 		Some defaults options:
 
-		:param width: Container width minus 200 pixels.
-		:param height: Container height minus 100 pixels.
-		:param modal: True
-		:param captionButtons: Buttons ``pin``, ``refresh``, ``toggle``, ``minimize`` and ``maximize`` are hides.
+		:width: Container width minus 200 pixels.
+		:height: Container height minus 100 pixels.
+		:modal: True
+		:captionButtons: Buttons ``pin``, ``refresh``, ``toggle``, ``minimize`` and ``maximize`` are hides.
 
-		Add some options:
+		Additional options:
 
-		:param boolean destroyOnClose: Destroy popup when it's closed. Default ``true``.
-		:param boolean ajax: If ``true``, ``contentUrl`` is AJAX loaded rather than use ``iframe``. Default ``true``.
-		:param JSON ajaxData: Data passed to AJAX request if ``ajax`` is ``true``.
+		:destroyOnClose: ``boolean``. Destroy popup when it's closed. Default ``true``.
+		:ajax: ``boolean``. If ``true``, ``contentUrl`` is AJAX loaded rather than use ``iframe``. Default ``true``.
+		:ajaxData: ``{}``. Data passed to AJAX request if ``ajax`` is ``true``.
 
 	.. code-block:: js
 

@@ -17,24 +17,31 @@ nosTabs('open')
 
 	:param mixed tab: JSON definition of tab.
 
+		:url: Required. Tab URL.
+		:iframe: If true, open tab in an iframe. Default ``false``.
+		:label: Tab label.
+		:labelDisplay: If false, don't display the label, only the icon. Default ``true``.
+		:iconUrl: Icon URL.
+		:iconSize: Icon size in pixel (square icon). Default 16.
+
 	.. code-block:: js
 
 		$(domContext).nosTabs('open', {
-			url: 'path/url', // Required. Tab URL.
-			iframe: false, // If true, open tab in an iframe.
-			label: 'title', // Tab label.
-			labelDisplay: true, // If false, don't display the label, only the icon.
-			iconUrl: 'path/icon.png', // Icon URL.
-			iconSize: 16 // Icon size in pixel (square icon).
+			url: 'path/url',
+			iframe: false,
+			label: 'title',
+			labelDisplay: true,
+			iconUrl: 'path/icon.png',
+			iconSize: 16
 		});
 
 		// Call simplified
 		$(domContext).nosTabs({
-			url: 'une/url',
+			url: 'path/url',
 			iframe: false,
-			label: 'un titre',
+			label: 'title',
 			labelDisplay: true,
-			iconUrl: 'url/de/l/icon.png',
+			iconUrl: 'path/icon.png',
 			iconSize: 16
 		});
 
@@ -46,6 +53,14 @@ nosTabs('add')
 	Add a new tab, even if an existing has the same URL.
 
 	:param mixed tab: JSON definition of tab.
+
+		:url: Required. Tab URL.
+		:iframe: If true, open tab in an iframe. Default ``false``.
+		:label: Tab label.
+		:labelDisplay: If false, don't display the label, only the icon. Default ``true``.
+		:iconUrl: Icon URL.
+		:iconSize: Icon size in pixel (square icon). Default 16.
+
 	:param string position: Position of the new tab. Can be ``end``, ``before`` or ``after`` the current tab (compared to the tab where is the DOM element in jQuery).
 
 	.. code-block:: js
@@ -53,12 +68,12 @@ nosTabs('add')
 		$(domContext).nosTabs(
 			'add',
 			{
-				url: 'path/url', // Required. Tab URL.
-				iframe: false, // If true, open tab in an iframe.
-				label: 'title', // Tab label.
-				labelDisplay: true, // If false, don't display the label, only the icon.
-				iconUrl: 'path/icon.png', // Icon URL.
-				iconSize: 16 // Icon size in pixel (square icon).
+				url: 'path/url',
+				iframe: false,
+				label: 'title',
+				labelDisplay: true,
+				iconUrl: 'path/icon.png',
+				iconSize: 16
 			},
 			'end'
 		);
@@ -83,16 +98,23 @@ nosTabs('update')
 
 	:param mixed tab: JSON definition of tab.
 
+		:url: Required. Tab URL.
+		:label: Tab label.
+		:labelDisplay: If false, don't display the label, only the icon. Default ``true``.
+		:iconUrl: Icon URL.
+		:iconSize: Icon size in pixel (square icon). Default 16.
+		:reload: If true and ``url`` is set, load the new URL in the current tab. Default ``false``.
+
 	.. code-block:: js
 	   :emphasize-lines: 7
 
 		$(domContext).nosTabs('update', {
-			url: 'path/url', // Required. Tab URL.
-			label: 'title', // Tab label.
-			labelDisplay: true, // If false, don't display the label, only the icon.
-			iconUrl: 'path/icon.png', // Icon URL.
-			iconSize: 16 // Icon size in pixel (square icon).
-			reload: false // If true and ``url`` is set, load the new URL in the current tab.
+			url: 'path/url',
+			label: 'title',
+			labelDisplay: true,
+			iconUrl: 'path/icon.png',
+			iconSize: 16
+			reload: true
 		});
 
 nosTabs('current')

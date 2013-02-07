@@ -7,6 +7,10 @@ Javascript API
 	events
 	nosAjax
 	nosDialog
+	nosForm
+	nosMedia
 	nosNotify
+	nosOnShow
 	nosTabs
+	nosUIElement
 
