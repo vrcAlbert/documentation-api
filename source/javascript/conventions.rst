@@ -47,7 +47,7 @@ If this parameter is omit, sub-function default is called.
 			iconSize: 16
 		});
 
-		// This call do the same thing that the prevent
+		// This call do the same thing that the previous
 		$('#id').nosTabs({
 			url: 'url',
 			iframe: false,

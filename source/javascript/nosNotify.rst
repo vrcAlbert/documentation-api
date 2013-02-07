@@ -15,8 +15,8 @@ nosNotify
 		$.nosNotify('message', 'error');
 
 		$.nosNotify({
-			title : 'It\'s work',
-			type : 'success'
+			title: 'It\'s work',
+			type: 'success'
 			sticker: false, // Not provide a button for the user to manually stick the notice.
 			hide: false, // Not remove the notification after a delay.
 		});

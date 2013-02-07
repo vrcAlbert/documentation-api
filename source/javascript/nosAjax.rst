@@ -7,7 +7,7 @@ nosAjax
 
 	:param JSON options:
 
-		JSON that configure the Ajax request. Same that ``jQuery.ajax()`` with some differences :
+		JSON that configure the Ajax request. Same that ``jQuery.ajax()`` with some differences:
 
 		* Some defaults options.
 		* Callbacks functions ``success`` and ``error`` are `monkey-patched <http://en.wikipedia.org/wiki/Monkey-Patch>`_ to execute defaults operations.
@@ -18,13 +18,13 @@ nosAjax
 	.. code-block:: js
 
 		$(domContext).nosAjax({
-			dataType : 'json', // datatype is default 'json'.
-			type     : 'POST', // The request is made in POST by default.
-			data     : {}
+			dataType: 'json', // datatype is default 'json'.
+			type: 'POST', // The request is made in POST by default.
+			data: {}
 		});
 
 nosAjaxSuccess
-##############
+**************
 
 .. js:function:: $context.nosAjaxSuccess(options)
 
@@ -43,7 +43,7 @@ nosAjaxSuccess
 		:param JSON internal_server_error: Display error and backtrace in the browser console.
 
 nosAjaxError
-############
+************
 
 .. js:function:: $context.nosAjaxError(jqXHR, textStatus)
 
