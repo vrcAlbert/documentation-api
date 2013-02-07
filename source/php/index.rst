@@ -1,4 +1,4 @@
-API PHP
+PHP API
 #######
 
 .. toctree::
