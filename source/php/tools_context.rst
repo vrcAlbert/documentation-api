@@ -18,8 +18,8 @@ Tools_Context
 
 	.. code-block:: php
 
-		$contexts = \Nos\Tools_Context::contexts();
-		foreach ($contexts as $context_key => $context_urls) {
+		$containers = \Nos\Tools_Context::contexts();
+		foreach ($containers as $container_key => $container_urls) {
 			// ....
 		}
 
@@ -64,12 +64,12 @@ Tools_Context
 
 		$default_context_code = \Nos\Tools_Context::defaultContext();
 
-::locale($context)
+::locale($container)
 ------------------
 
-.. php:staticmethod:: locale($context)
+.. php:staticmethod:: locale($container)
 
-	:param string $context: A context code.
+	:param string $container: A context code.
 
 	:returns: Array of context's locale.
 
@@ -79,12 +79,12 @@ Tools_Context
 		$title = $locale['title'];
 		$code_flag = $locale['flag'];
 
-::site($context)
+::site($container)
 ----------------
 
-.. php:staticmethod:: site($context)
+.. php:staticmethod:: site($container)
 
-	:param string $context: A context code.
+	:param string $container: A context code.
 
 	:returns: Array of context's site.
 

@@ -1,7 +1,7 @@
 nosOnShow
 #########
 
-.. js:function:: $context.nosOnShow([method [, options [, ... ]]])
+.. js:function:: $container.nosOnShow([method [, options [, ... ]]])
 
 	Special API which delays the rendering of UI elements when they are visible.
 	A lot of UI elements don’t initialise correctly when they are hidden (they can’t calculate sizes properly).
@@ -16,7 +16,7 @@ nosOnShow('show')
 
 .. js:function:: nosOnShow.show()
 
-	Trigger all functions bounded with :js:func:`nosOnShow.bind` by children elements of the DOM element in jQuery.
+	Trigger all functions bounded with :js:func:`nosOnShow.bind` by children elements of the DOM element in jQuery container.
 
 	.. warning::
 

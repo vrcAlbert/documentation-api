@@ -12,9 +12,9 @@ jQuery
 
 		$.nosNotify('message');
 
-.. js:data:: $context
+.. js:data:: $container
 
-	In this documentation, ``$context`` mean a jQuery collection of DOM elements.
+	In this documentation, ``$container`` mean a jQuery container, containing collection of DOM elements.
 
 	.. code-block:: js
 

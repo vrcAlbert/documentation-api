@@ -1,9 +1,9 @@
 nosFormUI
 #########
 
-.. js:function:: $context.nosFormUI()
+.. js:function:: $container.nosFormUI()
 
-	Will perform UI enhancements on DOM elements (which are children of the DOM element in jQuery)
+	Will perform UI enhancements on DOM elements (which are children of the DOM element in jQuery container)
 	using `Wijmo <http://wijmo.com/wiki/index.php/Main_Page>`_ and `jQuery UI <http://http://api.jqueryui.com/>`_ widgets.
 
 	Element with CSS class ``.notransform`` will not be formatting.
@@ -31,12 +31,12 @@ nosFormUI
 nosFormAjax
 ###########
 
-.. js:function:: $context.nosFormAjax()
+.. js:function:: $container.nosFormAjax()
 
-	Will use the `jquery-form <http://malsup.com/jquery/form/>`_ plugin to submit the form (the DOM element in jQuery or children forms)
+	Will use the `jquery-form <http://malsup.com/jquery/form/>`_ plugin to submit the form (the DOM element in jQuery container or children forms)
 	using Ajax rather than the native browser action.
 
-	Data type in return will be by default ``json``, and callbacks functions ``success`` and ``error`` call :js:func:`$context.nosAjaxSuccess` et :js:func:`$context.nosAjaxError`.
+	Data type in return will be by default ``json``, and callbacks functions ``success`` and ``error`` call :js:func:`$container.nosAjaxSuccess` et :js:func:`$container.nosAjaxError`.
 
 	.. code-block:: js
 
@@ -46,9 +46,9 @@ nosFormAjax
 nosFormValidate
 ###############
 
-.. js:function:: $context.nosFormValidate()
+.. js:function:: $container.nosFormValidate()
 
-	Will use the `jquery-validation <http://docs.jquery.com/Plugins/Validation>`_ plugin to perform inline validation on the form (the DOM element in jQuery or children forms).
+	Will use the `jquery-validation <http://docs.jquery.com/Plugins/Validation>`_ plugin to perform inline validation on the form (the DOM element in jQuery container or children forms).
 	It’s already configured to display error messages nicely, and take into account some specificity from the UI enhancements (like the accordion).
 
 	Most forms are using it, since it’s part of the standard form layout.

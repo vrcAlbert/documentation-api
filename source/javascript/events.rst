@@ -6,7 +6,7 @@ The back-office of Novius OS is a "big HTML page". Actions preformed in one tab 
 An event system has been established to enable the various interface elements communicate with each other.
 
 | On the one hand, the interface elements are listening events (by binding callbacks functions) by connecting to :term:`dispatcher`.
-| The other, the different actions trigger events, usually returned by AJAX requests (see :js:func:`$context.nosAjax`),
+| The other, the different actions trigger events, usually returned by AJAX requests (see :js:func:`$container.nosAjax`),
   which are then dispatched to all interface elements via :term:`dispatchers <dispatcher>`.
 
 Events dispatched are executed immediately on active tab or popup (has focus).
@@ -48,17 +48,17 @@ Structure of an event
 nosListenEvent
 **************
 
-.. js:function:: $context.nosListenEvent(event, callback [, caller ])
+.. js:function:: $container.nosListenEvent(event, callback [, caller ])
 
 	| Listen one (or many) event, ie register a callback function to be called when the event occurs.
-	| Listening will be on current :term:`dispatcher` (closest relatives in the DOM element in jQuery).
+	| Listening will be on current :term:`dispatcher` (closest relatives in the DOM element in jQuery container).
 
 	For the callback function is triggered, events listened and triggered should not match exactly.
 	The event listened can just match one property of the event triggered.
 
 	:param mixed event: ``{}`` or ``[{}]``. Required. JSON event to listen.
 	:param function callback: Required. The callback function to execute when the event occurs. The function takes as parameter the event trigger.
-	:param string caller: Caller name. If set, can stop listening to specific listener. See :js:func:`$context.nosUnlistenEvent`.
+	:param string caller: Caller name. If set, can stop listening to specific listener. See :js:func:`$container.nosUnlistenEvent`.
 
 	.. code-block:: js
 
@@ -96,9 +96,9 @@ nosListenEvent
 nosUnlistenEvent
 ****************
 
-.. js:function:: $context.nosUnlistenEvent(caller)
+.. js:function:: $container.nosUnlistenEvent(caller)
 
-	Stop listen events for a specific caller. See :js:func:`caller param of nosListenEvent <$context.nosListenEvent>`.
+	Stop listen events for a specific caller. See :js:func:`caller param of nosListenEvent <$container.nosListenEvent>`.
 
 	:param string caller: Caller name.
 

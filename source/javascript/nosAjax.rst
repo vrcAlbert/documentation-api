@@ -1,7 +1,7 @@
 nosAjax
 #######
 
-.. js:function:: $context.nosAjax(options)
+.. js:function:: $container.nosAjax(options)
 
 	Perform an asynchronous HTTP (Ajax) request. This is a wrapper of `jQuery.ajax() <http://api.jquery.com/jQuery.ajax/>`_.
 
@@ -12,8 +12,8 @@ nosAjax
 		* Some defaults options.
 		* Callbacks functions ``success`` and ``error`` are `monkey-patched <http://en.wikipedia.org/wiki/Monkey-Patch>`_ to execute defaults operations.
 
-			* Function :js:func:`$context.nosAjaxSuccess` is automatically call if the request success and return type is JSON.
-			* Function :js:func:`$context.nosAjaxError` is automatically call if the request fails.
+			* Function :js:func:`$container.nosAjaxSuccess` is automatically call if the request success and return type is JSON.
+			* Function :js:func:`$container.nosAjaxError` is automatically call if the request fails.
 
 	.. code-block:: js
 
@@ -26,7 +26,7 @@ nosAjax
 nosAjaxSuccess
 **************
 
-.. js:function:: $context.nosAjaxSuccess(options)
+.. js:function:: $container.nosAjaxSuccess(options)
 
 	Processes a return JSON of an AJAX request successed.
 
@@ -34,18 +34,18 @@ nosAjaxSuccess
 
 		:param mixed notify: A ``string`` or ``[string]``. Use for call :js:func:`$.nosNotify`.
 		:param mixed error: A ``string`` or ``[string]``. Use for call :js:func:`$.nosNotify` with ``error`` for notification type.
-		:param mixed action: A ``string`` or ``[string]``. Use for call :js:func:`$context.nosAction`.
+		:param mixed action: A ``string`` or ``[string]``. Use for call :js:func:`$container.nosAction`.
 		:param boolean closeDialog: If true, call :js:func:`nosDialog.close`.
 		:param boolean closeTab: If true, call :js:func:`nosTabs.close`.
 		:param JSON replaceTab: Use to call :js:func:`nosTabs.update`.
 		:param string redirect: Redirect browser window to this URL.
-		:param mixed dispatchEvent: Use to call :js:func:`$context.dispatchEvent`.
+		:param mixed dispatchEvent: Use to call :js:func:`$container.dispatchEvent`.
 		:param JSON internal_server_error: Display error and backtrace in the browser console.
 
 nosAjaxError
 ************
 
-.. js:function:: $context.nosAjaxError(jqXHR, textStatus)
+.. js:function:: $container.nosAjaxError(jqXHR, textStatus)
 
 	Processes a AJAX request in error.
 

@@ -1,7 +1,7 @@
 nosDialog
 #########
 
-.. js:function:: $context.nosDialog([method [, options [, ... ]]])
+.. js:function:: $container.nosDialog([method [, options [, ... ]]])
 
 	Manage back-office's popup. This is a :ref:`javascript/sub_function`.
 
@@ -21,7 +21,7 @@ nosDialog('open')
 	* From an URL loaded into a ``iframe``.
 	* Form an URL loaded into a ``<div>`` by AJAX request.
 
-	Catch events dispatched by :js:func:`$context.dispatchEvent`.
+	Catch events dispatched by :js:func:`$container.dispatchEvent`.
 
 	:param JSON options:
 
@@ -85,7 +85,7 @@ nosDialog('close')
 
 .. js:function:: nosDialog.close()
 
-	Close current popup (compared to the dialog where is the DOM element in jQuery).
+	Close current popup (compared to the dialog where is the DOM element in jQuery container).
 
 	.. code-block:: js
 

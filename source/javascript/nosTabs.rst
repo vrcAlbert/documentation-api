@@ -1,7 +1,7 @@
 nosTabs
 #######
 
-.. js:function:: $context.nosTabs([method [, options [, ... ]]])
+.. js:function:: $container.nosTabs([method [, options [, ... ]]])
 
 	Manage back-office's tabs. This is a :ref:`javascript/sub_function`.
 
@@ -61,7 +61,7 @@ nosTabs('add')
 		:iconUrl: Icon URL.
 		:iconSize: Icon size in pixel (square icon). Default 16.
 
-	:param string position: Position of the new tab. Can be ``end``, ``before`` or ``after`` the current tab (compared to the tab where is the DOM element in jQuery).
+	:param string position: Position of the new tab. Can be ``end``, ``before`` or ``after`` the current tab (compared to the tab where is the DOM element in jQuery container).
 
 	.. code-block:: js
 
@@ -83,7 +83,7 @@ nosTabs('close')
 
 .. js:function:: nosTabs.close()
 
-	Close current tab (compared to the tab where is the DOM element in jQuery).
+	Close current tab (compared to the tab where is the DOM element in jQuery container).
 
 	.. code-block:: js
 
@@ -94,7 +94,7 @@ nosTabs('update')
 
 .. js:function:: nosTabs.update(tab)
 
-	Update current tab (compared to the tab where is the DOM element in jQuery). Can load a new URL.
+	Update current tab (compared to the tab where is the DOM element in jQuery container). Can load a new URL.
 
 	:param mixed tab: JSON definition of tab.
 
@@ -122,7 +122,7 @@ nosTabs('current')
 
 .. js:function:: nosTabs.current(tab)
 
-	:returns: Index of the current tab (compared to the tab where is the DOM element in jQuery).
+	:returns: Index of the current tab (compared to the tab where is the DOM element in jQuery container).
 
 	.. code-block:: js
 

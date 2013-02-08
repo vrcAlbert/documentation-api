@@ -1,7 +1,7 @@
 nosMedia
 ########
 
-.. js:function:: $context.nosMedia([options])
+.. js:function:: $container.nosMedia([options])
 
 	Transform an ``<input type="hidden">`` element to a media selector UI in Media Center using plugin `inputFileThumb <http://www.novius-labs.com/contributions/jquery-plugin-inputfile/documentation.html>`_.
 
