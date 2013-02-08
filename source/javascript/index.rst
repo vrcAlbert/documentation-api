@@ -5,6 +5,7 @@ Javascript API
 
 	conventions
 	events
+	nosAction
 	nosAjax
 	nosDataReplace
 	nosDialog

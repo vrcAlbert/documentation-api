@@ -11,7 +11,7 @@ nosTabs
 nosTabs('open')
 ***************
 
-.. js:function:: nosTabs.open(tab)
+.. js:function:: nosTabs.open(tab [, dialogOptions ])
 
 	Open a new tab or re-open an existing tab if it has the same URL.
 
@@ -23,6 +23,8 @@ nosTabs('open')
 		:labelDisplay: If false, don't display the label, only the icon. Default ``true``.
 		:iconUrl: Icon URL.
 		:iconSize: Icon size in pixel (square icon). Default 16.
+
+	:param JSON dialogOptions: If DOM element in jQuery container is in popup, open a new popup by calling :js:func:`$container.nosDialog` instead of a tab. This parameter set options for :js:func:`$container.nosDialog`.
 
 	.. code-block:: js
 
@@ -48,7 +50,7 @@ nosTabs('open')
 nosTabs('add')
 **************
 
-.. js:function:: nosTabs.add(tab)
+.. js:function:: nosTabs.add(tab [, dialogOptions, position ])
 
 	Add a new tab, even if an existing has the same URL.
 
@@ -62,6 +64,7 @@ nosTabs('add')
 		:iconSize: Icon size in pixel (square icon). Default 16.
 
 	:param string position: Position of the new tab. Can be ``end``, ``before`` or ``after`` the current tab (compared to the tab where is the DOM element in jQuery container).
+	:param JSON dialogOptions: If DOM element in jQuery container is in popup, open a new popup by calling :js:func:`$container.nosDialog` instead of a tab. This parameter set options for :js:func:`$container.nosDialog`.
 
 	.. code-block:: js
 
