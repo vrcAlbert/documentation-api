@@ -42,7 +42,7 @@ Ouvrez un terminal et saisissez :
 .. code-block:: bash
 
     cd /var/www
-    sudo wget https://raw.github.com/novius-os/ci/master/0.2/tools/install.sh && sh install.sh
+    sudo wget http://raw.github.com/novius-os/ci/master/0.2/tools/install.sh && sh install.sh
 
 À la question « *Enter the directory name where you want to install Novius OS (default novius-os)* »,
 indiquez le nom du répertoire dans lequel vous voulez installer votre instance de Novius OS.
