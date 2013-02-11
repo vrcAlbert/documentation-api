@@ -28,7 +28,7 @@ Methods
 Other
 *****
 
-This behaviour extend Model method `->find() <http://fuelphp.com/docs/packages/orm/crud.html#read>`_.
+This behaviour extend :term:`Model->find()`.
 
 Add option to ``where`` array passed to method : you can use ``context`` key as alias for search in column :php:attr:`Orm_Behaviour_Contextable::$context_property`.
 

@@ -32,7 +32,7 @@ Configuration
 .. php:attr:: extension_property
 
 	Required.
-	Name of the parent relation use for generate first part of virtual path. See `relations in FuelPHP ORM <http://fuelphp.com/docs/packages/orm/relations/intro.html>`_.
+	Name of the parent :term:`relation <Relations>` use for generate first part of virtual path.
 
 Methods
 *******

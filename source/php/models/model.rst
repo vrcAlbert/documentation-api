@@ -3,12 +3,8 @@ Model
 
 .. php:class:: Model
 
-	| Extend Model of FuelPHP ORM.
+	| Extend :term:`Model of FuelPHP ORM <\Orm\Model>`.
 	| Belongs to the namespace :php:ns:`Nos/Orm`
-
-.. seealso::
-
-	See `Model of FuelPHP ORM <http://fuelphp.com/docs/packages/orm/creating_models.html>`_ for natives properties and methods.
 
 .. todo::
 
@@ -25,11 +21,11 @@ Configuration
 
 .. php:attr:: behaviours
 
-	Defined behaviours of model like for `observers <http://fuelphp.com/docs/packages/orm/observers/intro.html>`_.
+	Defined behaviours of model like for :term:`observers <Observers>`.
 
 .. php:attr:: attachment
 
-	Defined attachments of model. Attachment is a Novius OS special type of `relations <http://fuelphp.com/docs/packages/orm/relations/intro.html>`_. See :php:class:`Attachment`.
+	Defined attachments of model. Attachment is a Novius OS special type of :term:`relations <Relations>`. See :php:class:`Attachment`.
 
 Examples
 ========

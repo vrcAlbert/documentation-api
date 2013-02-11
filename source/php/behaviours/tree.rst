@@ -13,7 +13,7 @@ Configuration
 .. php:attr:: parent_relation
 
 	Required.
-	Name of the parent relation. See `relations in FuelPHP ORM <http://fuelphp.com/docs/packages/orm/relations/intro.html>`_.
+	Name of the parent :term:`relation <Relations>`.
 
 .. php:attr:: children_relation
 
@@ -47,7 +47,7 @@ Method
 
 	Children can be filter and / or sort by parameters.
 
-	| This method use native method `->find() <http://fuelphp.com/docs/packages/orm/crud.html#read>`_ of FuelPHP Model.
+	| This method use native method :term:`Model->find()`.
 	| ``$options`` parameter are passed to ``->find()`` like that:
 
 	.. code-block:: php
@@ -71,7 +71,7 @@ Method
 Other
 *****
 
-This behaviour extend Model method `->find() <http://fuelphp.com/docs/packages/orm/crud.html#read>`_.
+This behaviour extend :term:`Model->find()`.
 
 Add option to ``where`` array passed to method : you can use ``parent`` key as alias for search in :php:attr:`Orm_Behaviour_Tree::$parent_relation` relation.
 

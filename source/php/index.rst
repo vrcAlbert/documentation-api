@@ -5,6 +5,8 @@ PHP API
 
 .. php:namespace:: Nos/Orm
 
+.. php:namespace:: Nos/Page
+
 .. toctree::
 
 	configuration/index
@@ -13,4 +15,5 @@ PHP API
 	tools_context
 	events
 	datacatcher
+	fuelphp
 
