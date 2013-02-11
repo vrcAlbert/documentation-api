@@ -58,6 +58,7 @@ Enfin, on peut aussi le faire directement via le code, comme présenté ci-desso
 	    // Utilisation de la classe Str de FuelPHP
 	    if (Str::starts_with($params['url'], 'an-old-url'))
 	    {
+	        // Note : 10 == strlen('an-old-url')
 	        $new_url = 'my-new-url'.substr($params['url'], 10);
 
 	        // Utilisation de la classe Response de FuelPHP
