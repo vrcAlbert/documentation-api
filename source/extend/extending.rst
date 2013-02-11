@@ -5,14 +5,21 @@ Mécanismes d'extensions
 Créer un fichier dans :file:`local`
 ***********************************
 
-Il est possible de modifier n'importe quel fichier de vue ou de configuration via le dossier :file:`local`.
+On peut modifier n'importe quel fichier de vue ou de configuration via le dossier :file:`local`.
 
-Pour cela, il suffit de créer le fichier adéquat à l'emplacement :file:`local/{{section}}/{{application}}/`.
+Ceci est possible grâce au comportement des fichiers chargés « en cascade » existant dans FuelPHP et adapté dans Novius
+OS. C'est très simple à faire, car il suffit de copier un fichier existant et de le modifier à notre guise !
+
+Dans le cas d'une application, il faut copier le fichier dans :file:`local/config/apps/{{application}}/` ou
+:file:`local/views/apps/{{application}}/`.
+
+Pour étendre un fichier du moteur de Novius OS, on utilisera :file:`local/config/apps/novius-os/` et
+:file:`local/views/apps/novius-os/`.
+
+La syntaxe « générique » est donc :file:`local/{{section}}/{{application}}/` avec :
 
 * :file:`{{section}}`` est égal à :file:`config` ou :file:`views` ;
-* :file:`{{application}}`` correspond à un nom d'application existante.
-
-Le moteur a pour nom d'application ``novius-os``.
+* :file:`{{application}}`` correspond à :file:`apps` + un nom d'application ou :file:`novius-os` pour le moteur.
 
 
 Configuration
@@ -20,14 +27,12 @@ Configuration
 
 L'application ``noviusos_page`` possède un fichier de configuration :file:`controller/admin/appdesk.config.php` (le fichier se situe donc dans :file:`noviusos_page::config/controller/admin/appdesk.config.php`).
 
-Si on le copie dans :file:`local/config/noviusos_page/controller/admin/appdesk.config.php` alors ce dernier sera fusionné automatiquement avec celui de l'application qui le demande.
-
-Ceci est possible grâce au comportement des fichiers chargés « en cascade » existant dans FuelPHP et adapté dans Novius OS. C'est très simple à faire, car il suffit de copier un fichier de configuration existant et de le modifier à notre guise !
+Si on le copie dans :file:`local/{config/apps}/noviusos_page/controller/admin/appdesk.config.php` alors ce dernier sera fusionné automatiquement avec celui de l'application qui le demande.
 
 Vues
 ====
 
-Lorsqu'on créé le fichier :file:`local/views/noviusos_help/admin/help.view.php` ce dernier est utilisé en **remplacement** de :file:`noviusos_help::admin/help.view.php` !
+Lorsqu'on créé le fichier :file:`local/views/{apps/noviusos_help}/admin/help.view.php` ce dernier est utilisé en **remplacement** de :file:`noviusos_help::admin/help.view.php` !
 
 Pour étendre un fichier du moteur, on utilisera le nom d'application ``novius-os``. Par exemple, on créera le fichier :file:`local/views/novius-os/admin/login.view.php`.
 

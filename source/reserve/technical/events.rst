@@ -122,7 +122,7 @@ Modification possible de l'URL.
     /**
      * @param  string  $url  URL de la page courante (sans le nom de domaine et avec le .html)
      */
-	Event::register_function('front.start', function(&$params)
+	Event::register_function('front.start', function($params)
 	{
 	    $url =& $params['url'];
 	    // ...

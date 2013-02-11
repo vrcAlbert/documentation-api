@@ -44,8 +44,9 @@ Qui peut le plus peut le moins. Votre Novius OS peut gérer :
 * plusieurs sites dans une seule langue
 * un seul site dans une seule langue
 
-L'interface du back-office tient compte de ses différents cas. Le terme _contexte_ s'effacera alors pour ne parler plus que de sites ou de langues.
-Il disparaitra même complètement en cas d'un seul site et de une seule langue.
+| L'interface du back-office tient compte de ses différents cas. Le terme _contexte_ s'effacera alors pour ne parler plus
+  que de sites ou de langues.
+| Il disparaitra même complètement en cas d'un seul site et de une seule langue.
 
 Ajouter des contextes
 *********************

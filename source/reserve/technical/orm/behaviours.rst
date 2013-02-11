@@ -3,7 +3,7 @@
 Behaviours
 ##########
 
-En français, ``Behaviours`` veut dire comportements. Les ``Behaviours`` permettent d'étendre des ``Model`` en y ajoutant des comportements standardisés.
+En français, ``Behaviour`` veut dire comportemens. Les ``Behaviours`` permettent d'étendre des ``Model`` en y ajoutant des comportements standardisés.
 
 Ils sont similaire aux `Observers <http://docs.fuelphp.com/packages/orm/observers/intro.html>`_ de FuelPHP mais plus puissant :
 
