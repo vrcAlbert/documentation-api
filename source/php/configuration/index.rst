@@ -1,8 +1,9 @@
-Configuration documentation
-###########################
+Configuration
+#############
 
 .. toctree::
 
+	multi_context
 	metadata/index.rst
 	common/index.rst
 	appdesk/index.rst

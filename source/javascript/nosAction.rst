@@ -19,7 +19,7 @@ nosAction
 		* ``nosMediaVisualise`` (:js:attr:`nosAction.nosMediaVisualise`)
 		* ``dialogPick`` (:js:attr:`nosAction.dialogPick`)
 
-	:param JSON data: JSON contextuel Data. Use to replace placeholder in ``action`` by calling js:func:`$.nosDataReplace`.
+	:param JSON data: JSON contextuel Data. Use to replace placeholder in ``action`` by calling :js:func:`$.nosDataReplace`.
 
 Actions list
 ************

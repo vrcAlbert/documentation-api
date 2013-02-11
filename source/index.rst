@@ -12,7 +12,6 @@ Summary
 .. toctree::
 	:maxdepth: 2
 
-	configuration/index
 	php/index
 	javascript/index
 
