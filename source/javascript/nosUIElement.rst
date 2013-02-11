@@ -5,7 +5,7 @@ nosUIElement
 
 	:param JSON element: JSON definition of the element to create.
 
-		:type: ``string``. ``button`` (default) or ``link``. See :js:fun:`$container.nosFormUI` for buttons ``data``, those of links are almost the same.
+		:type: ``string``. ``button`` (default) or ``link``. See :js:func:`$container.nosFormUI` for buttons ``data``, those of links are almost the same.
 		:label: ``string``. Element label.
 		:action: ``{}``. Action bound to click event. See :js:func:`$container.nosAction`.
 		:bind: ``{}``. Event(s) bound to element. Voir `$().bind() <http://api.jquery.com/bind/>`_.

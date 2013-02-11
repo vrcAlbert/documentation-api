@@ -65,7 +65,7 @@ Tools_Context
 		$default_context_code = \Nos\Tools_Context::defaultContext();
 
 ::locale($container)
-------------------
+--------------------
 
 .. php:staticmethod:: locale($container)
 
@@ -80,7 +80,7 @@ Tools_Context
 		$code_flag = $locale['flag'];
 
 ::site($container)
-----------------
+------------------
 
 .. php:staticmethod:: site($container)
 

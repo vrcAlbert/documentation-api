@@ -12,9 +12,8 @@ Model
 
 .. todo::
 
-	Revoir l'ensemble
 	Expliquer le système de configuration par fichier de config
-	Lien vers Media et Wysiwyg
+	Plus d'infos sur Media et Wysiwyg
 
 Configuration
 *************
@@ -99,11 +98,11 @@ Properties
 
 .. php:attr:: medias
 
-	:php:class:`Model_Media` link to model.
+	:php:class:`Model_Media` linked to model.
 
 .. php:attr:: wysiwyg
 
-	:php:class:`Model_Wysiwyg` link to model.
+	:php:class:`Model_Wysiwyg` linked to model.
 
 
 Methods
@@ -117,7 +116,7 @@ Methods
 
 .. php:method:: get_possible_context()
 
-	:returns: Array of possible contexts ID for current item. See :doc:`/configuration/common/multi_context`.
+	:returns: Array of possible contexts ID for current item. See :doc:`/php/configuration/common/multi_context`.
 
 .. php:staticmethod:: add_properties($properties)
 
@@ -129,4 +128,9 @@ Methods
 
 .. php:method:: title_item()
 
-.. php:method:: pick()
+	:returns: Returns the item title, calculated from :php:attr:`Model::$title_property`.
+
+.. php:method:: pick($column [, $column [, $column [, ... ]]] )
+
+	:params array $column: A column name.
+	:returns: Returns the first non empty column. Will add column prefix (see :php:func:`Model::prefix`) when needed.
