@@ -1,5 +1,5 @@
-Inspectors documentation
-########################
+Inspectors
+##########
 
 .. toctree::
 

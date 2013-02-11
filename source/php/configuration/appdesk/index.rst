@@ -1,5 +1,5 @@
-Appdesk documentation
-#####################
+Appdesk
+#######
 
 .. toctree::
 

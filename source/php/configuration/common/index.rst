@@ -1,5 +1,5 @@
-Common documentation
-####################
+Common
+######
 
 .. toctree::
 
