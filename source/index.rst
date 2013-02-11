@@ -17,7 +17,8 @@ Sommaire
 
 	install/index
 	understand/index
-	extend/index
+	app_extend/index
+	app_create/index
 	release/index
 	contribute/index
 
