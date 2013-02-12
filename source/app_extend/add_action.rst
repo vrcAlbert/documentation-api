@@ -37,7 +37,7 @@ Il y a 3 cibles possibles pour les actions :
 .. image:: images/targets_grid.png
 	:alt: Cibles 'grid' des actions
 	:align: center
-|
+
 .. image:: images/targets_edit.png
 	:alt: Cible 'edit' des actions
 	:align: center
