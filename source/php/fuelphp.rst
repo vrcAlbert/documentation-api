@@ -23,6 +23,10 @@ FuelPHP
 		| A native :term:`FuelPHP ORM relation <Relations>`.
 		| See http://fuelphp.com/docs/packages/orm/relations/belongs_to.html
 
+	many_many
+		| A native :term:`FuelPHP ORM relation <Relations>`.
+		| See http://fuelphp.com/docs/packages/orm/relations/many_many.html
+
 	Model->find()
 		| Native method of FuelPHP ORM Model.
 		| See http://fuelphp.com/docs/packages/orm/crud.html#read

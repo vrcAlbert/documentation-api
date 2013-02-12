@@ -9,7 +9,6 @@ Model
 .. todo::
 
 	Expliquer le système de configuration par fichier de config
-	Plus d'infos sur Media et Wysiwyg
 
 Configuration
 *************
@@ -63,16 +62,13 @@ Example in configuration file:
 			'avatar' => array(
 				'dir' => 'namespace/model_name/avatar/',
 				'image' => true,
-				'url_path' => 'avatar',
+				'alias' => 'avatar',
 			),
 			'curriculum_vitae' => array(
 				'dir' => 'namespace/model_name/curriculum_vitae/',
 				'alias' => 'cv',
 				'extensions' => array('doc', 'odt', 'pdf'),
-				'check' => function($attached, $file_name) {
-					// ...
-					// return true or false, depend if current user have right to get file.
-				},
+				'check' => array('ClassName', 'methodName'),
 			),
 		),
 
@@ -89,17 +85,44 @@ Example in configuration file:
 		},
 	);
 
-Properties
-**********
+Relations
+*********
+
+.. php:attr:: linked_wysiwygs
+
+	* Relation type : :term:`has_many`.
+	* Model : :php:class:`Model_Wysiwyg`
+
+.. php:attr:: linked_medias
+
+	* Relation type : :term:`has_many`.
+	* Model : :php:class:`Model_Link`
+
+
+Accessors
+*********
 
 .. php:attr:: medias
 
-	:php:class:`Model_Media` linked to model.
+	Accessor for :php:class:`Model_Link` linked to model.
 
-.. php:attr:: wysiwyg
+	.. code-block:: php
 
-	:php:class:`Model_Wysiwyg` linked to model.
+		$item->medias->avatar // Get a Model_Link with key 'avatar'
+		$item->medias->avatar->media // Get Model_Media with key 'avatar'
 
+		$item->medias->cv->media = Model_Media // Set a Model_Media to key 'cv'
+
+.. php:attr:: wysiwygs
+
+	Accessor for :php:class:`Model_Wysiwyg` linked to model.
+
+	.. code-block:: php
+
+		$item->wysiwygs->content // Get a Model_Wysiwyg with key 'content'
+		$item->wysiwygs->content->wysiwyg_text // Get content of Model_Wysiwyg with key 'content'
+
+		$item->wysiwygs->summary = 'foo' // Set a Model_Wysiwyg with key 'content', width content 'foo'.
 
 Methods
 *******
@@ -112,7 +135,7 @@ Methods
 
 .. php:method:: get_possible_context()
 
-	:returns: Array of possible contexts ID for current item. See :doc:`/php/configuration/common/multi_context`.
+	:returns: Array of possible contexts ID for current item. See :doc:`/php/configuration/multi_context`.
 
 .. php:staticmethod:: add_properties($properties)
 

@@ -3,7 +3,7 @@ Contextable
 
 .. php:class:: Orm_Behaviour_Contextable
 
-	| For Model bound to a context. See :doc:`/configuration/common/multi_context`.
+	| For Model bound to a context. See :doc:`/php/configuration/multi_context`.
 	| Belongs to the namespace :php:ns:`Nos`
 
 Configuration

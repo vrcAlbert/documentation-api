@@ -15,17 +15,23 @@ Page types
 .. php:const:: TYPE_CLASSIC
 .. php:const:: TYPE_EXTERNAL_LINK
 
+Values for ``page_type`` column.
+
 External target types
 =====================
 
 .. php:const:: EXTERNAL_TARGET_NEW
 .. php:const:: EXTERNAL_TARGET_SAME
 
+Values for ``page_external_link_type`` column.
+
 Lock types
 ==========
 
 .. php:const:: LOCK_UNLOCKED
 .. php:const:: LOCK_DELETION
+
+Values for ``page_lock`` column.
 
 Relations
 *********

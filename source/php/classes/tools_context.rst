@@ -3,11 +3,12 @@ Tools_Context
 
 .. php:class:: Tools_Context
 
-	Use for retreive informations on yours contexts, sites and languages.
+	| Use for retreive informations on yours contexts, sites and languages.
+	| Belongs to the namespace :php:ns:`Nos`
 
 .. seealso::
 
-	:doc:`/configuration/common/multi_context`
+	:doc:`/php/configuration/multi_context`
 
 ::contexts()
 ------------
