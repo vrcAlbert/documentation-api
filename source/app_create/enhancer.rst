@@ -297,11 +297,7 @@ dernières. Pour ce faire, il faut alors implémenter une méthode statique ``ge
     }
 
 Cette fonction est liée à la ``Behaviour_Urlenhancer`` et aux méthodes ``url()`` et ``urls()`` des modèles. Pour voir
-comment les configurer, il faut se référer à la documentationd d'API associée :
-
-.. seealso::
-
-    :ref:`api:php/behaviours/urlenhancer`
+comment les configurer, il faut se référer à la :ref:`documentation d d'API associée <api:php/behaviours/urlenhancer>`.
 
 
 Exemple :
