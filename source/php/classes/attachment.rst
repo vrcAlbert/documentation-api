@@ -9,6 +9,11 @@ Attachment
 Configuration
 *************
 
+.. php:attr:: attached
+
+	Required.
+	The attached ID.
+
 .. php:attr:: dir
 
 	Required.
@@ -32,6 +37,19 @@ Configuration
 
 Methods
 *******
+
+.. php:staticmethod:: forge($attached, $config)
+
+	:params string $attached: The attached ID.
+	:params mixed $config: If is a ``string``, use it to load configuration array. ``Array`` otherwise:
+
+		:dir: :php:attr:`Attachment::$dir`
+		:alias: :php:attr:`Attachment::$alias`
+		:extensions: :php:attr:`Attachment::$extensions`
+		:image: :php:attr:`Attachment::$image`
+		:check: :php:attr:`Attachment::$check`
+
+	:returns: A new :php:class:`Attachment`.
 
 .. php:method:: newFile()
 
@@ -92,6 +110,13 @@ Example
 		'check' => 'check_attachment',
 	));
 
+	/ It's for example, USED GLOBALS IS EVIL
+	$GLOBALS['user_connected'] = true;
+
+	function check_attachment($attachment) {
+		return $GLOBALS['user_connected'];
+	}
+
 	try {
 		$attachment->set('/path/a_doc.doc');
 	} catch (\Fuel\Core\FileAccessException $e) {
@@ -105,5 +130,8 @@ Example
 
 	echo $attachment->url();
 	// Echo data/files/myapps-attachment/my_id/a_pdf.pdf
+
+	$GLOBALS['user_connected'] = false;
+	// Now URL data/files/myapps-attachment/my_id/a_pdf.pdf return 404
 
 	$attachment->delete();

@@ -3,7 +3,7 @@ Tools_Context
 
 .. php:class:: Tools_Context
 
-	| Use for retreive informations on yours contexts, sites and languages.
+	| Provide static methods for work with yours contexts, sites and languages.
 	| Belongs to the namespace :php:ns:`Nos`
 
 .. seealso::
