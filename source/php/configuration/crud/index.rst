@@ -1,5 +1,5 @@
-Crud documentation
-##################
+Crud
+####
 
 .. toctree::
 
