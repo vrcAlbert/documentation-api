@@ -110,7 +110,7 @@ Example
 		'check' => 'check_attachment',
 	));
 
-	/ It's for example, USED GLOBALS IS EVIL
+	// It's for example, USED GLOBALS IS EVIL
 	$GLOBALS['user_connected'] = true;
 
 	function check_attachment($attachment) {
