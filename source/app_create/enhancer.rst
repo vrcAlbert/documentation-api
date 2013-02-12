@@ -6,17 +6,7 @@ Créer un enhancer
 1. Définition dans le fichier :file:`metadata`
 ==============================================
 
-Les metadata d'un enhancer sont décrites dans la documentation d'API.
-
-.. seealso::
-    :ref:`api:metadata/enhancers`
-
-
-.. todo::
-
-    Mettre une référence avec un lien
-
-
+Les metadata d'un enhancer sont décrites dans la :ref:`documentation d'API <api:metadata/enhancers>`.
 
 
 2. [Back-office] Créer un contrôleur pour l'enhancer
@@ -73,14 +63,14 @@ fichier :file:`metadata.config.php`. Ajoutons cette information :
 Ici, la popup fera appel à la méthode ``action_popup()`` de la classe ``Mon\Appli\Controller_Admin_Enhancer``. Ce
 dernier est prévu pour fonctionner en Ajax.
 
-Comme pour toute modification du fichier :file:`metadata.config.php`, il faut aller appliquer les changements depuis le
-gestionnaire d'applications.
+Comme pour toute modification du fichier :file:`metadata.config.php`, il faut aller appliquer les changements depuis
+le gestionnaire d'applications.
 
 Désormais, lorsqu'on ajoute notre enhancer dans un WYSIWYG, une popup s'affiche, mais il n'y a aucune option à
 configurer !
 
-Le contrôleur standard que nous avons étendu prévoit d'être configuré pour ajouter les options de l'enhancer. Rendez-vous
-dans le fichier de configuration :file:`mon_appli::config/controller/admin/enhancer.config.php` :
+Le contrôleur standard que nous avons étendu prévoit d'être configuré pour ajouter les options de l'enhancer.
+Rendez-vous dans le fichier de configuration :file:`mon_appli::config/controller/admin/enhancer.config.php` :
 
 .. code-block:: php
    :emphasize-lines: 4-9
@@ -123,8 +113,8 @@ Modifier la prévisualisation
 La prévisualisation ajoutée dans le WYSIWYG est chargée en faisant appel à la valeur ``previewUrl`` configurée  dans le
 fichier :file:`metadata.config.php`.
 
-Généralement, vous ferez appel au même contrôleur que celui de la popup, mais en appelant la méthode ``action_preview()``
-au lieu de ``action_popup()``.
+Généralement, vous ferez appel au même contrôleur que celui de la popup, mais en appelant la méthode
+``action_preview()`` au lieu de ``action_popup()``.
 
 La vue fournie par défaut utilise un icône, un titre (les valeurs par défaut reprennent l'icône 64*64 de
 l'application, ainsi que le titre de l'enhancer) et un ``layout`` (fichiers de vues additionnels appelés).
@@ -143,17 +133,23 @@ l'application, ainsi que le titre de l'enhancer) et un ``layout`` (fichiers de v
         ),
         // Configuration de la prévisualisation
         'preview' => array(
-            // Vue fournie par défaut
-            'view' => 'nos::admin/enhancer/preview',
-            'layout' => array(),
+            // (facultatif) vue à utiliser pour le rendu (valeur par défaut en exemple)
+            //'view' => 'nos::admin/enhancer/preview',
+            // (facultatif) fichiers de vues additionnels (inclus par la view au-dessus)
+            //'layout' => array(),
             'params' => array(
-                // Optionnel, reprend le titre de l'enhancer par défaut
+                // (optionnel) reprend le titre de l'enhancer par défaut
                 'title' => "Mon super enhancer",
-                // 'icon' reprend celui de l'application en taille 64*64
+                // 'icon' (optionnel) reprend celui de l'application en taille 64*64 par défaut
             ),
         ),
     );
 
+
+À noter qu'il est possible de spécifier une fonction de callback à la fois pour le titre ou pour l'icône. Elle reçoit
+alors un paramètre : la configuration de l'enhancer ``$enhancer_args``.
+
+Par exemple, pour l'enhancer « Formulaire », le titre du formulaire sélectionné s'affiche.
 
 .. _app_create/enhancer/front:
 
@@ -163,14 +159,33 @@ l'application, ainsi que le titre de l'enhancer) et un ``layout`` (fichiers de v
 Une fois le WYSIWYG enregistré et la page publiée, l'enhancer va s'exprimer sur le site.
 
 Le contenu sera généré par le contrôleur configuré dans une des clés ``enhancer`` ou ``urlEnhancer`` du fichier
-:file:`metadata.config.php`
+:file:`metadata.config.php` (selon si on voulait un enhancer simple ou un URL enhancer). N'oubliez pas de prendre
+en compte les changements dans le gestionnaires d'applications si vous faites des modification sur ce fichier.
+
+Par exemple, l'application « Formulaires » a pour configuration ``noviusos_form/front/main`` ce qui fera appel à la
+méthode ``action_main()`` du ``Controller_Front`` de l'application ``noviusos_form`` (qui correspond en fait au
+contrôleur ``Nos\Form\Controller_Front``).
+
+Cette action prend en paramètre le tableau de configuration qui a été défini dans la popup de configuration
+``$enhancer_args``.
+
+Créons le contrôleur :file:`mon_appli::controller/front.ctrl.php`
 
 
-Par exemple, l'application « Formulaires » a pour configuration ``noviusos_form/front/main`` ce qui fera appel à la méthode
-``action_main()`` du ``Controller_Front`` de l'application ``noviusos_form`` (qui correspond en fait au contrôleur
-``Nos\Form\Controller_Front``).
+.. code-block:: php
 
-Cette action prend en paramètre le tableau de configuration qui a été défini dans la popup de configuration (`$enhancer_args`).
+    <?php
+
+    namespace Nos\Blog;
+
+    class Controller_Front extends \Nos\Controller_Front_Application
+    {
+        public function action_main($enhancer_args = array())
+        {
+            // Pour tester
+            return print_r($enhancer_args, true);
+        }
+    }
 
 
 .. _app_create/enhancer/url:
