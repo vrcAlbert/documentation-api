@@ -5,8 +5,8 @@ Configuration
 
 	multi_context
 	metadata
-	common/index
-	appdesk/index
-	inspector/index
-	crud/index
+	common
+	appdesk
+	inspector
+	crud
 	glossary
