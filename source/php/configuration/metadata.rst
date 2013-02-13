@@ -142,11 +142,60 @@ An enhancer is defined with:
 
 
 
+.. _metadata/templates:
+
 Templates
 =========
 
-:term:`Templates <Template>` are similar to other CMS' templates or themes. They provide a view for the front-office.
+:term:`Templates <Template>` are similar to other CMS' templates or themes. They provide a layout for the front-office.
 
+In Novius OS, a template contains one or more WYSIWYG editable area(s), which are is placed inside a grid.
+
+The grid has a size of ``cols`` * ``rows``, and each editable area is positioned using absolute coordinates (it's similar
+to ``position: absolute`` in CSS).
+
+Each WYSIWYG editable area has:
+
+- a **name**: it's the key in the ``layout`` array (see below) ;
+- a **position**: absolute coordinates inside the grid (similar to ``left`` and ``top`` in CSS) ;
+- a **size**: similar to ``width`` and ``height`` in CSS.
+
+In the end, a template is defined with:
+
+- ``file``: path to the template file (it's a view) ;
+- ``title``: title of the template, it's shown when selecting a template for a page ;
+- ``cols``: grid width (in units) ;
+- ``rows``: grid height (in units) ;
+- ``layout``: list of the WYSIWYG editors inside the grid :
+
+    - the key is the name of the WYSIWYG ;
+    - the value is a comma-separated string containing (in this order) :
+
+        - the left position (0-indexed) ;
+        - the top position (0-indexed) ;
+        - the width (in units) ;
+        - the height (in units).
+
+
+Here's an example:
+
+.. code-block:: php
+
+    <?php
+        'templates' => array(
+            'top_menu' => array(
+                'file' => 'noviusos_templates_basic::top_menu',
+                'title' => 'Default template with a top menu',
+                'cols' => 1,
+                'rows' => 1,
+                'layout' => array(
+                    // There is one WYSIWYG named 'content'
+                    // Position inside the grid: <left>,<top>,<width>,<height>
+                    'content' => '0,0,1,1',
+                ),
+            ),
+            // ...
+        ),
 
 
 

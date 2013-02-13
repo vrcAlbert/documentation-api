@@ -1,5 +1,26 @@
+Common
+######
+
+.. code-block:: php
+
+    <?php
+    return array(
+        'data_mapping' => array(
+            // columns on appdesks and inspectors.
+        ),
+        'i18n' => array(
+            // Optionnal: common translation (appdesk, crud, inspectors...).
+        ),
+        'actions' => array(
+            // Optionnal: common actions on the model.
+        ),
+        'icons' => array(
+            // Optionnal: common icon related to the model.
+        ),
+    );
+
 Data mapping
-############
+============
 
 Data mapping key defines columns on appdesks on inspectors.
 
@@ -51,3 +72,34 @@ Each value / key => value defines a column.
         ),
         // ...
     );
+
+I18n
+====
+
+This key contains all common translations.
+
+.. code-block:: php
+
+    <?php
+    return array(
+        'i18n' => array(
+            // Crud
+            'notification item added' => __('Done! The item has been added.'),
+            'notification item saved' => __('OK, all changes are saved.'),
+            'notification item deleted' => __('The item has been deleted.'),
+
+            // General errors
+            'notification item does not exist anymore' => __('This item doesn’t exist any more. It has been deleted.'),
+            'notification item not found' => __('We cannot find this item.'),
+
+            // ... extends /framework/config/i18n_common.config.php
+        ),
+    );
+
+Actions
+=======
+
+
+
+Icons
+=====
