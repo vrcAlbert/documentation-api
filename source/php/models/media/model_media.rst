@@ -1,10 +1,11 @@
 Model_Media
 ###########
 
+.. php:namespace:: Nos\Media
+
 .. php:class:: Model_Media
 
-	| Extend :php:class:`Model`.
-	| Belongs to the namespace :php:ns:`Nos/Media`
+	Extend :php:class:`Model`.
 
 Relations
 *********

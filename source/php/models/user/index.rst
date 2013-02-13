@@ -1,8 +1,6 @@
 User Models
 ###########
 
-.. php:namespace:: Nos/User
-
 .. todo::
 
 	On fait ?

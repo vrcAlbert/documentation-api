@@ -3,10 +3,11 @@
 Model
 #####
 
+.. php:namespace:: Nos\Orm
+
 .. php:class:: Model
 
-	| Extend :term:`Model of FuelPHP ORM <\Orm\Model>`.
-	| Belongs to the namespace :php:ns:`Nos/Orm`
+	Extend :term:`Model of FuelPHP ORM <\Orm\Model>`.
 
 .. todo::
 

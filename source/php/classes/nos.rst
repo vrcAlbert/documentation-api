@@ -1,10 +1,11 @@
 Nos
-###
+####
+
+.. php:namespace:: Nos
 
 .. php:class:: Nos
 
-	| Provide static methods useful in Novius OS.
-	| Belongs to the namespace :php:ns:`Nos`
+	Provide static methods useful in Novius OS.
 
 ::main_controller()
 -------------------

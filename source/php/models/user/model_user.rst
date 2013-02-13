@@ -1,10 +1,11 @@
 Model_User
 ##########
 
+.. php:namespace:: Nos\User
+
 .. php:class:: Model_User
 
-	| Extend :php:class:`Model`.
-	| Belongs to the namespace :php:ns:`Nos/User`
+	Extend :php:class:`Model`.
 
 .. todo::
 

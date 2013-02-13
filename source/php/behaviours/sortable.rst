@@ -1,10 +1,11 @@
 Sortable
 ########
 
+.. php:namespace:: Nos
+
 .. php:class:: Orm_Behaviour_Sortable
 
-	| For Model can be sort.
-	| Belongs to the namespace :php:ns:`Nos`
+	For Model can be sort.
 
 Configuration
 *************

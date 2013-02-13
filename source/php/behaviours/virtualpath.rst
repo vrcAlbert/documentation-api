@@ -1,11 +1,12 @@
 Virtualpath
 ###########
 
+.. php:namespace:: Nos
+
 .. php:class:: Orm_Behaviour_Virtualpath
 
 	| Extend :php:class:`Orm_Behaviour_Virtualname`.
-	|  Add a virtual path property to item.
-	| Belongs to the namespace :php:ns:`Nos`
+	| Add a virtual path property to item.
 
 .. seealso::
 

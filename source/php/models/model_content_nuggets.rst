@@ -1,10 +1,11 @@
 Model_Content_Nuggets
 #####################
 
+.. php:namespace:: Nos
+
 .. php:class:: Model_Content_Nuggets
 
-	| Extend :php:class:`Model`.
-	| Belongs to the namespace :php:ns:`Nos`
+	Extend :php:class:`Model`.
 
 .. todo::
 

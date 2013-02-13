@@ -2,16 +2,9 @@ Behaviours
 ##########
 
 .. toctree::
+	:glob:
 
-	contextable
-	publishable
-	sharable
-	sortable
-	tree
-	twinnable
-	urlenhancer
-	virtualname
-	virtualpath
+	*
 
 
 Printer friendly

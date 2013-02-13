@@ -1,10 +1,11 @@
 Model_Page
 ##########
 
+.. php:namespace:: Nos\Page
+
 .. php:class:: Model_Page
 
-	| Extend :php:class:`Model`.
-	| Belongs to the namespace :php:ns:`Nos/Page`
+	Extend :php:class:`Model`.
 
 Constantes
 **********

@@ -1,10 +1,11 @@
 Model_Wysiwyg
 #############
 
+.. php:namespace:: Nos
+
 .. php:class:: Model_Wysiwyg
 
-	| Extend :php:class:`Model`.
-	| Belongs to the namespace :php:ns:`Nos`
+	Extend :php:class:`Model`.
 
 Columns
 *******

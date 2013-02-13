@@ -1,7 +1,6 @@
 Metadata
 ########
 
-
 The :file:`metadata.config.php` file is how an application is defined. It tells what contains the application and what
 it does.
 
@@ -47,6 +46,8 @@ The most important keys are:
 
 An application provides:
 
+
+.. _php/configuration/metadata/launchers:
 
 Launchers
 =========
@@ -200,6 +201,8 @@ Here's an example:
     );
 
 
+
+.. _php/configuration/metadata/data_catchers:
 
 Data catchers
 =============

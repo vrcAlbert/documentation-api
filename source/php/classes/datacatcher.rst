@@ -1,9 +1,9 @@
 DataCatcher
 ###########
 
-.. php:class:: DataCatcher
+.. php:namespace:: Nos
 
-	Belongs to the namespace :php:ns:`Nos`
+.. php:class:: DataCatcher
 
 .. php:const:: TYPE_TITLE
 .. php:const:: TYPE_URL

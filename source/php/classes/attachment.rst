@@ -3,10 +3,11 @@
 Attachment
 ##########
 
+.. php:namespace:: Nos
+
 .. php:class:: Attachment
 
-	| Binds a file to an object.
-	| Belongs to the namespace :php:ns:`Nos`
+	Binds a file to an object.
 
 Configuration
 *************

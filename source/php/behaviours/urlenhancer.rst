@@ -3,10 +3,11 @@
 Urlenhancer
 ###########
 
+.. php:namespace:: Nos
+
 .. php:class:: Orm_Behaviour_Urlenhancer
 
 	| For Model displayed in front by a ``URL Enhancer``.
-	| Belongs to the namespace :php:ns:`Nos`
 
 .. todo::
 

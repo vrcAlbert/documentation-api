@@ -1,11 +1,12 @@
 Tree
 ####
 
+.. php:namespace:: Nos
+
 .. php:class:: Orm_Behaviour_Tree
 
 	| For Model whose behaviour tree (DB table has a join on itself).
 	| We then say that an item has a parent and children.
-	| Belongs to the namespace :php:ns:`Nos`
 
 Configuration
 *************

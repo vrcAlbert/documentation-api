@@ -1,10 +1,11 @@
 Publishable
 ###########
 
+.. php:namespace:: Nos
+
 .. php:class:: Orm_Behaviour_Publishable
 
-	| For Model whose behavior publishable.
-	| Belongs to the namespace :php:ns:`Nos`
+	For Model whose behavior publishable.
 
 .. note::
 
