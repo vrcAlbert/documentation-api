@@ -7,5 +7,5 @@ Comprendre Novius OS
 	ergonomie
 	applications
 	sharing
-	multi_context
+	multi_context/index
 	media_centre

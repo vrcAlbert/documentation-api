@@ -1,5 +1,5 @@
-Multi-Contextes
-###############
+Principes du multi-Contextes
+############################
 
 | Novius OS peut nativement gérer plusieurs sites, chacun de ces sites pouvant avoir plusieurs versions linguistiques.
 | Un contexte est un binome site / langue.

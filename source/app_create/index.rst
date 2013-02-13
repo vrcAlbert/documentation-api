@@ -6,4 +6,3 @@ Créer une nouvelle application
 	enhancer
 	template
 	attachment
-	twinnable
