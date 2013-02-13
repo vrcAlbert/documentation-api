@@ -16,7 +16,7 @@ Prérequis généraux
 
 			sudo apt-get install apache2 php5 mysql-server libapache2-mod-php5 php5-mysql
 
-* Avoir le **mod_rewrite** d’:program:`Apache` est activé.
+* Avoir le **mod_rewrite** d’:program:`Apache` activé.
 	.. code-block:: bash
 
 			sudo a2enmod rewrite
@@ -35,7 +35,7 @@ Installation rapide
 Prérequis
 =========
 
-* Avoir un accès ligne de commande sur le serveur et disposer des droits d'administation :command:`sudo`.
+* Avoir un accès ligne de commande sur le serveur et disposer des droits d'administration :command:`sudo`.
 * Avoir :program:`Git` installé.
 
 Installation
