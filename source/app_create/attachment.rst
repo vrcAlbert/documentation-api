@@ -12,7 +12,7 @@ Vous pouvez associer un fichier à un :ref:`api:php/models/model` mais aussi à 
 Pour définir un :ref:`api:php/classes/attachment` il suffit de fournir une configuration.
 
 .. code-block:: php
-	:linenothreshold: 3,4
+	:emphasize-lines: 3,4
 
 	<?php
 
