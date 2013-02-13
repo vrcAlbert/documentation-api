@@ -162,11 +162,11 @@ Each WYSIWYG editable area has:
 
 In the end, a template is defined with:
 
-- ``file``: path to the template file (it's a view) ;
-- ``title``: title of the template, it's shown when selecting a template for a page ;
-- ``cols``: grid width (in units) ;
-- ``rows``: grid height (in units) ;
-- ``layout``: list of the WYSIWYG editors inside the grid :
+:file:    path to the template file (it's a view)
+:title:   title of the template, it's shown when selecting a template for a page
+:cols:    grid width (in units)
+:rows:    grid height (in units)
+:layout:  list of the WYSIWYG editors inside the grid :
 
     - the key is the name of the WYSIWYG ;
     - the value is a comma-separated string containing (in this order) :
@@ -182,6 +182,8 @@ Here's an example:
 .. code-block:: php
 
     <?php
+
+    return array(
         'templates' => array(
             'top_menu' => array(
                 'file' => 'noviusos_templates_basic::top_menu',
@@ -194,8 +196,8 @@ Here's an example:
                     'content' => '0,0,1,1',
                 ),
             ),
-            // ...
         ),
+    );
 
 
 
