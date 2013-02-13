@@ -1,8 +1,6 @@
 Media Models
 ############
 
-.. php:namespace:: Nos/Media
-
 .. toctree::
 
 	model_media

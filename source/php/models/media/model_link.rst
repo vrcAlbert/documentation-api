@@ -1,11 +1,12 @@
 Model_Link
 ###########
 
+.. php:namespace:: Nos\Media
+
 .. php:class:: Model_Link
 
 	| Link between :php:class:`Model_Media` and :php:class:`Model`.
 	| Extend :php:class:`Model`.
-	| Belongs to the namespace :php:ns:`Nos/Media`
 
 Columns
 *******

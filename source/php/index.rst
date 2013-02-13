@@ -1,8 +1,6 @@
 PHP API
 #######
 
-.. php:namespace:: Nos
-
 .. toctree::
 
 	configuration/index

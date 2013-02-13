@@ -1,10 +1,11 @@
 Tools_Url
 #########
 
+.. php:namespace:: Nos
+
 .. php:class:: Tools_Url
 
-	| Provide static methods for URL.
-	| Belongs to the namespace :php:ns:`Nos`
+	Provide static methods for URL.
 
 ::page()
 --------

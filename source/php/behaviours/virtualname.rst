@@ -1,10 +1,11 @@
 Virtualname
 ###########
 
+.. php:namespace:: Nos
+
 .. php:class:: Orm_Behaviour_Virtualname
 
 	| Add a slug property to item.
-	| Belongs to the namespace :php:ns:`Nos`
 
 | ``Nos\Orm_Behaviour_Virtualname`` génère un nom virtuel (``slug``) pour chaque item.
 | Ce nom virtuel est généré automatiquement à partir de la propriété ``title_property`` du ``Model`` s'il n'est pas renseigné.

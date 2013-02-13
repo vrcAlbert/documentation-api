@@ -1,11 +1,11 @@
 Sharable
 ########
 
+.. php:namespace:: Nos
+
 .. php:class:: Orm_Behaviour_Sharable
 
-	| Add behaviour sharable to Models.
-	| Belongs to the namespace :php:ns:`Nos`
-
+	Add behaviour sharable to Models.
 
 .. todo::
 

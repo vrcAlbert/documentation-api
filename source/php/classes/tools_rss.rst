@@ -1,10 +1,11 @@
 Tools_RSS
 #########
 
+.. php:namespace:: Nos
+
 .. php:class:: Tools_RSS
 
-	| Use to build a RSS.
-	| Belongs to the namespace :php:ns:`Nos`
+	Use to build a RSS.
 
 Methods
 *******

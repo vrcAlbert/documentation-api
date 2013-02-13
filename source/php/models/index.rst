@@ -1,9 +1,6 @@
 Models
 ######
 
-.. php:namespace:: Nos/Orm
-.. php:namespace:: Nos/Page
-
 .. toctree::
 
 	model

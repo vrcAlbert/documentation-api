@@ -1,10 +1,11 @@
 Tools_Context
 #############
 
+.. php:namespace:: Nos
+
 .. php:class:: Tools_Context
 
-	| Provide static methods for work with yours contexts, sites and languages.
-	| Belongs to the namespace :php:ns:`Nos`
+	Provide static methods for work with yours contexts, sites and languages.
 
 .. seealso::
 
