@@ -33,8 +33,8 @@ Methods
 	Displays a time picker in a standalone manner.
 
 
-Examples
-********
+Example
+*******
 
 Adding a time picker in a CRUD form configuration:
 

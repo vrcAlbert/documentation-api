@@ -1,3 +1,6 @@
+
+.. _php/renderers:
+
 Renderers
 #########
 

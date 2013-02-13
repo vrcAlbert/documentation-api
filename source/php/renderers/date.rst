@@ -18,7 +18,7 @@ Configuration
 
 .. php:attr:: wrapper
 
-	HTML string to wrap the input + image
+	HTML string to wrap the ``<input>`` + the generated image to open the datepicker
 
 .. php:attr:: datepicker
 
@@ -58,8 +58,8 @@ Methods
 	Displays a date picker in a standalone manner.
 
 
-Examples
-********
+Example
+*******
 
 Adding a date picker in a CRUD form configuration:
 

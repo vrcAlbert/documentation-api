@@ -6,7 +6,7 @@ Media Selector
 .. php:class:: Renderer_Media
 
 	| This renderer is used to pick a file from the media centre.
-	| The UI part uses the jQuery UI widget called ``input-file-thumb``.
+	| It's based on the `jQuery UI input-file-thumb widget <http://www.novius-labs.com/contributions/jquery-plugin-inputfile/>`__.
 
 
 :Default UI:
@@ -59,8 +59,8 @@ Methods
 	Displays a media selector in a standalone manner.
 
 
-Examples
-********
+Example
+*******
 
 Adding a media in a CRUD form configuration:
 

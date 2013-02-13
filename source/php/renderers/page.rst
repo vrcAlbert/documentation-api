@@ -6,7 +6,7 @@ Page Selector
 .. php:class:: Renderer_Selector
 
 	| This renderer is used to pick a page.
-	| It will display a tree of the pages with radio buttons to pick a page.
+	| It displays a tree of the pages with radio buttons.
 
 
 .. image:: images/page_selector.png
@@ -59,8 +59,8 @@ Methods
 	Displays a page selector renderer in a standalone manner.
 
 
-Examples
-********
+Example
+*******
 
 Adding a page in a CRUD form configuration:
 

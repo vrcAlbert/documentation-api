@@ -7,8 +7,8 @@ Text
 
 	This renderer will show the value of the field as plain-text.
 
-Examples
-********
+Example
+*******
 
 Adding a text in a CRUD form configuration:
 
