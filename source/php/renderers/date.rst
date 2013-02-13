@@ -25,6 +25,8 @@ Configuration
 	Options for the datepicker widget used to render the UI. See the
 	`jQuery UI documentation <http://api.jqueryui.com/datepicker/>`__ for all available options.
 
+        .. Strange syntax here, we need a dummy text and double-indentation for :labels: to keep the case
+
         Default values below:
 
             :showOn: both

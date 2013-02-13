@@ -2,9 +2,7 @@ Renderers
 #########
 
 .. toctree::
+	:glob:
 
-	media
-	page
-	date
-	time
+	*
 
