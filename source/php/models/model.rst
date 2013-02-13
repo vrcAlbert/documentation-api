@@ -1,3 +1,5 @@
+.. _php/models/model:
+
 Model
 #####
 
@@ -37,10 +39,8 @@ Example in the class definition:
 	{
 		// In this example, attachments use defaults properties
 		protected static $_attachment = array(
-			'avatar' => array(
-			),
-			'cv' => array(
-			),
+			'avatar' => array(),
+			'cv' => array(),
 		);
 
 		protected static $_behaviours = array(

@@ -1,3 +1,5 @@
+.. _php/classes/attachment:
+
 Attachment
 ##########
 
@@ -33,7 +35,7 @@ Configuration
 
 .. php:attr:: check
 
-	A callback function if file not in public access. Function take the Attachement object for single parameter.
+	A `callback function <http://php.net/manual/en/language.types.callable.php>`_ if file not in public access. Function take the Attachement object for single parameter.
 
 Methods
 *******
@@ -110,8 +112,8 @@ Example
 		'check' => 'check_attachment',
 	));
 
-	// It's for example, USED GLOBALS IS EVIL
-	$GLOBALS['user_connected'] = true;
+	// It's for example
+	$_SESSION['user_connected'] = true;
 
 	function check_attachment($attachment) {
 		return $GLOBALS['user_connected'];
@@ -131,7 +133,7 @@ Example
 	echo $attachment->url();
 	// Echo data/files/myapps-attachment/my_id/a_pdf.pdf
 
-	$GLOBALS['user_connected'] = false;
+	$_SESSION['user_connected'] = false;
 	// Now URL data/files/myapps-attachment/my_id/a_pdf.pdf return 404
 
 	$attachment->delete();

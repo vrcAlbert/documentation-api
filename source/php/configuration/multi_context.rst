@@ -1,4 +1,4 @@
-.. _configuration_common_multi_contexts:
+.. _php/configuration/multi_contexts:
 
 Multi-Contexts
 ##############
