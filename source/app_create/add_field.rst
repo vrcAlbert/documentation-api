@@ -34,8 +34,8 @@ Exemple de configuration :
 	);
 
 
-Champs de formulaires standards (FuelPHP)
------------------------------------------
+Champs standards
+----------------
 
 Le texte en gras est la valeur de la propriété ``type``.
 
@@ -91,8 +91,8 @@ FuelPHP utilisera automatiquement la ``value`` comme texte du bouton.
 	);
 
 
-Champs améliorés (Renderer)
----------------------------
+Renderers (champs améliorés)
+----------------------------
 
 La liste des ``renderers`` est disponible dans :ref:`la documentation d'API <api:php/renderers>`.
 
