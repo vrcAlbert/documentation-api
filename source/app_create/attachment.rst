@@ -89,7 +89,7 @@ Fichier attaché sécurisé
 
 Si votre fichier attaché ne doit pas être accessible à n'importe qui, vous pouvez le sécuriser.
 Il suffit de définir, toujours dans le tableau de configuration, une clé ``check`` de type `fonction de callback <http://php.net/manual/fr/language.types.callable.php>`_.
-A chaque fois que le fichier se demandé, via son URL, le système exécutera cette fonction, en lui passant l'objet
+A chaque fois que le fichier sera demandé, via son URL, le système exécutera cette fonction, en lui passant l'objet
 :ref:`api:php/classes/attachment` en paramètre, pour vérifier si la personne connectée a le droit d'y accéder.
 
 Exemple :
