@@ -5,5 +5,6 @@ Créer une nouvelle application
 
 	enhancer
 	template
+	add_field
 	attachment
 	twinnable
