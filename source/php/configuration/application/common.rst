@@ -32,12 +32,12 @@ Associative array where each key => value defines a column, all keys are optiona
                 'title' => 'Column A',
                 'column' => 'col_a',
                 'multiContextHide' => true,
-				'cellFormatters' => array(
-					'center' => array(
-						'type' => 'css',
-						'css' => array('text-align' => 'center'),
-					),
-				),
+                'cellFormatters' => array(
+                    'center' => array(
+                        'type' => 'css',
+                        'css' => array('text-align' => 'center'),
+                    ),
+                ),
             ),
             'column_b' => array(
                 'title' => 'B',
