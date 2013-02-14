@@ -6,5 +6,6 @@ Créer une nouvelle application
 	enhancer
 	template
 	add_field
+	appdesk_views
 	attachment
 	twinnable
