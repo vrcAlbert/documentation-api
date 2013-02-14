@@ -3,7 +3,7 @@ nosDialog
 
 .. js:function:: $container.nosDialog([method [, options [, ... ]]])
 
-	Manage back-office's popup. This is a :ref:`javascript/sub_function`.
+	Manage back-office's popup. This is a :term:`function with sub-functions`.
 
 	:param mixed method: The sub-function name, ``open`` (default) or ``close``. If omit, this is the first parameter of the default sub-function :js:func:`nosDialog.open()`.
 	:param mixed options: Parameters of the sub-function.

@@ -24,7 +24,7 @@ nosAjax
 		});
 
 nosAjaxSuccess
-**************
+##############
 
 .. js:function:: $container.nosAjaxSuccess(options)
 
@@ -43,7 +43,7 @@ nosAjaxSuccess
 		:param JSON internal_server_error: Display error and backtrace in the browser console.
 
 nosAjaxError
-************
+############
 
 .. js:function:: $container.nosAjaxError(jqXHR, textStatus)
 

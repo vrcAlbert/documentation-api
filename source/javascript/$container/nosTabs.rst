@@ -3,7 +3,7 @@ nosTabs
 
 .. js:function:: $container.nosTabs([method [, options [, ... ]]])
 
-	Manage back-office's tabs. This is a :ref:`javascript/sub_function`.
+	Manage back-office's tabs. This is a :term:`function with sub-functions`.
 
 	:param mixed method: The sub-function name, ``open`` (default), ``add``, ``close``, ``update`` or ``current``. If omit, this is the first parameter of the default sub-function :js:func:`nosTabs.open()`.
 	:param mixed options: Parameters of the sub-function.

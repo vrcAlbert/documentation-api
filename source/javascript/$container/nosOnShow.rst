@@ -6,7 +6,7 @@ nosOnShow
 	Special API which delays the rendering of UI elements when they are visible.
 	A lot of UI elements don’t initialise correctly when they are hidden (they can’t calculate sizes properly).
 
-	This is a :ref:`javascript/sub_function`.
+	This is a :term:`function with sub-functions`.
 
 	:param mixed method: The sub-function name, ``show`` (default), ``one``  or ``bind``. If omit, this is the first parameter of the default sub-function :js:func:`nosOnShow.show()`.
 	:param mixed options: Parameters of the sub-function.
@@ -31,7 +31,7 @@ nosOnShow('show')
 
 
 nosOnShow('one')
-^^^^^^^^^^^^^^^^^
+****************
 
 .. js:function:: nosOnShow.one(callback)
 
@@ -47,7 +47,7 @@ nosOnShow('one')
 
 
 nosOnShow('bind')
-^^^^^^^^^^^^^^^^^
+*****************
 
 .. js:function:: nosOnShow.bind(callback)
 

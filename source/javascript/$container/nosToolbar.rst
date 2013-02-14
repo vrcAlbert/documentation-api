@@ -3,7 +3,7 @@ nosToolbar
 
 .. js:function:: $container.nosToolbar([method [, options [, ... ]]])
 
-	Manage back-office's toolbars. This is a :ref:`javascript/sub_function`.
+	Manage back-office's toolbars. This is a :term:`function with sub-functions`.
 
 	:param mixed method: The sub-function name, ``add`` (default) or ``create``. If omit, this is the first parameter of the default sub-function :js:func:`nosToolbar.add()`.
 	:param mixed options: Parameters of the sub-function.
@@ -33,7 +33,7 @@ nosToolbar('add')
 		$(domContext).nosToolbar($a);
 
 nosToolbar('create')
-^^^^^^^^^^^^^^^^^^^^
+********************
 
 .. js:function:: nosToolbar.create()
 

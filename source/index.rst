@@ -10,7 +10,7 @@ Summary
 =======
 
 .. toctree::
-	:maxdepth: 2
+	:titlesonly:
 
 	php/index
 	javascript/index

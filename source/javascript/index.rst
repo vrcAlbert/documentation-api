@@ -3,17 +3,6 @@ Javascript API
 
 .. toctree::
 
-	conventions
+	$/index
+	$container/index
 	events
-	nosAction
-	nosAjax
-	nosDataReplace
-	nosDialog
-	nosForm
-	nosMedia
-	nosNotify
-	nosOnShow
-	nosTabs
-	nosToolbar
-	nosUIElement
-
