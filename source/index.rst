@@ -1,13 +1,12 @@
 Documentation de Novius OS
-##########################
+==========================
 
-La documentation de Novius OS est hébergée et générée par `Read The Docs <http://readthedocs.org/>`__.
+Bienvenue sur la documentation de Novius OS. Elle est hébergée et générée par `Read The Docs <http://readthedocs.org/>`_.
+Toutes les contributions sont les bienvenues : signalement ou correction d'erreurs, propositions d'améliorations ou traductions.
+Les sources sont sur `Git Hub <https://github.com/novius-os/documentation-fr>`_, nous attendons vos ``Pull Request`` avec impatience. `Contactez-nous <http://www.novius-os.org/fr/footer/contacts.html>`_ si vous avez besoin d'aide avec votre contribution.
 
-Les sources sont disponibles dans `un dépôt sur GitHub <https://github.com/novius-os/documentation-fr>`__.
-
-N'hésitez pas à proposer des modifications via des ``Pull Request`` (si vous découvrez une erreur ou vous avez des suggestions d'amélioration).
-
-Vous êtes aussi bienvenus si vous voulez prendre part à sa traduction. `Contactez nous <http://www.novius-os.org/fr/footer/contacts.html>`__ pour plus de détails.
+* `Documentation d'API <http://docs-api.novius-os.org/>`_ (en anglais uniquement)
+* `English version <http://docs.novius-os.org/>`_
 
 Sommaire
 ========

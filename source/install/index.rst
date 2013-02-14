@@ -6,3 +6,4 @@ Installer Novius OS
 	install
 	setup_wizard
 	whats_next/index
+	update

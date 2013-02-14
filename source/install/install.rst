@@ -12,11 +12,13 @@ Prérequis généraux
 ******************
 
 * Disposer d'un serveur :program:`LAMP` avec PHP 5.3+.
+
 	.. code-block:: bash
 
 			sudo apt-get install apache2 php5 mysql-server libapache2-mod-php5 php5-mysql
 
 * Avoir le **mod_rewrite** d’:program:`Apache` activé.
+
 	.. code-block:: bash
 
 			sudo a2enmod rewrite
