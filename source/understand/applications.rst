@@ -15,10 +15,19 @@ Pour pouvoir ajouter une application au gestionnaire d'applications, il faut cr�
 
 Il est également possible de définir d’autres éléments dans ce fichier metadata :
 
-- **Launchers** : icônes de l'onglet d'accueil permet de lancer une application. Ils sont définis par un nom et une URL
-- **Data catchers** : composant d'une application permettant d'exploiter les données partagées par d'autres (dites sharable data)
-- **Enhancers** : grâce aux enhancers, une application vient enrichir le contenu édité dans un WYSIWYG.
-- **Templates** : modèles de pages pour le front-office.
+.. glossary::
+
+	Launchers
+		Icônes de l'onglet d'accueil permet de lancer une application. Ils sont définis par un nom et une URL
+
+	Data catchers
+		Composant d'une application permettant d'exploiter les données partagées par d'autres (dites sharable data)
+
+	Enhancers
+		Grâce aux enhancers, une application vient enrichir le contenu édité dans un WYSIWYG.
+
+	Templates
+		Modèles de pages pour le front-office.
 
 `Voir aussi l'infographie 'Comprendre les applications' <http://novius-os.github.com/docs/fr/applications.html>`_
 

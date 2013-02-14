@@ -22,14 +22,14 @@ Pour définir un :ref:`api:php/classes/attachment` il suffit de fournir une conf
 
 Dans l'exemple ci-dessus, notre fichier associé sera enregistré dans le répertoire :file:`local/data/files/apps/myapps/my_id/`.
 
-Pour enregistré un fichier, il suffira de faire :
+Pour enregistrer un fichier, il suffira de faire :
 
 .. code-block:: php
 
 	$attachment->set($_FILES['file']['tmp_name'], $_FILES['file']['name']);
 	$attachment->save();
 
-Dans cet exemple, nous enregsitrons un fichier uploadé comme fichier associé.
+Dans cet exemple, nous enregistrons un fichier uploadé comme fichier associé.
 Le chemin du fichier sera alors :file:`local/data/files/apps/myapps/my_id/nom_original.ext`
 où ``nom_original.ext`` est le nom original du fichier uploadé, récupérer via ``$_FILES['file']['name']``.
 
@@ -89,7 +89,7 @@ Fichier attaché sécurisé
 
 Si votre fichier attaché ne doit pas être accessible à n'importe qui, vous pouvez le sécuriser.
 Il suffit de définir, toujours dans le tableau de configuration, une clé ``check`` de type `fonction de callback <http://php.net/manual/fr/language.types.callable.php>`_.
-A chaque fois que le fichier se demandé, via son URL, le système exécutera cette fonction, en lui passant l'objet
+A chaque fois que le fichier sera demandé, via son URL, le système exécutera cette fonction, en lui passant l'objet
 :ref:`api:php/classes/attachment` en paramètre, pour vérifier si la personne connectée a le droit d'y accéder.
 
 Exemple :
