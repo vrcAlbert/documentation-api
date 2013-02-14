@@ -8,55 +8,17 @@ Les sources sont sur `Git Hub <https://github.com/novius-os/documentation-fr>`_,
 * `Documentation d'API <http://docs-api.novius-os.org/>`_ (en anglais uniquement)
 * `English version <http://docs.novius-os.org/>`_
 
- .. todolist::
-
-Tutos
------
-
-.. toctree::
-	:maxdepth: 1
-
-	how_to/install
-	how_to/setup-wizard
-	how_to/setup_front
-	how_to/extend_application
-
-Comprendre Novius OS
---------------------
-
-.. toctree::
-	:maxdepth: 1
-
-
-	understand/fondamentaux_os
-	understand/applications
-	understand/ergonomie
-
-* Infographie `Comprendre les applications <http://novius-os.github.com/docs/fr/applications.html>`_
-* `Glossaire <http://novius-os.github.com/docs/glossary.html>`_, apprenez le jargon Novius OS
-
-Documentation technique
------------------------
-
-.. toctree::
-	:maxdepth: 4
-	:titlesonly:
-
-	technical/coding_standards
-
-	technical/multi-context
-	technical/orm/orm
-	technical/sharing
-
-	technical/applications/general
-
-	technical/events
-
-Les nouveautés de la 0.2
-------------------------
+Sommaire
+========
 
 .. toctree::
 	:maxdepth: 2
 
-	release/0.2
-	release/migrate_from_0.1_to_0.2
+	install/index
+	understand/index
+	app_extend/index
+	app_create/index
+	release/index
+	contribute/index
+
+.. todolist::
