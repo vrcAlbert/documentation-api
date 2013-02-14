@@ -29,7 +29,7 @@ Votre instance Novius OS gérera alors **5** contextes :
 Configuration
 *************
 
-Pour configurer les différents contextes de votre instance Novius OS, veuillez vous référer à la :ref:`documentation d'API <api:php/configuration/multi_contexts>`.
+Pour configurer les différents contextes de votre instance Novius OS, veuillez vous référer à la :ref:`documentation d'API <api:php/configuration/software/multi_contexts>`.
 
 Cas particuliers
 ****************
