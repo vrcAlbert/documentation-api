@@ -9,7 +9,7 @@ Tools_Context
 
 .. seealso::
 
-	:doc:`/php/configuration/multi_context`
+	:doc:`/php/configuration/software/multi_context`
 
 ::contexts()
 ------------

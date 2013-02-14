@@ -1,9 +1,8 @@
-Configuration
-#############
+Application configuration
+#########################
 
 .. toctree::
 
-	multi_context
 	metadata
 	common
 	appdesk

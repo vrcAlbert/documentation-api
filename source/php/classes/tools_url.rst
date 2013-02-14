@@ -21,5 +21,5 @@ Tools_Url
 
 .. php:staticmethod:: context($context)
 
-	:params string $context: A context ID. See :doc:`/php/configuration/multi_context`.
+	:params string $context: A context ID. See :doc:`/php/configuration/software/multi_context`.
 	:returns: Home URL of the specify context.

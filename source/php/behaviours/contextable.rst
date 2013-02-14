@@ -7,7 +7,7 @@ Contextable
 
 .. php:class:: Orm_Behaviour_Contextable
 
-	For Model bound to a context. See :doc:`/php/configuration/multi_context`.
+	For Model bound to a context. See :doc:`/php/configuration/software/multi_context`.
 
 Configuration
 *************

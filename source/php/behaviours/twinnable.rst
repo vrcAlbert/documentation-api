@@ -8,7 +8,7 @@ Twinnable
 .. php:class:: Orm_Behaviour_Twinnable
 
 	| Extend :php:class:`Orm_Behaviour_Contextable`.
-	| It adds the ability to twin together different items with different contexts. See :doc:`/php/configuration/multi_context`.
+	| It adds the ability to twin together different items with different contexts. See :doc:`/php/configuration/software/multi_context`.
 
 .. seealso::
 

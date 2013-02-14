@@ -136,7 +136,7 @@ Methods
 
 .. php:method:: get_possible_context()
 
-	:returns: Array of possible contexts ID for current item. See :doc:`/php/configuration/multi_context`.
+	:returns: Array of possible contexts ID for current item. See :doc:`/php/configuration/software/multi_context`.
 
 .. php:staticmethod:: add_properties($properties)
 

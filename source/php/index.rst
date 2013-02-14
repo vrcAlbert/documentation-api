@@ -4,7 +4,8 @@ PHP API
 .. toctree::
 	:maxdepth: 2
 
-	configuration/index
+	configuration/software/index
+	configuration/application/index
 	models/index
 	behaviours/index
 	classes/index

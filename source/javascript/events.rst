@@ -42,7 +42,7 @@ Structure of an event
 .. js:attribute:: Event.context
 
 	| ``string`` or ``[string]``
-	| Context of the item that triggered the event. See :doc:`/php/configuration/multi_context`.
+	| Context of the item that triggered the event. See :doc:`/php/configuration/software/multi_context`.
 
 
 nosListenEvent
