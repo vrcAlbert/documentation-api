@@ -16,6 +16,7 @@ To define an action in PHP:
 
 .. code-block:: php
 
+	<?php
 	'action' => array(
 		'action' => 'actionName', // nosTabs, nosDialog, confirmationDialog, nosAjax, window.open, document.location...
 		// Other array keys depending the actionName
@@ -72,6 +73,7 @@ Apply CSS to content
 
 .. code-block:: php
 
+	<?php
 	array(
 		'type' => 'css',
 		'css' => array(
@@ -91,6 +93,7 @@ Add an icon, by its URL, before the actual content.
 
 .. code-block:: php
 
+	<?php
 	array(
 		'type' => 'icon',
 		'column' => 'column_icon', //URL is in the 'column_icon' column
@@ -122,6 +125,7 @@ Add an icon, by CSS classes, before the actual content.
 
 .. code-block:: php
 
+	<?php
 	array(
 		'type' => 'iconClasses',
 		'column' => 'column_icon_classes', //CSS classes is in the 'column_icon_classes' column
@@ -144,6 +148,7 @@ Add a link on actual content.
 
 .. code-block:: php
 
+	<?php
 	array(
 		'type' => 'link',
 		'action' => 'default', // Click bind the default action (ex: editing in the majority of cases)
@@ -171,34 +176,37 @@ Add a link on actual content.
 Full example
 ============
 
-        'data_mapping' => array(
-            'column_a' => array(
-                'title' => 'Column a'
-                'cellFormaters' => array(
-                	'bold' => array(
-                		'type' => 'bold',
-                	),
-					'center' => array(
-						'type' => 'css',
-						'css' => array(
-							'text-align' => 'center',
-						),
+.. code-block:: php
+
+	<?php
+	'data_mapping' => array(
+		'column_a' => array(
+			'title' => 'Column a'
+			'cellFormaters' => array(
+				'bold' => array(
+					'type' => 'bold',
+				),
+				'center' => array(
+					'type' => 'css',
+					'css' => array(
+						'text-align' => 'center',
 					),
-                ),
-            ),
-            'column_b' => array(
-                'title' => 'Column b'
-                'cellFormaters' => array(
-					'icon' => array(
-						'type' => 'icon',
-						'column' => 'column_icon',
-						'size' => 16
-					),
-                ),
-            ),
-            'column_icon' => array(
-            	value => function($item) {
-            		return $item->icon();
-            	},
-            ),
-        ),
+				),
+			),
+		),
+		'column_b' => array(
+			'title' => 'Column b'
+			'cellFormaters' => array(
+				'icon' => array(
+					'type' => 'icon',
+					'column' => 'column_icon',
+					'size' => 16
+				),
+			),
+		),
+		'column_icon' => array(
+			value => function($item) {
+				return $item->icon();
+			},
+		),
+	),

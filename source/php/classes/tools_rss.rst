@@ -71,7 +71,8 @@ Examples
 
 .. code-block:: php
 
-	$rss = \Nos\Tools_RSS::forge('RSS title');
+	<?php
+    $rss = \Nos\Tools_RSS::forge('RSS title');
 	$rss->set_items(array(
 		'title' => 'Item title',
 		'link' => 'http://www.mydomain.com/item_url.html',

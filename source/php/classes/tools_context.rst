@@ -20,6 +20,7 @@ Tools_Context
 
 	.. code-block:: php
 
+		<?php
 		$containers = \Nos\Tools_Context::contexts();
 		foreach ($containers as $container_key => $container_urls) {
 			// ....
@@ -34,6 +35,7 @@ Tools_Context
 
 	.. code-block:: php
 
+		<?php
 		$sites = \Nos\Tools_Context::sites();
 		foreach ($sites as $site_key => $site_params) {
 			$title = $site_params['title'];
@@ -49,6 +51,7 @@ Tools_Context
 
 	.. code-block:: php
 
+		<?php
 		$locales = \Nos\Tools_Context::locales();
 		foreach ($locales as $locale_key => $locale_params) {
 			$title = $locale_params['title'];
@@ -64,7 +67,8 @@ Tools_Context
 
 	.. code-block:: php
 
-		$default_context_code = \Nos\Tools_Context::defaultContext();
+		<?php
+        $default_context_code = \Nos\Tools_Context::defaultContext();
 
 ::locale($container)
 --------------------
@@ -77,7 +81,8 @@ Tools_Context
 
 	.. code-block:: php
 
-		$locale = \Nos\Tools_Context::locale('main::en_GB');
+		<?php
+        $locale = \Nos\Tools_Context::locale('main::en_GB');
 		$title = $locale['title'];
 		$code_flag = $locale['flag'];
 
@@ -92,7 +97,8 @@ Tools_Context
 
 	.. code-block:: php
 
-		$site = \Nos\Tools_Context::site('main::en_GB');
+		<?php
+        $site = \Nos\Tools_Context::site('main::en_GB');
 		$title = $site['title'];
 		$alias = $site['alias'];
 

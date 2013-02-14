@@ -36,7 +36,8 @@ Example in the class definition:
 
 .. code-block:: php
 
-	class Model_Example extends \Nos\Orm\Model
+	<?php
+    class Model_Example extends \Nos\Orm\Model
 	{
 		// In this example, attachments use defaults properties
 		protected static $_attachment = array(
@@ -58,7 +59,8 @@ Example in configuration file:
 
 .. code-block:: php
 
-	return array(
+	<?php
+    return array(
 		'attachment' => array(
 			'avatar' => array(
 				'dir' => 'namespace/model_name/avatar/',
@@ -109,7 +111,8 @@ Accessors
 
 	.. code-block:: php
 
-		$item->medias->avatar // Get a Model_Link with key 'avatar'
+		<?php
+        $item->medias->avatar // Get a Model_Link with key 'avatar'
 		$item->medias->avatar->media // Get Model_Media with key 'avatar'
 
 		$item->medias->cv->media = Model_Media // Set a Model_Media to key 'cv'
@@ -120,7 +123,8 @@ Accessors
 
 	.. code-block:: php
 
-		$item->wysiwygs->content // Get a Model_Wysiwyg with key 'content'
+		<?php
+        $item->wysiwygs->content // Get a Model_Wysiwyg with key 'content'
 		$item->wysiwygs->content->wysiwyg_text // Get content of Model_Wysiwyg with key 'content'
 
 		$item->wysiwygs->summary = 'foo' // Set a Model_Wysiwyg with key 'content', width content 'foo'.
