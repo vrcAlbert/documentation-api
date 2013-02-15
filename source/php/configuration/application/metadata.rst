@@ -59,11 +59,7 @@ A launcher is defined with:
 - a key: its ``identifier`` ;
 - a ``name``: text to display for the icon ;
 - an ``icon``: (optional) URL to a 64*64 image, default will use the 64*64 icon of the app ;
-- an ``action``: what is done when clicking on the launcher.
-
-.. todo::
-
-    Mettre un lien vers la doc des actions PHP.
+- an ``action``: what is done when clicking on the launcher. See :ref:`php/configuration/application/nosActions`.
 
 .. code-block:: php
 

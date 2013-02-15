@@ -13,6 +13,7 @@ Classes
 .. toctree::
 
 	nos
+	controller_front
 	attachment
 	tools_context
 	tools_rss

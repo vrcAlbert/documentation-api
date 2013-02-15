@@ -68,7 +68,8 @@ Tools_Context
 	.. code-block:: php
 
 		<?php
-        $default_context_code = \Nos\Tools_Context::defaultContext();
+		$default_context_code = \Nos\Tools_Context::defaultContext();
+
 
 ::locale($container)
 --------------------
@@ -82,9 +83,10 @@ Tools_Context
 	.. code-block:: php
 
 		<?php
-        $locale = \Nos\Tools_Context::locale('main::en_GB');
+		$locale = \Nos\Tools_Context::locale('main::en_GB');
 		$title = $locale['title'];
 		$code_flag = $locale['flag'];
+
 
 ::site($container)
 ------------------
@@ -98,9 +100,10 @@ Tools_Context
 	.. code-block:: php
 
 		<?php
-        $site = \Nos\Tools_Context::site('main::en_GB');
+		$site = \Nos\Tools_Context::site('main::en_GB');
 		$title = $site['title'];
 		$alias = $site['alias'];
+
 
 
 
