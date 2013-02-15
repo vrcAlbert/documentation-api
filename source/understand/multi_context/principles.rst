@@ -50,7 +50,6 @@ Ajouter des contextes
 Vous pouvez ajouter à n'importe quel moment de nouveaux contextes, sites ou langues à votre configuration.
 Modifiez simplement votre fichier ``contexts.config.php``, les nouveaux contextes sont aussitôt pris en compte.
 
-.. todo::
+.. seealso::
 
-	Lien vers la configuration de la doc d'API
-
+	:ref:`Documentation d'API du multi-contextes <api:php/configuration/software/multi_contexts>`.

@@ -49,9 +49,5 @@ Vous n'avez pas forcément envie de stocker tous vos fichiers dans la médiathè
 application « Offres d'emploi » qui reçoit des candidatures, vous ne souhaitez pas que les CV des candidats soient
 visibles dans la médiathèque.
 
-Pour traiter ce cas, il existe un mécanisme de fichiers indépendants ``Attachment``. À la manière des pièces jointes
+Pour traiter ce cas, il existe un mécanisme de fichiers indépendants :doc:`Attachment </app_create/attachment>`. À la manière des pièces jointes
 dans un e-mail, il est ainsi possible de joindre un fichier CV à une candidature.
-
-.. todo::
-
-	Lien vers la documenation d'API pour Attachement.
