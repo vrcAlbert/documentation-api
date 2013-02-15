@@ -77,7 +77,7 @@ In next example, ``col_b`` is sent in json under the column_b key but will not b
     );
 
 
-If the :php:class:`Nos\\Orm\\Model` have behaviour :php:class:`Nos\\Orm_Behaviour_Twinnable`, a pseudo column ``context`` is automatically add at the end of ``data_mapping``.
+If the :php:class:`Model` have behaviour :php:class:`Orm_Behaviour_Twinnable`, a pseudo column ``context`` is automatically add at the end of ``data_mapping``.
 But, if you want to position elsewhere, you can refrence:
 
 .. code-block:: php
@@ -175,17 +175,22 @@ Each action is an associative array. Key is the action ID, and value is an array
 
 :action: defines the action executed when action is triggered (using :doc:`/javascript/$/nosAction`)
 :label: Text associated to action (displayed or on tooltip)
-:primary: Is the action a primary action. On the grid,
+:primary: Is the action a primary action. On the grid, it defines whether or not it appears only in the action drop down or not
 :icon: Icon of the action. The string is appended to ``ui-icon-`` in order to obtain `jquery ui icon class <http://jqueryui.com/themeroller/#icons>`__.
 :red: Is the action red or not
-:targets: Where to display the action. It is an associated array where keys defines where to display the action,
-		  the value a boolean defining whether or not the action is displayed. ``targets`` can refined by the ``visible`` key There are 3 available keys :
+:targets: Where to display the action. It is an associated array where keys defines where to display the action, the value a boolean defining whether or not the action is displayed. ``targets`` can refined by the ``visible`` key There are 3 available keys :
 
     :grid: Is the action displayed on the grid (appdesk and inspector)
     :toolbar-grid: Is the action displayed on the grid toolbar
     :toolbar-edit: Is the action displayed on the crud edit toolbar
 
-:enabled: Callback function
+:disabled: Callback function that returns a boolean defining if the action is disabled or not for an item. There is only one parameter sent : the current item.
+:visible: Callback function that returns a boolean defining if the action is visible or not on a context. There is only one parameter sent, an associative array:
+
+    :model: Model tested.
+    :item: Only defined when actions are displayed on crud.
+    :target: Target where action is displayed. Value can be ``grid``, ``toolbar-grid`` or ``toolbar-edit`` (related to ``targets``).
+    :class: Class of the controller calling the function (this way you can differentiate appdesk and inspectors for instance).
 
 .. code-block:: php
 
@@ -208,8 +213,8 @@ Each action is an associative array. Key is the action ID, and value is an array
                     'grid' => true,
                     'toolbar-edit' => true,
                 ),
-                'enabled' => function($item) {
-                    return true;
+                'disabled' => function($item) {
+                    return false;
                 },
                 'visible' => function($params) {
                     return !isset($params['item']) || !$params['item']->is_new();
