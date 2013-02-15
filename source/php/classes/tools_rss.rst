@@ -15,14 +15,14 @@ Methods
 
 .. php:staticmethod:: forge($channel = array(), array $items = array())
 
-	:params mixed $channel: If it is a ``string``, use for ``title`` of channel. Associative array otherwise:
+	:param mixed $channel: If it is a ``string``, use for ``title`` of channel. Associative array otherwise:
 
         :encoding: Default ``UTF-8``. Use for XML encoding attribut.
         :version: Default ``2.0``. Use for version attribut of XML tag <rss>.
 
 		You can define any other key, which will be transformed into XML tag in the <channel />
 
-	:params array $items: Associative array. Each key will be transformed into XML tag in a <item />.
+	:param array $items: Associative array. Each key will be transformed into XML tag in a <item />.
 	:returns: A new :php:class:`Tools_RSS`.
 
 ::set()
@@ -30,8 +30,8 @@ Methods
 
 .. php:method:: set($property, $value = null)
 
-	:params mixed $property: A single ``string`` for set a channel property, or an associative array for multiple setting.
-	:params mixed $value: If ``$property`` is a ``string``, the value of the property.
+	:param mixed $property: A single ``string`` for set a channel property, or an associative array for multiple setting.
+	:param mixed $value: If ``$property`` is a ``string``, the value of the property.
 
 	Set one or multiple channel properties.
 
@@ -40,7 +40,7 @@ Methods
 
 .. php:method:: set_items(array $items)
 
-	:params array $items: Array of items.
+	:param array $items: Array of items.
 
 	Set a new array of items.
 
@@ -49,7 +49,7 @@ Methods
 
 .. php:method:: add_item(array $item)
 
-	:params array $item: An item.
+	:param array $item: An item.
 
 	Add a new item to array items.
 
@@ -58,8 +58,8 @@ Methods
 
 .. php:method:: build(array $channel = array(), array $items = array())
 
-	:params mixed $channel:
-	:params array $items:
+	:param mixed $channel:
+	:param array $items:
 	:returns: A XML description of RSS
 
 	See :php:meth:`Tools_RSS::forge` for parameters.
@@ -72,7 +72,7 @@ Examples
 .. code-block:: php
 
 	<?php
-    $rss = \Nos\Tools_RSS::forge('RSS title');
+	$rss = \Nos\Tools_RSS::forge('RSS title');
 	$rss->set_items(array(
 		'title' => 'Item title',
 		'link' => 'http://www.mydomain.com/item_url.html',

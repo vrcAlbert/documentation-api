@@ -32,15 +32,15 @@ nosAjaxSuccess
 
 	:param JSON options:
 
-		:param mixed notify: A ``string`` or ``[string]``. Use for call :js:func:`$.nosNotify`.
-		:param mixed error: A ``string`` or ``[string]``. Use for call :js:func:`$.nosNotify` with ``error`` for notification type.
-		:param mixed action: A ``string`` or ``[string]``. Use for call :js:func:`$container.nosAction`.
-		:param boolean closeDialog: If true, call :js:func:`nosDialog.close`.
-		:param boolean closeTab: If true, call :js:func:`nosTabs.close`.
-		:param JSON replaceTab: Use to call :js:func:`nosTabs.update`.
-		:param string redirect: Redirect browser window to this URL.
-		:param mixed dispatchEvent: Use to call :js:func:`$container.dispatchEvent`.
-		:param JSON internal_server_error: Display error and backtrace in the browser console.
+		:notify: A ``string`` or ``[string]``. Use for call :js:func:`$.nosNotify`.
+		:error: A ``string`` or ``[string]``. Use for call :js:func:`$.nosNotify` with ``error`` for notification type.
+		:action: A ``string`` or ``[string]``. Use for call :js:func:`$container.nosAction`.
+		:closeDialog: ``Boolean``. If ``true``, call :js:func:`nosDialog.close`.
+		:closeTab: ``Boolean``. If ``true``, call :js:func:`nosTabs.close`.
+		:replaceTab: ``{}``. Use to call :js:func:`nosTabs.update`.
+		:redirect: ``string``. Redirect browser window to this URL.
+		:dispatchEvent: Use to call :js:func:`$container.dispatchEvent`.
+		:internal_server_error: Display error and backtrace in the browser console.
 
 nosAjaxError
 ############

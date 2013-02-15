@@ -12,7 +12,7 @@ Tools_Url
 
 .. php:staticmethod:: page($page_id)
 
-	:params int $page_id: A :php:class:`Model_Page` ID.
+	:param int $page_id: A :php:class:`Model_Page` ID.
 	:returns: URL of the specify page.
 
 
@@ -21,5 +21,5 @@ Tools_Url
 
 .. php:staticmethod:: context($context)
 
-	:params string $context: A context ID. See :doc:`/php/configuration/software/multi_context`.
+	:param string $context: A context ID. See :doc:`/php/configuration/software/multi_context`.
 	:returns: Home URL of the specify context.

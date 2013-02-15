@@ -5,8 +5,8 @@ Model_Link
 
 .. php:class:: Model_Link
 
-	| Link between :php:class:`Model_Media` and :php:class:`Model`.
-	| Extend :php:class:`Model`.
+	| Link between :php:class:`Model_Media` and :php:class:`Nos\\Orm\\Model`.
+	| Extend :php:class:`Nos\\Orm\\Model`.
 
 Columns
 *******

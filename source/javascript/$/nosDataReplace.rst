@@ -6,7 +6,7 @@ nosDataReplace
 	Replace placeholder define by pattern ``{{placeholder}}`` in string or JSON.
 
 	:param mixed object: A string or a JSON, where to search placeholder to replace.
-	:param JSON data: A JSON, placeholder => replacement value.
+	:param JSON data: A JSON, ``placeholder => replacement value``.
 	:returns: Initial object with placeholders replaced.
 
 	.. code-block:: js

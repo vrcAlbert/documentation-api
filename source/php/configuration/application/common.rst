@@ -1,14 +1,14 @@
 Common
 ######
 
-Configuration for :php:class:`Model`, used in :doc:`appdesk`, :doc:`crud` or :doc:`inspector`.
+Configuration for :php:class:`Nos\\Orm\\Model`, used in :doc:`appdesk`, :doc:`crud` or :doc:`inspector`.
 
 Associative array:
 
 :data_mapping: columns on :doc:`appdesk` and :doc:`inspector`.
 :i18n: Optional, common translation
-:actions: Optional, common actions on the :php:class:`Model`.
-:icons: Optional, common icon related to the :php:class:`Model`.
+:actions: Optional, common actions on the :php:class:`Nos\\Orm\\Model`.
+:icons: Optional, common icon related to the :php:class:`Nos\\Orm\\Model`.
 
 Data mapping
 ************
@@ -18,9 +18,9 @@ Associative array where each key => value defines a column, all keys are optiona
 :title: Title of the grid column. If not set, column will not be displayed.
 :column: Default value is same as key.
 :search_column: Default value is column key value. Defines where on which sql column search / order.
-:search_relation: Default value is deduced from key (ex: "rel->col"). Relation to load (via related function on query).
+:search_relation: Default value is deduced from key (ex: ``rel->col``). Relation to load (via related function on query).
 :multiContextHide: Hide grid column when items are filtered on more than one contexts.
-:value: A closure function taking current item :php:class:`Model` in first parameter. Overloads value displayed in grid.
+:value: A closure function taking current item :php:class:`Nos\\Orm\\Model` in first parameter. Overloads value displayed in grid.
 :cellFormatters: Associative array of :ref:`cellFormatters <php/configuration/application/cellFormatters>` for formatting column display.
 
 .. code-block:: php
@@ -77,7 +77,7 @@ In next example, ``col_b`` is sent in json under the column_b key but will not b
     );
 
 
-If the :php:class:`Model` have behaviour :php:class:`Orm_Behaviour_Twinnable`, a pseudo column ``context`` is automatically add at the end of ``data_mapping``.
+If the :php:class:`Nos\\Orm\\Model` have behaviour :php:class:`Nos\\Orm_Behaviour_Twinnable`, a pseudo column ``context`` is automatically add at the end of ``data_mapping``.
 But, if you want to position elsewhere, you can refrence:
 
 .. code-block:: php
@@ -126,11 +126,11 @@ Actions
 
 This key contains all common actions related to the model. There are 5 actions automatically added:
 
-* ``add``: the "Add model" button located at the appdesk's toolbar
-* ``edit``: The "Edit" button located at the grids and crud toolbar
-* ``delete``: The "Edit" button located at the grids and crud toolbar
-* ``visualize``:
-* ``share``:
+* ``add``: the :guilabel:`Add model` button located at the appdesk's toolbar
+* ``edit``: The :guilabel:`Edit` button located at the grids and crud toolbar
+* ``delete``: The :guilabel:`Delete` button located at the grids and crud toolbar
+* ``visualize``: The :guilabel:`Visualize` button located at crud toolbar, if item is displayable in front-office.
+* ``share``: The :guilabel:`Share` button located at crud toolbar, if item have :php:class:`Nos\\Orm_Behaviour_Sharable` behaviour.
 
 The action key can be filled in two different ways.
 
@@ -150,7 +150,7 @@ The most common way is to define an associative array:
 
 If you want to define the order in which the actions are defined, two keys are to be defined:
 
-:list: associative array of actions (similar to previous 'actions' key
+:list: associative array of actions (similar to previous ``actions`` key)
 :order: array of action key defining their order
 
 .. code-block:: php
@@ -171,15 +171,15 @@ If you want to define the order in which the actions are defined, two keys are t
         ),
     );
 
-Each action is defined by a key => value. Key is the action id, and value is an array defining the action configuration:
+Each action is an associative array. Key is the action ID, and value is an array defining the action configuration:
 
 :action: defines the action executed when action is triggered (using :doc:`/javascript/$/nosAction`)
 :label: Text associated to action (displayed or on tooltip)
 :primary: Is the action a primary action. On the grid,
-:icon: Icon of the action. The string is appended to "ui-icon-" in order to obtain `jquery ui icon class <http://jqueryui.com/themeroller/#icons`
+:icon: Icon of the action. The string is appended to ``ui-icon-`` in order to obtain `jquery ui icon class <http://jqueryui.com/themeroller/#icons>`__.
 :red: Is the action red or not
 :targets: Where to display the action. It is an associated array where keys defines where to display the action,
-the value a boolean defining whether or not the action is displayed. ``targets`` can refined by the ``visible`` key There are 3 available keys :
+		  the value a boolean defining whether or not the action is displayed. ``targets`` can refined by the ``visible`` key There are 3 available keys :
 
     :grid: Is the action displayed on the grid (appdesk and inspector)
     :toolbar-grid: Is the action displayed on the grid toolbar
@@ -221,8 +221,17 @@ the value a boolean defining whether or not the action is displayed. ``targets``
 Placeholders
 ============
 
+.. todo::
+
+	Section vide
+
+
 Particular cases
 ================
+
+.. todo::
+
+	Section vide
 
 Icons
 *****

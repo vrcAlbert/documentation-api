@@ -5,7 +5,7 @@ Sortable
 
 .. php:class:: Orm_Behaviour_Sortable
 
-	For Model can be sort.
+	For :php:class:`Nos\\Orm\\Model` can be sort.
 
 Configuration
 *************
@@ -17,7 +17,7 @@ Configuration
 
 .. php:attr:: sort_order
 
-	``ASC`` (défaut) ou ``DESC``
+	``ASC`` (default) ou ``DESC``
 
 Methods
 *******

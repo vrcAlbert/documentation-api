@@ -5,12 +5,12 @@ Virtualpath
 
 .. php:class:: Orm_Behaviour_Virtualpath
 
-	| Extend :php:class:`Orm_Behaviour_Virtualname`.
+	| Extend :php:class:`Nos\\Orm_Behaviour_Virtualname`.
 	| Add a virtual path property to item.
 
 .. seealso::
 
-	:php:class:`Orm_Behaviour_Virtualname` for configuration and methods.
+	:php:class:`Nos\\Orm_Behaviour_Virtualname` for configuration and methods.
 
 Configuration
 *************
@@ -40,7 +40,7 @@ Methods
 
 .. php:method:: virtual_path($dir = false)
 
-	:params boolean $dir: If ``true``, extension replace by a final ``/``.
+	:param boolean $dir: If ``true``, extension replace by a final ``/``.
 	:returns: Virtual path of item.
 
 .. php:method:: extension()

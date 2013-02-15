@@ -5,7 +5,7 @@ Model_Wysiwyg
 
 .. php:class:: Model_Wysiwyg
 
-	Extend :php:class:`Model`.
+	Extend :php:class:`Nos\\Orm\\Model`.
 
 Columns
 *******

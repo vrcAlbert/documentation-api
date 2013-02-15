@@ -43,8 +43,8 @@ Methods
 
 .. php:staticmethod:: forge($attached, $config)
 
-	:params string $attached: The attached ID.
-	:params mixed $config: If is a ``string``, use it to load configuration array. ``Array`` otherwise:
+	:param string $attached: The attached ID.
+	:param mixed $config: If is a ``string``, use it to load configuration array. ``Array`` otherwise:
 
 		:dir: :php:attr:`Attachment::$dir`
 		:alias: :php:attr:`Attachment::$alias`
@@ -52,7 +52,7 @@ Methods
 		:image: :php:attr:`Attachment::$image`
 		:check: :php:attr:`Attachment::$check`
 
-	:returns: A new :php:class:`Attachment`.
+	:returns: A new :php:class:`Nos\\Attachment`.
 
 .. php:method:: newFile()
 
@@ -80,14 +80,14 @@ Methods
 
 .. php:method:: urlResized($max_width = 0, $max_height = 0)
 
-	:params array $max_width: Max width of the image.
-	:params array $max_height: Max height of the image.
+	:param array $max_width: Max width of the image.
+	:param array $max_height: Max height of the image.
 	:returns: Get the url of Attachment resized or ``false`` if no file or not an image.
 
 .. php:method:: set($file, $filename = null)
 
-	:params array $file: File path
-	:params array $filename: File name
+	:param array $file: File path
+	:param array $filename: File name
 	:returns: Set a new Attachment file.
 	:throws: \Fuel\Core\FileAccessException if new file have a not allowed extension.
 

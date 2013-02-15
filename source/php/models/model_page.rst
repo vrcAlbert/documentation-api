@@ -5,7 +5,7 @@ Model_Page
 
 .. php:class:: Model_Page
 
-	Extend :php:class:`Model`.
+	Extend :php:class:`Nos\\Orm\\Model`.
 
 Constantes
 **********
@@ -51,22 +51,22 @@ Relations
 Behaviours
 **********
 
-* :php:class:`Twinnable <Orm_Behaviour_Twinnable>`
-* :php:class:`Tree <Orm_Behaviour_Tree>`
-* :php:class:`Virtual path <Orm_Behaviour_Virtualpath>`
-* :php:class:`Sortable <Orm_Behaviour_Sortable>`
-* :php:class:`Publishable <Orm_Behaviour_Publishable>`
+* :php:class:`Twinnable <Nos\\Orm_Behaviour_Twinnable>`
+* :php:class:`Tree <Nos\\Orm_Behaviour_Tree>`
+* :php:class:`Virtual path <Nos\\Orm_Behaviour_Virtualpath>`
+* :php:class:`Sortable <Nos\\Orm_Behaviour_Sortable>`
+* :php:class:`Publishable <Nos\\Orm_Behaviour_Publishable>`
 
 Methods
 *******
 
 .. php:staticmethod:: link()
 
-	:returns: Returns the href and target attributes for an HTML link <a>.
+	:returns: Returns the href and target attributes for an HTML link ``<a>``.
 
 .. php:staticmethod:: url($params = array())
 
-	:params array $params:
+	:param array $params:
 
 		:preview: If set, return URL for previewed page
 

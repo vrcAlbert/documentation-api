@@ -10,14 +10,14 @@ nosAction
 		JSON define the action to execute.
 		JSON must have a key ``action``, can be :
 
-		* ``nosTabs`` (:js:attr:`nosAction.nosTabs`)
-		* ``nosDialog`` (:js:attr:`nosAction.nosDialog`)
-		* ``confirmationDialog`` (:js:attr:`nosAction.confirmationDialog`)
-		* ``nosAjax`` (:js:attr:`nosAction.nosAjax`)
-		* ``window.open`` (:js:attr:`nosAction.windowOpen`)
-		* ``document.location`` (:js:attr:`nosAction.documentLocation`)
-		* ``nosMediaVisualise`` (:js:attr:`nosAction.nosMediaVisualise`)
-		* ``dialogPick`` (:js:attr:`nosAction.dialogPick`)
+		:nosTabs: :js:attr:`nosAction.nosTabs`
+		:nosDialog: :js:attr:`nosAction.nosDialog`
+		:confirmationDialog: :js:attr:`nosAction.confirmationDialog`
+		:nosAjax: :js:attr:`nosAction.nosAjax`
+		:window.open: :js:attr:`nosAction.windowOpen`
+		:document.location: :js:attr:`nosAction.documentLocation`
+		:nosMediaVisualise: :js:attr:`nosAction.nosMediaVisualise`
+		:dialogPick: :js:attr:`nosAction.dialogPick`
 
 	:param JSON data: JSON contextuel Data. Use to replace placeholder in ``action`` by calling :js:func:`$.nosDataReplace`.
 

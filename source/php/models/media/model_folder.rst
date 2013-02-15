@@ -5,7 +5,7 @@ Model_Folder
 
 .. php:class:: Model_Folder
 
-	Extend :php:class:`Model`.
+	Extend :php:class:`Nos\\Orm\\Model`.
 
 Relations
 *********
@@ -29,8 +29,8 @@ Relations
 Behaviours
 **********
 
-* :php:class:`Tree <Orm_Behaviour_Tree>`
-* :php:class:`Virtual path <Orm_Behaviour_Virtualpath>`
+* :php:class:`Tree <Nos\\Orm_Behaviour_Tree>`
+* :php:class:`Virtual path <Nos\\Orm_Behaviour_Virtualpath>`
 
 Methods
 *******
@@ -45,11 +45,11 @@ Methods
 
 	:returns: ``True`` or ``false`` depending on whether the deletion was successful.
 
-	Delete all the public/cache entries (image thumbnails) for this folder
+	Delete all the public / cache entries (image thumbnails) for this folder
 
 .. php:method:: path($file = '')
 
-	:params string $file: A file name, right join to folder path in returns.
+	:param string $file: A file name, right join to folder path in returns.
 	:returns: Absolute folder path.
 
 .. php:method:: count_media()

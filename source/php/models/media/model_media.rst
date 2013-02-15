@@ -5,7 +5,7 @@ Model_Media
 
 .. php:class:: Model_Media
 
-	Extend :php:class:`Model`.
+	Extend :php:class:`Nos\\Orm\\Model`.
 
 Relations
 *********
@@ -18,7 +18,7 @@ Relations
 Behaviours
 **********
 
-* :php:class:`Virtual path <Orm_Behaviour_Virtualpath>`
+* :php:class:`Virtual path <Nos\\Orm_Behaviour_Virtualpath>`
 
 Methods
 *******
@@ -49,31 +49,31 @@ Methods
 
 .. php:method:: get_img_tag($params = array())
 
-	:params array $params:
+	:param array $params:
 
 		:max_width: Max width of the image.
 		:max_height: Max height of the image.
 
-	:returns: If media is an image, a HTML <img> tag with ``src``, ``width`` and ``height`` attributs, depends of ``$params``. ``False`` otherwise.
+	:returns: If media is an image, a HTML ``<img>`` tag with ``src``, ``width`` and ``height`` attributs, depends of ``$params``. ``False`` otherwise.
 
 .. php:method:: get_img_tag_resized($max_width = null, $max_height = null)
 
-	:params array $max_width: Max width of the image.
-	:params array $max_height: Max height of the image.
-	:returns: If media is an image, a HTML <img> tag with ``src``, ``width`` and ``height`` attributs. ``False`` otherwise.
+	:param array $max_width: Max width of the image.
+	:param array $max_height: Max height of the image.
+	:returns: If media is an image, a HTML ``<img>`` tag with ``src``, ``width`` and ``height`` attributs. ``False`` otherwise.
 
 	Alias of ``get_img_tag(array('width' => $max_width, 'height' => $max_height))``.
 
 .. php:method:: get_img_infos($max_width = null, $max_height = null)
 
-	:params array $max_width: Max width of the image.
-	:params array $max_height: Max height of the image.
+	:param array $max_width: Max width of the image.
+	:param array $max_height: Max height of the image.
 	:returns: If media is an image, an associative array with keys ``src``, ``width`` and ``height`` depends of size parameters. ``False`` otherwise.
 
 .. php:method:: get_public_path_resized($max_width = 0, $max_height = 0)
 
-	:params array $max_width: Max width of the image.
-	:params array $max_height: Max height of the image.
+	:param array $max_width: Max width of the image.
+	:param array $max_height: Max height of the image.
 	:returns: If media is an image, media URL relative to base href for specify size parameters. ``False`` otherwise.
 
 .. php:method:: is_image()

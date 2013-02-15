@@ -2,6 +2,7 @@ Models
 ######
 
 .. toctree::
+	:titlesonly:
 
 	model
 	model_page
