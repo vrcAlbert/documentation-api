@@ -19,6 +19,10 @@ FuelPHP
 		| FuelPHP ORM mechanism to add event on Model.
 		| See http://fuelphp.com/docs/packages/orm/observers/intro.html
 
+	Environments
+		| FuelPHP manage natively environments.
+		| See http://fuelphp.com/docs/general/environments.html
+
 	HMVC
 		| A FuelPHP concept.
 		| See http://fuelphp.com/docs/general/hmvc.html

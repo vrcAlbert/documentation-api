@@ -216,8 +216,4 @@ To go live
 **********
 
 You will probably need to define, for each of your contexts, different URLs between your local development instance and production.
-
-.. todo::
-
-	Lien vers un page traitant des environnement FUELPHP
-
+You can do that using :term:`environments mechanism <Environments>`.

@@ -7,11 +7,7 @@ Urlenhancer
 
 .. php:class:: Orm_Behaviour_Urlenhancer
 
-	| For Model displayed in front by a ``URL Enhancer``.
-
-.. todo::
-
-	Un seealso vers Enhancer et URL Enhancer
+	| For Model displayed in front by a :ref:`URL Enhancer <metadata/enhancers>`.
 
 Configuration
 *************
@@ -19,9 +15,9 @@ Configuration
 .. php:attr:: enhancers
 
 	Required.
-	Array of ``enhancers`` ID which can generate an URL for item.
+	Array of :ref:`enhancers <metadata/enhancers>` ID which can generate an URL for item.
 
-	``Enhancers`` listed must define a method ``get_url_model($item, $params)``.
+	:ref:`metadata/enhancers` listed must define a method ``get_url_model($item, $params)``.
 
 Methods
 *******
@@ -30,11 +26,11 @@ Methods
 
 	:param array $params:
 
-		:enhancer: Specify ``enhancer`` ID. Reduce search to the specify ``enhancer``.
+		:enhancer: Specify :ref:`enhancer <metadata/enhancers>` ID. Reduce search to the specify :ref:`enhancer <metadata/enhancers>`.
 
 	:returns: Associative array of possible URLs for this item
 
-		* key : ``page_id::item_slug``. ``item slug`` is the URL part generate by ``enhancer``.
+		* key : ``page_id::item_slug``. ``item slug`` is the URL part generate by :ref:`enhancer <metadata/enhancers>`.
 		* value : Absolute URL.
 
 .. php:method:: url($params = array())
