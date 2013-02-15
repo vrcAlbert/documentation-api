@@ -1,11 +1,11 @@
 Common
 ######
 
-Configuration for :php:class:`Model`, used in :doc:`appdesk`, :doc:`crud` or :doc:`inspectors`.
+Configuration for :php:class:`Model`, used in :doc:`appdesk`, :doc:`crud` or :doc:`inspector`.
 
 Associative array:
 
-:data_mapping: columns on :doc:`appdesk` and :doc:`inspectors`.
+:data_mapping: columns on :doc:`appdesk` and :doc:`inspector`.
 :i18n: Optional, common translation
 :actions: Optional, common actions on the :php:class:`Model`.
 :icons: Optional, common icon related to the :php:class:`Model`.
