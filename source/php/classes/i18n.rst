@@ -1,0 +1,88 @@
+
+.. _php/classes/i18n:
+
+I18n
+####
+
+.. php:namespace:: Nos
+
+.. php:class:: I18n
+
+	Provides the translation related functions.
+
+
+::setLocale()
+-------------
+
+.. php:staticmethod:: setLocale($locale)
+
+	Configure the locale to use for translations.
+
+	:params string $locale: A valid locale (``en``, ``en_GB``, ``en_GB.utf-8`` and ``en_GB.utf-8@variant`` are all valid).
+
+
+::restoreLocale()
+-----------------
+
+.. php:staticmethod:: restoreLocale()
+
+	Restores the previous locale.
+
+
+::load()
+--------
+
+.. php:staticmethod:: load($file)
+
+	Loads a dictionary for the current locale.
+
+	:params string $file: dictionary path.
+
+
+::get()
+-------
+
+.. php:staticmethod:: get($message, $default = null)
+
+	Retrieves a translation from the last loaded dictionary.
+
+	:params string $message: The message to translate.
+	:params string $default: The default text to return when the message is not found. Default value is the message itself.
+
+
+::gget()
+--------
+
+.. php:staticmethod:: gget($file, $message, $default = null)
+
+	Retrieves a translation from a specific dictionary.
+
+	:params string $file: Which dictionary to look into.
+	:params string $message: The message to translate.
+	:params string $default: The default text to return when the message is not found. Default value is the message itself.
+
+.. warning:: The dictionary must have been loaded manually before.
+
+
+::dictionary()
+--------------
+
+.. php:staticmethod:: dictionary($files)
+
+    Returns a closure that translate messages from a specific dictionary.
+
+	:params string|array $files: A dictionary file or list of dictionaries.
+
+
+    .. code-block:: php
+
+        <?php
+
+        // Retrieves an anonymous function
+        $dictionary = Nos\I18n::dictionary('mon_appli::common');
+
+        echo $dictionary('Translate this');
+
+
+
+
