@@ -8,6 +8,8 @@ Fondamentaux du logiciel
 		:depth: 2
 		:local:
 
+.. index:: MVC
+
 Une architecture MVC
 ********************
 
@@ -54,6 +56,8 @@ L’utilisation de frameworks oriente fortement la conception et l’implémenta
 Il convient donc de connaitre le rôle de chacun.
 Pour autant, cette documentation concernant Novius OS avant tout, veuillez vous référer à de la documentation ou tutoriaux externes pour plus de précisions sur ces frameworks.
 
+.. index:: FuelPHP
+
 FuelPHP
 =======
 
@@ -63,6 +67,8 @@ Le framework PHP utilisé pour Novius OS est `FuelPHP <http://fuelphp.com>`_. Il
 
 Les éléments de FuelPHP les plus utilisés sont ceux qui permettent de valider les données, l’ORM et le mapping des différents fichiers.
 Au delà de ces éléments, des outils inclus dans le framework simplifient grandement l’implémentation des applications (comme l’objet `Arr <http://docs.fuelphp.com/classes/arr.html>`_ par exemple).
+
+.. index:: ORM
 
 ORM de FuelPHP
 ==============
@@ -106,16 +112,18 @@ Cela s'explique par la grande importance donnée à l'interface utilisateur et �
 
 Pour proposer des interfaces et interactions riches, Novius OS utilise plusieurs librairies JS :
 
-**jQuery**
-	| Ce framework facilite l'écriture du code JS pour l'édition du contenu HTML. Il n'est pas directement orienté UI.
-	| `Documentation <http://api.jquery.com/>`__
+.. glossary::
 
-**jQuery UI**
-	| Ce complément de jQuery permet d'ajouter des éléments d'interface. Une majorité de l'UI de Novius OS est issue de cette librairie.
-	| `Documentation <http://api.jqueryui.com/>`__
+	jQuery
+		| Ce framework facilite l'écriture du code JS pour l'édition du contenu HTML. Il n'est pas directement orienté UI.
+		| `Documentation <http://api.jquery.com/>`__
 
-**Wijmo**
-	| Cette librairie est basée sur jQuery UI et fournit des éléments d'interface complémentaires, appelés widgets.
-	| `Documentation <http://wijmo.com/wiki/index.php/Main_Page>`__ et `Exemples <http://wijmo.com/demo/explore/>`__
+	jQuery UI
+		| Ce complément de jQuery permet d'ajouter des éléments d'interface. Une majorité de l'UI de Novius OS est issue de cette librairie.
+		| `Documentation <http://api.jqueryui.com/>`__
+
+	Wijmo
+		| Cette librairie est basée sur jQuery UI et fournit des éléments d'interface complémentaires, appelés widgets.
+		| `Documentation <http://wijmo.com/wiki/index.php/Main_Page>`__ et `Exemples <http://wijmo.com/demo/explore/>`__
 
 Il y a une hiérarchie entre ces librairies, Wijmo est la plus impactante sur l'ergonomie de Novius OS.

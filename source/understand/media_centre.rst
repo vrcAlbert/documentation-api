@@ -1,3 +1,5 @@
+.. index:: Mediathèque
+
 Médiathèque
 ###########
 
@@ -41,6 +43,8 @@ depuis le script PHP. Le nom de ce header varie d'un serveur à l'autre :
 
 	Lien vers la configuration de XSendfile sous Apache et dans Novius OS.
 
+.. index:: Fichiers joins
+.. index:: Attachment
 
 Fichiers joints (hors médiathèque)
 **********************************

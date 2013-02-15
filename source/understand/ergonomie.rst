@@ -4,6 +4,7 @@ Principes ergonomiques
 L’interface de Novius OS est construite autour de grands principes ergonomiques. Deux d’entre eux sont à connaitre pour
 le développement d’applications : la navigation par onglets et l’App Desk.
 
+.. index:: Onglets
 
 Navigation par onglets
 ----------------------

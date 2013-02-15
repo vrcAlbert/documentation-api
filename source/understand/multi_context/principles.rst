@@ -1,3 +1,5 @@
+.. index:: Multi-Contextes
+
 Principes du multi-Contextes
 ############################
 

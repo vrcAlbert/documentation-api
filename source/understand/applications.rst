@@ -1,3 +1,5 @@
+.. index:: Application
+
 Fondamentaux des applications
 =============================
 
@@ -31,6 +33,8 @@ Il est également possible de définir d’autres éléments dans ce fichier met
 
 `Voir aussi l'infographie 'Comprendre les applications' <http://novius-os.github.com/docs/fr/applications.html>`_
 
+
+.. index:: App Desk
 
 L’App Desk
 ----------
@@ -80,6 +84,9 @@ est un formulaire (ajout / édition). Ce dernier est construit grâce au fichier
 être rempli grâce à une instance du modèle. Le contrôleur est de nouveau appelé lors de l’envoi du formulaire pour
 enregistrer les données.
 
+
+.. index:: Observers
+.. index:: Behaviours
 
 Observers et behaviours
 -----------------------
