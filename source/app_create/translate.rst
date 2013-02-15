@@ -12,6 +12,8 @@ Ces répertoires de langues portent des noms de locales, comme par exemple :file
 
 Les dictionnaires sont des fichiers PHP qui retournent un tableau PHP, un peu comme les fichiers de configuration.
 
+.. seealso:: :ref:`API de la classe I18n <api:php/classes/i18n>`
+
 
 Fichier :file:`metadata.config.php`
 ===================================
