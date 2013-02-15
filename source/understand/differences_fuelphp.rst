@@ -32,9 +32,9 @@ Novius OS a une ``route`` configurée pour son back-office, dont la règle est l
 .. code-block:: php
 
 	<?php
-    'routes' => array(
-        '^admin/(:segment)/(:any)' => '$1/admin/$2',
-    ),
+	'routes' => array(
+		'^admin/(:segment)/(:any)' => '$1/admin/$2',
+	),
 
 Concrètement une URL :file:`admin/noviusos_page/page/insert_update/113` va être transformée en :file:`noviusos_page/admin/page/insert_update/113`.
 Ce qui correspond à exécuter la méthode ``action_insert_update`` du ``controller`` ``Controller_Admin_Page`` de l'application ``noviusos_page``.
