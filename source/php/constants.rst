@@ -13,9 +13,13 @@ All native constants of FuelPHP are available but links to specific Novius OS di
 
 	Path where Novius OS is installed.
 
+.. _php/constants/NOSPATH:
+
 .. php:const:: NOSPATH
 
 	Path of Novius OS core: :file:`NOSROOT/novius-os/framework/`.
+
+.. _php/constants/APPPATH:
 
 .. php:const:: APPPATH
 
