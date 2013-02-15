@@ -16,16 +16,10 @@ L'emplacement du fichier dépend de la clé ``file`` configurée dans le fichier
 
 À l'intérieur du gabarit, vous avez accès à plusieurs variables intéressantes :
 
-- ``$wysiwyg`` est un tableau contenant en clé le nom du WYSIWYG configuré dans le fichier :file:`metadata.config.php`
-  et en valeur le contenu saisi dans le back-office ;
-- ``$page`` contient l'instance du ``Nos\model_Page`` courant ;
-- ``$main_controller`` contient l'instance du contrôleur s'occupant du front-office ;
-  :ref:`voir la documentation associée <api:php/classes/controller_front>`.
-
-.. todo::
-
-    Vérifier le lien vers la documenation d'API (le document n'existe pas encore dedans...)
-
+:$wysiwyg: Un tableau contenant en clé le nom du WYSIWYG configuré dans le fichier :file:`metadata.config.php`
+  		   et en valeur le contenu saisi dans le back-office.
+:$page: L'instance du ``Nos\model_Page`` courant.
+:$main_controller: L'instance du :ref:`contrôleur s'occupant du front-office <api:php/classes/controller_front>`.
 
 .. code-block:: html
 
