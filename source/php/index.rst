@@ -6,6 +6,7 @@ PHP API
 
 	configuration/software/index
 	configuration/application/index
+	constants
 	models/index
 	behaviours/index
 	classes/index
