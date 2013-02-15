@@ -7,7 +7,7 @@ Mise à jour des fichiers
 Git
 ====
 
-Si vous avez installer Novius Os avec :program:`Git`, placez-vous dans le répertoire de votre Novius OS :
+Si vous avez installé Novius OS avec :program:`Git`, placez-vous dans le répertoire de votre Novius OS :
 
 .. code-block:: bash
 
@@ -22,8 +22,9 @@ Zip
 Si vous avez téléchargé Zip, la procédure est plus complexe.
 
 * Mettons que votre Novius OS est installé dans :file:`monsite/`.
-* Faites une sauvegarde de votre répertoire (copiz le répertoire ou zippez le).
-* Téléchargez le `zip de Novius OS <http://www.novius-os.org/download-novius-os-zip.html>`_ et dézippez le. Vous avez un répertoire :file:`novius-os/`.
+* Faites une sauvegarde de votre répertoire (copiez le répertoire ou zippez le).
+* Téléchargez le `nouveau zip de Novius OS <http://www.novius-os.org/download-novius-os-zip.html>`__ et dézippez-le.
+  Vous avez un répertoire :file:`novius-os/`.
 * Dans :file:`monsite/`, détruisez les répertoires suivant :
 	* :file:`monsite/novius-os/`
 	* :file:`monsite/local/migrations/`
@@ -43,13 +44,13 @@ Lancer la migration
 
 Avant de lancer la procédure de migration automatique, sauvegarder votre base de données.
 
-Si vous avez accès à :program:`Ssh` sur le serveur, placez-vous dans le répertoire de votre Novius OS :
+Si vous avez accès à :program:`SSH` sur le serveur, placez-vous dans le répertoire de votre Novius OS :
 
 .. code-block:: bash
 
 	sudo php oil refine migrate
 
-| Si vous n'avez pas accès à :program:`Ssh`, vous pouvez faire la migration via votre navigateur :
+| Si vous n'avez pas accès à :program:`SSH`, vous pouvez faire la migration via votre navigateur :
 
 * Au préalable vous devez renommer le fichier :file:`public/migrate.php.sample` en :file:`public/migrate.php`.
 * Appelez ensuite ce fichier via son URL, par exemple :file:`http://www.monsite.com/migrate.php`.
