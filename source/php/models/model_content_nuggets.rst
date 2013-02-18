@@ -5,7 +5,7 @@ Model_Content_Nuggets
 
 .. php:class:: Model_Content_Nuggets
 
-	Extend :php:class:`Model`.
+	Extend :php:class:`Nos\\Orm\\Model`.
 
 .. todo::
 

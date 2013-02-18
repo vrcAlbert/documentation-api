@@ -21,7 +21,7 @@ nosDialog('open')
 	* From an URL loaded into a ``iframe``.
 	* Form an URL loaded into a ``<div>`` by AJAX request.
 
-	Catch events dispatched by :js:func:`$container.dispatchEvent`.
+	Catch events dispatched by :js:func:`$.nosDispatchEvent`.
 
 	:param JSON options:
 

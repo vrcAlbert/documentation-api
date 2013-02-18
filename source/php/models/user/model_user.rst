@@ -5,7 +5,7 @@ Model_User
 
 .. php:class:: Model_User
 
-	Extend :php:class:`Model`.
+	Extend :php:class:`Nos\\Orm\\Model`.
 
 .. todo::
 
@@ -25,7 +25,7 @@ Methods
 
 .. php:method:: check_password($password)
 
-	:params string $password: Password to check if it matches the user password
+	:param string $password: Password to check if it matches the user password
 	:returns: ``True`` if passwords match, ``false`` otherwise.
 
 .. php:method:: generate_md5()

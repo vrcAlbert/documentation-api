@@ -5,7 +5,11 @@ Database
 
 The DB configuration was set by the install wizard. But you can (must for the passage in production)  update it after install.
 
-DB configuration is in :file:`local/config/db.php` and see `FuelPHP Database documentation <http://fuelphp.com/docs/classes/database/introduction.html>`_.
+DB configuration is in :file:`local/config/db.php`.
+
+ .. seealso::
+
+ 	`FuelPHP Database documentation <http://fuelphp.com/docs/classes/database/introduction.html>`_ for details.
 
 Email
 #####
@@ -14,4 +18,7 @@ By default, your Novius OS was not configure to send mail. The configuration is 
 
 You have a sample file for configuration in :file:`local/config/email.config.php.sample`.
 Simply rename it to :file:`local/config/email.config.php` and update it to your case.
-See `FuelPHP email package documentation <http://fuelphp.com/docs/packages/email/introduction.html>`_ for details.
+
+.. seealso::
+
+	`FuelPHP email package documentation <http://fuelphp.com/docs/packages/email/introduction.html>`_ for details.

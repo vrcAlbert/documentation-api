@@ -6,9 +6,9 @@ it does.
 
 The most important keys are:
 
-- ``name``: the name of the application ;
-- ``namespace``: in which PHP namespace all the classes of the application must be defined ;
-- ``icons``: in the 3 standard sizes 16*16, 32*32 and 64*64.
+:name: The name of the application.
+:namespace: In which PHP namespace all the classes of the application must be defined.
+:icons: In the 3 standard sizes 16*16, 32*32 and 64*64.
 
 .. code-block:: php
 
@@ -54,12 +54,11 @@ Launchers
 
 A :term:`launcher <Launcher>` is an icon on the home tab.
 
-A launcher is defined with:
+A launcher is defined by an associative array. Key is launcher ID, launcher properties is an associative array :
 
-- a key: its ``identifier`` ;
-- a ``name``: text to display for the icon ;
-- an ``icon``: (optional) URL to a 64*64 image, default will use the 64*64 icon of the app ;
-- an ``action``: what is done when clicking on the launcher. See :ref:`php/configuration/application/nosActions`.
+:name: Text to display for the icon.
+:icon: Optional. URL to a 64*64 image, default will use the 64*64 icon of the app.
+:action: What is done when clicking on the launcher. See :ref:`php/configuration/application/nosActions`.
 
 .. code-block:: php
 
@@ -102,15 +101,15 @@ has an URL.
 
 An enhancer is defined with:
 
-- ``title``: title of the enhancer displayed when opening the ‘Application’ menu from the wysiwyg ;
-- ``desc``: (optional) description of the enhancer ;
-- ``iconUrl``: (optional)  URL to a 16*16 icon, displayed when opening the ‘Application’ menu from the wysiwyg, default
-  will use the 16*16 icon of the app ;
-- ``enhancer`` or ``urlEnhancer``: URL of the front-office controller used to render the enhancer. Only one of the two
-  keys can is used, depending if you want an URL enhancer or just a plain regular enhancer ;
-- ``previewUrl``: (optional)  URL of the controller used to render the preview in the wysiwyg ;
-- ``dialog`` : (optional) If you want a configuration popup, URL of the controller used to display and save the
-  enhancer configuration. See :js:func:`$container.nosDialog` for the list of parameters.
+:title: Title of the enhancer displayed when opening the ‘Application’ menu from the wysiwyg.
+:desc: Optional. Description of the enhancer.
+:iconUrl: Optional. URL to a 16*16 icon, displayed when opening the ‘Application’ menu from the wysiwyg, default
+  		  will use the 16*16 icon of the app ;
+:enhancer: URL of the front-office controller used to render the enhancer.
+:urlEnhancer: Same that ``enhancer``.Only one of the two keys can is used, depending if you want an URL enhancer or just a plain regular enhancer.
+:previewUrl: Optional. URL of the controller used to render the preview in the wysiwyg.
+:dialog: Optional. If you want a configuration popup, URL of the controller used to display and save the
+  		 enhancer configuration. See :js:func:`$container.nosDialog` for the list of parameters.
 
 
 .. code-block:: php

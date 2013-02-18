@@ -11,6 +11,7 @@ Classes
 	* Tools_Wysiwyg
 
 .. toctree::
+	:titlesonly:
 
 	nos
 	controller_front
@@ -19,3 +20,4 @@ Classes
 	tools_rss
 	tools_url
 	datacatcher
+	i18n

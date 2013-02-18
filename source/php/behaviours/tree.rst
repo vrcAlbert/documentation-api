@@ -19,7 +19,7 @@ Configuration
 .. php:attr:: children_relation
 
 	Required.
-	Name of the children relation.
+	Name of the children :term:`relation <Relations>`.
 
 .. php:attr:: level_property
 
@@ -35,12 +35,12 @@ Method
 .. php:method:: set_parent($new_parent)
 
 	:param Model $new_parent: New parent Model of item.
-	:throws: ``Exception`` if item is moved in its own tree or, if item have behaviour :php:class:`Orm_Behaviour_Twinnable`,
+	:throws: ``Exception`` if item is moved in its own tree or, if item have behaviour :php:class:`Nos\\Orm_Behaviour_Twinnable`,
 	         if the new parent does not exist in one of the contexts of the current item.
 
 	Set a new parent for the item.
 
-	If item have behaviour :php:class:`Orm_Behaviour_Twinnable` and if it exists in several contexts, all contexts will be moved synchronously.
+	If item have behaviour :php:class:`Nos\\Orm_Behaviour_Twinnable` and if it exists in several contexts, all contexts will be moved synchronously.
 
 .. php:method:: find_children($where = array(), $order_by = array(), $options = array())
 

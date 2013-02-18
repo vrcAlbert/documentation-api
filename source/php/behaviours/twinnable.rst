@@ -7,12 +7,12 @@ Twinnable
 
 .. php:class:: Orm_Behaviour_Twinnable
 
-	| Extend :php:class:`Orm_Behaviour_Contextable`.
+	| Extend :php:class:`Nos\\Orm_Behaviour_Contextable`.
 	| It adds the ability to twin together different items with different contexts. See :doc:`/php/configuration/software/multi_context`.
 
 .. seealso::
 
-	:php:class:`Orm_Behaviour_Contextable` for configuration and methods.
+	:php:class:`Nos\\Orm_Behaviour_Contextable` for configuration and methods.
 
 Configuration
 *************
@@ -40,7 +40,7 @@ Methods
 
 .. php:method:: find_context($context)
 
-	:param mixed $context:
+	:param mixed $context: Can be
 
 		* Array of contexts ID.
 		* ``all``, to receive all contexts.

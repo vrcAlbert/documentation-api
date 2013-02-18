@@ -49,15 +49,19 @@ Methods
 	:param array $params: See :php:meth:`Orm_Behaviour_Urlenhancer::url`.
 	:returns: Absolute canonical URL of item or ``null`` if item can't be displayed in front.
 
-	Alias for `->url(array('canonical' => true))`.
+	Alias for ``->url(array('canonical' => true))``.
 
-	If item have behaviour :php:class:`Orm_Behaviour_Sharable`, return URL set in ``shared data (content nugget)``.
+	If item have behaviour :php:class:`Nos\\Orm_Behaviour_Sharable`, return URL set in ``shared data (content nugget)``.
+
+	.. todo::
+
+		Link to shared data (content nugget)
 
 .. php:method:: preview_url()
 
 	:returns: Absolute canonical URL of item, even if unpublished, or ``null`` if item can't be displayed in front.
 
-	Alias for `->url_canonical(array('preview' => true))`.
+	Alias for ``->url_canonical(array('preview' => true))``.
 
 Example
 *******

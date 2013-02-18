@@ -19,8 +19,8 @@ Nos
 
 .. php:staticmethod:: hmvc($where, $args = null)
 
-	:params mixed $where: Route for the request.
-	:params array $args: The method parameters.
+	:param mixed $where: Route for the request.
+	:param array $args: The method parameters.
 
 	Execute a :term:`HMVC` request.
 
@@ -29,7 +29,7 @@ Nos
 
 .. php:staticmethod:: parse_wysiwyg($content)
 
-	:params string $content: A :php:class:`Model_Wysiwyg` content.
+	:param string $content: A :php:class:`Nos\\Model_Wysiwyg` content.
 	:returns: Prepare wysiwyg content for display.
 
 	| Replace enhancers by theirs content

@@ -16,7 +16,7 @@ After installation, Novius OS is configured with three contexts, one site in thr
 .. code-block:: php
 
 	<?php
-    return array(
+	return array(
 		'sites' => array(
 			'main' => array(
 				'title' => 'Main site',
@@ -54,7 +54,7 @@ Here is an example configuration with five contexts across three sites and three
 .. code-block:: php
 
 	<?php
-    return array(
+	return array(
 		'sites' => array(
 			'main' => array(
 				'title' => 'Main site',
@@ -103,7 +103,7 @@ Here is an example configuration for just one site in one language:
 .. code-block:: php
 
 	<?php
-    return array(
+	return array(
 		'sites' => array(
 			'main' => array(
 				'title' => 'Main site',
@@ -137,7 +137,7 @@ Contexts on subdirectory
 .. code-block:: php
 
 	<?php
-    'contexts' => array(
+	'contexts' => array(
 		'main::en_GB' => array(), // Takes the default domain
 		'main::fr_FR' => array(
 			'http://www.mysite.com/fr/',
@@ -164,7 +164,7 @@ Contexts on domains
 .. code-block:: php
 
 	<?php
-    'contexts' => array(
+	'contexts' => array(
 		'main::en_GB' => array(
 			'http://www.monsite.com/',
 		),
@@ -192,7 +192,7 @@ Contexts with multiple URLs
 .. code-block:: php
 
 	<?php
-    'contexts' => array(
+	'contexts' => array(
 		'main::en_GB' => array(
 			'http://www.monsite.com/',
 		),

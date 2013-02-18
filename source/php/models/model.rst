@@ -27,7 +27,7 @@ Configuration
 
 .. php:attr:: attachment
 
-	Defined attachments of model. Attachment is a Novius OS special type of :term:`relations <Relations>`. See :php:class:`Attachment`.
+	Defined attachments of model. Attachment is a Novius OS special type of :term:`relations <Relations>`. See :php:class:`Nos\\Attachment`.
 
 Examples
 ========
@@ -37,7 +37,7 @@ Example in the class definition:
 .. code-block:: php
 
 	<?php
-    class Model_Example extends \Nos\Orm\Model
+	class Model_Example extends \Nos\Orm\Model
 	{
 		// In this example, attachments use defaults properties
 		protected static $_attachment = array(
@@ -60,7 +60,7 @@ Example in configuration file:
 .. code-block:: php
 
 	<?php
-    return array(
+	return array(
 		'attachment' => array(
 			'avatar' => array(
 				'dir' => 'namespace/model_name/avatar/',
@@ -94,12 +94,12 @@ Relations
 .. php:attr:: linked_wysiwygs
 
 	* Relation type : :term:`has_many`.
-	* Model : :php:class:`Model_Wysiwyg`
+	* Model : :php:class:`Nos\\Model_Wysiwyg`
 
 .. php:attr:: linked_medias
 
 	* Relation type : :term:`has_many`.
-	* Model : :php:class:`Model_Link`
+	* Model : :php:class:`Nos\\Media\\Model_Link`
 
 
 Accessors
@@ -107,24 +107,24 @@ Accessors
 
 .. php:attr:: medias
 
-	Accessor for :php:class:`Model_Link` linked to model.
+	Accessor for :php:class:`Nos\\Media\\Model_Link` linked to model.
 
 	.. code-block:: php
 
 		<?php
-        $item->medias->avatar // Get a Model_Link with key 'avatar'
+		$item->medias->avatar // Get a Model_Link with key 'avatar'
 		$item->medias->avatar->media // Get Model_Media with key 'avatar'
 
 		$item->medias->cv->media = Model_Media // Set a Model_Media to key 'cv'
 
 .. php:attr:: wysiwygs
 
-	Accessor for :php:class:`Model_Wysiwyg` linked to model.
+	Accessor for :php:class:`Nos\\Model_Wysiwyg` linked to model.
 
 	.. code-block:: php
 
 		<?php
-        $item->wysiwygs->content // Get a Model_Wysiwyg with key 'content'
+		$item->wysiwygs->content // Get a Model_Wysiwyg with key 'content'
 		$item->wysiwygs->content->wysiwyg_text // Get content of Model_Wysiwyg with key 'content'
 
 		$item->wysiwygs->summary = 'foo' // Set a Model_Wysiwyg with key 'content', width content 'foo'.
@@ -144,7 +144,7 @@ Methods
 
 .. php:staticmethod:: add_properties($properties)
 
-	:params array $properties: Properties to merge.
+	:param array $properties: Properties to merge.
 
 .. php:staticmethod:: prefix()
 
@@ -156,5 +156,5 @@ Methods
 
 .. php:method:: pick($column [, $column [, $column [, ... ]]] )
 
-	:params array $column: A column name.
+	:param array $column: A column name.
 	:returns: Returns the first non empty column. Will add column prefix (see :php:func:`Model::prefix`) when needed.
