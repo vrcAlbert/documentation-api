@@ -77,8 +77,8 @@ In next example, ``col_b`` is sent in json under the column_b key but will not b
     );
 
 
-If the :php:class:`Model` have behaviour :php:class:`Orm_Behaviour_Twinnable`, a pseudo column ``context`` is automatically add at the end of ``data_mapping``.
-But, if you want to position elsewhere, you can refrence:
+If the :php:class:`Model` have behaviour :php:class:`Orm_Behaviour_Twinnable`, a pseudo column ``context`` is automatically added at the end of ``data_mapping``.
+But, if you want to place it elsewhere, you can insert it like this:
 
 .. code-block:: php
 
@@ -126,11 +126,11 @@ Actions
 
 This key contains all common actions related to the model. There are 5 actions automatically added:
 
-* ``add``: the :guilabel:`Add model` button located at the appdesk's toolbar
-* ``edit``: The :guilabel:`Edit` button located at the grids and crud toolbar
-* ``delete``: The :guilabel:`Delete` button located at the grids and crud toolbar
-* ``visualize``: The :guilabel:`Visualize` button located at crud toolbar, if item is displayable in front-office.
-* ``share``: The :guilabel:`Share` button located at crud toolbar, if item have :php:class:`Nos\\Orm_Behaviour_Sharable` behaviour.
+* ``add``: the :guilabel:`Add model` button located on the appdesk's toolbar
+* ``edit``: The :guilabel:`Edit` button located on the grids and crud toolbar
+* ``delete``: The :guilabel:`Delete` button located on the grids and crud toolbar
+* ``visualize``: The :guilabel:`Visualize` button located on grids and crud toolbar, if item is displayable in front-office.
+* ``share``: The :guilabel:`Share` button located on crud toolbar, if item have the :php:class:`Nos\\Orm_Behaviour_Sharable` behaviour.
 
 The action key can be filled in two different ways.
 
@@ -173,18 +173,18 @@ If you want to define the order in which the actions are defined, two keys are t
 
 Each action is an associative array. Key is the action ID, and value is an array defining the action configuration:
 
-:action: defines the action executed when action is triggered (using :doc:`/javascript/$/nosAction`)
-:label: Text associated to action (displayed or on tooltip)
-:primary: Is the action a primary action. On the grid, it defines whether or not it appears only in the action drop down or not
+:action: defines the action executed when action is triggered (using :doc:`/javascript/$/nosAction`).
+:label: Text associated to action (displayed or on tooltip).
+:primary: Is the action a primary action. On the grid, it defines whether or not it appears only in the action drop down or not.
 :icon: Icon of the action. The string is appended to ``ui-icon-`` in order to obtain `jquery ui icon class <http://jqueryui.com/themeroller/#icons>`__.
-:red: Is the action red or not
-:targets: Where to display the action. It is an associated array where keys defines where to display the action, the value a boolean defining whether or not the action is displayed. ``targets`` can refined by the ``visible`` key There are 3 available keys :
+:red: Is the action red or not.
+:targets: Where to display the action. It is an associated array where keys defines where to display the action, the value a boolean defining whether or not the action is displayed. ``targets`` can be refined by the ``visible`` key. There are 3 available keys:
 
-    :grid: Is the action displayed on the grid (appdesk and inspector)
-    :toolbar-grid: Is the action displayed on the grid toolbar
-    :toolbar-edit: Is the action displayed on the crud edit toolbar
+    :grid: Is the action displayed on the grid (appdesk and inspector) ?
+    :toolbar-grid: Is the action displayed on the grid toolbar ?
+    :toolbar-edit: Is the action displayed on the crud edit toolbar ?
 
-:disabled: Callback function that returns a boolean defining if the action is disabled or not for an item. There is only one parameter sent : the current item.
+:disabled: Callback function that returns a boolean defining if the action is disabled or not for an item. There is only one parameter sent: the current item.
 :visible: Callback function that returns a boolean defining if the action is visible or not on a context. There is only one parameter sent, an associative array:
 
     :model: Model tested.
@@ -226,10 +226,32 @@ Each action is an associative array. Key is the action ID, and value is an array
 Default actions and particular cases
 ====================================
 
-Default actions (such as ``add`` or ``edit``) can be overloaded with this ``actions`` key
+Default actions (such as ``add`` or ``edit``) can be overloaded with this ``actions`` key. `\\Arr::merge <http://fuelphp.com/docs/classes/arr.html#/method_merge>`__ is used to merge defined actions with default actions.
+
+This will hide the default ``add`` action:
+
+.. code-block:: php
+
+    <?php
+    return array(
+        // ...
+        'actions '=> array(
+            'add' => false,
+        ),
+    );
 
 Placeholders
 ============
+
+Placeholders are available in order to simplify action targets and labels. First, some placeholders are always available:
+
+* ``controller_base_url``: url of crud controller
+* ``model_label``: generated from model class name
+* ``_id``: id of the object
+* ``_context``: if behaviour contextable
+* ``publication_status``: if behaviour publishable
+
+Additionally, all ``dataset`` items are used as placeholders.
 
 Icons
 *****
