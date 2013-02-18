@@ -9,3 +9,4 @@ Créer une nouvelle application
 	add_field
 	appdesk_views
 	attachment
+	translate

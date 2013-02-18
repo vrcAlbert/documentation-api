@@ -69,13 +69,6 @@ Ci-dessous le fichier de configuration de l'App Desk de l'application ``Monkey``
 
 .. only:: not_rtd
 
-	.. todo::
-
-		* Ajouter un Voir vers une documentation sur I18n
-		* Ajouter un description de l'organisation des fichiers de config, avec les common
-		* Lister toutes les clés possibles
-		* Lister toutes les clés de i18n (besoin de 'common')
-
 
 * ``model`` :
 * ``query`` : parameters of the query executed when loading the data. This parameters are the same as the static ``find`` function in the orm.

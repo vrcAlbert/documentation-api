@@ -11,6 +11,8 @@ Le cas le plus simple. Une application n'implémente pas la notion de contexte. 
 
 Son contenu sera alors le même quelque soit le contexte et elle pourra être utilisée (via ses :term:`enhancers`) dans n'importe quel contexte.
 
+.. index:: Contextable
+
 Application ``Contextable``
 ***************************
 
@@ -19,6 +21,8 @@ L'application utilise les contextes. Chaque item est associé à un contexte et 
 Techniquement les tables de l'application auront un champ ``context`` de type ``varchar(25)`` contenant le code du contexte
 et les :ref:`Models <api:php/models/model>` de l'application implémenteront le behaviour :ref:`api:php/behaviours/contextable`.
 
+
+.. index:: Twinnable
 
 Application ``Twinnable``
 *************************
