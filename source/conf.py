@@ -249,9 +249,17 @@ texinfo_documents = [
 #texinfo_show_urls = 'footnote'
 
 if on_rtd:
-	intersphinx_mapping = {'api': ('http://docs-api.novius-os.org/en/latest/', None)}
+	intersphinx_mapping = {
+	'api': ('http://docs-api.novius-os.org/en/latest/', None),
+	'en': ('http://docs.novius-os.org/en/latest/', None),
+	'ja': ('http://docs-ja.novius-os.org/en/latest/', None),
+	  }
 	todo_include_todos = False
 else:
-	intersphinx_mapping = {'api': ('http://novius-os-docs-api/', None)}
+	intersphinx_mapping = {
+	'api': ('http://novius-os-docs-api/', None),
+	'en': ('http://docs.novius-os.org/en/latest/', None),
+	'ja': ('http://docs-ja.novius-os.org/en/latest/', None),
+	  }
 	todo_include_todos = True
 	intersphinx_cache_limit = -1
