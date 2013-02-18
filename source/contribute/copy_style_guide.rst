@@ -1,3 +1,5 @@
+.. _contribute/copy_style_guide:
+
 Charte rédactionnelle (Français)
 ################################
 

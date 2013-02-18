@@ -1,5 +1,5 @@
 Documentation de Novius OS
-==========================
+##########################
 
 Bienvenue sur la documentation de Novius OS. Elle est hébergée et générée par `Read The Docs <http://readthedocs.org/>`__.
 
