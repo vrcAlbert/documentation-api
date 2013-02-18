@@ -91,7 +91,7 @@ Novius OS est basé sur `l'ORM de FuelPHP <http://www.fuelphp.com/docs/packages/
 | Néanmoins, Novius OS ajoute une sur-couche notable à l'ORM : les ``Behaviours``.
 | En français, ``Behaviour`` veut dire comportement. Les ``Behaviours`` permettent d'étendre des ``Model`` en y ajoutant des comportements standardisés.
 
-Ils sont similaire aux `Observers <http://docs.fuelphp.com/packages/orm/observers/intro.html>`_ de FuelPHP mais plus puissant :
+Ils sont similaire aux `Observers <http://docs.fuelphp.com/packages/orm/observers/intro.html>`_ de FuelPHP mais plus puissants :
 
 * Comme les ``Observers``, ils sont configurables par des options.
 * Comme les ``Observers``, ils peuvent intercepter des événements pour agir sur le ``Model`` (par exemple l'événement ``before_save`` se déclenchant avant la sauvegarde).
