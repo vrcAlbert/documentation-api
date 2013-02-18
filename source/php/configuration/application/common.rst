@@ -176,7 +176,7 @@ Each action is defined by a key => value. Key is the action id, and value is an 
 :action: defines the action executed when action is triggered (using :doc:`/javascript/$/nosAction`)
 :label: Text associated to action (displayed or on tooltip)
 :primary: Is the action a primary action. On the grid, it defines whether or not it appears only in the action drop down or not
-:icon: Icon of the action. The string is appended to "ui-icon-" in order to obtain `jquery ui icon class <http://jqueryui.com/themeroller/#icons>`
+:icon: Icon of the action. The string is appended to "ui-icon-" in order to obtain `jquery ui icon class <http://jqueryui.com/themeroller/#icons>`__
 :red: Is the action red or not
 :targets: Where to display the action. It is an associated array where keys defines where to display the action, the value a boolean defining whether or not the action is displayed. ``targets`` can refined by the ``visible`` key There are 3 available keys :
 
@@ -223,11 +223,15 @@ Each action is defined by a key => value. Key is the action id, and value is an 
         ),
     );
 
+Default actions and particular cases
+====================================
+
+Default actions (such as ``add`` or ``edit``) can be overloaded with this ``actions`` key
+
 Placeholders
 ============
 
-Particular cases
-================
+For string values,
 
 Icons
 *****
