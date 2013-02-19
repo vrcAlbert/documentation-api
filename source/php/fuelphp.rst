@@ -20,7 +20,7 @@ FuelPHP
 		| See http://fuelphp.com/docs/packages/orm/observers/intro.html
 
 	Environments
-		| FuelPHP manage natively environments.
+		| FuelPHP manages environments natively.
 		| See http://fuelphp.com/docs/general/environments.html
 
 	HMVC

@@ -6,22 +6,23 @@ Configuration for :php:class:`Nos\\Orm\\Model`, used in :doc:`appdesk`, :doc:`cr
 Associative array:
 
 :data_mapping: columns on :doc:`appdesk` and :doc:`inspector`.
-:i18n: Optional, common translation
-:actions: Optional, common actions on the :php:class:`Nos\\Orm\\Model`.
-:icons: Optional, common icon related to the :php:class:`Nos\\Orm\\Model`.
+:i18n:         Optional, common translation
+:actions:      Optional, common actions on the :php:class:`Nos\\Orm\\Model`.
+:icons:        Optional, common icons related to the :php:class:`Nos\\Orm\\Model`.
 
 Data mapping
 ************
 
 Associative array where each key => value defines a column, all keys are optionals.
 
-:title: Title of the grid column. If not set, column will not be displayed.
-:column: Default value is same as key.
-:search_column: Default value is column key value. Defines where on which sql column search / order.
-:search_relation: Default value is deduced from key (ex: ``rel->col``). Relation to load (via related function on query).
+:title:            Title of the grid column. If not set, column will not be displayed.
+:column:           Default value is same as key.
+:search_column:    Default value is column key value. Defines on which SQL column search / order.
+:search_relation:  Default value is deduced from key (ex: ``rel->col``). Relation to load (via related function on query).
+:sorting_callback: A closure function taking two parameters: the ``$query`` object and the ``$sortDirection``.
 :multiContextHide: Hide grid column when items are filtered on more than one contexts.
-:value: A closure function taking current item :php:class:`Nos\\Orm\\Model` in first parameter. Overloads value displayed in grid.
-:cellFormatters: Associative array of :ref:`cellFormatters <php/configuration/application/cellFormatters>` for formatting column display.
+:value:            A closure function taking current item :php:class:`Nos\\Orm\\Model` in first parameter. Overloads value displayed in the grid.
+:cellFormatters:   Associative array of :ref:`cellFormatters <php/configuration/application/cellFormatters>` for formatting column display.
 
 .. code-block:: php
 
@@ -54,7 +55,7 @@ Associative array where each key => value defines a column, all keys are optiona
 Particular cases
 ================
 
-In next example, ``column_a`` is sent in json but will not be displayed.
+In the following example, ``column_a`` is sent in json but is not displayed in the grid.
 
 .. code-block:: php
 
@@ -65,7 +66,7 @@ In next example, ``column_a`` is sent in json but will not be displayed.
         ),
     );
 
-In next example, ``col_b`` is sent in json under the column_b key but will not be displayed.
+In the following example, ``col_b`` is sent in json under the ``column_b`` key but is not displayed in the grid.
 
 .. code-block:: php
 
@@ -77,8 +78,9 @@ In next example, ``col_b`` is sent in json under the column_b key but will not b
     );
 
 
-If the :php:class:`Model` have behaviour :php:class:`Orm_Behaviour_Twinnable`, a pseudo column ``context`` is automatically added at the end of ``data_mapping``.
-But, if you want to place it elsewhere, you can insert it like this:
+If the :php:class:`Model` has the :php:class:`Orm_Behaviour_Twinnable` behaviour, a pseudo column ``context`` is
+automatically added at the end of the ``data_mapping``.
+But, if you want to place it elsewhere, you can force its position like this:
 
 .. code-block:: php
 
@@ -99,7 +101,7 @@ But, if you want to place it elsewhere, you can insert it like this:
 I18n
 ****
 
-This key contains all common translations.
+This key contains all the common translations.
 
 .. code-block:: php
 
@@ -115,7 +117,7 @@ This key contains all common translations.
             'notification item does not exist anymore' => __('This item doesn’t exist any more. It has been deleted.'),
             'notification item not found' => __('We cannot find this item.'),
 
-            // ... extends /framework/config/i18n_common.config.php
+            // ... see the 'framework/config/i18n_common.config.php' file to include the appropriate keys depending on your item
         ),
     );
 
@@ -124,17 +126,17 @@ This key contains all common translations.
 Actions
 *******
 
-This key contains all common actions related to the model. There are 5 actions automatically added:
+This key contains all the common actions related to the model. 5 actions which are automatically added:
 
-* ``add``: the :guilabel:`Add model` button located on the appdesk's toolbar
-* ``edit``: The :guilabel:`Edit` button located on the grids and crud toolbar
-* ``delete``: The :guilabel:`Delete` button located on the grids and crud toolbar
-* ``visualize``: The :guilabel:`Visualize` button located on grids and crud toolbar, if item is displayable in front-office.
-* ``share``: The :guilabel:`Share` button located on crud toolbar, if item have the :php:class:`Nos\\Orm_Behaviour_Sharable` behaviour.
+:add:       The :guilabel:`Add model` button located on the appdesk's toolbar
+:edit:      The :guilabel:`Edit` button located on the grids and the crud's toolbar
+:delete:    The :guilabel:`Delete` button located on the grids and the crud's toolbar
+:visualise: The :guilabel:`Visualise` button located on the grids and crud's toolbar, if the item can be displayed in front-office.
+:share:     The :guilabel:`Share` button located on the crud's toolbar, if the item has the :php:class:`Nos\\Orm_Behaviour_Sharable` behaviour.
 
 The action key can be filled in two different ways.
 
-The most common way is to define an associative array:
+The most common way is to use an associative array:
 
 .. code-block:: php
 
@@ -148,10 +150,10 @@ The most common way is to define an associative array:
         ),
     );
 
-If you want to define the order in which the actions are defined, two keys are to be defined:
+If you want to change the order in which the actions are displayed, two keys are to be defined:
 
-:list: associative array of actions (similar to previous ``actions`` key)
-:order: array of action key defining their order
+:list:  associative array of actions (similar to the previous ``actions`` key)
+:order: array of action's key defining their order
 
 .. code-block:: php
 
@@ -173,24 +175,25 @@ If you want to define the order in which the actions are defined, two keys are t
 
 Each action is an associative array. Key is the action ID, and value is an array defining the action configuration:
 
-:action: defines the action executed when action is triggered (using :doc:`/javascript/$/nosAction`).
-:label: Text associated to action (displayed or on tooltip).
-:primary: Is the action a primary action. On the grid, it defines whether or not it appears only in the action drop down or not.
-:icon: Icon of the action. The string is appended to ``ui-icon-`` in order to obtain `jquery ui icon class <http://jqueryui.com/themeroller/#icons>`__.
-:red: Is the action red or not.
-:targets: Where to display the action. It is an associated array where keys defines where to display the action, the value a boolean defining whether or not the action is displayed. ``targets`` can be refined by the ``visible`` key. There are 3 available keys:
+:action:  which action is executed when clicking on the button (using :doc:`/javascript/$/nosAction`).
+:label:   Text associated with the action (either shown as text or in a tooltip).
+:primary: Is it a primary action? Primary actions have a dedicated button, and secondary actions appears in the action drop down.
+:icon:    Icon of the action. It's a `jquery ui icon class <http://jqueryui.com/themeroller/#icons>`__, but without the leading ``ui-icon-`` string.
+:red:     Is it a red action? (especially used for 'Delete')
+:targets: Where to display the action. It is an associated array where keys defines where to display the action, the value a boolean defining whether or not the
+          action is displayed. ``targets`` can be refined by the ``visible`` key. There are 3 available keys:
 
-    :grid: Is the action displayed on the grid (appdesk and inspector) ?
-    :toolbar-grid: Is the action displayed on the grid toolbar ?
-    :toolbar-edit: Is the action displayed on the crud edit toolbar ?
+    :grid: Is the action displayed on the grid (appdesk and inspector)?
+    :toolbar-grid: Is the action displayed on the grid toolbar?
+    :toolbar-edit: Is the action displayed on the crud edit toolbar?
 
-:disabled: Callback function that returns a boolean defining if the action is disabled or not for an item. There is only one parameter sent: the current item.
-:visible: Callback function that returns a boolean defining if the action is visible or not on a context. There is only one parameter sent, an associative array:
+:disabled: Callback function that returns a boolean defining if the action is disabled or not for an item. There is only one parameter sent: the current ``$item``.
+:visible:  Callback function that returns a boolean defining if the action is visible or not on a context. There is only one parameter sent, an associative array:
 
-    :model: Model tested.
-    :item: Only defined when actions are displayed on crud.
+    :model:  Model tested.
+    :item:   Only defined when actions are displayed on crud.
     :target: Target where action is displayed. Value can be ``grid``, ``toolbar-grid`` or ``toolbar-edit`` (related to ``targets``).
-    :class: Class of the controller calling the function (this way you can differentiate appdesk and inspectors for instance).
+    :class:  Name of the controller class calling the function (this way you can differentiate appdesk and inspectors for instance).
 
 .. code-block:: php
 

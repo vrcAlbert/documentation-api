@@ -6,7 +6,7 @@ Multi-Contexts
 Configuration
 *************
 
-To change the contexts of your Novius OS instance, edit the file :file:`local/config/contexts.config.php`.
+To change the contexts of your Novius OS instance, edit the :file:`local/config/contexts.config.php` file.
 
 Default configuration
 =====================
@@ -127,9 +127,11 @@ Here is an example configuration for just one site in one language:
 Domain Names
 ************
 
-By default, the first context will respond on the root of your domain, the following contexts in a subdirectory :file:`site_code/language_code/` (ex: :file:`main/es_ES/`).
+By default, the first context will answer to the root of your domain, the following contexts in a
+:file:`site_code/language_code/` subdirectory (e.g.: :file:`main/es_ES/`).
 
-You can specify the domain, subdomain or subdirectory of domain for each context in the table associated with it.
+But for each context, you can choose the URI (including a domain and optionally a directory) it will answer to, by
+specifying it the the associated configuration array.
 
 Contexts on subdirectory
 ========================
@@ -137,54 +139,57 @@ Contexts on subdirectory
 .. code-block:: php
 
 	<?php
-	'contexts' => array(
-		'main::en_GB' => array(), // Takes the default domain
-		'main::fr_FR' => array(
-			'http://www.mysite.com/fr/',
-		),
-		'main::es_ES' => array(
-			'http://www.mysite.com/es/',
-		),
-		'mobile::fr_FR' => array(
-			'http://www.mysite.com/mobile/',
-		),
-		'event::en_GB' => array(
-			'http://www.mysite.com/event/',
-		),
-	),
+
+    'contexts' => array(
+        'main::en_GB' => array(), // Uses the default domain
+        'main::fr_FR' => array(
+            'http://www.mysite.com/fr/',
+        ),
+        'main::es_ES' => array(
+            'http://www.mysite.com/es/',
+        ),
+        'mobile::fr_FR' => array(
+            'http://www.mysite.com/mobile/',
+        ),
+        'event::en_GB' => array(
+            'http://www.mysite.com/event/',
+        ),
+    ),
 
 .. warning::
 
-	If your main context (the first) has a page :file:`fr/example.html` and your context ``main::fr_FR`` has a page :file:`example.html`,
-	their URLs are identical (ie: :file:`http://www.mysite.com/fr/example.html`). Only the page of your main context will be accessible.
+	If your main context (the first) has a :file:`fr/example.html` page and your ``main::fr_FR`` context has an
+	:file:`example.html` page, their URLs are identical (ie: :file:`http://www.mysite.com/fr/example.html`). In this
+	situation, only the page of your main context will be accessible.
 
 Contexts on domains
 ===================
 
 .. code-block:: php
 
-	<?php
-	'contexts' => array(
-		'main::en_GB' => array(
-			'http://www.monsite.com/',
-		),
-		'main::fr_FR' => array(
-			'http://www.mysite.fr/',
-		),
-		'main::es_ES' => array(
-			'http://www.monsite.es/',
-		),
-		'mobile::fr_FR' => array(
-			'http://mobile.monsite.fr/',
-		),
-		'event::en_GB' => array(
-			'http://event.monsite.com/',
-		),
-	),
+    <?php
+
+    'contexts' => array(
+        'main::en_GB' => array(
+            'http://www.monsite.com/',
+        ),
+        'main::fr_FR' => array(
+            'http://www.mysite.fr/',
+        ),
+        'main::es_ES' => array(
+            'http://www.monsite.es/',
+        ),
+        'mobile::fr_FR' => array(
+            'http://mobile.monsite.fr/',
+        ),
+        'event::en_GB' => array(
+            'http://event.monsite.com/',
+        ),
+    ),
 
 .. note::
 
-	Domains should of course be in advance, set in Apache.
+	Of course, your domains should also be properly configured in :program:`Apache`.
 
 Contexts with multiple URLs
 ===========================
@@ -212,8 +217,9 @@ Contexts with multiple URLs
 		),
 	),
 
-To go live
+Going live
 **********
 
-You will probably need to define, for each of your contexts, different URLs between your local development instance and production.
-You can do that using :term:`environments mechanism <Environments>`.
+You will probably need to define, for each of your contexts, different URLs between your local (development) and
+production instances.
+You can do that using :term:`environment-specific config files <Environments>`.
