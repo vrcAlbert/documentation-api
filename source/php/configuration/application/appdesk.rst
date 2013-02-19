@@ -77,6 +77,7 @@ If it is a key => value association (value must then be an array), then the insp
 views
 *****
 
+:todo: not done
 
 thumbnails
 **********
@@ -92,8 +93,9 @@ If defined to true, data_mapping has to define two keys:
 tree
 ****
 
-
+:todo: not done
 
 appdesk
 *******
 
+:todo: not done
