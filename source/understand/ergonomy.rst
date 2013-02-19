@@ -36,9 +36,6 @@ Les **pop-ups** doivent être limitées au cas modal, c’est-à-dire quand une 
 (ou annulée) avant que le travail ne puisse se poursuivre (ex : confirmation d’une suppression, ajout d’un lien ou
 image à un contenu WYSIWYG).
 
-.. _understand/ergnonomie/app_desk:
-
-
 L’App Desk
 ----------
 
