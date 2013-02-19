@@ -73,7 +73,7 @@ jQuery UI / Wijmo
 =================
 
 Bien que les actions logiques soient effectuées en PHP côté serveur, Novius OS est en majorité écrit en Javascript.
-Cela s'explique par la grande importance donnée à l'interface utilisateur et à l'ergonomie (cf. :doc:`ergonomie`).
+Cela s'explique par la grande importance donnée à l'interface utilisateur et à l'ergonomie (cf. :doc:`ergonomy`).
 
 Pour proposer des interfaces et interactions riches, Novius OS utilise plusieurs librairies JS :
 

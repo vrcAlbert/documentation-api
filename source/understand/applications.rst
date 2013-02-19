@@ -39,7 +39,7 @@ Il est également possible de définir d’autres éléments dans ce fichier met
 L’App Desk
 ----------
 
-Avant tout, :doc:`consulter les principes ergonomiques <ergonomie>` pour comprendre l'App Desk.
+Avant tout, :doc:`consulter les principes ergonomiques <ergonomy>` pour comprendre l'App Desk.
 
 
 La configuration de l’App Desk
