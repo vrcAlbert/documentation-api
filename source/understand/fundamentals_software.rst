@@ -6,7 +6,8 @@ Fondamentaux du logiciel
 Une architecture MVC
 ********************
 
-Novius OS répond aux standards de découpage `Modèle-Vue-Contrôleur <http://fr.wikipedia.org/wiki/Mod%C3%A8le-Vue-Contr%C3%B4leur>`_, qui définissent des logiques de travail :
+Novius OS répond aux standards de découpage `Modèle-Vue-Contrôleur <http://fr.wikipedia.org/wiki/Mod%C3%A8le-Vue-Contr%C3%B4leur>`__,
+qui définissent des logiques de travail :
 
 - dans la conception des applications ;
 - dans l’organisation d'un projet sous Novius OS.
@@ -14,28 +15,30 @@ Novius OS répond aux standards de découpage `Modèle-Vue-Contrôleur <http://f
 Utilisation de frameworks
 *************************
 
-L’utilisation de frameworks oriente fortement la conception et l’implémentation des applications.
+L'utilisation de frameworks oriente fortement la conception et l'implémentation des applications.
 Il convient donc de connaitre le rôle de chacun.
-Pour autant, cette documentation concernant Novius OS avant tout, veuillez vous référer à de la documentation ou tutoriaux externes pour plus de précisions sur ces frameworks.
+Pour autant, cette documentation concernant Novius OS avant tout, veuillez vous référer à de la documentation ou
+tutoriaux externes pour plus de précisions sur ces frameworks.
 
 .. index:: FuelPHP
 
 FuelPHP
 =======
 
-`Consulter les tutoriaux FuelPHP par Novius <http://www.novius-labs.com/quel-framework-choisir-nous-votons-fuelphp,29.html>`_
+`Consulter les tutoriaux FuelPHP par Novius <http://www.novius-labs.com/quel-framework-choisir-nous-votons-fuelphp,29.html>`__
 
-Le framework PHP utilisé pour Novius OS est `FuelPHP <http://fuelphp.com>`_. Il influence évidemment la partie logique de Novius OS.
+Le framework PHP utilisé pour Novius OS est `FuelPHP <http://fuelphp.com>`__.
 
-Les éléments de FuelPHP les plus utilisés sont ceux qui permettent de valider les données, l’ORM et le mapping des différents fichiers.
-Au delà de ces éléments, des outils inclus dans le framework simplifient grandement l’implémentation des applications (comme l’objet `Arr <http://docs.fuelphp.com/classes/arr.html>`_ par exemple).
+Les éléments de FuelPHP les plus utilisés sont ceux qui permettent de valider les données, l'ORM et le mapping des différents fichiers.
+Au delà de ces éléments, des outils inclus dans le framework simplifient grandement l'implémentation des applications (comme
+la classe `Arr <http://docs.fuelphp.com/classes/arr.html>`__ par exemple).
 
 .. index:: ORM
 
 ORM de FuelPHP
 ==============
 
-ORM pour object-relational mapping. En français `mapping objet-relationnel <http://fr.wikipedia.org/wiki/Mapping_objet-relationnel>`_.
+ORM pour object-relational mapping. En français `mapping objet-relationnel <http://fr.wikipedia.org/wiki/Mapping_objet-relationnel>`__.
 
 | L'ORM permet une gestion de la base de données par des objets PHP, des classes, et en gérant notamment les relations entre les tables.
 | Des exemples parlent plus qu'un long discours :
@@ -54,12 +57,12 @@ ORM pour object-relational mapping. En français `mapping objet-relationnel <htt
 	$monkey = Model_Monkey::find(4);
 	$monkey->delete();
 
-Novius OS est basé sur `l'ORM de FuelPHP <http://www.fuelphp.com/docs/packages/orm/intro.html>`_. Veuillez vous référer à sa documentation.
+Novius OS est basé sur `l'ORM de FuelPHP <http://www.fuelphp.com/docs/packages/orm/intro.html>`__. Veuillez vous référer à sa documentation.
 
 | Néanmoins, Novius OS ajoute une sur-couche notable à l'ORM : les ``Behaviours``.
 | En français, ``Behaviour`` veut dire comportement. Les ``Behaviours`` permettent d'étendre des ``Model`` en y ajoutant des comportements standardisés.
 
-Ils sont similaire aux `Observers <http://docs.fuelphp.com/packages/orm/observers/intro.html>`_ de FuelPHP mais plus puissant :
+Ils sont similaire aux `Observers <http://docs.fuelphp.com/packages/orm/observers/intro.html>`__ de FuelPHP mais plus puissant :
 
 * Comme les ``Observers``, ils sont configurables par des options.
 * Comme les ``Observers``, ils peuvent intercepter des événements pour agir sur le ``Model`` (par exemple l'événement ``before_save`` se déclenchant avant la sauvegarde).

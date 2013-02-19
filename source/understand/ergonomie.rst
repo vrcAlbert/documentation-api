@@ -9,7 +9,7 @@ le développement d’applications : la navigation par onglets et l’App Desk.
 Navigation par onglets
 ----------------------
 
-`Voir le screencast consacré à la navigation par onglets <http://youtu.be/l1TKuP3TomA>`_
+`Voir le screencast consacré à la navigation par onglets <http://youtu.be/l1TKuP3TomA>`__
 
 Les onglets structurent le travail de l’utilisateur du back-office. Le but est de le faire gagner en productivité, en
 limitant les tâches répétitives et les chargement de pages.
@@ -18,7 +18,7 @@ On distingue deux types d’onglets :
 
 - **Onglet d’application** : Les onglets d’application n’ont pas de titre, ils sont uniquement représentés par l’icône
   de l’application, en grand. Dans cet onglet, on trouve l’App Desk de l’application (voir plus bas).
-- **Onglet d’item** : | depuis l’onglet d’application, on accède à l’édition ou la visualisation d’un item, dans un
+- **Onglet d’item** : depuis l’onglet d’application, on accède à l’édition ou la visualisation d’un item, dans un
   nouvel onglet. Les onglets d’item portent le titre de l’item et l’icône de l’application, en petit.
 
 .. image:: images/ergonomie-tabs.png
@@ -42,14 +42,14 @@ image à un contenu WYSIWYG).
 L’App Desk
 ----------
 
-`Voir le screencast consacré à l’App Desk <http://youtu.be/opuOAS_XRrA>`_
+`Voir le screencast consacré à l’App Desk <http://youtu.be/opuOAS_XRrA>`__
 
 L’App Desk est l’accueil d’une application, il permet l’accès aux différents items. Il est constitué des éléments
 suivants :
 
 - **Tableau principal** : il liste les items d’une application, une ou plusieurs vues sont proposées (vignettes,
   tableau, arborescence, etc.). Son contenu est filtré par les inspecteurs et / ou une recherche full-text. Il ne peut
-  y avoir qu’un seul tableau principal par application.
+  y avoir qu’un seul tableau principal par App Desk.
 - **Inspecteurs** : les inspecteurs regroupent les éléments meta d’une application (ex : auteurs pour un blog,
   dossiers pour la médiathèque). Les inspecteurs permettent de filtrer le contenu du tableau principal (ex : voir
   uniquement les billets d’un auteur précis). Certains inspecteurs permettent aussi de gérer des données (ex :
