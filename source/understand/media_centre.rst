@@ -21,7 +21,7 @@ Lors du premier accès au média, le gestionnaire 404 est appelé et un lien sym
 
 La raison de ce fonctionnement est pour l'ajout futur de médias **privé**. Pour ces derniers, sera retourné :
 
-* un code d'erreur HTTP 401 (autorisation nécessaire) sera retourné ;
+* un code d'erreur HTTP 401 (autorisation nécessaire) ;
 * soit le fichier sera envoyé sur la sortie standard, mais sans création de lien symbolique (le droit d'accès est
   vérifié lors de chaque requête).
 
@@ -43,7 +43,7 @@ depuis le script PHP. Le nom de ce header varie d'un serveur à l'autre :
 
 	Lien vers la configuration de XSendfile sous Apache et dans Novius OS.
 
-.. index:: Fichiers joins
+.. index:: Fichiers joints
 .. index:: Attachment
 
 Fichiers joints (hors médiathèque)
