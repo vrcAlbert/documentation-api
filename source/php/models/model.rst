@@ -7,7 +7,7 @@ Model
 
 .. php:class:: Model
 
-	Extend :term:`Model of FuelPHP ORM <\Orm\Model>`.
+	Extends :term:`Model of FuelPHP ORM <\Orm\Model>`.
 
 .. todo::
 
@@ -18,16 +18,16 @@ Configuration
 
 .. php:attr:: title_property
 
-	| Defined the title property of model. Can be a column name or a closure (which take current item to parameter).
-	| If not defined, automatically set to first column which have ``title``, ``label`` or ``name`` in his name, if any first column in ``varchar``.
+	| Defines the title property of a model. Can be a column name or a closure (which take current ``$iitem`` as parameter).
+	| If not defined, automatically set to first column which has ``title``, ``label`` or ``name`` in its name, or (as last resort) the first ``varchar``.
 
 .. php:attr:: behaviours
 
-	Defined behaviours of model like for :term:`observers <Observers>`.
+	Defines the behaviours of model. Same syntax as :term:`observers <Observers>`.
 
 .. php:attr:: attachment
 
-	Defined attachments of model. Attachment is a Novius OS special type of :term:`relations <Relations>`. See :php:class:`Nos\\Attachment`.
+	Defines the attachments of a model. Attachment is a special type of :term:`relations <Relations>` created for Novius OS. See :php:class:`Nos\\Attachment`.
 
 Examples
 ========
@@ -93,14 +93,18 @@ Relations
 
 .. php:attr:: linked_wysiwygs
 
-	* Relation type : :term:`has_many`.
-	* Model : :php:class:`Nos\\Model_Wysiwyg`
+	* Relation type: :term:`has_many`.
+	* Model: :php:class:`Nos\\Model_Wysiwyg`
 
 .. php:attr:: linked_medias
 
-	* Relation type : :term:`has_many`.
-	* Model : :php:class:`Nos\\Media\\Model_Link`
+	* Relation type: :term:`has_many`.
+	* Model: :php:class:`Nos\\Media\\Model_Link`
 
+
+.. warning::
+
+    Don't use these relations directly, we created accessors for them.
 
 Accessors
 *********
@@ -112,10 +116,10 @@ Accessors
 	.. code-block:: php
 
 		<?php
-		$item->medias->avatar // Get a Model_Link with key 'avatar'
-		$item->medias->avatar->media // Get Model_Media with key 'avatar'
+		$item->medias->avatar; // Get a Model_Link named 'avatar'
+		$item->medias->avatar->media; // Get Model_Media named 'avatar'
 
-		$item->medias->cv->media = Model_Media // Set a Model_Media to key 'cv'
+		$item->medias->cv->media = $Model_Media; // Set a Model_Media named 'cv'
 
 .. php:attr:: wysiwygs
 
@@ -124,10 +128,10 @@ Accessors
 	.. code-block:: php
 
 		<?php
-		$item->wysiwygs->content // Get a Model_Wysiwyg with key 'content'
-		$item->wysiwygs->content->wysiwyg_text // Get content of Model_Wysiwyg with key 'content'
+		$item->wysiwygs->content; // Get a Model_Wysiwyg named 'content'
+		$item->wysiwygs->content->wysiwyg_text; // Get content of Model_Wysiwyg named 'content'
 
-		$item->wysiwygs->summary = 'foo' // Set a Model_Wysiwyg with key 'content', width content 'foo'.
+		$item->wysiwygs->summary = 'foo'; // Set a Model_Wysiwyg named 'content', width content 'foo'.
 
 Methods
 *******
@@ -144,15 +148,15 @@ Methods
 
 .. php:staticmethod:: add_properties($properties)
 
-	:param array $properties: Properties to merge.
+	:param array $properties: Additional properties (merged).
 
 .. php:staticmethod:: prefix()
 
-	:returns: Prefix of column name. Computed form primary key column name, search ``_``.
+	:returns: Prefix of column name. Computed from the primary key name (everything before the first ``_`` character).
 
 .. php:method:: title_item()
 
-	:returns: Returns the item title, calculated from :php:attr:`Model::$title_property`.
+	:returns: Returns the item's title, calculated from :php:attr:`Model::$title_property`.
 
 .. php:method:: pick($column [, $column [, $column [, ... ]]] )
 

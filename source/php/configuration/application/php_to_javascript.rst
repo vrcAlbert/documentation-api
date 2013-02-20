@@ -1,16 +1,16 @@
 PHP to Javascript
 #################
 
-Configuring an application is in PHP, but once in the browser, code is powered by Javascript.
+Application configuration is mostly done in PHP, but a lot of code also runs in the browser, and is powered by JavaScript.
 
-Some PHP configuration patterns are made for define Javascript behaviours.
+Some PHP configuration patterns have been created to define JavaScript behaviours from a PHP configuration file.
 
 .. _php/configuration/application/nosActions:
 
 PHP nosActions
 **************
 
-:js:func:`$container.nosAction` execute an action bind to a DOM element.
+:js:func:`$container.nosAction` executes an action bound to a DOM element.
 
 To define an action in PHP:
 
@@ -19,10 +19,10 @@ To define an action in PHP:
 	<?php
 	'action' => array(
 		'action' => 'actionName', // nosTabs, nosDialog, confirmationDialog, nosAjax, window.open, document.location...
-		// Other array keys depending the actionName
+		// Other keys are array and depends on the actionName
 	),
 
-	//Example for nostabs
+	// Example with nostabs
 	'action' => array(
 		'action' => 'nosTabs',
 		'tab' => array(
@@ -35,7 +35,7 @@ This syntax is used to define actions for:
 
 * :ref:`php/configuration/metadata/launchers`
 * :ref:`php/configuration/metadata/data_catchers`
-* buttons and menus in :doc:`appdesk`
+* buttons and menus in the :doc:`appdesk`
 * :doc:`crud`
 
 
@@ -44,10 +44,10 @@ This syntax is used to define actions for:
 PHP cellFormatters
 ******************
 
-Use for formatting column display in grids of :doc:`appdesk`.
+Used to format the value displayed in a column of a grid in the :doc:`appdesk`.
 
 | A ``cellFormatter`` is an associative array.
-| You can have multiple ``cellFormatter``, set an array of arrays.
+| You can have multiple ``cellFormatter``, just use arrays.
 | You can assign a key to a ``cellFormatter``. This way, someone else can delete or modify it by overloading configuration.
 
 Common keys
@@ -62,14 +62,14 @@ Types
 bold
 ----
 
-Formatting content in bold. No additional key.
+Formats the text in bold. No additional key.
 
 css
 ----
 
-Apply CSS to content
+Apply CSS styles to the content.
 
-:css: An associative array of styles CSS to apply.
+:css: An associative array of all CSS styles to apply.
 
 .. code-block:: php
 
@@ -84,19 +84,19 @@ Apply CSS to content
 icon
 ----
 
-Add an icon, by its URL, before the actual content.
+Prepends an icon to the text, using an URL.
 
-:column: The column key of item data which contains icon URL.
+:column: Use a ``data_mapping`` column to fetch the icon URL.
 :src: The icon URL.
-:mapping: An associative array, column value in keys, corresponding URLs in values.
-:size: Size in pixel, use for width and height.
+:mapping: A mapping array to fetch URL depending on the value of the column.
+:size: Force a size in pixels for the icon. Used for both width and height.
 
 .. code-block:: php
 
 	<?php
 	array(
 		'type' => 'icon',
-		'column' => 'column_icon', //URL is in the 'column_icon' column
+		'column' => 'column_icon', // URL is retrieved from the 'column_icon' column
 		'size' => 16
 	),
 
@@ -118,9 +118,9 @@ Add an icon, by its URL, before the actual content.
 iconClasses
 -----------
 
-Add an icon, by CSS classes, before the actual content.
+Prepends an icon to the text, using CSS classes.
 
-:column: The column key of item data which contains icon CSS classes.
+:column: Use a ``data_mapping`` column to fetch the icon CSS classes.
 :classes: The icon CSS classes.
 
 .. code-block:: php
@@ -128,7 +128,7 @@ Add an icon, by CSS classes, before the actual content.
 	<?php
 	array(
 		'type' => 'iconClasses',
-		'column' => 'column_icon_classes', //CSS classes is in the 'column_icon_classes' column
+		'column' => 'column_icon_classes', // CSS classes are fetch from the 'column_icon_classes' column
 	),
 
 	// Or
@@ -140,24 +140,24 @@ Add an icon, by CSS classes, before the actual content.
 link
 ----
 
-Add a link on actual content.
+Wraps a link to the text (which performs an action upon click).
 
-:action: Action when link clicked. Can be ``default`` for the default action of the item,
+:action: Action to perform when the link is clicked. Can be ``default`` to use the default action of the item,
 		 an :ref:`action name <php/configuration/application/common/actions>` of the item
-		 or an :ref:`nosAction <php/configuration/application/nosActions>`.
+		 or a :ref:`nosAction <php/configuration/application/nosActions>`.
 
 .. code-block:: php
 
 	<?php
 	array(
 		'type' => 'link',
-		'action' => 'default', // Click bind the default action (ex: editing in the majority of cases)
+		'action' => 'default', // Binds the default action (e.g.: 'edit the item' in the most of the cases)
 	),
 
 	// Or
 	array(
 		'type' => 'link',
-		'action' => 'Namespace\Model_Example.result', // Click bind de 'result' action of the item, which is a Namespace\Model_Example instance.
+		'action' => 'Namespace\Model_Example.result', // Binds the 'result' action of the item, which is a Namespace\Model_Example instance.
 	),
 
 	// Or
@@ -166,8 +166,8 @@ Add a link on actual content.
 		'action' => array(
 			'action' => 'nosTabs', // Open a new tab
 			'tab' => array(
-				'url' => 'admin/nos/page/page/insert_update/{{_id}}', // {{_id}} will be replace by the current item ID
-				'label' => '{{_title}}', // {{_title}} will be replace by the current item title
+				'url' => 'admin/nos/page/page/insert_update/{{_id}}', // {{_id}} will be replaced by the item's ID
+				'label' => '{{_title}}', // {{_title}} will be replaced by the item's title
 			),
 		),
 	),

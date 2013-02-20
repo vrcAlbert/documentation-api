@@ -23,16 +23,16 @@ All native constants of FuelPHP are available but links to specific Novius OS di
 
 .. php:const:: APPPATH
 
-	Overload of the native FUELPHP constant. Path to the application directory: :file:`NOSROOT/local/`.
+	Overload of the native FuelPHP's constant. Path to the application directory: :file:`NOSROOT/local/`.
 
 .. php:const:: COREPATH
 
-	Overload of the native FUELPHP constant. Path to the FuelPHP core directory: :file:`NOSROOT/novius-os/fuel-core/`.
+	Overload of the native FuelPHP's constant. Path to the FuelPHP core directory: :file:`NOSROOT/novius-os/fuel-core/`.
 
 .. php:const:: DOCROOT
 
-	Overload of the native FUELPHP constant. Path to the location where the `startup script` is: :file:`NOSROOT/public/`.
+	Overload of the native FuelPHP's constant. Path to the location where the `startup script` is: :file:`NOSROOT/public/`.
 
 .. php:const:: PKGPATH
 
-	Overload of the native FUELPHP constant. Path to the packages directory: :file:`NOSROOT/novius-os/packages/`.
+	Overload of the native FuelPHP's constant. Path to the packages directory: :file:`NOSROOT/novius-os/packages/`.

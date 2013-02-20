@@ -3,9 +3,10 @@
 Database
 ########
 
-The DB configuration was set by the install wizard. But you can (must for the passage in production)  update it after install.
+The DB configuration was initially created by the installation wizard. But you can (and you must to go live) update
+it after installation.
 
-DB configuration is in :file:`local/config/db.php`.
+The DB configuration is in :file:`local/config/db.php`.
 
  .. seealso::
 
@@ -14,10 +15,10 @@ DB configuration is in :file:`local/config/db.php`.
 Email
 #####
 
-By default, your Novius OS was not configure to send mail. The configuration is too dependent on the server.
+By default, your Novius OS is not configured to send mail, because it's too dependent on the server.
 
-You have a sample file for configuration in :file:`local/config/email.config.php.sample`.
-Simply rename it to :file:`local/config/email.config.php` and update it to your case.
+A sample configuration file is available in :file:`local/config/email.config.php.sample`.
+Just rename (or copy) it to :file:`local/config/email.config.php`, and update it to your case.
 
 .. seealso::
 

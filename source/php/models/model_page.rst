@@ -5,10 +5,10 @@ Model_Page
 
 .. php:class:: Model_Page
 
-	Extend :php:class:`Nos\\Orm\\Model`.
+	Extends :php:class:`Nos\\Orm\\Model`.
 
-Constantes
-**********
+Constants
+*********
 
 Page types
 ==========
@@ -16,7 +16,7 @@ Page types
 .. php:const:: TYPE_CLASSIC
 .. php:const:: TYPE_EXTERNAL_LINK
 
-Values for ``page_type`` column.
+Possible values of the ``page_type`` column.
 
 External target types
 =====================
@@ -24,7 +24,7 @@ External target types
 .. php:const:: EXTERNAL_TARGET_NEW
 .. php:const:: EXTERNAL_TARGET_SAME
 
-Values for ``page_external_link_type`` column.
+Possible values of the ``page_external_link_type`` column.
 
 Lock types
 ==========
@@ -32,21 +32,21 @@ Lock types
 .. php:const:: LOCK_UNLOCKED
 .. php:const:: LOCK_DELETION
 
-Values for ``page_lock`` column.
+Possible values of the ``page_lock`` column.
 
 Relations
 *********
 
 .. php:attr:: children
 
-	* Relation type : :term:`has_many`.
-	* Model : :php:class:`Model_Page`
+	* Relation type: :term:`has_many`.
+	* Model: :php:class:`Model_Page`
 
 
 .. php:attr:: parent
 
-	* Relation type : :term:`belongs_to`.
-	* Model : :php:class:`Model_Page`
+	* Relation type: :term:`belongs_to`.
+	* Model: :php:class:`Model_Page`
 
 Behaviours
 **********
@@ -62,12 +62,12 @@ Methods
 
 .. php:staticmethod:: link()
 
-	:returns: Returns the href and target attributes for an HTML link ``<a>``.
+	:returns: ``string`` The href and target attributes for an HTML link, such as ``href="..." target="..."``.
 
 .. php:staticmethod:: url($params = array())
 
 	:param array $params:
 
-		:preview: If set, return URL for previewed page
+		:preview: If set, returns a preview URL
 
 	:returns: The absolute URL of the page
