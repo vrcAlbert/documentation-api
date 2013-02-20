@@ -1,11 +1,10 @@
-Présentation de l'assistant "Créer mon appli"
-#############################################
+Assistant "Créer mon appli"
+###########################
 
-L'assistant "Créer mon appli" permet de facilement et rapidement générer les bases d'une nouvelle application.
+L'assistant "Créer mon appli" permet de générer facilement et rapidement les bases d'une nouvelle application : Modèles, champs et groupe de champs, App Desk, launchers, URL enhancers, etc.
 
-L'assistant permet de générer les informations de base de votre application (nom, nom de dossier). Il permet de même de
-gérer plusieurs modèles.
+En industrialisant la création d'une application, l'assistant vous permet d'être plus productif et de vous concentrer sur l'essentiel.
 
 .. todo::
 
-    Il est nécéssaire de faire la traduction française de l'application wizard avant.
+    Ajouter pré-requis + lien vers le screencast
