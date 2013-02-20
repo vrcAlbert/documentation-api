@@ -8,12 +8,14 @@ Associative array:
 :model: Model name.
 :query: Optional. Additional informations about the query.
 :search_text: Optional. Array of columns in which we search when the user fills appdesk's search bar.
-:data_mapping: Optional. Defines which data_mapping item we display.
+:data_mapping: Optional. Defines which data_mapping item are displayed.
 :inspectors: Optional.
 :views: Optional.
+:inputs: Optional. How to process additional parameters sent to
+:selectedView: Optional. Default selected view identifier.
 :i18n: Optional. Extends default text items.
 :thumbnails: Optional, boolean. Can the appdesk display items as thumbnails ?
-:tree: Optional (automatically filled when model has the :ref:`tree behaviour <php/behaviours/tree>`)/.
+:tree: Optional (automatically filled when model has the :doc:`/php/behaviours/tree` behaviours enabled).
 :appdesk: Optional. Additional display information about the appdesk.
 
 query
@@ -30,7 +32,7 @@ Associative array. All keys are optional. Most keys are similar than the `find f
 data_mapping
 ************
 
-Associative or simple array. Defines which data_mapping items from :ref:`common configuration <common>` we display (mostly filtering).
+Associative or simple array. Defines which data_mapping items from :doc:`common` configuration we display (mostly filtering).
 
 Is is also possible to define new custom data_mapping items which will be only used on the appdesk.
 
@@ -78,7 +80,13 @@ If it is a key => value association (value must then be an array), then the insp
 views
 *****
 
-.. todo:: not done
+Associative array defining different way of displaying the appdesk. The key is the view identifier. Value is vew configuration:
+
+:name: Optionnal. Display view name in view selector
+:virtual: Optionnal. Is the view present on the view selector ?
+:json: Array of javascript files to load. These javascript extends appdesk configuration.
+
+.. todo:: show how appdesk configuration can be extended on javascript ?
 
 thumbnails
 **********
@@ -90,13 +98,46 @@ If defined to true, data_mapping has to define two keys:
 :thumbnail: url of item thumbnail.
 :thumbnailAlternate: Default thumbnail when there is no thumbnails or thumbnail can't be found.
 
-
 tree
 ****
 
-.. todo:: not done
+Defines how the model tree is constructed on the appdesk. It is automatically filled when model has the :ref:`tree behaviour <php/behaviours/tree>`)/. Associative array:
+
+:models: Models to be loaded on the tree. Array of associative array:
+
+    :model: Model class name
+    :order_by:
+    :childs: Array of model class name. Which models instances are children.
+    :dataset: dataset information sent by objects in json format.
+
+:roots:
+
+    :model: Model class name
+    :order_by:
+    :where:
+
+.. todo:: order_by but also other find parameters ?
 
 appdesk
 *******
 
-.. todo:: not done
+Associative array describing how appdesk interacts and is displayed. All items are automatically generated, but can be overloaded.
+
+:appdesk: Defines how appdesk is displayed. Associative array:
+
+    :defaultView: Default view of appdesk.
+    :buttons: Associative array containing grid toolbar actions information. See :ref:`php/configuration/application/common/actions`.
+    :splitterVertical: Size of the vertical splitter.
+    :inspectors: Associative array containing information about inspectors. Key is the inspector identifier, value is its configurations. See :ref:`inspectors configuration <common>`.
+    :grid: Grids informations. Associative array:
+
+        :urlJson: Url of the json API to get items
+        :columns: Columns informations
+
+    :treeGrid:
+
+        :urlJson: Url of the json API to get items
+
+:tab: Information about tab information (see :ref:`javascript/$/nosAction/nosTabs`).
+:reloadEvent: Event name that will reload appdesk.
+:actions: Associative array containing main grid actions information. See :ref:`php/configuration/application/common/actions`.
