@@ -25,9 +25,9 @@ Methods
 
 .. php:method:: check_password($password)
 
-	:param string $password: Password to check if it matches the user password
+	:param string $password: Password to check if it matches the user's password
 	:returns: ``True`` if passwords match, ``false`` otherwise.
 
 .. php:method:: generate_md5()
 
-	Generate a ``md5`` for user and set to column ``user_md5``.
+	Generate a new ``md5`` for the user (store in the ``user_md5`` column).

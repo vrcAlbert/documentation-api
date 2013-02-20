@@ -5,26 +5,26 @@ Model_Content_Nuggets
 
 .. php:class:: Model_Content_Nuggets
 
-	Extend :php:class:`Nos\\Orm\\Model`.
+	Extends :php:class:`Nos\\Orm\\Model`.
 
 .. todo::
 
 	* liens vers reference glossaire de data catchers
 	* liens vers reference glossaire de content nugget
 
-Constantes
-**********
+Constants
+*********
 
 .. php:const:: DEFAULT_CATCHER
 
-	Value a default ``data catcher`` for ``content_catcher`` column.
+	Default value for the ``content_catcher`` column.
 
 
 Columns
 *******
 
-:content_id: Model_Content_Nuggets primary key.
-:content_catcher: ``Data catcher`` name.
-:content_model_name: Name of the model which are the outcome ``content nuggets``.
-:content_model_id: ID of the model which are the outcome ``content nuggets``.
-:content_data: The ``content nuggets``. An associative array serialize.
+:content_id:         Model_Content_Nuggets primary key.
+:content_catcher:    ``Data catcher`` name.
+:content_model_name: Name of the model this ``content nuggets`` originates from.
+:content_model_id:   ID of the model this ``content nuggets`` originates from.
+:content_data:       The ``content nuggets``. Stored as a serialized associative array.

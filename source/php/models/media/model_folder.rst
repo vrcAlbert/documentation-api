@@ -5,26 +5,26 @@ Model_Folder
 
 .. php:class:: Model_Folder
 
-	Extend :php:class:`Nos\\Orm\\Model`.
+	Extends :php:class:`Nos\\Orm\\Model`.
 
 Relations
 *********
 
 .. php:attr:: children
 
-	* Relation type : :term:`has_many`.
-	* Model : :php:class:`Model_Folder`
+	* Relation type: :term:`has_many`.
+	* Model: :php:class:`Model_Folder`
 
 .. php:attr:: media
 
-	* Relation type : :term:`has_many`.
-	* Model : :php:class:`Model_Media`
+	* Relation type: :term:`has_many`.
+	* Model: :php:class:`Model_Media`
 
 
 .. php:attr:: parent
 
-	* Relation type : :term:`belongs_to`.
-	* Model : :php:class:`Model_Folder`
+	* Relation type: :term:`belongs_to`.
+	* Model: :php:class:`Model_Folder`
 
 Behaviours
 **********
@@ -39,23 +39,23 @@ Methods
 
 	:returns: ``True`` or ``false`` depending on whether the deletion was successful.
 
-	Delete folder recursively, media, sub-folders and itself.
+	Delete the folder and all its content (recursively).
 
 .. php:method:: delete_public_cache()
 
 	:returns: ``True`` or ``false`` depending on whether the deletion was successful.
 
-	Delete all the public / cache entries (image thumbnails) for this folder
+	Delete all the public and cached entries (image thumbnails) of this folder
 
 .. php:method:: path($file = '')
 
-	:param string $file: A file name, right join to folder path in returns.
+	:param string $file: A file name to append to the path.
 	:returns: Absolute folder path.
 
 .. php:method:: count_media()
 
-	:returns: Number of media contained in folder and its sub-folders.
+	:returns: Number of media contained in the folder and all its sub-folders.
 
 .. php:method:: count_media_usage()
 
-	:returns: Number of media contained in folder and his sub-folders that are in use.
+	:returns: Number of media in use (by the applications) contained in this folder and all its sub-folders.

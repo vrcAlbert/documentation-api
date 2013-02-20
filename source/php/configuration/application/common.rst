@@ -180,19 +180,18 @@ Each action is an associative array. Key is the action ID, and value is an array
 :primary: Is it a primary action? Primary actions have a dedicated button, and secondary actions appears in the action drop down.
 :icon:    Icon of the action. It's a `jquery ui icon class <http://jqueryui.com/themeroller/#icons>`__, but without the leading ``ui-icon-`` string.
 :red:     Is it a red action? (especially used for 'Delete')
-:targets: Where to display the action. It is an associated array where keys defines where to display the action, the value a boolean defining whether or not the
-          action is displayed. ``targets`` can be refined by the ``visible`` key. There are 3 available keys:
+:targets: Where is the action displayed? This has no effect if the action is not ``visible`` (see below). There are 3 locations available:
 
-    :grid: Is the action displayed on the grid (appdesk and inspector)?
-    :toolbar-grid: Is the action displayed on the grid toolbar?
-    :toolbar-edit: Is the action displayed on the crud edit toolbar?
+    :grid:         Is the action displayed on the grid (appdesk and inspector)?
+    :toolbar-grid: Is the action displayed on the grid's toolbar?
+    :toolbar-edit: Is the action displayed on the crud's toolbar (edition form)?
 
 :disabled: Callback function that returns a boolean defining if the action is disabled or not for an item. There is only one parameter sent: the current ``$item``.
 :visible:  Callback function that returns a boolean defining if the action is visible or not on a context. There is only one parameter sent, an associative array:
 
     :model:  Model tested.
-    :item:   Only defined when actions are displayed on crud.
-    :target: Target where action is displayed. Value can be ``grid``, ``toolbar-grid`` or ``toolbar-edit`` (related to ``targets``).
+    :target: Target where action is displayed. Value can be ``grid``, ``toolbar-grid`` or ``toolbar-edit`` (related to action's ``targets``).
+    :item:   Only populated when ``target == 'toolbar-edit'``.
     :class:  Name of the controller class calling the function (this way you can differentiate appdesk and inspectors for instance).
 
 .. code-block:: php
@@ -229,9 +228,9 @@ Each action is an associative array. Key is the action ID, and value is an array
 Default actions and particular cases
 ====================================
 
-Default actions (such as ``add`` or ``edit``) can be overloaded with this ``actions`` key. `\\Arr::merge <http://fuelphp.com/docs/classes/arr.html#/method_merge>`__ is used to merge defined actions with default actions.
+Default actions (such as ``add`` or ``edit``) can be overloaded with this ``actions`` key. `Arr::merge <http://fuelphp.com/docs/classes/arr.html#/method_merge>`__ is used to merge defined actions with default actions.
 
-This will hide the default ``add`` action:
+To hide an action, set its value to ``false``:
 
 .. code-block:: php
 
@@ -248,18 +247,18 @@ Placeholders
 
 Placeholders are available in order to simplify action targets and labels. First, some placeholders are always available:
 
-* ``controller_base_url``: url of crud controller
+* ``controller_base_url``: URL of the crud controller
 * ``model_label``: generated from model class name
-* ``_id``: id of the object
-* ``_context``: if behaviour contextable
-* ``publication_status``: if behaviour publishable
+* ``_id``: ID of the item
+* ``_title``: Title of the item
+* ``_context``: if the item has the ``Contextable`` behaviour
 
-Additionally, all ``dataset`` items are used as placeholders.
+Additionally, all ``dataset`` keys can be used as placeholders.
 
 Icons
 *****
 
-This key contains all common icons related to the model. Structure is similar to the icons key in :doc:`metadata` configuration file :
+This key contains all common icons related to the model. Structure is similar to the icons key of the :doc:`metadata` configuration file :
 
 .. code-block:: php
 
