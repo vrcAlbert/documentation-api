@@ -21,8 +21,8 @@ Dans Novius OS, le front-office et le back-office sont deux espaces bien sépar�
 
 Au lieu d'un seul point d'entrée :file:`index.php` de FuelPHP, Novius OS a deux points d'entrée :
 
-* :file:`~/novius-os/htdocs/admin.php`: Point d'entrée du back-office. Traite toutes les URL commençant par :file:`/admin/`.
-* :file:`~/novius-os/htdocs/front.php`: Point d'entrée du front-office. Traite toutes les URL finissant par `.html` ou la racine de votre site.
+* :file:`~/novius-os/htdocs/admin.php` : Point d'entrée du back-office. Traite toutes les URL commençant par :file:`/admin/`.
+* :file:`~/novius-os/htdocs/front.php` : Point d'entrée du front-office. Traite toutes les URL finissant par ``.html`` ou la racine de votre site.
 
 Point d'entrée du back-office
 =============================

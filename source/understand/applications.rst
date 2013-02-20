@@ -31,7 +31,10 @@ Il est également possible de définir d’autres éléments dans ce fichier met
 	Templates
 		Modèles de pages pour le front-office.
 
-`Voir aussi l'infographie 'Comprendre les applications' <http://novius-os.github.com/docs/fr/applications.html>`_
+
+.. seealso::
+
+    `Infographie 'Comprendre les applications' <http://novius-os.github.com/docs/fr/applications.html>`__
 
 
 .. index:: App Desk
@@ -39,7 +42,7 @@ Il est également possible de définir d’autres éléments dans ce fichier met
 L’App Desk
 ----------
 
-Avant tout, :doc:`consulter les principes ergonomiques <ergonomie>` pour comprendre l'App Desk.
+Avant tout, :doc:`consulter les principes ergonomiques <ergonomy>` pour comprendre l'App Desk.
 
 
 La configuration de l’App Desk
@@ -91,7 +94,7 @@ enregistrer les données.
 Observers et behaviours
 -----------------------
 
-Les observers sont issus du framework `FuelPHP <http://dev-docs.fuelphp.com/packages/orm/observers/intro.html>`_.
+Les observers sont issus du framework `FuelPHP <http://dev-docs.fuelphp.com/packages/orm/observers/intro.html>`__.
 
 Ce sont des procédures liées directement à un modèle. Elles sont appelées lorsque qu'un évènement identifié est
 déclenché. Ces procédures sont utilisées pour formatter, modifier ou valider des propriétés du modèle (ex :

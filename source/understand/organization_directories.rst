@@ -22,14 +22,16 @@ Un fichier peut être :
 
 Cela donne 4 usage possibles. Chacun d'eux a un répertoire dans :file:`~/public/` :
 
-* :file:`~/public/static/` : Équivalent des ``assets``. Des fichiers non exécutables fourni par le developpeur ou le logiciel.
+* :file:`~/public/static/` : Équivalent des ``assets``. Des fichiers non exécutables fourni par le développeur ou Novius OS.
 * :file:`~/public/data/` : Fichiers non exécutables générés par Novius OS.
-* :file:`~/public/htdocs/` : Fichiers exécutables fourni par par le developpeur ou le logiciel.
+* :file:`~/public/htdocs/` : Fichiers exécutables fourni par par le développeur ou Novius OS.
 * :file:`~/public/cache/` : Fichiers exécutables générés par Novius OS
+
+.. note:: Ici, Novius OS fait référence au core, ou toute application de votre site web.
 
 Il y a un 5ème répertoire :file:`~/public/media/` utilisé par la :doc:`media_centre`.
 
-Là où Novius OS peut écrire, le site ne le peut pas et vice et versa.
+Là où Novius OS peut écrire, le développeur ne le peut pas et vice et versa.
 
 :file:`~/public/static/` et :file:`~/public/htdocs/` ont la même structure de sous-répertoire :
 
@@ -37,7 +39,7 @@ Là où Novius OS peut écrire, le site ne le peut pas et vice et versa.
 * :file:`~/apps/<application_name>/` : Pour les fichiers venant des developpeurs d':doc:`applications <applications>`.
 
 | Ces sous-répertoires sont des liens symboliques, créés à l'installation du logiciel ou à l'activation des :doc:`applications <applications>`.
-| Ces liens symboliques pointant respectivement vers le :file:`htdocs` et le :file:`static` du repertoire du logiciel ou de l':doc:`application <applications>`.
+| Ces liens symboliques pointant respectivement vers le :file:`htdocs` et le :file:`static` du repertoire du logiciel ou de l'application.
 | Voir ci-dessous l':ref:`organisation des répertoires d'une application <understand/organization_directories/application>`.
 
 Le répertoire du ``core``
@@ -80,13 +82,13 @@ On distingue 5 dossiers principaux :
 :file:`classes`
 	Ce dossier regroupe la partie logique, c'est-à-dire les classes PHP qui définissent et manipulent les données.
 	Il s'agit a minima des contrôleurs et modèles de l’application. On y retrouve également des outils utilisés par les vues ou directement par les contrôleurs.
-	Attention, ces outils ne manipulent jamais directement les données de votre application.
 
 :file:`config`
 	| Ce dossier rassemble l’ensemble des informations permettant de représenter vos modèles.
 	  Les contrôleurs effectuent les opérations logiques sur vos données, mais auront besoin d’informations complémentaires à transmettre aux vues pour leur représentation.
 	  Ces informations sont ainsi séparées des contrôleurs, n’ayant pas de valeur logique, et des vues, car celles-ci reçoivent les données en paramètres et ne les recherchent jamais.
-	| Les fichiers de config sont organisés dans le dossier config de manière symétrique à l’organisation des contrôleurs dans le dossier /classes/controller.
+	| Le fichie de configuration du contrôleur :file:`controller/admin/monkey.ctrl.php` se situe à :file:`config/controller/admin/monkey.ctrl.php`
+	  Une classe et son fichier de configuration partagent une convention de nommage symétrique.
 
 :file:`lang`
 	Ce dossier contient les fichiers de traduction, organisés en sous-dossiers par langue.

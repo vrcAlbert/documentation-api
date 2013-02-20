@@ -6,7 +6,7 @@ Comprendre Novius OS
 	fundamentals_software
 	organization_directories
 	differences_fuelphp
-	ergonomie
+	ergonomy
 	applications
 	sharing
 	multi_context/index
