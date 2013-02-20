@@ -28,6 +28,8 @@ Actions list
 	:local:
 	:backlinks: top
 
+.. _javascript/$/nosAction/nosTabs:
+
 nosTabs
 =======
 

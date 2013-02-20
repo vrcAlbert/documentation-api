@@ -1,5 +1,6 @@
 Appdesk
 #######
+
 Configuration for :php:class:`Nos\\Orm\\Model`'s appdesk.
 
 Associative array:
