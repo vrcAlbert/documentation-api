@@ -9,6 +9,8 @@ le développement d’applications : la navigation par onglets et l’App Desk.
 Navigation par onglets
 ----------------------
 
+..  youtube:: l1TKuP3TomA
+
 `Voir le screencast consacré à la navigation par onglets <http://youtu.be/l1TKuP3TomA>`__
 
 Les onglets structurent le travail de l’utilisateur du back-office. Le but est de le faire gagner en productivité, en
