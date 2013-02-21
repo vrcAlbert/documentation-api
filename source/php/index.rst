@@ -11,6 +11,7 @@ PHP API
 	behaviours/index
 	classes/index
 	renderers/index
+	views/index
 	events
 	fuelphp
 
