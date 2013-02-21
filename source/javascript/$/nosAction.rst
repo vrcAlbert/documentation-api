@@ -141,7 +141,7 @@ document.location
 
 .. js:attribute:: nosAction.documentLocation
 
-	Redirect browser window to a ew URL.
+	Redirect browser window to a new URL.
 
 	:action: ``document.location``
 	:url: New URL of the window.
