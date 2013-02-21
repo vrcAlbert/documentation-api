@@ -100,13 +100,17 @@ Associative array:
 Plain data inspector
 ********************
 
-Displays static data, so it is the simplest inspector. Associative array:
+Displays static data. Associative array:
 
 :data: Array of items. Each item is an associative array:
 
     :id:
     :title:
     :icon: Optional.
+
+:input:
+
+    :query: Here this key is mandatory.
 
 :appdesk:
 
