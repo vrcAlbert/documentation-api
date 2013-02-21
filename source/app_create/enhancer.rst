@@ -14,7 +14,7 @@ Les metadata d'un enhancer sont décrites dans la :ref:`documentation d'API <api
 
 Pour gérer la popup de configuration et la prévisualisation de l'enhancer, nous avons besoin d'un contrôleur.
 
-Créez donc le fichier :file:`mon_appli::classes/controller/admin/enhancer.ctrl.php` en étendant le ``Controller``
+Créez donc le fichier :file:`mon_appli::classes/controller/admin/enhancer.ctrl.php` en étendant le ``Controller_Admin_Enhancer``
 adéquat.
 
 .. code-block:: php
