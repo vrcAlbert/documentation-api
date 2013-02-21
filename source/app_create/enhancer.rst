@@ -116,7 +116,7 @@ fichier :file:`metadata.config.php`.
 Généralement, vous ferez appel au même contrôleur que celui de la popup, mais en appelant la méthode
 ``action_preview()`` au lieu de ``action_popup()``.
 
-La vue fournie par défaut utilise un icône, un titre (les valeurs par défaut reprennent l'icône 64*64 de
+La vue fournie par défaut utilise une icône, un titre (les valeurs par défaut reprennent l'icône 64*64 de
 l'application, ainsi que le titre de l'enhancer) et un ``layout`` (fichiers de vues additionnels appelés).
 
 :file:`mon_appli::config/controller/admin/enhancer.config.php` :
