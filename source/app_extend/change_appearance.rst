@@ -101,7 +101,7 @@ Nous créer le fichier :file:`local::views/apps/noviusos_blognews/front/post/lis
     include APPPATH.'applications/noviusos_blognews/views/front/post/list.view.php';
 
 
-Notre vue modifiée inclut d'abord un fichier CSS (à créer dans :file:`public/static/css/blog_custom.css`, puis appelle la vue d'origine.
+Notre vue modifiée inclut d'abord un fichier CSS (à créer dans :file:`public/static/css/blog_custom.css`), puis appelle la vue d'origine.
 
 
 2\ :sup:`e`\  technique : agir directement sur le gabarit

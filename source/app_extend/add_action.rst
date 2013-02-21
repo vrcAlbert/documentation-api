@@ -21,7 +21,7 @@ La configuration des actions contient des ``{{placeholders}}``.
     - ``{{context}}`` : contexte actuellement affiché (ou premier contexte lorsque plusieurs sont affichés)
 
 Tous les autes placeholders sont remplacés par les données de **l'item** : ``{{_id}}`` et ``{{_title}}`` dans ce cas,
-mais égalements n'importe quelle champ définit dans le ``data_mapping``.
+mais égalements n'importe quel champ définit dans le ``data_mapping``.
 
 
 Cibles des actions
@@ -129,12 +129,12 @@ L'action **delete** :
                     )),
                 ),
             ),
-            // L'action s'affiche à la fois dans la grille principale et sur le formulaire d'édition
+            // L'action s'affiche à la fois dans la grille principale et sur le formulaire d'édition...
             'targets' => array(
                 'grid' => true,
                 'toolbar-edit' => true,
             ),
-            /// Mais pas pour les nouveaux items !
+            // ...mais pas pour les nouveaux items !
             'visible' => function($params) {
                 return !isset($params['item']) || !$params['item']->is_new();
             },

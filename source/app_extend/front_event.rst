@@ -62,7 +62,7 @@ Enfin, on peut aussi le faire directement via le code, comme présenté ci-desso
 	        $new_url = 'my-new-url'.substr($params['url'], 10);
 
 	        // Utilisation de la classe Response de FuelPHP
-	        \Response::redirect($new_url, 'location', 301);
+	        Response::redirect($new_url, 'location', 301);
 	    }
 	});
 
