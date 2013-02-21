@@ -86,7 +86,7 @@ Rendez-vous dans le fichier de configuration :file:`mon_appli::config/controller
         ),
     );
 
-Ce fichier fait référence à la vue ``mon_appli::enhancer/popup`` qui n'existe pas, il qu'il faut donc créer. Cette
+Ce fichier fait référence à la vue ``mon_appli::enhancer/popup`` qui n'existe pas, et qu'il faut donc créer. Cette
 dernière contiendra des champs de formulaire avec nos options configurables :
 
 .. code-block:: html+php
