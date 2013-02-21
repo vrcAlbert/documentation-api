@@ -1,3 +1,2 @@
-http://pypi.python.org/pypi/sphinxcontrib-youtube
 sphinxcontrib-phpdomain
 
