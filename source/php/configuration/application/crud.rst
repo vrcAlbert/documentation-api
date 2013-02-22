@@ -1,19 +1,45 @@
-Crud
-####
+Crud Controller
+###############
 
-Configuration for :php:class:`Nos\\Orm\\Model`'s appdesk.
 
-Associative array:
+The CRUD controller is in charge of generating the forms (add, edit & delete) related to an item / model and handling
+automatically the multilingual / translation problematic.
+
 
 :controller_url: Url of the CRUD controller
-:model:          Model handled by this controller
+:model:          Which model it generates the form for.
 :environment_relation: Relation name. Allows to define a children / parent relationship.
-:tab:            Tab informations, see :ref:`javascript/$/nosAction/nosTabs`
+:tab:            Tab informations (such as the icon & label), see :ref:`javascript/$/nosAction/nosTabs`
 :views:          Optional. Views locations.
-:layout:         Where fields are displayed on form. Optional if `layout_insert` and `layout_update` are defined.
+:layout:         How the form looks like and where fields are displayed inside it. Optional if `layout_insert` and `layout_update` are defined.
 :layout_insert:  Optional. Specific layout for insert. Will use ``layout`` as default value.
 :layout_update:  Optional. Specific layour for update. Will use ``layout`` as default value.
 :fields:         All fields displayed in the form.
+
+
+.. code-block:: php
+
+	<?php
+	return array(
+		'controller_url' => '',
+        'environment_relation' => null,
+		'model' => '',
+        'tab' => array(
+            'iconUrl' => '',
+            'labels' => array(
+                'update' => null,
+                'insert' => 'New item',
+                'blankSlate' => 'Translate an item',
+            ),
+        ),
+		'layout' => array(),
+		'fields' => array(),
+        'require_js' => array(),
+        'views' => array(
+            'form' => 'nos::crud/form',
+            'delete' => 'nos::crud/delete_popup',
+        ),
+	);
 
 
 environment_relation
@@ -68,10 +94,25 @@ The ``tab`` configuration array has a special ``labels`` key, to handle several 
 :blankSlate: Translating an existing item
 :update:     Editing an existing item
 
-
 - ``insert`` and ``update`` must contain plain ``string`` value ;
 - ``update`` can either contain a plain ``string`` value, or a ``callable`` taking one argument: the ``$item`` ;
 - The default value for ``labels.update`` is the item's title.
+
+.. code-block:: php
+
+	<?php
+	return array(
+		'tab' => array(
+			'iconUrl' => 'static/apps/noviusos_monkey/img/16/monkey.png',
+			// Add form will user 'insert'
+			// Edit form will use item's title
+			// Translate form (multilingual) will use 'blankSlate'
+			'labels' => array(
+				'insert' => __('Add a monkey'),
+				'blankSlate' => __('Translate a monkey'),
+			),
+		),
+	);
 
 
 views
@@ -86,12 +127,14 @@ views
 layout
 ******
 
-``layout`` is a data passed to the parameters of the view.
+The ``layout`` is a data passed to the parameters of the view. It list all the views needed to render the form.
 
-There are two syntaxes, the normal (full) and a simplified form (because it's what we want to use 80% of the time).
+There are two syntaxes:
 
+- the full syntax ;
+- a simplified syntax, which is used 90% of the time.
 
-Here is the **full normal syntax**:
+The **full syntax** for using a layout is the following:
 
 .. code-block:: php
 
@@ -100,7 +143,7 @@ Here is the **full normal syntax**:
         'first_view' => array(
             'view' => 'nos::form/layout_standard',
             'params' => array(
-                // View data
+                // View data (depends on the view).
                 'title' => '',
                 'content' => '',
             ),
@@ -109,10 +152,23 @@ Here is the **full normal syntax**:
             'view' => 'noviusos_page::admin/page_form',
             // No 'params'
         ),
+        // More views can be used here.
     ),
 
 
-But Novius OS has a standard layout for the form, and that's what we want to use 80% of the time with the **simplified syntax**:
+In addition to view-specific params / data, Novius OS always include the following vars:
+
+* ``$item`` : the instance of the model currently edited (or added / translated).
+* ``$fieldset`` : the form instance which holds all fields definition.
+
+
+
+Because 90% of the time, we want to use ``nos::form/layout_standard`` as the view for the layout, a
+**simplified syntax** was created: only write the view  ``params`` of the standard layout.
+
+It's much more limitating because you can only use one view to render the layout, and it has to be
+``nos::form/layout_standard``. But that's what should be used 90% of the time.
+
 
 .. code-block:: php
 
@@ -135,21 +191,65 @@ We only need to define the view data for the standard layout, and it will be wra
         ),
     );
 
+.. code-block:: php
 
-.. seealso:: :doc:`/php/views/form`
+	<?php
+	// The following...
+	return array(
+		'layout' => array(
+			'view_1' => array(
+				'view' => 'nos::form/layout_standard',
+				'params' => array(
+                    // View data (depends on the view).
+				),
+			),
+		),
+	);
+
+	// ... is the same as this:
+	return array(
+		'layout' => array(
+			// View params for ``nos::form/layout_standard``.
+		),
+	);
+
+
+Native views included in Novius OS
+----------------------------------
+
+- Used as **container** for other layouts / views
+
+    * :ref:`php/views/form/layout_standard`: used as a container for other views ;
+    * :ref:`php/views/form_expander`: used inside ``layout_standard.content`` in the Pages application ;
+
+- Used as **final** views:
+
+    * :ref:`php/views/form_fields`: used inside ``layout_standard.content`` in the User application ;
+    * :ref:`php/views/form_accordion`: used inside ``layout_standard.menu`` in the Pages application.
+
+
+.. seealso:: :doc:`/php/views/index
+`
 
 .. _php/configuration/application/crud/fields:
 
 fields
 ******
 
-The ``fields`` syntax is based on an existing FuelPHP feature, which is used to configure form attributes for each column of a Model.
+Contains the fields definition, including:
+
+- a label ;
+- how the field is displayed: a native HTML ``<input>`` or a custom renderer (like date picker or wysiwyg) ;
+- validation rules.
+
+The ``fields`` syntax is based on an existing FuelPHP feature, which is used to configure form attributes for each
+column of a Model.
 
 .. seealso::
 
     `FuelPHP documentation on Model::$_properties <http://docs.fuelphp.com/packages/orm/creating_models.html#propperties>`__
 
-In addition to standard form fields, Novius OS has :term:`renderers <Renderer>`, which are a bit more advanced. For
+In addition to standard form fields, Novius OS has :ref:`renderers <php/renderers>`, which are a bit more advanced. For
 instance, they allow to select a media, a page, a date...
 
 

@@ -1,6 +1,4 @@
-Form views
-##########
-
+.. _php/views/form/layout_standard:
 
 Standard layout
 ---------------
@@ -69,59 +67,3 @@ View path: ``nos::form/layout_standard``.
             'fields' => array('field_4', 'field_4'),
         ),
     ),
-
-
-Accordion
----------
-
-View path: ``nos::form/accordion``
-
-.. seealso:: `Wijmo Accordion <http://wijmo.com/widgets/wijmo-open/accordion/>`__
-
-
-For each accordion, you can either set:
-
-- a **view** + **params** pair ;
-- or a **fields** list.
-
-
-**Params**:
-
-:accordions: A list of accordions
-
-    :title:           Optional. Default value is *empty string*.
-    :view:            Optional. Path to a view.
-    :params:          Optional. Data for the ``view``.
-    :fields:          Optional. A list of field names.
-    :field_template:  Optional. Template to wrap each field. Default value is ``<p>{field}</p>``
-    :header_class:    Optional. CSS classes for the ``<h3>`` tag.
-    :content_class:   Optional. CSS classes for the ``<div>`` panel.
-
-
-Expander
---------
-
-View path: ``nos::form/expander``
-
-.. seealso:: `Wijmo Expander <http://wijmo.com/widgets/wijmo-open/expander/>`__
-
-
-**Params**:
-
-:title:   Expander's title.
-:options: Options for the wijexpander.
-:content: Either a plain *string*, a *callable*, or a *view* + *params* pair (array).
-
-
-Fields
-------
-
-View path: ``nos::form/fields``
-
-
-**Params**:
-
-:begin:    String to display at the beginning.
-:end:      String to display at the end.
-:fields:   A list of field names.
-:callback: Optional. Callback function used to render the field. By default, a field will be rendered by calling it's ``build()`` method.
