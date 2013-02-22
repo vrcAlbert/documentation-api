@@ -14,7 +14,7 @@ La syntaxe se base sur une fonctionnalité existante de FuelPHP, qui définit co
 
     `Documentation de FuelPHP sur les propriétés d'un modèle <http://docs.fuelphp.com/packages/orm/creating_models.html#propperties>`__
 
-En plus des champs de formulaires standards, Novius possède des :term:`renderers <Renderer>`, qui sont un peu plus
+En plus des champs de formulaires standards, Novius OS possède des :term:`renderers <Renderer>`, qui sont un peu plus
 poussés. Ils permettent par exemple de sélectionner un média, une page, une date...
 
 
