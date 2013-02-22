@@ -7,7 +7,8 @@ Changements non rétro-compatibles obligatoires
 Conséquences du passage de multi-languages à multi-contextes
 ============================================================
 
-	* La configuration se fait dans un fichier dédié (plus dans ``config.php``). Deux nouvelles clé ``contexts`` et ``sites`` en plus de ``locales``
+	* La configuration des contextes se fait dans un fichier dédié (elle n'est plus dans ``config.php``). Deux nouvelles
+	  clé ``contexts`` et ``sites`` font leur apparition, en plus de ``locales``
 	* Toutes les colonnes ``lang``, ``lang_common_id``, ``lang_is_main`` de la base de données ont été renommées avec ``context``
 	* Les nouvelles colonnes ``context`` ont été agrandies, de 5 à 25 caractères
 	* Le ``behaviour`` ``Translatable`` a été renommé en ``Twinnable``
@@ -21,7 +22,7 @@ Modification de l'API des pages
 	* ``Model_Page->get_href()`` -> ``Model_Page->url()``
 	* ``Model_Page::get_url()`` -> ``Tools_Url::page()``
 	* Suppression de ``Model_Page::get_url_absolute()``
-	* Toutes les méthodes retournent des URLs absolues
+	* Toutes les méthodes retournent des URL absolues
 
 Modification de l'API des évènements
 ====================================
@@ -53,7 +54,7 @@ Metadata
 ========
 
 
-* Launchers : la clé ``url`` a été remplacée par ``action`` (syntaxe standard nosAction)
+* Launchers : la clé ``url`` a été remplacée par ``action`` (syntaxe standard :ref:`nosAction <api:php/configuration/application/nosActions>`)
 * Launchers : la clé ``icon64`` a été remplacée par ``icon``
 
 .. code-block:: php
@@ -135,28 +136,28 @@ Cette partie se base sur l'existence d'une hypothétique application ``lib_agend
 Appdesk
 =======
 
-Les modèles possèdent un nouveau fichier de configuration ``common`` qui contient :
+Les modèles possèdent un nouveau fichier de configuration :file:`common` qui contient :
 * un ``data_mapping``
 * une liste d'``actions``
 
-Dans ``appdesk.config.php`` :
+Dans :file:`appdesk.config.php` :
 
 * Supprimer les clés ``selectedView`` et ``views`` (si vous n'avez qu'une seule vue sans fichier de conf JS).
-* Repérez le modèle principale de votre appdesk (clé ``query.model``).
-* Créez le ficher common associé ``config/common/{{model_name}}.config.php``
+* Repérez le modèle principal de votre appdesk (clé ``query.model``).
+* Créez le ficher common associé :file:`config/common/{{model_name}}.config.php`
     * ``{{model_name}}`` correspond au nom du model en minuscule, sans le préfixe ``Model_``, par exemple ``Model_Page`` devient ``page``
-    * ``Model_Page`` correspond donc au fichier ``config/common/page.config.php``
+    * ``Model_Page`` correspond donc au fichier :file:`config/common/page.config.php`
 
 
-Note :
+.. note::
 
-* Attention à bien avoir ``'hideContexts' => true,`` dans la configuration de votre appdesk si vos élements ne sont pas ``Contextable``.
+    Attention à bien avoir ``'hideContexts' => true,`` dans la configuration de votre appdesk si vos items ne sont pas ``Contextable``.
 
 
 Data mapping
 ------------
 
-Le ``data_mapping`` correspond à la fusion du ``dataset`` et de ``appdesk.grid.columns``
+Le ``data_mapping`` correspond à la fusion du ``dataset`` et de ``appdesk.grid.columns``.
 
 
 .. code-block:: php
@@ -244,7 +245,7 @@ Le ``data_mapping`` correspond à la fusion du ``dataset`` et de ``appdesk.grid.
 
     <?php
 
-    // Code du nouveau fichier ``event.config.php``
+    // Code du nouveau fichier event.config.php
     return array(
         // Fusion de 'appdesk.dataset' et de 'appdesk.grid.columns'
         'data_mapping' => array(
@@ -270,7 +271,7 @@ Le ``data_mapping`` correspond à la fusion du ``dataset`` et de ``appdesk.grid.
         ),
     );
 
-Quelques notes :
+Quelques remarques :
 * ``headerText`` peut s'écrire ``title`` (plus facile / simple à retenir, utilisé dans les applis natives)
 * ``datakey`` peut s'écrire ``column``
 * ``value`` est toujours possible pour une fonction de callback
@@ -281,7 +282,7 @@ Quelques notes :
 Actions
 -------
 
-Les actions sur le modèle principal (celui de la grid de l'appdesk) doivent également être déplacées dans le fichier common.
+Les actions sur le modèle principal (celui de la grid de l'appdesk) doivent également être déplacées dans le fichier :file:`common`.
 
 .. code-block:: php
    :emphasize-lines: 8-16
@@ -351,7 +352,7 @@ Les actions sur le modèle principal (celui de la grid de l'appdesk) doivent ég
 À partir du moment où le fichier ``common`` est utilisé, les actions génériques suivantes apparaissent :
 * ``add``
 * ``edit`` (et non pas ``update`` !)
-* ``visualise`` (si approprié, c-à-d si le modèle possède le Behaviour Urlrnhancer)
+* ``visualise`` (si approprié, c-à-d si le modèle possède le Behaviour Urlrenhancer)
 * ``delete``
 * ``share`` (si approprié)
 
@@ -395,12 +396,15 @@ Notes :
     );
 
 
-Par défaut, les targets sont configurés comme suit pour les actions :
+Par défaut, les targets sont configurées comme suit pour les actions :
 * ``grid`` : edit + visualise + delete
 * ``toolbar-grid`` : add
 * ``toolbar-edit`` : visualise + share + delete
 
-Note : pour l'instant, ``appdesk.appdesk.buttons`` est toujours défini, il prend donc la main sur la configuration par défaut. Sachant que nous avons à la fois 'Ajouter un évènement' et 'Ajouter une catégorie', on ne peut pas (encore) le supprimer tout de suite.
+.. note::
+
+    Pour l'instant, ``appdesk.appdesk.buttons`` est toujours défini, il prend donc la main sur la configuration par défaut.
+    Sachant que nous avons à la fois 'Ajouter un évènement' et 'Ajouter une catégorie', on ne peut pas (encore) le supprimer tout de suite.
 
 
 
@@ -409,7 +413,7 @@ I18N et traductions
 
 Les textes sont configurables via la clé ``i18n``.
 
-Se référer à la documentation, ou (en attendant) au fichier ``framework/config/common_i18n.config.php`` pour la liste des clés possibles.
+Se référer à la documentation, ou (en attendant) au fichier :file:`framework/config/common_i18n.config.php` pour la liste des clés possibles.
 
 .. code-block:: php
 
@@ -462,9 +466,9 @@ Inspecteurs
 En 0.1, les inspecteurs sont configurés à 3 endroits :
 * La clé ``appdesk.appdesk.inspectors``
 * La clé ``inputs``
-* Le fichier de configuration ``inspector/{{model}}.config.php``
+* Le fichier de configuration :file:`inspector/{{model}}.config.php`
 
-EN 0.2, les ``inputs`` doivent désormais être déplacé dans leur fichier ``inspector/{{model}}.config.php`` correspondant.
+En 0.2, les ``inputs`` doivent désormais être déplacés dans leur fichier :file:`inspector/{{model}}.config.php` correspondant.
 Chaque clé de ``appdesk.appdesk.inspectors`` sera déplacée sur une clé ``appdesk`` du fichier ``inspector/{{model}}.config.php`` correspondant.
 La clé ``appdesk.appdesk.inspectors`` est remplacée par une clé ``inspectors`` qui contient le nom des fichiers ``inspector/{{model}}.config.php``.
 

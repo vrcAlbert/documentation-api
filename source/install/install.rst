@@ -1,18 +1,24 @@
 Installation
 ############
 
-.. contents::
-	:depth: 2
+.. sidebar:: Sommaire
+
+	.. contents::
+		:backlinks: top
+		:depth: 2
+		:local:
 
 Prérequis généraux
 ******************
 
-* Disposer d'un serveur **LAMP** avec PHP 5.3+.
+* Disposer d'un serveur :program:`LAMP` avec PHP 5.3+.
+
 	.. code-block:: bash
 
 			sudo apt-get install apache2 php5 mysql-server libapache2-mod-php5 php5-mysql
 
-* Avoir le **mod_rewrite d’Apache** est activé.
+* Avoir le **mod_rewrite** d’:program:`Apache` activé.
+
 	.. code-block:: bash
 
 			sudo a2enmod rewrite
@@ -23,16 +29,16 @@ Prérequis généraux
 
 .. note::
 
-	Théoriquement Novius OS peut fonctionner avec un serveur autre qu'**Apache**.
+	Théoriquement Novius OS peut fonctionner avec un serveur autre qu':program:`Apache`.
 
 Installation rapide
 *******************
 
-Prérequis
-=========
+Pré-requis
+==========
 
-* Avoir un accès ligne de commande sur le serveur et disposer des droits d'administation ``sudo``.
-* Avoir **Git** installé.
+* Avoir un accès ligne de commande sur le serveur et disposer des droits d'administration :command:`sudo`.
+* Avoir :program:`Git` installé.
 
 Installation
 ============
@@ -44,29 +50,29 @@ Ouvrez un terminal et saisissez :
     cd /var/www
     sudo wget http://raw.github.com/novius-os/ci/master/0.2/tools/install.sh && sh install.sh
 
-À la question « *Enter the directory name where you want to install Novius OS (default novius-os)* »,
+À la question :guilabel:`« Enter the directory name where you want to install Novius OS (default novius-os) »`,
 indiquez le nom du répertoire dans lequel vous voulez installer votre instance de Novius OS.
-Laissez vide pour l'installer dans un répertoire novius-os.
+Laissez vide pour l'installer dans un répertoire :file:`novius-os`.
 
 Une fois l'installation terminée :
 
-* Ouvrez votre navigateur à l'URL http://votredomaine/novius-os/ (remplacez ``novius-os`` par le nom du répertoire que vous avez saisi).
+* Ouvrez votre navigateur à l'URL :file:`http://votredomaine/novius-os/` (remplacez :file:`novius-os` par le nom du répertoire que vous avez saisi).
 * Poursuivez l'installation avec :doc:`l'assistant de paramétrage <setup_wizard>`.
 
 .. note::
 
-	* Pour une installation en local, l'URL sera probablement http://localhost/novius-os/ .
-	* Si le ``DOCUMENT_ROOT`` de votre serveur n'est pas ``/var/www/``, modifiez la première ligne en conséquence.
+	* Pour une installation en local, l'URL sera probablement :file:`http://localhost/novius-os/`.
+	* Si le ``DOCUMENT_ROOT`` de votre serveur n'est pas :file:`/var/www/`, modifiez la première ligne en conséquence.
 
 Installation via Zip
 ********************
 
 Cette procédure est à privilégier si vous souhaitez installer Novius OS sur un hébergement mutualisé :
 
-* Téléchargez  `novius-os.0.2.zip <http://www.novius-os.org/download-novius-os-zip.html>`_.
+* Téléchargez  `novius-os.0.2.zip <http://www.novius-os.org/download-novius-os-zip.html>`__.
 * Dézippez le fichier.
-* Uploadez (ou déplacer) le répertoire ``novius-os`` dans le ``DOCUMENT_ROOT`` de votre serveur (par exemple via FTP).
-* Ouvrez votre navigateur à l'URL http://votredomaine/novius-os/ (remplacez ``novius-os`` par le nom du répertoire où vous avez dézippé Novius OS).
+* Uploadez (ou déplacer) le répertoire :file:`novius-os` dans le ``DOCUMENT_ROOT`` de votre serveur (par exemple via FTP).
+* Ouvrez votre navigateur à l'URL :file:`http://votredomaine/novius-os/` (remplacez :file:`novius-os` par le nom du répertoire où vous avez dézippé Novius OS).
 * Poursuivez l'installation avec :doc:`l'assistant de paramétrage <setup_wizard>`.
 
 
@@ -82,12 +88,12 @@ Les commandes suivantes sont données à titre d'exemple si vous voulez installe
 
 	sudo nano /etc/apache2/sites-available/novius-os
 
-| Remplacez ``nano`` par n'importe quel autre éditeur de texte.
-| Remplacez ``novius-os`` par le nom que vous voulez donner à votre ``Virtual Host``
+| Remplacez :command:`nano` par n'importe quel autre éditeur de texte.
+| Remplacez :file:`novius-os` par le nom que vous voulez donner à votre ``Virtual Host``.
 
-| Copiez la configuration suivant dans le fichier que vous venez d'ouvrir et sauvegardez.
+| Copiez la configuration suivante dans le fichier que vous venez d'ouvrir et sauvegardez.
 | Adaptez la ligne ``ServerName`` avec votre nom de domaine dans le cas d'une installation en production.
-| De même, remplacez ``/var/www/novius-os`` par le répertoire dans lequel vous avez installé Novius OS.
+| De même, remplacez :file:`/var/www/novius-os` par le répertoire dans lequel vous avez installé Novius OS.
 
 .. code-block:: apache
 
@@ -100,15 +106,15 @@ Les commandes suivantes sont données à titre d'exemple si vous voulez installe
 		</Directory>
 	</VirtualHost>
 
-La configuration par défaut contient un répertoire public. La racine web doit pointer vers ce répertoire.
+La configuration par défaut contient un répertoire :file:`public`. C'est vers ce lui que doit pointer ``DocumentRoot``.
 
-Activez votre nouveau VirtualHost
+Activez votre nouveau ``VirtualHost`` :
 
 .. code-block:: bash
 
 	sudo a2ensite novius-os
 
-Relancez ensuite Apache pour prendre en compte la nouvelle configuration.
+Relancez ensuite :program:`Apache` pour appliquer la nouvelle configuration.
 
 .. code-block:: bash
 
@@ -117,7 +123,7 @@ Relancez ensuite Apache pour prendre en compte la nouvelle configuration.
 Configurer le fichier hosts, dans le cas d'installation sur votre machine
 -------------------------------------------------------------------------
 
-Si vous installez Novius OS sur votre machine locale, la valeur du ``ServerName`` (``novius-os`` dans l'exemple ci-desssus) doit être ajoutée dans votre fichiers ``hosts``.
+Si vous installez Novius OS sur votre machine locale, vous devez ajouter une ligne au fichier :file:`/etc/hosts`, avec la valeur du ``ServerName`` (``novius-os`` dans l'exemple ci-desssus) .
 
 .. code-block:: bash
 
@@ -132,7 +138,7 @@ Ajouter la ligne suivante :
 Installation avancée avec Git
 =============================
 
-Pour cloner Novius OS :
+Il faut cloner le dépôt disponible sur GitHub :
 
 .. code-block:: bash
 
@@ -141,13 +147,17 @@ Pour cloner Novius OS :
 Cette commande télécharge le dépôt principal, avec plusieurs submodules :
 
 * novius-os : le cœur de Novius OS, qui contient lui-même des submodules, comme fuel-core ou fuel-orm.
-* Différents submodules dans local/applications : les applications blog, news, comments, form, slideshow...
+* Différents submodules dans :file:`local/applications` : les applications blog, actualités, commentaires, formulaires, diaporamas...
 
-| Le dépôt est configuré pour que lors d'un clone, il pointe vers la dernière version stable.
-| Lorsqu'une nouvelle version est disponible, on la créé dans une branche.
-| Pour le moment, tous les dépôts dépendants de novius-os/novius-os sont synchronisés au niveau des numéros de version. C'est-à-dire qu'une application disponible sur notre compte Github suit les mêmes numéros de version que le cœur de Novius OS. Donc si vous utilisez novius-os/core en version 0.3 (qui n'est pas encore sorti !), alors vous devriez aussi utiliser novius-os/app dans le même numéro de version 0.3.
+| La branche par défaut du dépôt pointe vers la dernière version stable.
+| Les nouvelles versions seront disponibles dans des nouvelles branches.
+
+| Pour le moment, tous les dépôts dépendants de novius-os/novius-os partagent le même numéro de version.
+  C'est-à-dire qu'une application disponible sur notre compte Github existe dans les mêmes versions que le cœur de Novius OS.
+  Donc si vous utilisez ``novius-os/core`` en version |version|, alors vous devriez aussi utiliser ``novius-os/app`` dans le même numéro de version |version|.
+
 | Pour changer la version que vous voulez utiliser après un clone, n'oubliez pas de mettre à jour les submodules !
-| Exemple qui utilise la dernière nightly de la branche dev :
+| Exemple qui utilise la dernière nightly de la branche ``dev`` :
 
 .. code-block:: bash
 
