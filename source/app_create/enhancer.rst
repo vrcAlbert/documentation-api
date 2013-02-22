@@ -156,7 +156,7 @@ Par exemple, pour l'enhancer « Formulaire », le titre du formulaire sélection
 3. [Front-office] Afficher votre contenu sur le site
 ====================================================
 
-Une fois le WYSIWYG enregistré et la page publiée, l'enhancer va s'exprimer sur le site.
+Une fois la page enregistrée et publiée, l'enhancer va s'exprimer sur le site.
 
 Le contenu sera généré par le contrôleur configuré dans une des clés ``enhancer`` ou ``urlEnhancer`` du fichier
 :file:`metadata.config.php` (selon si on voulait un enhancer simple ou un URL enhancer). N'oubliez pas de prendre
