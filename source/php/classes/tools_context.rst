@@ -5,7 +5,7 @@ Tools_Context
 
 .. php:class:: Tools_Context
 
-	Provide static methods for work with yours contexts, sites and languages.
+	Provides static methods to work with yours contexts, sites and languages.
 
 .. seealso::
 
@@ -21,8 +21,8 @@ Tools_Context
 	.. code-block:: php
 
 		<?php
-		$containers = \Nos\Tools_Context::contexts();
-		foreach ($containers as $container_key => $container_urls) {
+		$contexts = \Nos\Tools_Context::contexts();
+		foreach ($contexts as $context_code => $context_urls) {
 			// ....
 		}
 

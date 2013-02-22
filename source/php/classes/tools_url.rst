@@ -5,7 +5,7 @@ Tools_Url
 
 .. php:class:: Tools_Url
 
-	Provide static methods for URL.
+	Provides static methods for URL.
 
 ::page()
 --------
@@ -13,7 +13,7 @@ Tools_Url
 .. php:staticmethod:: page($page_id)
 
 	:param int $page_id: A :php:class:`Model_Page` ID.
-	:returns: URL of the specify page.
+	:returns: URL of the specified page.
 
 
 ::context()
@@ -22,4 +22,4 @@ Tools_Url
 .. php:staticmethod:: context($context)
 
 	:param string $context: A context ID. See :doc:`/php/configuration/software/multi_context`.
-	:returns: Home URL of the specify context.
+	:returns: Home URL of the specified context.
