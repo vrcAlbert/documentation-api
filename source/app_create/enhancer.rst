@@ -176,7 +176,7 @@ Créons le contrôleur :file:`mon_appli::controller/front.ctrl.php`
 
     <?php
 
-    namespace Nos\Blog;
+    namespace Mon\Appli;
 
     class Controller_Front extends \Nos\Controller_Front_Application
     {
