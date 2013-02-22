@@ -5,11 +5,11 @@ Publishable
 
 .. php:class:: Orm_Behaviour_Publishable
 
-	For Model whose behavior publishable.
+	Adds a publication status on a :php:class:`Nos\\Orm\\Model`.
 
 .. note::
 
-	For now, only one state yes / no is supported. Publications with dates of start and end will be possible later.
+	For now, only one state yes / no is supported. Publication with dates of start and end will be possible later.
 
 Configuration
 *************
@@ -17,7 +17,7 @@ Configuration
 .. php:attr:: publication_bool_property
 
 	Required.
-	Column name use for save publish state. Column must have type ``boolean``.
+	Column used to store the publication state. Its data type must be ``boolean``.
 
 Methods
 *******

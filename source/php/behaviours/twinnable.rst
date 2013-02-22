@@ -7,12 +7,12 @@ Twinnable
 
 .. php:class:: Orm_Behaviour_Twinnable
 
-	| Extend :php:class:`Nos\\Orm_Behaviour_Contextable`.
-	| It adds the ability to twin together different items with different contexts. See :doc:`/php/configuration/software/multi_context`.
+	| Extends :php:class:`Nos\\Orm_Behaviour_Contextable`.
+	| It adds the ability to twin together different items with different contexts.
 
-.. seealso::
+	.. seealso:: :doc:`/php/configuration/software/multi_context`.
 
-	:php:class:`Nos\\Orm_Behaviour_Contextable` for configuration and methods.
+    .. seealso:: :php:class:`Nos\\Orm_Behaviour_Contextable` for configuration and methods.
 
 Configuration
 *************
@@ -20,19 +20,19 @@ Configuration
 .. php:attr:: common_id_property
 
 	Required.
-	Column name use for save the common ID between twin items. Column must have type ``int``.
+	Column used to store the common ID between twinned items. Data type must be ``int``.
 
 .. php:attr:: is_main_property
 
 	Required.
-	Column name use for save if the item is the main item among twin items. Column must have type ``boolean``.
+	Column used to store if the item is the main item among twin items. Data type must be ``boolean``.
 
 Methods
 *******
 
 .. php:method:: delete_all_context()
 
-	Removes all items twinned to the current item, including the current item.
+	Removes all items twinned to the current item, including the current item itself.
 
 .. php:method:: is_main_context()
 
@@ -44,14 +44,14 @@ Methods
 
 		* Array of contexts ID.
 		* ``all``, to receive all contexts.
-		* Contexte ID.
+		* Context ID.
 		* ``main``, to receive main twin item.
 
-	:returns: A twin item, or an array of twin items, ``null`` or ``array()`` if none.
+	:returns: A twinned item, or an array of twinned items, ``null`` or ``array()`` if none.
 
 .. php:method:: find_main_context()
 
-	:returns: Return main twin item.
+	:returns: The main item among the twins.
 
 	Alias for ``->find_context('main')``.
 
@@ -62,12 +62,12 @@ Methods
 
 .. php:method:: get_all_context()
 
-	:returns: Array of all twin contexts, current item context include.
+	:returns: Array of all twinned contexts, including the one of the current item.
 
 .. php:method:: get_other_context($filter = array())
 
-	:param array $filter: Array of contexts ID. If set, return only twin contexts which belongs to array ``$filter``.
-	:returns: Array of all twin contexts ID, current item context exclude.
+	:param array $filter: Array of contexts ID. If set, return only twinned contexts which belongs to array ``$filter``.
+	:returns: Array of all twinned contexts ID, excluding the one of the current item.
 
 Example
 *******
