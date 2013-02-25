@@ -70,7 +70,7 @@ Extensions
 A la création de votre :ref:`api:php/classes/attachment`, vous pouvez spécifier une liste d'extensions de fichier autorisées
 en ajoutant la clé ``extensions`` au tableau de configuration et en lui donnant un tableau d'extensions acceptées en valeur.
 
-Si votre fichier fichier doit être une image, une clé ``image`` à ``true`` suffira.
+Si votre fichier doit être une image, une clé ``image`` à ``true`` suffira.
 
 Alias pour l'URL
 ================
