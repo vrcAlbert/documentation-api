@@ -8,7 +8,8 @@ Novius OS fournit la classe :ref:`api:php/classes/attachment` pour gérer les fi
 
 Les fichiers associés sont stockés dans le répertoire :file:`local/data/files/`.
 
-Vous pouvez associer un fichier à un :ref:`api:php/models/model` mais aussi à n'importe quel objet.
+Généralement les fichiers sont associés à un :ref:`api:php/models/model` mais il est possible de les gérer comme bon
+vous semble.
 Pour définir un :ref:`api:php/classes/attachment` il suffit de fournir une configuration.
 
 .. code-block:: php
