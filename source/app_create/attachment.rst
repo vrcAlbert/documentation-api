@@ -32,7 +32,7 @@ Pour enregistrer un fichier, il suffira de faire :
 
 Dans cet exemple, nous enregistrons un fichier uploadé comme fichier associé.
 Le chemin du fichier sera alors :file:`local/data/files/apps/myapps/my_id/nom_original.ext`
-où ``nom_original.ext`` est le nom original du fichier uploadé, récupérer via ``$_FILES['file']['name']``.
+où ``nom_original.ext`` est le nom original du fichier uploadé, récupéré via ``$_FILES['file']['name']``.
 
 
 Attaché à un model
