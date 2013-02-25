@@ -79,9 +79,9 @@ Par défaut, votre fichier attaché sera disponible à l'URL du type :
 
 :file:`http://www.mondomaine.com/data/files/{dir}/{id}/{file_name}.{extension}`
 
-Si ``dir`` est égale à ``apps/mon-apps/mon-type-de-fichier/``, seulement pas faire une URL assez longue.
+Si ``dir`` est égal, comme souvent, à ``apps/mon-apps/mon-type-de-fichier/``, celà peut faire une URL assez longue.
 
-Définissez une classe ``alias`` dans le tableau de configuration de votre :ref:`api:php/classes/attachment`.
+Définissez une clé ``alias`` dans le tableau de configuration de votre :ref:`api:php/classes/attachment`.
 La valeur de ``alias``, remplacera celle de ``dir`` dans l'URL.
 
 
