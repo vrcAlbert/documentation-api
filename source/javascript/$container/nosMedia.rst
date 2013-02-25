@@ -3,7 +3,7 @@ nosMedia
 
 .. js:function:: $container.nosMedia([options])
 
-	Transform an ``<input type="hidden">`` element to a media selector UI in Media Center using plugin `inputFileThumb <http://www.novius-labs.com/contributions/jquery-plugin-inputfile/documentation.html>`_.
+	Transforms an ``<input type="hidden">`` element into a media selector UI in Media Center using plugin `inputFileThumb <http://www.novius-labs.com/contributions/jquery-plugin-inputfile/documentation.html>`__.
 
 	:param JSON options: Optional options
 
@@ -21,12 +21,14 @@ nosMedia
 			}
 		});
 
+	.. seealso:: :ref:`php/renderers/media`.
+
 nosMediaVisualise
 #################
 
 .. js:function:: $.nosMediaVisualise(media)
 
-	Display a media, in a popup for images or in a new browser window for others.
+	Displays a media, in a popup for images or in a new browser window for other documents (like PDF).
 
 	:param JSON media: Media parameters
 

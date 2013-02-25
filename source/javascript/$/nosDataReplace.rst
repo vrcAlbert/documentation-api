@@ -3,18 +3,18 @@ nosDataReplace
 
 .. js:function:: $.nosDataReplace(object, data)
 
-	Replace placeholder define by pattern ``{{placeholder}}`` in string or JSON.
+	Replaces placeholder defined by the ``{{placeholder}}`` pattern in a string or JSON.
 
 	:param mixed object: A string or a JSON, where to search placeholder to replace.
-	:param JSON data: A JSON, ``placeholder => replacement value``.
-	:returns: Initial object with placeholders replaced.
+	:param JSON data:    A JSON, ``placeholder => replacement value``.
+	:returns:            Initial object with placeholders replaced.
 
 	.. code-block:: js
 
 		$.nosDataReplace(obj, data);
 
 		$.nosDataReplace('exemple {{foo}}', {foo : 'bar'});
-		// return 'exemple bar'
+		// returns 'exemple bar'
 
 		$.nosDataReplace({
 			astring: 'example {{foo}}',
@@ -26,7 +26,7 @@ nosDataReplace
 			foo : 'bar',
 			bar : 'foo'
 		});
-		//return {
+		//returns {
 		//	astring: 'example bar',
 		//	json: {
 		//		string: 'sample foo',

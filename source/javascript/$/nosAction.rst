@@ -3,23 +3,23 @@ nosAction
 
 .. js:function:: $container.nosAction(action [, data ])
 
-	Execute an action
+	Executes an action
 
 	:param JSON action:
 
-		JSON define the action to execute.
-		JSON must have a key ``action``, can be :
+		JSON defines the action to execute.
+		JSON must have an ``action`` key, can be :
 
-		:nosTabs: :js:attr:`nosAction.nosTabs`
-		:nosDialog: :js:attr:`nosAction.nosDialog`
+		:nosTabs:            :js:attr:`nosAction.nosTabs`
+		:nosDialog:          :js:attr:`nosAction.nosDialog`
 		:confirmationDialog: :js:attr:`nosAction.confirmationDialog`
-		:nosAjax: :js:attr:`nosAction.nosAjax`
-		:window.open: :js:attr:`nosAction.windowOpen`
-		:document.location: :js:attr:`nosAction.documentLocation`
-		:nosMediaVisualise: :js:attr:`nosAction.nosMediaVisualise`
-		:dialogPick: :js:attr:`nosAction.dialogPick`
+		:nosAjax:            :js:attr:`nosAction.nosAjax`
+		:window.open:        :js:attr:`nosAction.windowOpen`
+		:document.location:  :js:attr:`nosAction.documentLocation`
+		:nosMediaVisualise:  :js:attr:`nosAction.nosMediaVisualise`
+		:dialogPick:         :js:attr:`nosAction.dialogPick`
 
-	:param JSON data: JSON contextuel Data. Use to replace placeholder in ``action`` by calling :js:func:`$.nosDataReplace`.
+	:param JSON data: JSON contextual data. Used to replace placeholder in ``action`` by calling :js:func:`$.nosDataReplace`.
 
 Actions list
 ************
@@ -37,7 +37,7 @@ nosTabs
 
 	:action: ``nosTabs``
 	:method: Any sub-function name of :js:func:`$container.nosTabs`.
-	:tab: First parameter passed to sub-function of :js:func:`$container.nosTabs`.
+	:tab:    First parameter passed to sub-function of :js:func:`$container.nosTabs`.
 	:dialog: Second parameter passed to sub-function of :js:func:`$container.nosTabs`.
 
 	.. code-block:: js
@@ -47,7 +47,7 @@ nosTabs
 			method: 'add',
 			tab: {
 				url: 'path/url',
-				label: 'a title',
+				label: 'A title',
 				iconUrl: 'url/of/icon.png'
 			},
 			dialog: {
@@ -71,7 +71,7 @@ nosDialog
 			dialog: {
 				ajax: true,
 				contentUrl: 'path/url/,
-				title: 'a title',
+				title: 'A title',
 				width: 500,
 				height: 200
 			}
@@ -93,7 +93,7 @@ confirmationDialog
 			action: 'confirmationDialog',
 			dialog: {
 				contentUrl: 'path/url/,
-				title: 'a title'
+				title: 'A title'
 			}
 		});
 
@@ -143,10 +143,10 @@ document.location
 
 .. js:attribute:: nosAction.documentLocation
 
-	Redirect browser window to a new URL.
+	Redirects the browser window to a new URL.
 
 	:action: ``document.location``
-	:url: New URL of the window.
+	:url: The new URL.
 
 	.. code-block:: js
 
@@ -160,7 +160,7 @@ nosMediaVisualise
 
 .. js:attribute:: nosAction.nosMediaVisualise
 
-	This action have no parameter. Depends only on the data passed with action. See :js:func:`$.nosMediaVisualise`.
+	This action has no parameters. It only depends on the data passed with action. See :js:func:`$.nosMediaVisualise`.
 
 	:action: ``nosMediaVisualise``
 

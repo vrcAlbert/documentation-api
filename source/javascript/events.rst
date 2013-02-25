@@ -1,16 +1,16 @@
 Events
 ######
 
-The back-office of Novius OS is a "big HTML page". Actions preformed in one tab can affect displayed by a other (ex: adding, modifying or deleting an item).
+The back-office of Novius OS is one "big HTML page". Actions performed in one tab can affect other tabs (ex: adding, modifying or deleting an item).
 
-An event system has been established to enable the various interface elements communicate with each other.
+An event system has been established to enable the various interface elements to communicate with each other.
 
-| On the one hand, the interface elements are listening events (by binding callbacks functions) by connecting to :term:`dispatcher`.
-| The other, the different actions trigger events, usually returned by AJAX requests (see :js:func:`$container.nosAjax`),
+| On the one side, the interface elements are listening to events (by binding callbacks functions) by connecting to :term:`dispatchers <dispatcher>`.
+| On the other side, the different actions trigger events, usually returned by AJAX requests (see :js:func:`$container.nosAjax`),
   which are then dispatched to all interface elements via :term:`dispatchers <dispatcher>`.
 
-Events dispatched are executed immediately on active tab or popup (has focus).
-On the other tabs or popups, they are executed only when the tab or popup becomes active.
+Dispatched events are executed immediately on the current active tab or popup (the one which has focus).
+For other tabs (or popups), they are executed only when the tab or popup becomes active / focused.
 
 .. glossary::
 
@@ -27,12 +27,12 @@ Structure of an event
 
 	| ``string``
 	| Required
-	| Event name.	For events on a ``Model``, the name is the Model name, including PHP namespace.
+	| Event name. For events on a ``Model``, the name is the Model name, including its PHP namespace.
 
 .. js:attribute:: Event.id
 
 	| ``int`` or ``[int]``
-	| For events on a ``Model``, ID(s) of the item to which they relate event.
+	| For events on a ``Model``, ID(s) of the item to which they relate.
 
 .. js:attribute:: Event.action
 
@@ -50,14 +50,14 @@ nosListenEvent
 
 .. js:function:: $container.nosListenEvent(event, callback [, caller ])
 
-	| Listen one (or many) event, ie register a callback function to be called when the event occurs.
+	| Listen one (or many) event(s), i.e. register a callback function to be called when the event occurs.
 	| Listening will be on current :term:`dispatcher` (closest relatives in the DOM element in jQuery container).
 
-	For the callback function is triggered, events listened and triggered should not match exactly.
-	The event listened can just match one property of the event triggered.
+	For the callback function to be triggered, listened and triggered events should not match exactly.
+	The listened event can just match one property of the triggered event.
 
 	:param mixed event: ``{}`` or ``[{}]``. Required. JSON event to listen.
-	:param function callback: Required. The callback function to execute when the event occurs. The function takes as parameter the event trigger.
+	:param function callback: Required. The callback function to execute when the event occurs. The function takes as parameter the triggered event.
 	:param string caller: Caller name. If set, can stop listening to specific listener. See :js:func:`$container.nosUnlistenEvent`.
 
 	.. code-block:: js
@@ -69,7 +69,7 @@ nosListenEvent
 			// ...
 		}, 'caller');
 
-		// Listen all events with name 'Nos\Model_Page' and action 'insert' or 'delete'
+		// Listen all events with the 'Nos\Model_Page' name and 'insert' or 'delete' actions
 		$(domContext).nosListenEvent({
 				name: 'Nos\Model_Page',
 				action: ['insert', 'delete']
@@ -78,8 +78,8 @@ nosListenEvent
 				// ...
 			});
 
-		// Listen all events with name 'Nos\Model_Page' and action 'insert' or 'delete',
-		// or events with name 'Nos\Model_Page' and context 'main::en_GB'
+		// Listen all events with the 'Nos\Model_Page' name and 'insert' or 'delete' actions,
+		// or events with the 'Nos\Model_Page' name and the 'main::en_GB' context
 		$(domContext).nosListenEvent([
 			{
 				name: 'Nos\Model_Page',
@@ -98,7 +98,7 @@ nosUnlistenEvent
 
 .. js:function:: $container.nosUnlistenEvent(caller)
 
-	Stop listen events for a specific caller. See :js:func:`caller param of nosListenEvent <$container.nosListenEvent>`.
+	Stop listening events for a specific caller. See :js:func:`caller param of nosListenEvent <$container.nosListenEvent>`.
 
 	:param string caller: Caller name.
 
@@ -111,7 +111,7 @@ nosDispatchEvent
 
 .. js:function:: $.nosDispatchEvent(event)
 
-	Dispatch an event to all available :term:`dispatchers <dispatcher>`.
+	Dispatches an event to all available :term:`dispatchers <dispatcher>`.
 
 	:param JSON event: See :js:data:`Event`.
 

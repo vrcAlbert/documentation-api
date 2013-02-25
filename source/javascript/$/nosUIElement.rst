@@ -5,23 +5,23 @@ nosUIElement
 
 	:param JSON element: JSON definition of the element to create.
 
-		:type: ``string``. ``button`` (default) or ``link``. See :js:func:`$container.nosFormUI` for buttons ``data``, those of links are almost the same.
-		:label: ``string``. Element label.
-		:action: ``{}``. Action bound to click event. See :js:func:`$container.nosAction`.
-		:bind: ``{}``. Event(s) bound to element. Voir `$().bind() <http://api.jquery.com/bind/>`_.
+		:type:     ``string``. ``button`` (default) or ``link``. See :js:func:`$container.nosFormUI` for buttons ``data``, those of links are almost the same.
+		:label:    ``string``. Element label.
+		:action:   ``{}``. Action bound to the click event. See :js:func:`$container.nosAction`.
+		:bind:     ``{}``. Event(s) bound to the element. See `$().bind() <http://api.jquery.com/bind/>`__.
 		:disabled: ``boolean``. If ``true``, the element is disabled.
-		:menu: ``{}``. If set, bind a context menu to element.
+		:menu:     ``{}``. If set, binds a context menu to element.
 
 			:menus: ``[{}]``. Array containing each menu line.
 
-				:action: ``{}``. Action bound to click event of menu line. See :js:func:`$container.nosAction`.
+				:action: ``{}``. Action bound to the click event of the menu line. See :js:func:`$container.nosAction`.
 				:content: ``string``. HTML content of the menu line.
 				:label: ``string``. Label of the menu line.
-				:icon: Icon name (See `icons names of jQuery UI <http://jqueryui.com/themeroller/>`_) without the ``ui-icon-`` prefix.
+				:icon: Icon name (See `icons name of jQuery UI <http://jqueryui.com/themeroller/>`__) without the ``ui-icon-`` prefix.
 				:iconClasses: CSS classes of icon.
 				:iconUrl: Icon URL.
 
-			:options: ``{}``. Settings for `Wijmo widget wijmenu <http://wijmo.com/wiki/index.php/Menu>`_.
+			:options: ``{}``. Settings for `Wijmo widget wijmenu <http://wijmo.com/wiki/index.php/Menu>`__.
 
 	:param JSON data: Data attached to element and passed to action. See :js:func:`$container.nosAction`.
 
@@ -37,3 +37,5 @@ nosUIElement
 			id: 5
 			foo: 'bar'
 		});
+
+.. note:: ``content`` and ``label`` are exclusive. You don't need both. Same goes for the ``icon`` (either use a name, CSS classes or an URL).

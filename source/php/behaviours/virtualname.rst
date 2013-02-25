@@ -5,7 +5,7 @@ Virtualname
 
 .. php:class:: Orm_Behaviour_Virtualname
 
-	| Add a slug property to item.
+    | Adds a slug property to item.
     | The slug is automatically generated based on the ``title_property`` of the model if it is not specified.
 
 	If :php:attr:`Orm_Behaviour_Virtualname::$unique` is set, ``->save()`` method can throw an ``Exception`` if slug already in use.

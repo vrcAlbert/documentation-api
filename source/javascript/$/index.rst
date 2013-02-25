@@ -3,7 +3,7 @@ $ functions
 
 .. js:data:: $
 
-	In this documentation, ``$`` mean jQuery object itself.
+	In this documentation, ``$`` means the jQuery object itself.
 
 	.. code-block:: js
 

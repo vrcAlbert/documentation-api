@@ -1,3 +1,5 @@
+.. _php/renderers/media:
+
 Media Selector
 ##############
 
