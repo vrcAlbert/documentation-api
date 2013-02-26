@@ -5,7 +5,7 @@ Sharable
 
 .. php:class:: Orm_Behaviour_Sharable
 
-	Add behaviour sharable to Models.
+	Adds the sharable behaviour on a :php:class:`Nos\\Orm\\Model`.
 
 .. todo::
 
@@ -23,8 +23,8 @@ Configuration
 
 Associative array of different types of data forming a ``content nuggets``.
 
-* Keys can be one of :php:class:`DataCatcher` constantes.
-* Values are associative arrays.
+* Keys can be one of :php:class:`DataCatcher` constants.
+* Values are associative array.
 
 	:value: A column name or a closure. See :ref:`php/behaviours/sharable_examples`.
 	:useTitle: Help label indicate which property of item is use as default value.
@@ -36,12 +36,12 @@ Methods
 
 .. php:method:: get_default_nuggets()
 
-	:returns: Array containing default ``content nuggets`` of item.
+	:returns: Array containing the default ``content nuggets`` of an item.
 
 .. php:method:: get_catcher_nuggets($catcher = Model_Content_Nuggets::DEFAULT_CATCHER)
 
 	:param string $catcher: ``Data catchers`` ID.
-	:returns: A ``Model_Content_Nuggets`` of item for the specify ``data catchers``.
+	:returns: The ``Model_Content_Nuggets`` of this item for the specified ``data catcher``.
 
 .. php:method:: get_sharable_property($property = null, $default = null)
 
@@ -51,24 +51,33 @@ Methods
 
 .. php:method:: data_catchers()
 
-	:returns: Associative array of all ``data catchers``, ``data catchers`` ID in keys, can share ``content nuggets`` of item.
+    Retrieves all the data catchers that can use the ``content nugget`` of this item (checks the ``required_data`` of a
+    data catcher and ).
+
+	:returns: All the valid ``data catchers`` for this item (keys are the ``data catcher`` names).
 
 .. php:method:: possible_medias()
+
+    Retrieves all possible medias that can be associated with the item. Search for linked medias and images inserted in
+    the WYSIWYGs.
 
 	:returns: Associative array of all ``Model_Media``, ``Model_Media`` ID in keys, of item.
 
 .. php:method:: get_nugget_content($catcher)
 
+    Retrieves the personalised ``content nugget`` of a ``data catcher``, merged with the default ``content nugget`` of
+    the item.
+
 	:param string $catcher: ``Data catchers`` ID.
-	:returns: Array of ``content nuggets`` of item for specify ``data catchers`` merged with default ``content nuggets`` of item.
+	:returns: ``Array`` A ``content nugget``.
 
 .. _php/behaviours/sharable_examples:
 
 Examples
 ********
 
-A column for default data
-=========================
+A column for the default value
+==============================
 
 .. code-block:: php
 
@@ -79,8 +88,8 @@ A column for default data
 		),
 	);
 
-A closure which return default value
-====================================
+A closure which returns a default value
+=======================================
 
 .. code-block:: php
 

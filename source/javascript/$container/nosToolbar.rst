@@ -5,7 +5,7 @@ nosToolbar
 
 	Manage back-office's toolbars. This is a :term:`function with sub-functions`.
 
-	:param mixed method: The sub-function name, ``add`` (default) or ``create``. If omit, this is the first parameter of the default sub-function :js:func:`nosToolbar.add()`.
+	:param mixed method: The sub-function name, ``add`` (default) or ``create``. If omitted, this is the first parameter of the default sub-function :js:func:`nosToolbar.add()`.
 	:param mixed options: Parameters of the sub-function.
 
 nosToolbar('add')
@@ -13,7 +13,7 @@ nosToolbar('add')
 
 .. js:function:: nosToolbar.add(element [, right_side ])
 
-	Add element to toolbar on which depends the DOM element in jQuery container. If no toolbar exist, create one on the fly.
+	Adds an element to the toolbar of the current js:data::`$container`. If no toolbar exists, creates a new one on-the-fly.
 
 	:param mixed element: Can be HTML code, a DOM element or a jQuery container.
 	:param boolean right_side: Default ``false``, if ``true`` element added at the right side of the toolbar.
@@ -37,7 +37,7 @@ nosToolbar('create')
 
 .. js:function:: nosToolbar.create()
 
-	Add a toolbar above the DOM element in jQuery container.
+	Creates a toolbar in the current js:data::`$container`.
 
 	.. code-block:: js
 

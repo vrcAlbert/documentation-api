@@ -8,27 +8,29 @@ Associative array:
 :model: Model name.
 :query: Optional. Additional informations about the query.
 :search_text: Optional. Array of columns in which we search when the user fills appdesk's search bar.
-:data_mapping: Optional. Defines which data_mapping item are displayed.
+:data_mapping: Optional. Defines which data_mapping items are displayed.
 :inspectors: Optional.
 :views: Optional.
-:inputs: Optional. How to process additional parameters sent to
 :selectedView: Optional. Default selected view identifier.
+:inputs: Optional. How to process additional parameters sent to the appdesk.
 :i18n: Optional. Extends default text items.
 :thumbnails: Optional, boolean. Can the appdesk display items as thumbnails ?
-:tree: Optional (automatically filled when model has the :doc:`/php/behaviours/tree` behaviours enabled).
+:tree: Optional (automatically filled when model has the :doc:`/php/behaviours/tree` behaviour enabled).
 :appdesk: Optional. Additional display information about the appdesk.
 
+.. _php/configuration/application/appdesk/query:
 query
 *****
 
 Associative array. All keys are optional. Most keys are similar than the `find function second parameters <http://fuelphp.com/docs/packages/orm/crud.html#functions>`__.
 
-:model: Model on which query is executed
+:model: Model on which query is executed.
 :limit:
 :order:
 :related:
 :callback: Array of callback functions allowing you to customize the query (first parameter is the current query, must return the modified query).
 
+.. _php/configuration/application/appdesk/data_mapping:
 data_mapping
 ************
 
@@ -80,7 +82,7 @@ If it is a key => value association (value must then be an array), then the insp
 views
 *****
 
-Associative array defining different way of displaying the appdesk. The key is the view identifier. Value is vew configuration:
+Associative array defining different way of displaying the appdesk. The key is the view identifier. Value is view configuration:
 
 :name: Optionnal. Display view name in view selector
 :virtual: Optionnal. Is the view present on the view selector ?
@@ -98,10 +100,11 @@ If defined to true, data_mapping has to define two keys:
 :thumbnail: url of item thumbnail.
 :thumbnailAlternate: Default thumbnail when there is no thumbnails or thumbnail can't be found.
 
+.. _php/configuration/application/appdesk/tree:
 tree
 ****
 
-Defines how the model tree is constructed on the appdesk. It is automatically filled when model has the :ref:`tree behaviour <php/behaviours/tree>`)/. Associative array:
+Defines how the model tree is constructed on the appdesk. It is automatically filled when model has the :doc:`/php/behaviours/tree` behaviour. Associative array:
 
 :models: Models to be loaded on the tree. Array of associative array:
 
@@ -128,7 +131,7 @@ Associative array describing how appdesk interacts and is displayed. All items a
     :defaultView: Default view of appdesk.
     :buttons: Associative array containing grid toolbar actions information. See :ref:`php/configuration/application/common/actions`.
     :splitterVertical: Size of the vertical splitter.
-    :inspectors: Associative array containing information about inspectors. Key is the inspector identifier, value is its configurations. See :ref:`inspectors configuration <common>`.
+    :inspectors: Associative array containing information about inspectors. Key is the inspector identifier, value is its configurations. See :doc:`inspector` configuration.
     :grid: Grids informations. Associative array:
 
         :urlJson: Url of the json API to get items
@@ -138,6 +141,6 @@ Associative array describing how appdesk interacts and is displayed. All items a
 
         :urlJson: Url of the json API to get items
 
-:tab: Information about tab information (see :ref:`javascript/$/nosAction/nosTabs`).
+:tab: Tab information (see :ref:`javascript/$/nosAction/nosTabs`).
 :reloadEvent: Event name that will reload appdesk.
 :actions: Associative array containing main grid actions information. See :ref:`php/configuration/application/common/actions`.

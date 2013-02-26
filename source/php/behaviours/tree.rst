@@ -5,8 +5,8 @@ Tree
 
 .. php:class:: Orm_Behaviour_Tree
 
-	| For Model whose behaviour tree (DB table has a join on itself).
-	| We then say that an item has a parent and children.
+	| Makes a :php:class:`Nos\\Orm\\Model` behaves like a Tree.
+	| An item can then have a parent and children (all of the same Model).
 
 Configuration
 *************
@@ -23,24 +23,28 @@ Configuration
 
 .. php:attr:: level_property
 
-	Column name use for save depth of item in tree. Column must have type ``int``.
+	Column used to store the item's depth inside the tree. Data type must be ``int``.
 
 Method
 ******
 
 .. php:method:: get_parent()
 
-	:returns: Return Model parent item if exist, ``null`` otherwise.
+	:returns: Model parent item, if it exists, ``null`` otherwise.
 
 .. php:method:: set_parent($new_parent)
 
-	:param Model $new_parent: New parent Model of item.
-	:throws: ``Exception`` if item is moved in its own tree or, if item have behaviour :php:class:`Nos\\Orm_Behaviour_Twinnable`,
-	         if the new parent does not exist in one of the contexts of the current item.
-
 	Set a new parent for the item.
 
-	If item have behaviour :php:class:`Nos\\Orm_Behaviour_Twinnable` and if it exists in several contexts, all contexts will be moved synchronously.
+	If the item is :php:class:`twinnable <Nos\\Orm_Behaviour_Twinnable>` and if it exists in several contexts, all contexts will be moved synchronously.
+
+	:param Model $new_parent: New parent Model of the item (use ``null`` to remove the parent).
+	:throws:
+
+	    ``Exception`` when:
+
+	    - the item is moved in its own tree ;
+	    - the item is :php:class:`twinnable <Nos\\Orm_Behaviour_Twinnable>` and its parent does not exist in one of the contexts of the current item.
 
 .. php:method:: find_children($where = array(), $order_by = array(), $options = array())
 
@@ -72,7 +76,7 @@ Method
 Other
 *****
 
-This behaviour extend :term:`Model->find()`.
+This behaviour extends :term:`Model->find()`.
 
 Add option to ``where`` array passed to method : you can use ``parent`` key as alias for search in :php:attr:`Orm_Behaviour_Tree::$parent_relation` relation.
 

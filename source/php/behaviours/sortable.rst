@@ -5,7 +5,7 @@ Sortable
 
 .. php:class:: Orm_Behaviour_Sortable
 
-	For :php:class:`Nos\\Orm\\Model` can be sort.
+	Makes a :php:class:`Nos\\Orm\\Model` sortable.
 
 Configuration
 *************
@@ -24,15 +24,15 @@ Methods
 
 .. php:method:: move_before($item)
 
-	:param Model $item: Item before which move the current.
+	:param Model $item: Moves the current item before this one.
 
 .. php:method:: move_after($item)
 
-	:param Model $item: Item after which move the current.
+	:param Model $item: Moves the current item after this one.
 
 .. php:method:: move_to_last_position()
 
-	Move current item in last position.
+	Moves the current item to the last position (of its siblings).
 
 Example
 *******

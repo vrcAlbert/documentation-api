@@ -7,7 +7,7 @@ Urlenhancer
 
 .. php:class:: Orm_Behaviour_Urlenhancer
 
-	| For Model displayed in front by a :ref:`URL Enhancer <metadata/enhancers>`.
+	| Used for :php:class:`Nos\\Orm\\Model` displayed in the front-office by an :ref:`URL Enhancer <metadata/enhancers>`.
 
 Configuration
 *************
@@ -15,9 +15,9 @@ Configuration
 .. php:attr:: enhancers
 
 	Required.
-	Array of :ref:`enhancers <metadata/enhancers>` ID which can generate an URL for item.
+	Array of :ref:`enhancers <metadata/enhancers>` ID which can generate an URL for the item.
 
-	:ref:`metadata/enhancers` listed must define a method ``get_url_model($item, $params)``.
+	Listed :ref:`enhancers <metadata/enhancers>` must define a ``get_url_model($item, $params)`` method.
 
 Methods
 *******
@@ -26,9 +26,9 @@ Methods
 
 	:param array $params:
 
-		:enhancer: Specify :ref:`enhancer <metadata/enhancers>` ID. Reduce search to the specify :ref:`enhancer <metadata/enhancers>`.
+		:enhancer: Specify :ref:`enhancer <metadata/enhancers>` ID. Restricts the search to the specified :ref:`enhancer <metadata/enhancers>`.
 
-	:returns: Associative array of possible URLs for this item
+	:returns: Associative array of all possibles URLs for this item
 
 		* key : ``page_id::item_slug``. ``item slug`` is the URL part generate by :ref:`enhancer <metadata/enhancers>`.
 		* value : Absolute URL.
@@ -51,7 +51,7 @@ Methods
 
 	Alias for ``->url(array('canonical' => true))``.
 
-	If item have behaviour :php:class:`Nos\\Orm_Behaviour_Sharable`, return URL set in ``shared data (content nugget)``.
+	If the item is :php:class:`sharable <Nos\\Orm_Behaviour_Sharable>`, returns the URL set in the ``shared data (content nugget)``.
 
 	.. todo::
 
@@ -59,7 +59,7 @@ Methods
 
 .. php:method:: preview_url()
 
-	:returns: Absolute canonical URL of item, even if unpublished, or ``null`` if item can't be displayed in front.
+	:returns: Absolute canonical URL of item, even if it's not published, or ``null`` if item can't be displayed in the front-office.
 
 	Alias for ``->url_canonical(array('preview' => true))``.
 

@@ -3,25 +3,25 @@ nosFormUI
 
 .. js:function:: $container.nosFormUI()
 
-	Will perform UI enhancements on DOM elements (which are children of the DOM element in jQuery container)
-	using `Wijmo <http://wijmo.com/wiki/index.php/Main_Page>`_ and `jQuery UI <http://http://api.jqueryui.com/>`_ widgets.
+	Will perform UI enhancements on DOM elements on all the children of js:data::`$container` using
+	`Wijmo <http://wijmo.com/wiki/index.php/Main_Page>`__ and `jQuery UI <http://http://api.jqueryui.com/>`__ widgets.
 
-	Element with CSS class ``.notransform`` will not be formatting.
+	Element with a ``.notransform`` CSS class will be left unchanged.
 
-	:input text: Using `widget wijtextbox <http://wijmo.com/wiki/index.php/Textbox>`_.
-	:select: Using `widget wijdropdown <http://wijmo.com/wiki/index.php/Dropdown>`_.
-	:checkbox: Using `widget wijcheckbox <http://wijmo.com/wiki/index.php/Checkbox>`_.
-	:radio: Using `widget wijradio <http://wijmo.com/wiki/index.php/Radio>`_.
-	:expander: | Elements with CSS class ``.expander`` using `widget wijexpander <http://wijmo.com/wiki/index.php/Expander>`_.
-	  		   | You can set HTML attribut ``data-wijexpander-options`` contening a JSON for additional settings.
-	:accordion: Elements with CSS class ``.accordion`` using `widget wijaccordion <http://wijmo.com/wiki/index.php/Accordion>`_.
-	:submit: | Using `widget button <http://api.jqueryui.com/button/>`_.
-		     | You can set HTML attributs ``data-`` for additional settings:
+	:input text: Using the `wijtextbox widget <http://wijmo.com/wiki/index.php/Textbox>`__.
+	:select:     Using the `wijdropdown widget <http://wijmo.com/wiki/index.php/Dropdown>`__.
+	:checkbox:   Using the `wijcheckbox widget <http://wijmo.com/wiki/index.php/Checkbox>`__.
+	:radio:      Using the `wijradio widget <http://wijmo.com/wiki/index.php/Radio>`__.
+	:expander:   | Elements with the ``.expander`` CSS class  using `wijexpander widget <http://wijmo.com/wiki/index.php/Expander>`__.
+	  		     | You can set options with the ``data-wijexpander-options`` HTML attribute (JSON for additional settings).
+	:accordion:  Elements with CSS class ``.accordion`` using `wijaccordion widget <http://wijmo.com/wiki/index.php/Accordion>`__.
+	:submit:     | Using the `button widget <http://api.jqueryui.com/button/>`__.
+		         | You can set options with the ``data-`` HTML attributes (additional settings).
 
-		:red: Make red button.
-		:icons: ``{}``. Define icons for button.
-		:icon: Define left icon name (See `icons names of jQuery UI <http://jqueryui.com/themeroller/>`_).
-		:iconClasses: Define CSS classes for left icon.
+		:red: Makes the button red.
+		:icons: ``{}``. Define icons for the button.
+		:icon: Defines the left icon using a name (See `icons names of jQuery UI <http://jqueryui.com/themeroller/>`_).
+		:iconClasses: Defines the left icon CSS classes for left icon.
 		:iconUrl: Define URL of the left icon.
 
 	.. code-block:: js
@@ -33,10 +33,11 @@ nosFormAjax
 
 .. js:function:: $container.nosFormAjax()
 
-	Will use the `jquery-form <http://malsup.com/jquery/form/>`_ plugin to submit the form (the DOM element in jQuery container or children forms)
+	Will use the `jquery-form <http://malsup.com/jquery/form/>`__ plugin to submit any form inside js:data::`$container`
 	using Ajax rather than the native browser action.
 
-	Data type in return will be by default ``json``, and callbacks functions ``success`` and ``error`` call :js:func:`$container.nosAjaxSuccess` et :js:func:`$container.nosAjaxError`.
+	The default response data type is ``json``, and the ``success`` and ``error`` callbacks functions will call
+	:js:func:`$container.nosAjaxSuccess` and :js:func:`$container.nosAjaxError`.
 
 	.. code-block:: js
 
@@ -48,10 +49,13 @@ nosFormValidate
 
 .. js:function:: $container.nosFormValidate()
 
-	Will use the `jquery-validation <http://docs.jquery.com/Plugins/Validation>`_ plugin to perform inline validation on the form (the DOM element in jQuery container or children forms).
-	It’s already configured to display error messages nicely, and take into account some specificity from the UI enhancements (like the accordion).
+	Will use the `jquery-validation <http://docs.jquery.com/Plugins/Validation>`__ plugin to perform inline
+	validation on any form inside js:data::`$container`.
 
-	Most forms are using it, since it’s part of the standard form layout.
+	It’s already configured to display error messages nicely, and take into account some specificity from the UI
+	enhancements (like the accordion).
+
+	Most forms are using it, since it’s part of the form's standard layout.
 
 	.. code-block:: js
 

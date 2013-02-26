@@ -20,11 +20,11 @@ Configuration
 .. php:attr:: dir
 
 	Required.
-	Directory path, relative to :file:`local/data/files`, where the attachment is stored.
+	Directory path, where the attachment is stored. Relative to :file:`local/data/files`.
 
 .. php:attr:: alias
 
-	An URL alias for directory path.
+	An URL alias to access the directory path.
 
 .. php:attr:: extensions
 
@@ -36,7 +36,8 @@ Configuration
 
 .. php:attr:: check
 
-	A `callback function <http://php.net/manual/en/language.types.callable.php>`_ if file not in public access. Function take the Attachement object for single parameter.
+    Used it to make the attachment private.
+    A `callback function <http://php.net/manual/en/language.types.callable.php>`__ to check permissions against. It takes a single parameter: Attachement instance.
 
 Methods
 *******
@@ -56,19 +57,19 @@ Methods
 
 .. php:method:: newFile()
 
-	:returns: Get the new attachment file path if one, ``false`` if no.
+	:returns: Get the new attachment file path if one, ``false`` if no file exists.
 
 .. php:method:: path()
 
-	:returns: Get the attachment file path or ``false`` if no file.
+	:returns: Get the attachment file path or ``false`` if no file exists.
 
 .. php:method:: filename()
 
-	:returns: Get the attachment filename or ``false`` if no file.
+	:returns: Get the attachment filename or ``false`` if no file exists.
 
 .. php:method:: extension()
 
-	:returns: Get the attachment extension or ``false`` if no file.
+	:returns: Get the attachment extension or ``false`` if no file exists.
 
 .. php:method:: isImage()
 
@@ -76,13 +77,13 @@ Methods
 
 .. php:method:: url()
 
-	:returns: Get the attachment url or ``false`` if no file.
+	:returns: Get the attachment url or ``false`` if no file exists.
 
 .. php:method:: urlResized($max_width = 0, $max_height = 0)
 
 	:param array $max_width: Max width of the image.
 	:param array $max_height: Max height of the image.
-	:returns: Get the url of Attachment resized or ``false`` if no file or not an image.
+	:returns: Get the resized url for the Attachment  or ``false`` if no file exists or it's not an image.
 
 .. php:method:: set($file, $filename = null)
 

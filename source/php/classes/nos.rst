@@ -5,7 +5,7 @@ Nos
 
 .. php:class:: Nos
 
-	Provide static methods useful in Novius OS.
+	Provides static methods useful in Novius OS.
 
 
 Entry points
@@ -27,7 +27,7 @@ Entry points
 
 .. php:staticmethod:: main_controller()
 
-	:returns: Instance of main :term:`controller <Controller>`.
+	:returns: Instance of the main :term:`controller <Controller>`.
 
 ::hmvc()
 --------
@@ -37,7 +37,7 @@ Entry points
 	:param mixed $where: Route for the request.
 	:param array $args: The method parameters.
 
-	Execute a :term:`HMVC` request.
+	Executes an :term:`HMVC` request.
 
 ::parse_wysiwyg()
 -----------------
@@ -47,6 +47,6 @@ Entry points
 	:param string $content: A :php:class:`Nos\\Model_Wysiwyg` content.
 	:returns: Prepare wysiwyg content for display.
 
-	| Replace enhancers by theirs content
+	| Replace enhancers by their content.
 	| Replace :php:class:`Model_Page` and :php:class:`Model_Media` IDs by theirs URLs
-	| Add URL prefix on anchors (for work with ``base_href``).
+	| Add URL prefix on anchors (to work with ``<base href="">``).

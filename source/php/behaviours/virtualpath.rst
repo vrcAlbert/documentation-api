@@ -5,8 +5,8 @@ Virtualpath
 
 .. php:class:: Orm_Behaviour_Virtualpath
 
-	| Extend :php:class:`Nos\\Orm_Behaviour_Virtualname`.
-	| Add a virtual path property to item.
+	| Extends :php:class:`Nos\\Orm_Behaviour_Virtualname`.
+	| Adds a virtual path to an item.
 
 .. seealso::
 
@@ -23,25 +23,25 @@ Configuration
 .. php:attr:: extension_property
 
 	Required.
-	String to add to the end of the virtual path.
-	If is ``array``:
+	If it's a ``string``, it will be appended to the virtual path.
+	If it's an ``array``:
 
 		:before: String to add to extension start.
 		:after: String to add to extension end.
-		:property: Column name to use for extension.
+		:property: Column name used to store the extension.
 
 .. php:attr:: extension_property
 
 	Required.
-	Name of the parent :term:`relation <Relations>` use for generate first part of virtual path.
+	Name of the parent :term:`relation <Relations>` use to generate the first part of the virtual path.
 
 Methods
 *******
 
 .. php:method:: virtual_path($dir = false)
 
-	:param boolean $dir: If ``true``, extension replace by a final ``/``.
-	:returns: Virtual path of item.
+	:param boolean $dir: If ``true``, extension is replaced by a final ``/``.
+	:returns: Virtual path of the item.
 
 .. php:method:: extension()
 
