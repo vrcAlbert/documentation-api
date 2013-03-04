@@ -19,6 +19,7 @@ Entry points
 .. php:const:: ENTRY_POINT_FRONT
 .. php:const:: ENTRY_POINT_404
 .. php:const:: ENTRY_POINT_INSTALL
+.. php:const:: ENTRY_POINT_OIL
 
 .. versionadded:: 0.2.0.1
 
