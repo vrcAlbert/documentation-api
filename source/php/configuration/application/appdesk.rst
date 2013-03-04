@@ -62,7 +62,9 @@ Associative or simple array. Defines which inspectors are used on appdesk.
 
 If is also possible to define new custom inspectors which will be only used on the appdesk.
 
-If only value is defined, appdesk will display the inspector located at `inspector/inspector_name` if the value is `inspector_name`.
+If only value is defined:
+* appdesk will display the inspector located at `inspector/inspector_name` if the value is `inspector_name`.
+* it also supports inspector class names (`\My\App\Controller_Admin_Inspector_Name`).
 
 If it is a key => value association (value must then be an array), then the inspector configuration is extended by the value.
 
@@ -73,6 +75,7 @@ If it is a key => value association (value must then be an array), then the insp
         // ...
         'inspectors '=> array(
             'inspector1', // will display the inspector located at inspector/inspector1.
+            '\My\App\Controller_Admin_Inspector_Name', // will display the inspector which class is \My\App\Controller_Admin_Inspector_Name
             'inspector2' => array( // if inspector/inspector2 exists, then it is extended ; otherwise it creates a new inspector
                 // ...
             ),
