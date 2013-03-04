@@ -1,0 +1,19 @@
+Notes de la version 0.2
+===================================
+
+Nouveautés
+----------
+
+
+Développeur
+-----------
+
+* Mise à jour des librairies tierces :
+
+	* **jQuery**, de la 1.8.2 à **1.8.3**
+	* **jQuery UI**, de la 1.8.24 à la **1.9.2**
+	* **Wijmo**, de la 2.2.2 à la **2.3.7**
+	* **tinyMCE**, de la 3.5.7 à la **3.5.8**
+	* **require.js**, de la 2.1.1 à la **2.1.4**
+	* **FuelPHP** et ses packages de la 1.4 à la **1.5**
+
