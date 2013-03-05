@@ -19,6 +19,7 @@ Associative array:
 :appdesk: Optional. Additional display information about the appdesk.
 
 .. _php/configuration/application/appdesk/query:
+
 query
 *****
 
@@ -31,6 +32,7 @@ Associative array. All keys are optional. Most keys are similar than the `find f
 :callback: Array of callback functions allowing you to customize the query (first parameter is the current query, must return the modified query).
 
 .. _php/configuration/application/appdesk/data_mapping:
+
 data_mapping
 ************
 
@@ -101,6 +103,7 @@ If defined to true, data_mapping has to define two keys:
 :thumbnailAlternate: Default thumbnail when there is no thumbnails or thumbnail can't be found.
 
 .. _php/configuration/application/appdesk/tree:
+
 tree
 ****
 
