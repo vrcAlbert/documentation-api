@@ -17,3 +17,7 @@ Développeur
 	* **require.js**, de la 2.1.1 à la **2.1.4**
 	* **FuelPHP** et ses packages de la 1.4 à la **1.5**
 
+Deprecated
+^^^^^^^^^^
+
+* Ne plus utiliser la classe Nos\Renderer_Media mais Nos\Media\Renderer_Media
