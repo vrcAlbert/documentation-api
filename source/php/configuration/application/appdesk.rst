@@ -95,6 +95,24 @@ Associative array defining different way of displaying the appdesk. The key is t
 
 .. todo:: show how appdesk configuration can be extended on javascript ?
 
+inputs
+*****
+
+How to process additional parameters sent to the appdesk. Associative array, to define a callback for each parameter.
+
+.. code-block:: php
+
+    <?php
+    return array(
+        // ...
+        'inputs' => array(
+            'monk_species_id' => function($value, $query) {
+                // ...
+                return $query;
+            },
+        ),
+    );
+
 thumbnails
 **********
 
