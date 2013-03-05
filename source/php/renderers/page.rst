@@ -83,7 +83,7 @@ Displaying a media selector:
 
     <?php
 
-    echo Nos\Renderer_Media::renderer(array(
+    echo Nos\Page\Renderer_Selector::renderer(array(
         'input_name' => 'my_page',
         'selected' => array(
             'id' => 2, // ID of the previously selected page

@@ -3,7 +3,7 @@
 Media Selector
 ##############
 
-.. php:namespace:: Nos
+.. php:namespace:: Nos\Media
 
 .. php:class:: Renderer_Media
 
@@ -72,7 +72,7 @@ Adding a media in a CRUD form configuration:
 
     return array(
         'label' => '',
-        'renderer' => 'Nos\Renderer_Media',
+        'renderer' => 'Nos\Media\Renderer_Media',
         'renderer_options' => array(
             'mode' => 'image',
                 'inputFileThumb' => array(
@@ -88,7 +88,7 @@ Displaying a media selector:
 
     <?php
 
-    echo Nos\Renderer_Media::renderer(array(
+    echo Nos\Media\Renderer_Media::renderer(array(
         'name' => 'my_image',
         'class' => 'some_class',
         'value' => 2, // ID of the previously selected media
