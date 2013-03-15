@@ -21,3 +21,10 @@ Deprecated
 ^^^^^^^^^^
 
 * Ne plus utiliser la classe Nos\Renderer_Media mais Nos\Media\Renderer_Media
+
+
+Migration
+---------
+
+* Les ``$_properties`` des models du ``core`` et des applications natives sont maintenant définies.
+  Si vous avez ajouté un ou des champs à l'un de ces models, vous devez les ajouter aux ``properties`` via un fichier de config lié au model.
