@@ -8,7 +8,7 @@ Migration
 	Provides migration automation and methods useful for migrations.
 
 ->up()
----------------------------
+------
 
 .. php:method:: up()
 
@@ -16,7 +16,7 @@ Migration
 	001_install.sql).
 
 ->down()
----------------------------
+--------
 
 .. php:method:: down()
 
