@@ -21,3 +21,4 @@ Classes
 	tools_url
 	datacatcher
 	i18n
+	migration
