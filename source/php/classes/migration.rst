@@ -7,6 +7,25 @@ Migration
 
 	Provides migration automation and methods useful for migrations.
 
+Default usage
+-------------
+
+All you need is to declare the class in the right namespace.
+
+.. code-block:: php
+
+    <?php
+
+    namespace Nos\Monkey\Migrations;
+
+    class Install extends \Nos\Migration
+    {
+    }
+
+If the migration name is `001_install.php` it will try to execute `001_install.sql`.
+
+If you want a more complex migration (e.g. update files), you can overload up and down functions.
+
 ->up()
 ------
 
@@ -20,7 +39,7 @@ Migration
 
 .. php:method:: down()
 
-	Does nothing. Need to be overridden if you want to support this operation.
+	Does nothing. Need to be overloaded if you want to support this operation.
 
 ::executeSqlFile($sql_file)
 ---------------------------
