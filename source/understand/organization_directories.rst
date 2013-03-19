@@ -77,7 +77,7 @@ Tout Novius OS reprend les principes de segmentation issus de l’architecture M
 	:alt: Organisation des fichiers
 	:align: center
 
-On distingue 5 dossiers principaux :
+On distingue 6 dossiers principaux :
 
 :file:`classes`
 	Ce dossier regroupe la partie logique, c'est-à-dire les classes PHP qui définissent et manipulent les données.
@@ -92,6 +92,9 @@ On distingue 5 dossiers principaux :
 
 :file:`lang`
 	Ce dossier contient les fichiers de traduction, organisés en sous-dossiers par langue.
+
+:file:`migrations`
+	Ce dossier contient les fichiers de migration.
 
 :file:`static`
 	Ce dossier contient l’ensemble des scripts (JS et CSS) et ressources publiques (comme les images) chargées en front office.
