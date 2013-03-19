@@ -1,5 +1,5 @@
-Fichiers migrations
-###################
+Fichiers de migrations
+######################
 
 Chaque application ainsi que le dossier local peut avoir un dossier `migrations`.
 Ce dossier contient des fichiers de migration qui sont un moyen pratique de mettre à jour la base de données ou les
