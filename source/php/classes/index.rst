@@ -22,3 +22,4 @@ Classes
 	datacatcher
 	i18n
 	migration
+	view
