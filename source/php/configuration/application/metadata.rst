@@ -9,6 +9,9 @@ The most important keys are:
 :name: The name of the application.
 :namespace: In which PHP namespace all the classes of the application must be defined.
 :icons: In the 3 standard sizes 16*16, 32*32 and 64*64.
+:extends: Which application does your application extends.
+:requires: Which applications does your application requires. Array or string (in the last case, considered as an array
+    with a unique element).
 
 .. code-block:: php
 
@@ -21,6 +24,10 @@ The most important keys are:
         'provider'  => array(
             'name'  => 'Novius OS',
         ),
+        'extends' => '' // Optional,
+        'requires' => array(
+            // Optional
+        )
         'icons' => array(
             64 => 'static/apps/noviusos_page/img/64/page.png',
             32 => 'static/apps/noviusos_page/img/32/page.png',
