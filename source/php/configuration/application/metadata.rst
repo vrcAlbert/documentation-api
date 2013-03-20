@@ -9,8 +9,8 @@ The most important keys are:
 :name: The name of the application.
 :namespace: In which PHP namespace all the classes of the application must be defined.
 :icons: In the 3 standard sizes 16*16, 32*32 and 64*64.
-:extends: Which application does your application extends.
-:requires: Which applications does your application requires. Array or string (in the last case, considered as an array
+:extends: Optional. Which application does your application extends.
+:requires: Optional. Which applications does your application requires. Array or string (in the last case, considered as an array
     with a unique element).
 
 .. code-block:: php
