@@ -9,7 +9,6 @@ The most important keys are:
 :name: The name of the application.
 :namespace: In which PHP namespace all the classes of the application must be defined.
 :icons: In the 3 standard sizes 16*16, 32*32 and 64*64.
-:extends: Optional. Which application does your application extends.
 :requires: Optional. Which applications does your application requires. Array or string (in the last case, considered as an array
     with a unique element).
 
@@ -24,10 +23,12 @@ The most important keys are:
         'provider'  => array(
             'name'  => 'Novius OS',
         ),
-        'extends' => '' // Optional,
+        'extends' => array(
+            // Optional,
+        ),
         'requires' => array(
             // Optional
-        )
+        ),
         'icons' => array(
             64 => 'static/apps/noviusos_page/img/64/page.png',
             32 => 'static/apps/noviusos_page/img/32/page.png',
@@ -53,6 +54,15 @@ The most important keys are:
 
 An application provides:
 
+Extends
+=======
+
+Application can extend other applications. The scope of the extension depends on the configuration you provide. The
+value of the `extends` key can be an associative array:
+
+:application: Application that is extended
+:extend_configuration: Optional, default value is true. Boolean defining if configuration files are extended (the
+    extended application's configuration files are recursively merged with those of the extending application).
 
 .. _php/configuration/metadata/launchers:
 
@@ -61,7 +71,7 @@ Launchers
 
 A :term:`launcher <Launcher>` is an icon on the home tab.
 
-A launcher is defined by an associative array. Key is launcher ID, launcher properties is an associative array :
+A launcher is defined by an associative array. Key is launcher ID, launcher properties is an associative array:
 
 :name: Text to display for the icon.
 :icon: Optional. URL to a 64*64 image, default will use the 64*64 icon of the app.
