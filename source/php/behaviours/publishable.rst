@@ -5,18 +5,17 @@ Publishable
 
 .. php:class:: Orm_Behaviour_Publishable
 
-	Adds a publication status on a :php:class:`Nos\\Orm\\Model`. 3 modes are available:
+	Adds a publication status on a :php:class:`Nos\\Orm\\Model`. 2 modes are available:
 
 	- Yes / No state ;
-	- Publication depending on start / end dates ;
-	- Both of above (either forced always published / unpublished, or using a date range).
+	- Publication depending on start / end dates (yes / no choice remains).
 
 Configuration
 *************
 
 .. php:attr:: publication_state_property
 
-	Required for the **yes/no** mode.
+	Always required, both for the **yes/no** and the **date range** modes.
 
 	Column used to store the publication state. Its data type must be ``int``:
 
@@ -39,7 +38,27 @@ Methods
 
 .. php:method:: published()
 
-	:returns: ``true`` or ``false`` depending on whether the item is published or not.
+	:returns: ``true`` or ``false`` depending on whether the item is currently published or not.
+
+.. php:method:: planification_status()
+
+	:returns: ``0`` (not published), ``1`` (published) or ``2`` (scheduled).
+
+.. php:method:: publication_start()
+
+	:returns: the publication start date, MySQL format.
+
+.. php:method:: publication_end()
+
+	:returns: the publication end date, MySQL format.
+
+Other
+*****
+
+This behaviour extends :term:`Model->find()`.
+
+You can use the ``published`` key in the ``where`` array. Appropriate conditions will be added, according to the
+configuration of the behaviour. Especially useful with the **date range** mode (and start / end dates).
 
 Example
 *******
