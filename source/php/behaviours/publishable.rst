@@ -40,15 +40,15 @@ Methods
 
 	:returns: ``true`` or ``false`` depending on whether the item is currently published or not.
 
-.. php:method:: planification_status()
+.. php:method:: planificationStatus()
 
 	:returns: ``0`` (not published), ``1`` (published) or ``2`` (scheduled).
 
-.. php:method:: publication_start()
+.. php:method:: publicationStart()
 
 	:returns: the publication start date, MySQL format.
 
-.. php:method:: publication_end()
+.. php:method:: publicationEnd()
 
 	:returns: the publication end date, MySQL format.
 
