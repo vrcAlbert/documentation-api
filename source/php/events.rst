@@ -113,7 +113,7 @@ front.parse_wysiwyg
 
         <?php
 
-        Event::register_function('front.parse_wysiwyg', function(&content)
+        Event::register_function('front.parse_wysiwyg', function(&$content)
         {
             // ...
         });
@@ -132,7 +132,7 @@ front.display
 
         <?php
 
-        Event::register_function('front.display', function(&html)
+        Event::register_function('front.display', function(&$html)
         {
             // ...
         });
@@ -156,6 +156,89 @@ front.404NotFound
         Event::register('front.404NotFound', function($params)
         {
             $url = $params['url'];
+            // ...
+        });
+
+404 entry point
+***************
+
+.. versionadded:: 0.2.0.2
+
+404.start
+===========
+
+.. php:function:: 404.start($params)
+
+    A inexistant file is requested. Can be media or attachment file.
+
+    :param array $params:
+
+        :&$url: ``string``  URL requested (without leading domain)
+
+    .. code-block:: php
+
+        <?php
+
+        Event::register_function('404.start', function($params)
+        {
+            $url =& $params['url'];
+            // ...
+        });
+
+
+404.mediaNotFound
+=================
+
+.. php:function:: 404.mediaNotFound($url)
+
+	A inexistant media file is requested.
+
+    :param string $url: URL requested (without leading domain)
+
+    .. code-block:: php
+
+        <?php
+
+        Event::register('404.mediaNotFound', function($url)
+        {
+            // ...
+        });
+
+
+404.attachmentNotFound
+======================
+
+.. php:function:: 404.attachmentNotFound($url)
+
+	A inexistant attachment file is requested.
+
+    :param string $url: URL requested (without leading domain)
+
+    .. code-block:: php
+
+        <?php
+
+        Event::register('404.attachmentNotFound', function($url)
+        {
+            // ...
+        });
+
+
+404.end
+=======
+
+.. php:function:: 404.end($url)
+
+	A inexistant file is requested. No attachment or media file matched the URL.
+
+    :param string $url: URL requested (without leading domain)
+
+    .. code-block:: php
+
+        <?php
+
+        Event::register('404.end', function($url)
+        {
             // ...
         });
 
