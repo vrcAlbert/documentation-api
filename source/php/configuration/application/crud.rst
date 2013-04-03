@@ -134,6 +134,8 @@ There are two syntaxes:
 - the full syntax ;
 - a simplified syntax, which is used 90% of the time.
 
+.. _php/configuration/crud/layout:
+
 The **full syntax** for using a layout is the following:
 
 .. code-block:: php

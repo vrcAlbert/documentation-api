@@ -8,3 +8,4 @@ Views
 	form_expander
 	form_accordion
 	form_fields
+	permissions_standalone

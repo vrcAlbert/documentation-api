@@ -17,7 +17,7 @@ View path: ``nos::form/layout_standard``.
 :large:    Default layout has spaces on the sides. If true, the form will use 100% of the width.
 :save:     Which field is the save button.
 :subtitle: Fields under title.
-:content:  It has the same syntax as the **full** version of the ``layout`` (see above).
+:content:  It has the same syntax as the **full** version of the :ref:`crud layout <php/configuration/crud/layout>`.
 :menu:     Shown on the right. Data for the **accordion** view (see below). Optionally comes with an **simplified syntax**.
 
 

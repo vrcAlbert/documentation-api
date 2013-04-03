@@ -23,3 +23,4 @@ Classes
 	i18n
 	migration
 	view
+	permission

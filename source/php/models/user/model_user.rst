@@ -19,6 +19,12 @@ Relations
 	* Relation type : :term:`many_many`.
 	* Model : :php:class:`Model_Role`
 
+.. php:method:: check_permission($permission_name, $category_key = null)
+
+	:param string $permission_name: Name of the permission to check against
+    :param string $category_key: (optional) If the permission has categories, the category key to check against
+    :returns: ``True`` if the user has the required authorisation, ``false`` otherwise
+
 
 Methods
 *******

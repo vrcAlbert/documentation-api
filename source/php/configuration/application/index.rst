@@ -11,3 +11,4 @@ Application configuration
 	inspector
 	crud
 	glossary
+	permissions
