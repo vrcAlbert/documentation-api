@@ -9,7 +9,7 @@ nosUIElement
 		:label:    ``string``. Element label.
 		:action:   ``{}``. Action bound to the click event. See :js:func:`$container.nosAction`.
 		:bind:     ``{}``. Event(s) bound to the element. See `$().bind() <http://api.jquery.com/bind/>`__.
-		:disabled: ``boolean``. If ``true``, the element is disabled.
+		:disabled: ``boolean`` or ``string``. If ``true`` or ``string``, the element is disabled. If it is a ``string``, it will fill the element's title.
 		:menu:     ``{}``. If set, binds a context menu to element.
 
 			:menus: ``[{}]``. Array containing each menu line.

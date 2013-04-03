@@ -186,8 +186,13 @@ Each action is an associative array. Key is the action ID, and value is an array
     :toolbar-grid: Is the action displayed on the grid's toolbar?
     :toolbar-edit: Is the action displayed on the crud's toolbar (edition form)?
 
-:disabled: Callback function that returns a boolean defining if the action is disabled or not for an item. There is only one parameter sent: the current ``$item``.
-:visible:  Callback function that returns a boolean defining if the action is visible or not on a context. There is only one parameter sent, an associative array:
+:disabled: Callback function or array of callback functions (the one taken into account is the first which doesn't
+    return ``false``) that returns a boolean or a string defining if the action is disabled or not for an item (a string
+    disable the action and the value is used as title). There is two sent parameters: the current ``$item``, and
+    ``$params`` containing the common configuration.
+:visible:  Callback function or array of callback functions (the one taken into account is the first which doesn't
+    return ``true``) that returns a boolean defining if the action is visible or not on a context. There is only one
+    parameter sent, an associative array:
 
     :model:  Model tested.
     :target: Target where action is displayed. Value can be ``grid``, ``toolbar-grid`` or ``toolbar-edit`` (related to action's ``targets``).
