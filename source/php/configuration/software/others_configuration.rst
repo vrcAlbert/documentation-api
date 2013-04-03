@@ -1,3 +1,29 @@
+Novius OS
+#########
+
+A sample configuration file is available in :file:`local/config/config.php.sample`.
+Just rename (or copy) it to :file:`local/config/config.php`, and update it to your case.
+
+.. php:global:: cache
+
+    ``Boolean`` for use of cache on front. By default is ``true``, except in DEVELOPMENT environment.
+
+    .. versionadded:: 0.2.0.2
+
+.. php:global:: cache_duration_page
+
+    ``Int``, number of seconds of cache validity. By default is ``60``.
+
+.. php:global:: upload
+
+    ``Array`` :
+
+    :param disabled_extensions: ``Array`` of invalid extensions for files uploaded in Novius OS. By default ``php`` is disabled.
+
+.. php:global:: assets_minified
+
+    ``Boolean`` for use of assets minified in back-office. By default is ``true``, except in DEVELOPMENT environment.
+
 .. _php/configuration/software/db:
 
 Database

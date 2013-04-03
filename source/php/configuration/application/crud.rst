@@ -230,8 +230,7 @@ Native views included in Novius OS
     * :ref:`php/views/form_accordion`: used inside ``layout_standard.menu`` in the Pages application.
 
 
-.. seealso:: :doc:`/php/views/index
-`
+.. seealso:: :doc:`/php/views/index`
 
 .. _php/configuration/application/crud/fields:
 
