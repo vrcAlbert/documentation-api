@@ -21,7 +21,7 @@ i.e. You need to configure one or several (``view`` + ``params``) pair(s), like 
                         'params' => array(
                             'list' => array(
                                 'noviusos_app::create' => array(
-                                    'label' => __('Can create new pages'),
+                                    'label' => __('Can create new items'),
                                     'checked' => true,
                                 ),
                                 'noviusos_app::delete_locked' => array(

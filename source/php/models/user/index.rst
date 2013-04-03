@@ -1,6 +1,5 @@
 User Models
-Native views included in Novius OS
-----------------------------------
+-----------
 
 ###########
 
