@@ -11,3 +11,4 @@ Comprendre Novius OS
 	sharing
 	multi_context/index
 	media_centre
+	permissions
