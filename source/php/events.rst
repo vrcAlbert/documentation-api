@@ -71,6 +71,7 @@ config|<group>
         Config::load(array(), 'group');
 
 
+.. _php/events/front-office:
 
 Front-office (website)
 **********************
@@ -137,6 +138,52 @@ front.display
             // ...
         });
 
+front.pageFound
+=================
+
+.. php:function:: front.pageFound($params)
+
+    Page to display have been found.
+
+    :param array $params:
+
+        :$page: :php:class::`Nos\\Page\\Model_Page`
+
+    .. code-block:: php
+
+        <?php
+
+        Event::register('front.pageFound', function($params)
+        {
+            $page = $params['page'];
+            // ...
+        });
+
+
+front.response
+==============
+
+.. php:function:: front.response($params)
+
+    Before that the response be sended.
+
+    :param array $params:
+
+        :&$content: ``string``  The response body
+        :&$status: ``int``  The HTTP response status for this response
+        :&$headers: ``array``  HTTP headers for this response
+
+    .. code-block:: php
+
+        <?php
+
+        Event::register_function('front.response', function($params)
+        {
+            $content =& $params['content'];
+            $status =& $params['status'];
+            $headers =& $params['headers'];
+            // ...
+        });
 
 front.404NotFound
 =================
@@ -147,7 +194,7 @@ front.404NotFound
 
     :param array $params:
 
-        :&$url: ``string``  Current URL (without leading domain, with trailing .html)
+        :$url: ``string``  Current URL (without leading domain, with trailing .html)
 
     .. code-block:: php
 
