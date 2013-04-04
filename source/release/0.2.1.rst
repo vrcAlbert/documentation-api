@@ -1,30 +1,48 @@
-Notes de la version 0.2
-===================================
+Notes de la version 0.2.1
+#########################
 
 Nouveautés
-----------
+==========
 
+* Le comportement publiable (``Behaviour_Publishable``) supporte maintenant la publication par dates de début et de fin.
 
-Développeur
------------
-
-* Mise à jour des librairies tierces :
-
-	* **jQuery**, de la 1.8.2 à **1.8.3**
-	* **jQuery UI**, de la 1.8.24 à la **1.9.2**
-	* **Wijmo**, de la 2.2.2 à la **2.3.7**
-	* **tinyMCE**, de la 3.5.7 à la **3.5.8**
-	* **require.js**, de la 2.1.1 à la **2.1.4**
-	* **FuelPHP** et ses packages de la 1.4 à la **1.5**
-
-Deprecated
-^^^^^^^^^^
-
-* Ne plus utiliser la classe Nos\Renderer_Media mais Nos\Media\Renderer_Media
-
-
-Migration
+Slideshow
 ---------
 
-* Les ``$_properties`` des models du ``core`` et des applications natives sont maintenant définies.
-  Si vous avez ajouté un ou des champs à l'un de ces models, vous devez les ajouter aux ``properties`` via un fichier de config lié au model.
+* Ajout d'une barre de progression sur les formulaire multi-page
+
+Développeur
+===========
+
+* Amélioration du front-office
+
+    * Activation du ``Profiling`` par défaut dans l'environement ``DEVELOPMENT``.
+    * La configuration ``novius-os.cache`` est à ``true`` par défaut.
+    * Les configurations ``novius-os.cache_duration_page`` et ``novius-os.cache_duration_function`` sont à 600 secondes par défaut, sauf en ``PRODUCTION`` à 3600 secondes.
+    * Nouveaux événements ``front.pageFound`` et ``front.response``.
+    * Nouvelles méthodes sur le Controller_Front : getContext, disableCaching, setCacheDuration, setStatus, setHeader, getCustomData, setCustomData, sendContent, addCacheSuffixHandler.
+    * Le status et les headers sont sauvés dans le cache.
+    * Mécanisme de Suffix Handler permettant d'ajouter des suffixes au cache en fonction de paramètres GET ou de ce que vous voulez (par des ``callables``).
+    * Mécanisme d'exécution après cache
+
+* Properties des Models
+
+    * Les properties des Models sont toutes définies
+    * Implémentation d'un mécanisme de cache des properties, via le cache FuelPHP. Ce cache s'auto regénère si une property,
+      existante en base mais inconnue du Model, est appellée via le ``get()`` ou le ``set()``.
+
+* Les migrations sont maintenant dispatchées par application
+* Nouvelle clé ``requires`` dans le ``metadata`` des applications permettant de définir qu'une application en nécessite une autre.
+* Possibilité d'utiliser ``href="##..."`` dans les enhancers ou les templates; les occurences seront remplacées par ``href="#..."`` sans être préfixée par le ``base_url``.
+* CRUD: Quand la clé ``disabled`` returne une chaine, elle est affiché en tooltip. Les clés ``disabled`` et ``visible`` peuvent maintenant être de simple valeur, des fonctions de callbacks ou des tableaux de callbacks.
+
+
+Deprecated
+----------
+
+* Ne plus utiliser la classe ``Nos\Renderer_Media`` mais ``Nos\Media\Renderer_Media``.
+* Dans la définition des ``launchers`, ne plus utiliser la clé ``url`` mais la clé ``action``.
+* Dans la configuration des renderer, ne plus utiliser la clé ``widget`` mais la clé ``renderer`` et modifier le nom de la classe appellée.
+* Dans la configuration des renderer, ne plus utiliser la clé ``widget_options`` mais la clé ``renderer_options``.
+* Ne plus utiliser la classe ``\Config::extendable_load()`` mais ``\Config::loadConfiguration()``.
+* Dans la configuration du behaviour ``Orm_Behaviour_Publishable``, ne plus utiliser la clé ``publication_bool_property`` mais la clé ``publication_state_property``.
