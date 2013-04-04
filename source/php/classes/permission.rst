@@ -1,3 +1,5 @@
+.. _php/classes/permission:
+
 Permission
 ##########
 

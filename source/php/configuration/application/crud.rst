@@ -237,14 +237,10 @@ Native views included in Novius OS
 fields
 ******
 
-Contains the fields definition, including:
-
-- a label ;
-- how the field is displayed: a native HTML ``<input>`` or a custom renderer (like date picker or wysiwyg) ;
-- validation rules.
+Contains the fields definition array.
 
 The ``fields`` syntax is based on an existing FuelPHP feature, which is used to configure form attributes for each
-column of a Model.
+column of a Model :
 
 .. seealso::
 
@@ -252,6 +248,21 @@ column of a Model.
 
 In addition to standard form fields, Novius OS has :ref:`renderers <php/renderers>`, which are a bit more advanced. For
 instance, they allow to select a media, a page, a date...
+
+The field name is determined using the key. Then, for each field:
+
+:label:            Text for the label. Won't be shown for hidden fields
+:form:             ``array`` Attributes of the <input> tag
+:renderer:         Class name of a renderer
+:renderer_options: (optional) ``array`` Options for the renderer
+:validation:       (optional) ``array`` rules used to validate the field.
+:expert:           (optional) ``boolean`` Should the field be visible only to expert users? Default ``false``.
+:show_when:        (optional) ``callable`` Custom callback function to alter the visibility of the field. Must return ``true`` for the field to be shown.
+
+
+To choose how the field is displayed, you only need to specify either ``form`` (a native HTML ``<input>``) or a
+``renderer`` (like a date picker or a wysiwyg), you don't need both. If both keys are filled, the renderer
+will be used to display the field (and the ``form`` key will be ignored).
 
 
 Configuration example:
