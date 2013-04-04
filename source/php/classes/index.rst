@@ -15,6 +15,7 @@ Classes
 
 	nos
 	controller_front
+	frontcache
 	attachment
 	tools_context
 	tools_rss
