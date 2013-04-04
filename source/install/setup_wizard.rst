@@ -59,6 +59,11 @@ nécessaires dans votre base de données.
 	:alt: Étape 4
 	:align: center
 
+.. warning::
+
+    Nous vous conseillons vivement de suivre les recommandation de cette page.
+
+    Concernant le paramétrage des contextes, reportez-vous aux :doc:`principes </understand/multi_context/principles>` et :ref:`à la documentation d'API <api:php/configuration/software/multi_contexts>`.
 
 
 Applications
