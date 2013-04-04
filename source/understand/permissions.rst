@@ -99,6 +99,11 @@ API pour vérifier une permission
 
 .. seealso:: Documentation d'API pour la classe :ref:`Permission <api:php/classes/permission>`.
 
+.. warning::
+
+    Le nom de la permission est un élément important. La partie avant les ``::`` doit représenter un nom d'application
+    valide. Pour que la permission soit validée, il faut également que l'utilisateur ait accès à cette application.
+
 CRUD
 ----
 
