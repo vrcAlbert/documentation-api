@@ -23,6 +23,8 @@ Entry points
 
 .. versionadded:: 0.2.0.1
 
+.. _php/classes/nos/main_controller:
+
 ::main_controller()
 -------------------
 
