@@ -80,7 +80,7 @@ Grâce à ce fichier, chaque application peut définir la liste des permissions 
 L'affichage se fait dans une colonne dédiée à droite du nom de l'application lors de l'édition des permissions :
 
 .. image:: images/permissions.png
-:align: center
+    :align: center
 
 
 .. seealso:: :ref:`API associée au fichier de configuration des permissions <api:php/configuration/application/permissions>`
@@ -98,6 +98,11 @@ API pour vérifier une permission
     Permission::check('noviusos_app::create_in_folder', $folder_id);
 
 .. seealso:: Documentation d'API pour la classe :ref:`Permission <api:php/classes/permission>`.
+
+.. warning::
+
+    Le nom de la permission est un élément important. La partie avant les ``::`` doit représenter un nom d'application
+    valide. Pour que la permission soit validée, il faut également que l'utilisateur ait accès à cette application.
 
 CRUD
 ----
