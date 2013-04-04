@@ -80,7 +80,7 @@ Grâce à ce fichier, chaque application peut définir la liste des permissions 
 L'affichage se fait dans une colonne dédiée à droite du nom de l'application lors de l'édition des permissions :
 
 .. image:: images/permissions.png
-:align: center
+    :align: center
 
 
 .. seealso:: :ref:`API associée au fichier de configuration des permissions <api:php/configuration/application/permissions>`
