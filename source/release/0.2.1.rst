@@ -4,10 +4,10 @@ Notes de la version 0.2.1
 Nouveautés
 ==========
 
-* Le comportement publiable (``Behaviour_Publishable``) supporte maintenant la publication par dates de début et de fin.
+* Le comportement publiable (``Behaviour_Publishable``) supporte maintenant la publication avec dates de début et de fin.
 
-Slideshow
----------
+Application Formulaire
+----------------------
 
 * Ajout d'une barre de progression sur les formulaire multi-page
 
@@ -32,14 +32,22 @@ Développeur
 
 * Properties des Models
 
-    * Les properties des Models sont toutes définies
+    * Les properties des Models sont désormais définies dans les applications natives
     * Implémentation d'un mécanisme de cache des properties, via le cache FuelPHP. Ce cache s'auto regénère si une property,
       existante en base mais inconnue du Model, est appellée via le ``get()`` ou le ``set()``.
 
 * Les migrations sont maintenant dispatchées par application
 * Nouvelle clé ``requires`` dans le ``metadata`` des applications permettant de définir qu'une application en nécessite une autre.
-* Possibilité d'utiliser ``href="##..."`` dans les enhancers ou les templates; les occurences seront remplacées par ``href="#..."`` sans être préfixée par le ``base_url``.
-* CRUD: Quand la clé ``disabled`` returne une chaine, elle est affiché en tooltip. Les clés ``disabled`` et ``visible`` peuvent maintenant être de simple valeur, des fonctions de callbacks ou des tableaux de callbacks.
+* Possibilité d'utiliser ``href="##..."`` dans les enhancers ou les templates; les occurences seront remplacées par ``href="#..."`` sans être préfixées par le ``base_url``.
+* CRUD: Quand la clé ``disabled`` retourne une chaine, elle est affichée en tooltip. Les clés ``disabled`` et ``visible`` peuvent maintenant être contenir un scalaire simple, une fonction de callback ou un tableau de callbacks.
+* Les miniatures d'images sont désormais sécurisées : il n'est plus possible d'en générer un grand nombre pour surcharger le serveur
+
+
+* Permissions :
+
+    * Possiblité de  définir des permissions par application via un fichier de configuration
+    * Nouvelle API pour vérifier les permissions sur un utilisateur ou un rôle
+    * Nouvelle configuration ``novius-os.users.enable_roles`` pour activer les rôles multiples sur les utilisateurs
 
 
 Deprecated
