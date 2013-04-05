@@ -250,17 +250,17 @@ texinfo_documents = [
 
 if on_rtd:
 	intersphinx_mapping = {
-	'api': ('http://docs-api.novius-os.org/en/0.2/', None),
-	'en': ('http://docs.novius-os.org/en/0.2/', None),
-	'fr': ('http://docs-fr.novius-os.org/en/0.2/', None),
+	'api': ('http://docs-api.novius-os.org/en/0.2.1/', None),
+	'en': ('http://docs.novius-os.org/en/0.2.1/', None),
+	'fr': ('http://docs-fr.novius-os.org/en/0.2.1/', None),
 	'ja': ('http://docs-ja.novius-os.org/en/0.2/', None),
 	  }
 	todo_include_todos = False
 else:
 	intersphinx_mapping = {
 	'api': ('http://novius-os-docs-api/', None),
-	'en': ('http://docs.novius-os.org/en/0.2/', None),
-	'fr': ('http://docs-fr.novius-os.org/en/0.2/', None),
+	'en': ('http://docs.novius-os.org/en/0.2.1/', None),
+	'fr': ('http://docs-fr.novius-os.org/en/0.2.1/', None),
 	'ja': ('http://docs-ja.novius-os.org/en/0.2/', None),
 	  }
 	todo_include_todos = True
