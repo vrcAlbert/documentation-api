@@ -11,6 +11,11 @@ Slideshow
 
 * Ajout d'une barre de progression sur les formulaire multi-page
 
+Blog / News
+-----------
+
+* Affichage des posts par auteur
+
 Développeur
 ===========
 
