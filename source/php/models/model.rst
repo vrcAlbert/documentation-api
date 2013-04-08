@@ -7,11 +7,13 @@ Model
 
 .. php:class:: Model
 
-	Extends :term:`Model of FuelPHP ORM <\Orm\Model>`.
+    Extends :term:`Model of FuelPHP ORM <\Orm\Model>`.
 
-.. todo::
+    Novius OS Model have some differences compare with FuelPHP Model :
 
-	Expliquer le système de configuration par fichier de config
+        * Novius OS implements a cache mechanism for properties. By default, cache files are save in :file:`NOSPATH/local/cache/fuelphp/model_properties`.
+        * In property definition, put ``convert_empty_to_null`` key to ``true`` if you want that this property stores a null value when it receives empty string.
+
 
 Configuration
 *************
@@ -28,6 +30,12 @@ Configuration
 .. php:attr:: attachment
 
 	Defines the attachments of a model. Attachment is a special type of :term:`relations <Relations>` created for Novius OS. See :php:class:`Nos\\Attachment`.
+
+In Novius OS, you can configurate model by a file configuration.
+For sample: if in your application you define a ``Model_Monkey`` class, you can create a file :file:`config/model/monkey.config.php` to extend configuration.
+All this attributes can be defined in configuration file : ``properties``, ``table_name``, ``title_property``, ``observers``,
+``behaviours`` and all relations types (``has_many``, ``belongs_to``, ``has_one``, ``many_many`` and ``attachment``).
+
 
 Examples
 ========
