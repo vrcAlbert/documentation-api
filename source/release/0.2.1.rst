@@ -25,10 +25,10 @@ Développeur
     * La configuration ``novius-os.cache`` est à ``true`` par défaut.
     * Les configurations ``novius-os.cache_duration_page`` et ``novius-os.cache_duration_function`` sont à 600 secondes par défaut, sauf en ``PRODUCTION`` à 3600 secondes.
     * Nouveaux événements ``front.pageFound`` et ``front.response``.
-    * Nouvelles méthodes sur le Controller_Front : getContext, disableCaching, setCacheDuration, setStatus, setHeader, getCustomData, setCustomData, sendContent, addCacheSuffixHandler.
+    * Nouvelles méthodes sur le ``Controller_Front`` : getContext, disableCaching, setCacheDuration, setStatus, setHeader, getCustomData, setCustomData, sendContent, addCacheSuffixHandler.
     * Le status et les headers sont sauvés dans le cache.
-    * Mécanisme de Suffix Handler permettant d'ajouter des suffixes au cache en fonction de paramètres GET ou de ce que vous voulez (par des ``callables``).
-    * Mécanisme d'exécution après cache
+    * Mécanisme de ``Suffix Handler`` permettant d'ajouter des suffixes au cache en fonction de paramètres GET ou de ce que vous voulez (par des ``callables``).
+    * Mécanisme pour exécuter du code tout en utilisant le cache.
 
 * Properties des Models
 
@@ -43,7 +43,7 @@ Développeur
 * Les miniatures d'images sont désormais sécurisées : il n'est plus possible d'en générer un grand nombre pour surcharger le serveur
 
 
-* Permissions :
+* Permissions
 
     * Possiblité de  définir des permissions par application via un fichier de configuration
     * Nouvelle API pour vérifier les permissions sur un utilisateur ou un rôle
