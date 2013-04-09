@@ -1,3 +1,5 @@
+.. _php/classes/view:
+
 View
 ####
 
