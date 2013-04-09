@@ -175,7 +175,7 @@ If you want to change the order in which the actions are displayed, two keys are
 
 Each action is an associative array. Key is the action ID, and value is an array defining the action configuration:
 
-:action:  which action is executed when clicking on the button (using :doc:`/javascript/$/nosAction`).
+:action:  which action is executed when clicking on the button (using :doc:`/javascript/$container/nosAction`).
 :label:   Text associated with the action (either shown as text or in a tooltip).
 :primary: Is it a primary action? Primary actions have a dedicated button, and secondary actions appears in the action drop down.
 :icon:    Icon of the action. It's a `jquery ui icon class <http://jqueryui.com/themeroller/#icons>`__, but without the leading ``ui-icon-`` string.
