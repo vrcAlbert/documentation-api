@@ -1,3 +1,4 @@
+
 .. _php/views/form_accordion:
 
 Accordion
@@ -25,3 +26,4 @@ For each accordion, you can either set:
     :field_template:  Optional. Template to wrap each field. Default value is ``<p>{field}</p>``
     :header_class:    Optional. CSS classes for the ``<h3>`` tag.
     :content_class:   Optional. CSS classes for the ``<div>`` panel.
+    :show_when_empty: Optional. Default false. Should the panel be displayed if there is no content inside of it?
