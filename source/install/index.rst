@@ -7,3 +7,4 @@ Installer Novius OS
 	setup_wizard
 	whats_next/index
 	upgrade
+	post_install_optimisations
