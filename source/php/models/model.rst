@@ -11,7 +11,7 @@ Model
 
     Novius OS Model have some differences compare with FuelPHP Model :
 
-        * Novius OS implements a cache mechanism for properties. By default, cache files are save in :file:`NOSPATH/local/cache/fuelphp/model_properties`.
+        * Novius OS implements a cache mechanism for properties when they are fetched from the database. By default, cache files are save in :file:`NOSPATH/local/cache/fuelphp/list_columns`.
         * In property definition, put ``convert_empty_to_null`` key to ``true`` if you want that this property stores a null value when it receives empty string.
 
 
