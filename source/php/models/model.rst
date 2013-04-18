@@ -127,7 +127,11 @@ Accessors
 		$item->medias->avatar; // Get a Model_Link named 'avatar'
 		$item->medias->avatar->media; // Get Model_Media named 'avatar'
 
-		$item->medias->cv->media = $Model_Media; // Set a Model_Media named 'cv'
+		$item->medias->cv = $Model_Media; // Attach a Model_Media named 'cv'
+
+		$item->medias->cv = null; // Detach a media from an item
+		// or
+		unset($item->medias->cv);
 
 .. php:attr:: wysiwygs
 
@@ -139,7 +143,11 @@ Accessors
 		$item->wysiwygs->content; // Get a Model_Wysiwyg named 'content'
 		$item->wysiwygs->content->wysiwyg_text; // Get content of Model_Wysiwyg named 'content'
 
-		$item->wysiwygs->summary = 'foo'; // Set a Model_Wysiwyg named 'content', width content 'foo'.
+		$item->wysiwygs->summary = 'foo'; // Set a Model_Wysiwyg named 'content', with content 'foo'.
+
+		$item->medias->summary = null; // Remove a wysiwyg from an item
+		// or
+		unset($item->wysiwygs->summary);
 
 Methods
 *******
