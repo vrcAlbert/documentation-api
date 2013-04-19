@@ -152,7 +152,7 @@ Associative array describing how appdesk interacts and is displayed. All items a
 
 :appdesk: Defines how appdesk is displayed. Associative array:
 
-    :defaultView: Default view of appdesk.
+    :defaultView: Default view of appdesk. It can be 'grid' (default), 'treeGrid' or 'thumbnails'.
     :buttons: Associative array containing grid toolbar actions information. See :ref:`php/configuration/application/common/actions`.
     :splitterVertical: Size of the vertical splitter.
     :inspectors: Associative array containing information about inspectors. Key is the inspector identifier, value is its configurations. See :doc:`inspector` configuration.
