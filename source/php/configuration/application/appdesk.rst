@@ -136,6 +136,7 @@ Defines how the model tree is constructed on the appdesk. It is automatically fi
     :order_by:
     :childs: Array of model class name. Which models instances are children.
     :dataset: dataset information sent by objects in json format.
+    :callback: Array of callback functions allowing you to customize the query (first parameter is the query).
 
 :roots:
 
