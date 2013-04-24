@@ -21,7 +21,7 @@ Relations
 
 .. php:method:: check_permission($permission_name, $category_key = null)
 
-	:param string $permission_name: Name of the permission to check against
+    :param string $permission_name: Name of the permission to check against
     :param string $category_key: (optional) If the permission has categories, the category key to check against
     :returns: ``True`` if the user has the required authorisation, ``false`` otherwise
 
@@ -31,8 +31,8 @@ Methods
 
 .. php:method:: check_password($password)
 
-	:param string $password: Password to check if it matches the user's password
-	:returns: ``True`` if passwords match, ``false`` otherwise.
+    :param string $password: Password to check if it matches the user's password
+    :returns: ``True`` if passwords match, ``false`` otherwise.
 
 .. php:method:: generate_md5()
 
