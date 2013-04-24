@@ -12,4 +12,4 @@ Comprendre Novius OS
 	multi_context/index
 	media_centre
 	permissions
-	front
+	front_and_cache

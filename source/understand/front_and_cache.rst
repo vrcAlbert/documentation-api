@@ -1,5 +1,5 @@
-Front-Office
-############
+Front-Office et cache
+#####################
 
 Novius OS utilise le **mod_rewrite** d’:program:`Apache` (ou l’équivalent sur un autre serveur) pour afficher les pages en front-office.
 
@@ -8,7 +8,7 @@ Toutes les URLs finissant par ``.html``, la home et les répertoires sont rediri
 Ce fichier charge Novius OS et délègue le traitement de l'URL au :ref:`Controller_Front <api:php/classes/controller_front>`.
 
 Le :ref:`Controller_Front <api:php/classes/controller_front>` analyse l'URL et détermine le chemin du fichier de cache correspondant.
-A partir de là, plusieurs possibilités.
+À partir de là, plusieurs possibilités.
 
 Exécution du cache
 ==================
@@ -29,10 +29,10 @@ Génération du cache
 
 Si le fichier de cache correspondant à l'URL n'existe pas ou n'est plus valide.
 
-Le :ref:`Controller_Front <api:php/classes/controller_front>` va déterminer la page appellée en fonction de l'URL. La page connue,
+Le :ref:`Controller_Front <api:php/classes/controller_front>` va déterminer la page appelée en fonction de l'URL. La page connue,
 il récupère le template qui lui est lié. Puis le ou les WYSIWYG de la page venant s'insérer dans le template.
 
-Si les WYSIWYG contiennent des enhancers, ces enhancers sont exécutés et leurs résultats enregistré.
+Si les WYSIWYG contiennent des enhancers, ces enhancers sont exécutés et leur résultat enregistré.
 
 Puis le template est exécuté comme une View en prenant comme paramètre le tableau des WYSIWYG (``$wysiwyg``),
 le titre de la page (``$title``), la page (``$page``) et le :ref:`Controller_Front <api:php/classes/controller_front>` (``$main_controller``).
@@ -56,8 +56,8 @@ en récupérant son instance, soit par :ref:`\Nos\Nos::main_controller() <api:ph
 Modifier le contenu généré
 --------------------------
 
-Dans certains cas, vous pouvez vouloir généré un contenu de sortie sans tenir compte du template. Par exemple :
-un enhancer renvoi un flux RSS. Pour cela, utiliser la méthode ``sendContent()`` du :ref:`Controller_Front <api:php/classes/controller_front>`.
+Dans certains cas, vous pouvez vouloir générer un contenu de sortie sans tenir compte du template, par exemple pour
+renvoiyer un flux RSS depuis un enhancer. Pour cela, utiliser la méthode ``sendContent()`` du :ref:`Controller_Front <api:php/classes/controller_front>`.
 
 Voici un exemple de code d'un enhancer :
 
@@ -69,7 +69,7 @@ Voici un exemple de code d'un enhancer :
     $this->main_controller->setCacheDuration(60 * 30); // La durée de cache est fixée à 30 minutes
     return $this->main_controller->sendContent($rss); // La variable $rss contient le flux RSS
 
-Le fichier de cache ne contiendra alors que le contenu du flux RSS et la réponse HTTP envera un header pour spécifier le ``content-type``.
+Le fichier de cache ne contiendra alors que le contenu du flux RSS et la réponse HTTP enverra un header pour spécifier le ``content-type``.
 
 Exécution hors cache
 ====================

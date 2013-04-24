@@ -32,7 +32,7 @@ nginx
 ~~~~~
 
 Dans **nginx**, XSendFile est activé par défaut, mais l'entête à utiliser est ``X-Accel-Redirect``. Dans ce cas, il
-faut éditer votre fichier de configuration ``config.php`` pour y renseigner cet entête :
+faut éditer votre fichier de configuration :file:`config.php` pour y renseigner cet entête :
 
 
 .. code-block:: php
