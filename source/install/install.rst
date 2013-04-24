@@ -48,7 +48,7 @@ Ouvrez un terminal et saisissez :
 .. code-block:: bash
 
     cd /var/www
-    sudo wget http://raw.github.com/novius-os/ci/master/0.2/tools/install.sh && sh install.sh
+    sudo wget http://raw.github.com/novius-os/ci/master/chiba/tools/install.sh && sh install.sh
 
 À la question :guilabel:`« Enter the directory name where you want to install Novius OS (default novius-os) »`,
 indiquez le nom du répertoire dans lequel vous voulez installer votre instance de Novius OS.
@@ -69,7 +69,7 @@ Installation via Zip
 
 Cette procédure est à privilégier si vous souhaitez installer Novius OS sur un hébergement mutualisé :
 
-* Téléchargez  `novius-os.0.2.0.2.zip <http://community.novius-os.org/download-novius-os-zip.html>`__.
+* Téléchargez  `novius-os.chiba.1.zip <http://community.novius-os.org/download-novius-os-zip.html>`__.
 * Dézippez le fichier.
 * Uploadez (ou déplacer) le répertoire :file:`novius-os` dans le ``DOCUMENT_ROOT`` de votre serveur (par exemple via FTP).
 * Ouvrez votre navigateur à l'URL :file:`http://votredomaine/novius-os/` (remplacez :file:`novius-os` par le nom du répertoire où vous avez dézippé Novius OS).
