@@ -39,7 +39,7 @@ depuis le script PHP. Le nom de ce header varie d'un serveur à l'autre :
 * ``X-Accel-Redirect`` est utilisé par **nginx**.
 
 
-.. seealso:: :doc:`install/post_install_optimisations`
+.. seealso:: :doc:`/install/post_install_optimisations`
 
 .. index:: Fichiers joints
 .. index:: Attachment

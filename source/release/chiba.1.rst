@@ -1,5 +1,5 @@
-Notes de la version 0.2.1
-#########################
+Notes de la version Chiba 1
+###########################
 
 Nouveautés
 ==========

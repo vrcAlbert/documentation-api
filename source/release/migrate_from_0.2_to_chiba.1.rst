@@ -1,5 +1,5 @@
-Guide de migration de la version 0.2 à la version 0.2.1
-#######################################################
+Guide de migration de la version 0.2 à la version Chiba 1
+#########################################################
 
 Peu de modification a réaliser pour passer à la version suivante. La nouvelle API est compatible avec l'ancienne.
 À partir de cette version, Novius OS gère les dépréciations. En voici une liste :
