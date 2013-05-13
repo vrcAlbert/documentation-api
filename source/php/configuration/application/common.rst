@@ -21,6 +21,7 @@ Associative array where each key => value defines a column, all keys are optiona
 :search_relation:  Default value is deduced from key (ex: ``rel->col``). Relation to load (via related function on query).
 :sorting_callback: A closure function taking two parameters: the ``$query`` object and the ``$sortDirection``.
 :multiContextHide: Hide grid column when items are filtered on more than one contexts.
+:isSafeHtml:       If ``true``, the content won't be escaped when displayed (inside the grid).
 :value:            A closure function taking current item :php:class:`Nos\\Orm\\Model` in first parameter. Overloads value displayed in the grid.
 :cellFormatters:   Associative array of :ref:`cellFormatters <php/configuration/application/cellFormatters>` for formatting column display.
 
