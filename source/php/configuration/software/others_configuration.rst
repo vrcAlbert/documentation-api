@@ -14,6 +14,14 @@ Just rename (or copy) it to :file:`local/config/config.php`, and update it to yo
 
     ``Int``, number of seconds of cache validity. By default is ``60``.
 
+.. php:global:: cache_model_properties
+
+    ``Boolean`` for use of cache on :php:class:`Nos\\Orm\\Model` properties. By default is ``false``.
+    If is ``true``, all models properties will be cached with a auto-refresh mechanism : if you add a column on a model which has properties defined,
+    the cache will be refreshed by a DB ``list_columns`` request when you access this column with ``get()`` or ``set()``.
+
+    .. versionadded:: Chiba 1.0.1
+
 .. php:global:: upload
 
     ``Array`` :
