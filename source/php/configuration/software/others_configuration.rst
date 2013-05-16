@@ -14,6 +14,8 @@ Just rename (or copy) it to :file:`local/config/config.php`, and update it to yo
 
     ``Int``, number of seconds of cache validity. By default is ``60``.
 
+.. _php/configuration/software/cache_model_properties:
+
 .. php:global:: cache_model_properties
 
     ``Boolean`` for use of cache on :php:class:`Nos\\Orm\\Model` properties. By default is ``false``.
