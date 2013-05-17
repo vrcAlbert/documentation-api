@@ -63,7 +63,7 @@ Activer le cache des ``properties``
             ),
         );
 
-Une fois activé, le cache va mettre toutes les ``properties`` des models en cache dans le répertoire :file:`local/cache/fuelphp/model_properties/`.
+Une fois activé, le système va mettre toutes les ``properties`` des models en cache dans le répertoire :file:`local/cache/fuelphp/model_properties/`.
 Quand une colonne est ajoutée et non déclarée, au premier appel à ``get()`` ou à ``set()`` pour cette colonne,
 les ``properties`` seront mise à jour avec une requête en base pour lister les colonnes du model.
 
