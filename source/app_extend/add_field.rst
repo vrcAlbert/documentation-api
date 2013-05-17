@@ -69,7 +69,7 @@ les ``properties`` seront mise à jour avec une requête en base pour lister les
 
 .. warning::
 
-    Ce mécanisme n'est possible qu'avec une base de données MySQL.
+    Ce mécanisme n'est possible qu'avec `les drivers MySQL et MySQLi <http://fuelphp.com/docs/packages/orm/creating_models.html#/creation>`__.
 
 .. seealso::
 
