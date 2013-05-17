@@ -6,9 +6,6 @@ Nous allons partir d'un exemple pour l'explication.
 Ajoutons un champ ``Source`` pour un billet de blog, qui permettra de renseigner une URL externe ayant produit le
 contenu original.
 
-
-
-
 Dans la BDD
 ***********
 
@@ -16,6 +13,67 @@ Dans la BDD
 
     ALTER TABLE `nos_blog_post` ADD `post_source` VARCHAR(255);
 
+Dans le Model
+*************
+
+Deux possibilités :
+
+* Déclarer la nouvelle colonne dans les ``properties`` du model.
+* Activer le système de cache des ``properties`` des models.
+
+Déclarer la colonne
+===================
+
+Pour déclarer votre nouvelle colonne nous allons écouter l'événement qui charge le fichier de configuration du model.
+
+.. code-block:: php
+
+    <?php
+
+    Event::register_function('config|noviusos_blog::model/post', function(&$config) {
+        $config['properties']['post_source'] = array(
+            'default' => null,
+            'data_type' => 'varchar',
+            'null' => false,
+        );
+    });
+
+.. seealso::
+
+    `Définition des properties dans la documentation de FuelPHP <http://fuelphp.com/docs/packages/orm/creating_models.html#/propperties>`__
+
+Activer le cache des ``properties``
+===================================
+
+* Créez le fichier :file:`local/config/config.php` à partir du fichier :file:`local/config/config.php.sample` si ce n'est pas encore fait.
+* Décommentez la ligne (ou créez la) ayant la clé ``cache_model_properties`` et lui assigner ``true`` :
+
+    .. code-block:: php
+
+        <?php
+
+        return array(
+            //...
+
+            'novius-os' => array(
+                //...
+                'cache_model_properties' => true,
+
+                //...
+            ),
+        );
+
+Une fois activé, le cache va mettre toutes les ``properties`` des models en cache dans le répertoire :file:`local/cache/fuelphp/model_properties/`.
+Quand une colonne est ajoutée et non déclarée, au premier appel à ``get()`` ou à ``set()`` pour cette colonne,
+les ``properties`` seront mise à jour avec une requête en base pour lister les colonnes du model.
+
+.. warning::
+
+    Ce mécanisme n'est possible qu'avec une base de données MySQL.
+
+.. seealso::
+
+    :ref:`La documentation sur la configuration de Novius OS <api:php/configuration/software>`.
 
 Dans le formulaire
 ******************
