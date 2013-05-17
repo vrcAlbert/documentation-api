@@ -1,3 +1,5 @@
+.. _php/configuration/software:
+
 Novius OS
 #########
 
@@ -13,8 +15,6 @@ Just rename (or copy) it to :file:`local/config/config.php`, and update it to yo
 .. php:global:: cache_duration_page
 
     ``Int``, number of seconds of cache validity. By default is ``60``.
-
-.. _php/configuration/software/cache_model_properties:
 
 .. php:global:: cache_model_properties
 
