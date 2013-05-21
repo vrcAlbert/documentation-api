@@ -18,6 +18,14 @@ Config
 
     Merge configuration with the one saved in user in the key `$key`.
 
+::getDbName($key)
+------------------------------
+
+.. php:staticmethod:: getDbName($key)
+
+    :param string $key: Key to be transformed.
+    :returns: Valid user configuration key.
+
 ::configFile($class)
 --------------------
 
