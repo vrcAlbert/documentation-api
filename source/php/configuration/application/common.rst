@@ -127,7 +127,7 @@ This key contains all the common translations.
 Actions
 *******
 
-This key contains all the common actions related to the model. 5 actions which are automatically added:
+This key contains all the common actions related to the model. 5 actions are automatically added:
 
 :add:       The :guilabel:`Add model` button located on the appdesk's toolbar
 :edit:      The :guilabel:`Edit` button located on the grids and the crud's toolbar
@@ -181,6 +181,8 @@ Each action is an associative array. Key is the action ID, and value is an array
 :primary: Is it a primary action? Primary actions have a dedicated button, and secondary actions appears in the action drop down.
 :icon:    Icon of the action. It's a `jquery ui icon class <http://jqueryui.com/themeroller/#icons>`__, but without the leading ``ui-icon-`` string.
 :red:     Is it a red action? (especially used for 'Delete')
+:align:   Alignment of the button. Can be a string (``begin`` or ``end``) or a number (``begin`` is equivalent to
+    ``-10`` and ``end`` is equivalent to ``10``). Defines actions default order (``align`` in ascending order).
 :targets: Where is the action displayed? This has no effect if the action is not ``visible`` (see below). There are 3 locations available:
 
     :grid:         Is the action displayed on the grid (appdesk and inspector)?
