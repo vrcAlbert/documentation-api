@@ -120,6 +120,17 @@ nosTabs('update')
 			reload: true
 		});
 
+nosTabs('reload')
+*****************
+
+.. js:function:: nosTabs.reload()
+
+	Reload current js:data::`$container` tab.
+
+	.. code-block:: js
+
+    		$(domContext).nosTabs('reload');
+
 nosTabs('current')
 ******************
 
