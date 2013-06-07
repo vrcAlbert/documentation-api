@@ -118,17 +118,20 @@ has an URL.
 
 An enhancer is defined with:
 
-:title:       Title of the enhancer displayed when opening the ‘Application’ menu from the wysiwyg.
-:desc:        Optional. Description of the enhancer.
-:iconUrl:     Optional. URL to a 16*16 icon, displayed when opening the ‘Application’ menu from the wysiwyg, default
-  		      will use the 16*16 icon of the app ;
-:enhancer:    URL of the front-office controller used to render the enhancer.
-:urlEnhancer: Same that ``enhancer``.Only one of the two keys can is used, depending if you want an URL enhancer or
-              just a plain regular enhancer.
-:previewUrl:  Optional. URL of the controller used to render the preview in the wysiwyg.
-:dialog:      Optional. If you want a configuration popup, URL of the controller used to display and save the
-  		      enhancer configuration. See :js:func:`$container.nosDialog` for the list of parameters.
-
+:title:             Title of the enhancer displayed when opening the ‘Application’ menu from the wysiwyg.
+:desc:              Optional. Description of the enhancer.
+:iconUrl:           Optional. URL to a 16*16 icon, displayed when opening the ‘Application’ menu from the wysiwyg, default
+  		            will use the 16*16 icon of the app ;
+:enhancer:          URL of the front-office controller used to render the enhancer.
+:urlEnhancer:       Same that ``enhancer``.Only one of the two keys can is used, depending if you want an URL enhancer or
+                    just a plain regular enhancer.
+:previewUrl:        Optional. URL of the controller used to render the preview in the wysiwyg.
+:dialog:            Optional. If you want a configuration popup, URL of the controller used to display and save the
+  		            enhancer configuration. See :js:func:`$container.nosDialog` for the list of parameters.
+:check_container:   | Optional. A `callback function <http://php.net/manual/en/language.types.callable.php>`__ to check
+                      if the enhancer is available for a specific container.
+                    | If the function returns false, the enhancer won't be available.
+                    | The function takes two parameters: the enhancer's configuration and the :php:class:`container instance <Nos\\Orm\\Model>`.
 
 .. code-block:: php
 
@@ -151,9 +154,17 @@ An enhancer is defined with:
                 'height' => 400,
                 'ajax' => true,
             ),
+            // The callback function which check availability of the enhancer
+            'check_container' => 'my_check_container',
         ),
     );
 
+    // In this example, the enhancer won't be available in WYSIWYGs of monkeys.
+    function check_container($enhencer, $container)
+    {
+        $container_class = get_class($container);
+        return $container_class !== 'Nos\Monkey\Model_Monkey';
+    }
 
 
 .. _metadata/templates:
