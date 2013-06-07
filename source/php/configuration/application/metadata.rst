@@ -128,7 +128,7 @@ An enhancer is defined with:
 :previewUrl:        Optional. URL of the controller used to render the preview in the wysiwyg.
 :dialog:            Optional. If you want a configuration popup, URL of the controller used to display and save the
   		            enhancer configuration. See :js:func:`$container.nosDialog` for the list of parameters.
-:check_container:   | Optional. A `callback function <http://php.net/manual/en/language.types.callable.php>`__ to check
+:valid_container:   | Optional. A `callback function <http://php.net/manual/en/language.types.callable.php>`__ to check
                       if the enhancer is available for a specific container.
                     | If the function returns false, the enhancer won't be available.
                     | The function takes two parameters: the enhancer's configuration and the :php:class:`container instance <Nos\\Orm\\Model>`.
@@ -155,12 +155,12 @@ An enhancer is defined with:
                 'ajax' => true,
             ),
             // The callback function which check availability of the enhancer
-            'check_container' => 'my_check_container',
+            'valid_container' => 'validContainer',
         ),
     );
 
     // In this example, the enhancer won't be available in WYSIWYGs of monkeys.
-    function check_container($enhencer, $container)
+    function validContainer($enhencer, $container)
     {
         $container_class = get_class($container);
         return $container_class !== 'Nos\Monkey\Model_Monkey';
