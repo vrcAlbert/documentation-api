@@ -5,7 +5,7 @@ The ``twinnable_belongs_to`` relation is the equivalent of the FuelPHP native ``
 The difference is that the link is not made on the primary key but on the context common ID.
 
 If you use the ``twinnable_belongs_to`` relation, the model and the model linked must implement :doc:`Twinnable behaviour </php/behaviours/twinnable>`.
-The field ``key_from`` must be declared invariant field in the twinnable behaviour.
+The field ``key_from`` must be declared common field in the twinnable behaviour.
 
 .. seealso::
 

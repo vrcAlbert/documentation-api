@@ -29,21 +29,21 @@ Configuration
 	Required.
 	Column used to store if the item is the main item among twin items. Data type must be ``boolean``.
 
-.. php:attr:: invariant_fields
+.. php:attr:: common_fields
 
-	Array of fields which are invariant between context twins.
+	Array of fields which are common to all context twins.
 
 Methods
 *******
 
-.. php:staticmethod:: hasInvariantFields()
+.. php:staticmethod:: hasCommonFields()
 
-    :returns: ``True`` if model has invariant fields, medias or WYSIWYGs.
+    :returns: ``True`` if model has common fields, medias or WYSIWYGs.
 
-.. php:staticmethod:: isInvariantField($name)
+.. php:staticmethod:: isCommonField($name)
 
     :param string $name: The field name to check.
-    :returns: ``True`` if the field name is a invariant field or, media or WYSIWYG.
+    :returns: ``True`` if the field name is a common field or, media or WYSIWYG.
 
 .. php:method:: delete_all_context()
 
@@ -110,7 +110,7 @@ Example
 				'context_property'      => 'page_context',
 				'common_id_property' => 'page_context_common_id',
 				'is_main_property' => 'page_context_is_main',
-				'invariant_fields'   => array(),
+				'common_fields'   => array(),
 			),
 		);
 	}
