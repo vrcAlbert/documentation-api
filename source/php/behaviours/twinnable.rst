@@ -9,10 +9,12 @@ Twinnable
 
 	| Extends :php:class:`Nos\\Orm_Behaviour_Contextable`.
 	| It adds the ability to twin together different items with different contexts.
+	| It also adds the ability to link medias and WYSIWYGs to context twins.
 
-	.. seealso:: :doc:`/php/configuration/software/multi_context`.
+	.. seealso::
 
-    .. seealso:: :php:class:`Nos\\Orm_Behaviour_Contextable` for configuration and methods.
+        * :doc:`/php/configuration/software/multi_context`.
+        * :php:class:`Nos\\Orm_Behaviour_Contextable` for configuration and methods.
 
 Configuration
 *************
@@ -27,8 +29,21 @@ Configuration
 	Required.
 	Column used to store if the item is the main item among twin items. Data type must be ``boolean``.
 
+.. php:attr:: invariant_fields
+
+	Array of fields which are invariant between context twins.
+
 Methods
 *******
+
+.. php:staticmethod:: hasInvariantFields()
+
+    :returns: ``True`` if model has invariant fields, medias or WYSIWYGs.
+
+.. php:staticmethod:: isInvariantField($name)
+
+    :param string $name: The field name to check.
+    :returns: ``True`` if the field name is a invariant field or, media or WYSIWYG.
 
 .. php:method:: delete_all_context()
 
@@ -68,6 +83,18 @@ Methods
 
 	:param array $filter: Array of contexts ID. If set, return only twinned contexts which belongs to array ``$filter``.
 	:returns: Array of all twinned contexts ID, excluding the one of the current item.
+
+.. php:method:: get_possible_context()
+
+	:returns: Array of possible contexts ID for current item.
+
+.. php:staticmethod:: findMainOrContext($context, array $options = array())
+
+	:param string $context: A context ID.
+	:param array $options: Array of others options like in ``find()``.
+	:returns: Array of items, like ``find()``, either in the given context, either the main.
+
+	.. seealso:: `FuelPHP native find() method <http://fuelphp.com/docs/packages/orm/crud.html#/find_all>`__.
 
 Example
 *******
