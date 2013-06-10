@@ -9,6 +9,7 @@ PHP API
 	constants
 	models/index
 	behaviours/index
+	relations/index
 	classes/index
 	renderers/index
 	views/index
