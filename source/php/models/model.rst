@@ -31,10 +31,20 @@ Configuration
 
 	Defines the attachments of a model. Attachment is a special type of :term:`relations <Relations>` created for Novius OS. See :php:class:`Nos\\Attachment`.
 
-In Novius OS, you can configurate model by a file configuration.
+.. php:attr:: shared_wysiwygs_context
+
+	Array of WYSIWYG keys which are shared by context twins. See :ref:`WYSIWYG accessor <php/models/model/accessors>`.
+
+.. php:attr:: shared_medias_context
+
+	Array of media keys which are shared by context twins. See :ref:`Media accessor <php/models/model/accessors>`.
+
+In Novius OS, you can configure model by a file configuration.
 For sample: if in your application you define a ``Model_Monkey`` class, you can create a file :file:`config/model/monkey.config.php` to extend configuration.
 All this attributes can be defined in configuration file : ``properties``, ``table_name``, ``title_property``, ``observers``,
-``behaviours`` and all relations types (``has_many``, ``belongs_to``, ``has_one``, ``many_many`` and ``attachment``).
+``behaviours``, ``shared_wysiwygs_context``, ``shared_medias_context`` and all relations types (``has_many``, ``belongs_to``,
+``has_one``, ``many_many``, ``twinnable_has_many``, ``twinnable_belongs_to``, ``twinnable_has_one``, ``twinnable_many_many``
+and ``attachment``).
 
 
 Examples
@@ -114,6 +124,8 @@ Relations
 
     Don't use these relations directly, we created accessors for them.
 
+.. _php/models/model/accessors:
+
 Accessors
 *********
 
@@ -156,15 +168,46 @@ Methods
 
 	:returns: Title property of model. See :php:attr:`Model::$title_property`.
 
+.. php:staticmethod:: table()
+
+	:returns: The DB table name of model.
+
 .. php:staticmethod:: behaviours($specific = null, $default = null)
-
-.. php:method:: get_possible_context()
-
-	:returns: Array of possible contexts ID for current item. See :doc:`/php/configuration/software/multi_context`.
 
 .. php:staticmethod:: add_properties($properties)
 
 	:param array $properties: Additional properties (merged).
+
+.. php:staticmethod:: addRelation($type, $name, array $options = array())
+
+    Add a relation to model
+
+    :param string $type: A valid relation type.
+    :param string $name: The relation name to add.
+    :param string $options: The relation options
+    :throws: ``\FuelException`` if $type is not a valid one.
+
+.. php:staticmethod:: configModel()
+
+	:returns: Array configurations of the model.
+
+.. php:staticmethod:: getApplication()
+
+	:returns: Application name of the model.
+
+.. php:method:: event($method, $args = array())
+
+    Trigger an event (caught by behaviours) on the item.
+
+    :param string $method: Name of the event, also name of the method Behaviours.
+    :param array $args: Arguments of the event.
+
+.. php:staticmethod:: eventStatic($method, $args = array())
+
+    Trigger an event (caught by behaviours) on the model class.
+
+    :param string $method: Name of the event, also name of the method Behaviours.
+    :param array $args: Arguments of the event.
 
 .. php:staticmethod:: prefix()
 
