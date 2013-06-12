@@ -6,7 +6,8 @@ The CRUD controller is in charge of generating the forms (add, edit & delete) re
 automatically the multilingual / translation problematic.
 
 
-:controller_url: Url of the CRUD controller
+:controller_url: Url of the CRUD controller.
+:css:            List of css file to load in order to add specific styles.
 :model:          Which model it generates the form for.
 :environment_relation: Relation name. Allows to define a children / parent relationship.
 :tab:            Tab informations (such as the icon & label), see :ref:`javascript/$/nosAction/nosTabs`
@@ -19,11 +20,11 @@ automatically the multilingual / translation problematic.
 
 .. code-block:: php
 
-	<?php
-	return array(
-		'controller_url' => '',
+    <?php
+    return array(
+        'controller_url' => '',
         'environment_relation' => null,
-		'model' => '',
+        'model' => '',
         'tab' => array(
             'iconUrl' => '',
             'labels' => array(
@@ -32,14 +33,14 @@ automatically the multilingual / translation problematic.
                 'blankSlate' => 'Translate an item',
             ),
         ),
-		'layout' => array(),
-		'fields' => array(),
+        'layout' => array(),
+        'fields' => array(),
         'require_js' => array(),
         'views' => array(
             'form' => 'nos::crud/form',
             'delete' => 'nos::crud/delete_popup',
         ),
-	);
+    );
 
 
 environment_relation
@@ -100,19 +101,19 @@ The ``tab`` configuration array has a special ``labels`` key, to handle several 
 
 .. code-block:: php
 
-	<?php
-	return array(
-		'tab' => array(
-			'iconUrl' => 'static/apps/noviusos_monkey/img/16/monkey.png',
-			// Add form will user 'insert'
-			// Edit form will use item's title
-			// Translate form (multilingual) will use 'blankSlate'
-			'labels' => array(
-				'insert' => __('Add a monkey'),
-				'blankSlate' => __('Translate a monkey'),
-			),
-		),
-	);
+    <?php
+    return array(
+        'tab' => array(
+            'iconUrl' => 'static/apps/noviusos_monkey/img/16/monkey.png',
+            // Add form will user 'insert'
+            // Edit form will use item's title
+            // Translate form (multilingual) will use 'blankSlate'
+            'labels' => array(
+                'insert' => __('Add a monkey'),
+                'blankSlate' => __('Translate a monkey'),
+            ),
+        ),
+    );
 
 
 views
@@ -195,25 +196,25 @@ We only need to define the view data for the standard layout, and it will be wra
 
 .. code-block:: php
 
-	<?php
-	// The following...
-	return array(
-		'layout' => array(
-			'view_1' => array(
-				'view' => 'nos::form/layout_standard',
-				'params' => array(
+    <?php
+    // The following...
+    return array(
+        'layout' => array(
+            'view_1' => array(
+                'view' => 'nos::form/layout_standard',
+                'params' => array(
                     // View data (depends on the view).
-				),
-			),
-		),
-	);
+                ),
+            ),
+        ),
+    );
 
-	// ... is the same as this:
-	return array(
-		'layout' => array(
-			// View params for ``nos::form/layout_standard``.
-		),
-	);
+    // ... is the same as this:
+    return array(
+        'layout' => array(
+            // View params for ``nos::form/layout_standard``.
+        ),
+    );
 
 
 Native views included in Novius OS
@@ -269,16 +270,16 @@ Configuration example:
 
 .. code-block:: php
 
-	<?php
-	return array(
-		'name' => array(
-			'label' => 'Text shown next to the field',
-			'form' => array(
-				'type' => 'text',
-				'value' => 'Default value',
-			),
-			'validation' => array(),
-	);
+    <?php
+    return array(
+        'name' => array(
+            'label' => 'Text shown next to the field',
+            'form' => array(
+                'type' => 'text',
+                'value' => 'Default value',
+            ),
+            'validation' => array(),
+    );
 
 
 Standard fields
@@ -298,20 +299,20 @@ Bold text is the value for the ``type`` property.
 
 .. code-block:: php
 
-	<?php
-	return array(
-		'gender' => array(
-			'label' => 'Gender',
-			'form' => array(
-				'type' => 'select',
-				'options' => array(
-					'm' => 'Male',
-					'f' => 'Female',
-				)
-			),
-			'validation' => array('required'),
-		),
-	);
+    <?php
+    return array(
+        'gender' => array(
+            'label' => 'Gender',
+            'form' => array(
+                'type' => 'select',
+                'options' => array(
+                    'm' => 'Male',
+                    'f' => 'Female',
+                )
+            ),
+            'validation' => array('required'),
+        ),
+    );
 
 
 <button type="submit">
@@ -326,16 +327,16 @@ FuelPHP will automatically use the ``value`` as the button's text.
 
 .. code-block:: php
 
-	<?php
-	return array(
-		'save' => array(
-			'form' => array(
-				'type' => 'submit',
-				'tag' => 'button',
-				'value' => 'Save',
-			),
-		),
-	);
+    <?php
+    return array(
+        'save' => array(
+            'form' => array(
+                'type' => 'submit',
+                'tag' => 'button',
+                'value' => 'Save',
+            ),
+        ),
+    );
 
 
 Renderers (advanced fields)
