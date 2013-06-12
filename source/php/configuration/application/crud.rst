@@ -7,7 +7,7 @@ automatically the multilingual / translation problematic.
 
 
 :controller_url: Url of the CRUD controller.
-:css:            List of css file to load in order to add specific styles.
+:css:            Optional. List of css file to load in order to add specific styles.
 :model:          Which model it generates the form for.
 :environment_relation: Relation name. Allows to define a children / parent relationship.
 :tab:            Tab informations (such as the icon & label), see :ref:`javascript/$/nosAction/nosTabs`

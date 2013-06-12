@@ -6,6 +6,7 @@ Configuration for :php:class:`Nos\\Orm\\Model`'s appdesk.
 Associative array:
 
 :model: Model name.
+:css: Optional. List of css file to load in order to add specific styles.
 :query: Optional. Additional informations about the query.
 :search_text: Optional. Array of columns in which we search when the user fills appdesk's search bar.
 :data_mapping: Optional. Defines which data_mapping items are displayed.
