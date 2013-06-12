@@ -173,6 +173,23 @@ Wraps a link to the text (which performs an action upon click).
 	),
 
 
+Custom cellFormatters
+---------------------
+
+It is possible to create custom `cellFormatters`. You just have to indicate your javascript url in the `type` key.
+
+Here is a `cellFormatter` sample allowing you to change the font size of a column.
+
+.. code-block:: js
+
+	define(function(require, exports) {
+		exports.format = function(formatter, args) {
+			args.$container.css({
+				'font-size': 20
+			});
+		}
+	});
+
 Full example
 ============
 
