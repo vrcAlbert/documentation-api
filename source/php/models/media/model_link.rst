@@ -11,11 +11,14 @@ Model_Link
 Columns
 *******
 
-:medil_id:         Model_Link primary key.
-:medil_from_table: DB table name of the model which the media is linked to.
-:medil_foreign_id: ID of the model which the media is linked to.
-:medil_key:        ``string`` key identifying the linked media.
-:medil_media_id:   ID of the linked media.
+:medil_id:                          Model_Link primary key.
+:medil_from_table:                  DB table name of the model which the media is linked to.
+:medil_foreign_id:                  ID of the model which the media is linked to.
+:medil_foreign_context_common_id:   Common ID of the model which the media is linked to.
+:medil_key:                         ``string`` key identifying the linked media.
+:medil_media_id:                    ID of the linked media.
+
+One of ``medil_foreign_id`` and ``medil_foreign_context_common_id`` columns is NULL for each row.
 
 Relations
 *********

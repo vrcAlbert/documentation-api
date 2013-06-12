@@ -165,6 +165,7 @@ Associative array describing how appdesk interacts and is displayed. All items a
     :treeGrid:
 
         :urlJson: Url of the json API to get items
+        :initialDepth: Initial depth of the tree opening
 
 :tab: Tab information (see :ref:`javascript/$/nosAction/nosTabs`).
 :reloadEvent: Event name that will reload appdesk.

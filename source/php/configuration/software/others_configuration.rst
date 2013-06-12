@@ -59,3 +59,38 @@ Just rename (or copy) it to :file:`local/config/email.config.php`, and update it
 .. seealso::
 
 	`FuelPHP email package documentation <http://fuelphp.com/docs/packages/email/introduction.html>`_ for details.
+
+WYSIWYG
+#######
+
+You can modify default configuration of WYSIWYGs in your Novius OS.
+You can also have multiple configurations, especially configurations for :doc:`contexts <multi_context>`.
+
+A sample configuration file is available in :file:`local/config/wysiwyg.config.php.sample`.
+Just rename (or copy) it to :file:`local/config/wysiwyg.config.php`, and update it to your case.
+
+To set a configuration for a context, set a key with the context id in the array ``setups``:
+
+.. code-block:: php
+
+    <?php
+    return array(
+        'default' => array(
+        ),
+
+        'active_setup' => 'default',
+
+        'setups' => array(
+            'default' => array(),
+            'main::en_GB' => array(
+                //... Set here your specific configuration for context main::en_GB
+            ),
+            //'main::fr_FR' => array(),
+            //'main::ja_JP' => array(),
+        ),
+    );
+
+
+.. seealso::
+
+	`TinyMCE documentation <http://www.tinymce.com/wiki.php>`_ for details.

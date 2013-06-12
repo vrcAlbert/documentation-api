@@ -17,7 +17,7 @@ Configuration
 	Required.
 	Array of :ref:`enhancers <metadata/enhancers>` ID which can generate an URL for the item.
 
-	Listed :ref:`enhancers <metadata/enhancers>` must define a ``get_url_model($item, $params)`` method.
+	Listed :ref:`enhancers <metadata/enhancers>` must define a ``getUrlEnhanced($params)`` method.
 
 Methods
 *******
