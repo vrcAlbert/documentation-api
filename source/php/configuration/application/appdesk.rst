@@ -7,6 +7,7 @@ Associative array:
 
 :model: Model name.
 :css: Optional. List of css file to load in order to add specific styles.
+:notify: Optional. Allows you to notify the user when displaying the appdesk.
 :query: Optional. Additional informations about the query.
 :search_text: Optional. Array of columns in which we search when the user fills appdesk's search bar.
 :data_mapping: Optional. Defines which data_mapping items are displayed.
@@ -18,6 +19,16 @@ Associative array:
 :thumbnails: Optional, boolean. Can the appdesk display items as thumbnails ?
 :tree: Optional (automatically filled when model has the :doc:`/php/behaviours/tree` behaviour enabled).
 :appdesk: Optional. Additional display information about the appdesk.
+
+.. _php/configuration/application/appdesk/notify:
+
+notify
+******
+
+Allows you to notify the user when displaying the appdesk.
+
+:message: Message you want to display.
+:type: Type of notification.
 
 .. _php/configuration/application/appdesk/query:
 
