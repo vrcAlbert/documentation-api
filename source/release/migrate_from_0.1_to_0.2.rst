@@ -37,6 +37,7 @@ Procédure à suivre
 
     * Rechercher ``_lang`` et remplacer par ``_context`` (c-à-d ``page_lang => page_context``)
     * Rechercher ``Nos\Model_`` et remplacer par ``Nos\{{app}}\Model_`` (c-à-d ``Nos\Model_Page => Nos\Page\Model_Page``, ``Nos\Model_Media => Nos\Media\Model_Media``)
+    * Rechercher ``config|nos::`` et remplacer par le namespace::path de l'application concernée (``config|nos::controller/admin/page/page`` devient ``config|noviusos_page::controller/admin/page``)
     * Rechercher ``Translatable`` et remplacer par ``Contextable``
     * Rechercher  ``Model_Page->get_link()`` et remplacer par ``Model_Page->link()``
     * Rechercher ``Model_Page->get_href()`` et remplacer par ``Model_Page->url()``
