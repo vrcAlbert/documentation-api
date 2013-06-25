@@ -33,6 +33,11 @@ Configuration
 	Required for **date range** mode.
 	Column used to store the publication end date. Its data type must be ``datetime``.
 
+.. php:attr:: options
+
+:allow_publish: Callback function or array of callback functions. If any returns ``false`` then the item will be
+                restricted from publication.
+
 Methods
 *******
 
@@ -59,6 +64,12 @@ This behaviour extends :term:`Model->find()`.
 
 You can use the ``published`` key in the ``where`` array. Appropriate conditions will be added, according to the
 configuration of the behaviour. Especially useful with the **date range** mode (and start / end dates).
+
+CRUD form
+---------
+
+If you're using the ``standard_layout`` included in Novius OS, this behaviour will automatically prepend a field in the
+``subtitle`` section to select publication status and/or dates (according to the behaviour configuration).
 
 Example
 *******
