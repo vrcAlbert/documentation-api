@@ -147,7 +147,7 @@ front.pageFound
 
     :param array $params:
 
-        :$page: :php:class::`Nos\\Page\\Model_Page`
+        :$page: :php:class:`Nos\\Page\\Model_Page`
 
     .. code-block:: php
 
@@ -232,6 +232,30 @@ front.404NotFound
             // ...
         });
 
+404.mediaFound
+=================
+
+.. php:function:: 404.mediaFound($params)
+
+    Media to send have been found.
+
+    :param array $params:
+
+        :$url: ``string``  The requested URL
+        :$media: :php:class:`Nos\\Media\\Model_Media`
+        :&$send_file: ``string``  The path of the file to be sent
+
+    .. code-block:: php
+
+        <?php
+
+        Event::register_function('404.mediaFound', function($params)
+        {
+            $url = $params['url'];
+            $media = $params['media'];
+            $send_file =& $params['send_file'];
+            // ...
+        });
 
 404.mediaNotFound
 =================
@@ -251,6 +275,30 @@ front.404NotFound
             // ...
         });
 
+404.attachmentFound
+===================
+
+.. php:function:: 404.attachmentFound($params)
+
+    Attachment file to send have been found.
+
+    :param array $params:
+
+        :$url: ``string``  The requested URL
+        :$attachement: :php:class:`Nos\\Attachment`
+        :&$send_file: ``string``  The path of the file to be sent
+
+    .. code-block:: php
+
+        <?php
+
+        Event::register_function('404.attachmentFound', function($params)
+        {
+            $url = $params['url'];
+            $attachement = $params['attachement'];
+            $send_file =& $params['send_file'];
+            // ...
+        });
 
 404.attachmentNotFound
 ======================
