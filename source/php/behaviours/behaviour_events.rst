@@ -3,6 +3,8 @@ Behaviour events
 
 Behaviours can catch events triggered on a :php:class:`Nos\\Orm\\Model` or on a instance of :php:class:`Nos\\Orm\\Model`.
 
+.. _php/behaviours/behaviour_event/instance:
+
 Instance events
 ***************
 
@@ -18,18 +20,20 @@ Instance events
 
     :param array $config: Current ``fieldset`` configuration.
 
-.. php:method:: form_processing($data, &$config)
+.. php:method:: form_processing($data, &$json_response)
 
     Trigger when receive a ``form`` response.
 
     :param array $data: Data received.
-    :param array $config: Current ``fieldset`` configuration.
+    :param array $json_response: JSON response to send.
 
 .. php:method:: wysiwygOptions(&$options)
 
     Trigger when construct WYSIWYG options for an item.
 
     :param array $options: Current option for WYSIWYG.
+
+.. _php/behaviours/behaviour_event/static:
 
 Static events
 *************
