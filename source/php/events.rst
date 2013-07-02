@@ -338,6 +338,8 @@ front.404NotFound
         });
 
 
+.. _php/events/email:
+
 Emails
 ******
 

@@ -7,7 +7,7 @@ Model
 
 .. php:class:: Model
 
-    Extends :term:`Model of FuelPHP ORM <\Orm\Model>`.
+    Extends :term:`Model of FuelPHP ORM <Orm\\Model>`.
 
     Novius OS Model have some differences compare with FuelPHP Model :
 

@@ -14,5 +14,5 @@ PHP API
 	renderers/index
 	views/index
 	events
-	fuelphp
+	fuelphp/index
 

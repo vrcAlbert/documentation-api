@@ -1,9 +1,9 @@
-FuelPHP
-#######
+Glossary
+########
 
 .. glossary::
 
-	\Orm\Model
+	Orm\\Model
 		| Native FuelPHP ORM Model. The M of MVC.
 		| See http://fuelphp.com/docs/packages/orm/creating_models.html
 
