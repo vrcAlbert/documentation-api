@@ -78,14 +78,14 @@ Methods
 .. php:method:: url($absolute = true)
 
     :param bool $absolute: Default true, if false return relative URL
-	:returns: Get the attachment url or ``false`` if no file exists.
+    :returns: Get the attachment url or ``false`` if no file exists.
 
 .. php:method:: urlResized($max_width = 0, $max_height = 0, $absolute = true)
 
-	:param array $max_width: Max width of the image.
-	:param array $max_height: Max height of the image.
+    :param array $max_width: Max width of the image.
+    :param array $max_height: Max height of the image.
     :param bool $absolute: Default true, if false return relative URL
-	:returns: Get the resized url for the Attachment  or ``false`` if no file exists or it's not an image.
+    :returns: Get the resized url for the Attachment  or ``false`` if no file exists or it's not an image.
 
 .. php:method:: set($file, $filename = null)
 

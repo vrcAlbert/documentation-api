@@ -23,59 +23,46 @@ Behaviours
 Methods
 *******
 
-.. php:method:: delete_from_disk()
-
-	:returns: ``True`` or ``false`` depending on whether the deletion was successful.
+.. php:method:: deleteFromDisk()
 
 	Delete the original media file from the disk.
 
-.. php:method:: delete_public_cache()
-
-	:returns: ``True`` or ``false`` depending on whether the deletion was successful.
+.. php:method:: deleteCache()
 
 	Delete all the cached versions (thumbnails) of the media files from the disk.
 
-.. php:method:: get_path()
+.. php:method:: path()
 
-	:returns: Relative media file virtual path.
+	:returns: Private absolute media file path.
 
-.. php:method:: get_public_path()
+.. php:method:: getImgTag($params = array())
 
-	:returns: Public media file URL relative to base href.
+    :param array $params: the attributes array
+    :returns: If the media file is an image, return an html image tag of the media.
 
-.. php:method:: get_private_path()
+    Sets width, height, alt attributes is not supplied.
 
-	:returns: Private media file path relative to Novius OS root directory.
+.. php:method:: getImgTagResized($max_width = null, $max_height = null, $params = array())
 
-.. php:method:: get_img_tag($params = array())
+    :param array $max_width: Max width of the image.
+    :param array $max_height: Max height of the image.
+    :param array $params: the attributes array
+    :returns: If the media file is an image, return an html image tag of the media resized.
 
-	:param array $params:
+    Sets width, height, alt attributes is not supplied.
 
-		:max_width:  Max width of the image.
-		:max_height: Max height of the image.
+.. php:method:: url($absolute = true)
 
-	:returns: If the media file is an image, a HTML ``<img>`` tag with ``src``, ``width`` and ``height`` attributes, depends of ``$params``. ``False`` otherwise.
+    :param bool $absolute: Default true, if false return relative URL
+	:returns: Public media file URL.
 
-.. php:method:: get_img_tag_resized($max_width = null, $max_height = null)
+.. php:method:: urlResized($max_width = 0, $max_height = 0, $absolute = true)
 
-	:param array $max_width: Max width of the image.
-	:param array $max_height: Max height of the image.
-	:returns: If the media file is an image, a HTML ``<img>`` tag with ``src``, ``width`` and ``height`` attributes. ``False`` otherwise.
+    :param array $max_width: Max width of the image.
+    :param array $max_height: Max height of the image.
+    :param bool $absolute: Default true, if false return relative URL
+    :returns: If the media file is an image, media URL for specify size parameters. ``False`` otherwise.
 
-	Alias of ``get_img_tag(array('width' => $max_width, 'height' => $max_height))``.
-
-.. php:method:: get_img_infos($max_width = null, $max_height = null)
-
-	:param array $max_width: Max width of the image.
-	:param array $max_height: Max height of the image.
-	:returns: If the media file is an image, an associative array with keys ``src``, ``width`` and ``height`` depends of size parameters. ``False`` otherwise.
-
-.. php:method:: get_public_path_resized($max_width = 0, $max_height = 0)
-
-	:param array $max_width: Max width of the image.
-	:param array $max_height: Max height of the image.
-	:returns: If the media file is an image, media URL relative to base href for specify size parameters. ``False`` otherwise.
-
-.. php:method:: is_image()
+.. php:method:: isImage()
 
 	:returns: ``True`` or ``false``, depend if media is an image.
