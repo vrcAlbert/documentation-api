@@ -101,23 +101,7 @@ Example
 
 	<?php
 
-	// Date range mode
-	class Model_Page extends \Nos\Orm\Model
-	{
-		protected static $_behaviours = array(
-			'Nos\Orm_Behaviour_Publishable' => array(
-				'publication_start_property' => 'page_publication_start',
-				'publication_end_property' => 'page_publication_end',
-			),
-		);
-	}
-
-
-.. code-block:: php
-
-	<?php
-
-	// Combined Yes/No state + date range modes
+	// Date range mode (combined with Yes/No state)
 	class Model_Page extends \Nos\Orm\Model
 	{
 		protected static $_behaviours = array(

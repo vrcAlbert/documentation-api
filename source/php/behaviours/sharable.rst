@@ -108,15 +108,15 @@ A closure which returns a default value
 Real example
 ============
 
-Find in ``Monkey`` example application.
+From the ``Monkey`` example application. ``config/model/monkey.config.php`` (we're using a config file here, because we
+can't put functions in a class property):
 
 .. code-block:: php
 
 	<?php
 
-	class Model_Monkey extends \Nos\Orm\Model
-	{
-		protected static $_behaviours = array(
+	return array(
+	    'behaviours' => array(
 			'Nos\Orm_Behaviour_Sharable' => array(
 				'data' => array(
 					\Nos\DataCatcher::TYPE_TITLE => array(
@@ -155,5 +155,5 @@ Find in ``Monkey`` example application.
 					),
 				),
 			),
-		);
-	}
+		),
+	);
