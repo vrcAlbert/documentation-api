@@ -74,7 +74,7 @@ Finder
 Image
 -----
 
-Added the static method **gravatarUrl**\($email, $options)
+Added the static method **shrink**\($max_width, $max_height = null, $keepar = true, $pad = false)
 
 
 Module

@@ -35,15 +35,11 @@ Behaviours
 Methods
 *******
 
-.. php:method:: delete_from_disk()
-
-	:returns: ``True`` or ``false`` depending on whether the deletion was successful.
+.. php:method:: deleteFromDisk()
 
 	Delete the folder and all its content (recursively).
 
-.. php:method:: delete_public_cache()
-
-	:returns: ``True`` or ``false`` depending on whether the deletion was successful.
+.. php:method:: deleteCache()
 
 	Delete all the public and cached entries (image thumbnails) of this folder
 
