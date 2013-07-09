@@ -75,14 +75,16 @@ Methods
 
 	:returns: ``True`` if the Attachment is an image, ``false`` otherwise.
 
-.. php:method:: url()
+.. php:method:: url($absolute = true)
 
+    :param bool $absolute: Default true, if false return relative URL
 	:returns: Get the attachment url or ``false`` if no file exists.
 
-.. php:method:: urlResized($max_width = 0, $max_height = 0)
+.. php:method:: urlResized($max_width = 0, $max_height = 0, $absolute = true)
 
 	:param array $max_width: Max width of the image.
 	:param array $max_height: Max height of the image.
+    :param bool $absolute: Default true, if false return relative URL
 	:returns: Get the resized url for the Attachment  or ``false`` if no file exists or it's not an image.
 
 .. php:method:: set($file, $filename = null)
@@ -133,9 +135,9 @@ Example
 	// Now file saved in local/data/files/apps/myapps/my_id/a_pdf.pdf
 
 	echo $attachment->url();
-	// Echo data/files/myapps-attachment/my_id/a_pdf.pdf
+	// Echo http://wwww.domain.ext/data/files/myapps-attachment/my_id/a_pdf.pdf
 
 	$_SESSION['user_connected'] = false;
-	// Now URL data/files/myapps-attachment/my_id/a_pdf.pdf return 404
+	// Now URL http://wwww.domain.ext/data/files/myapps-attachment/my_id/a_pdf.pdf return 404
 
 	$attachment->delete();
