@@ -63,6 +63,18 @@ Methods
 
 	Alias for ``->url_canonical(array('preview' => true))``.
 
+.. php:method:: htmlAnchor($attributes = array())
+
+    :param array $attributes:
+        | Array of attributes to be applied to the anchor tag.
+        | If key 'href' is set in $attributes parameter:
+
+        * if is a string, used for href attribute
+        * if is an array, used as argument of ->url() method
+
+        If key 'text' is set in $attributes parameter, its value replace item title
+    :returns: Returns an HTML anchor tag with, by default, item URL in href and item title in text.
+
 Example
 *******
 

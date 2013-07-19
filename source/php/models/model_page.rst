@@ -60,11 +60,19 @@ Behaviours
 Methods
 *******
 
-.. php:staticmethod:: link()
+.. php:method:: htmlAnchor($attributes = array())
 
-	:returns: ``string`` The href and target attributes for an HTML link, such as ``href="..." target="..."``.
+    :param array $attributes:
+        | Array of attributes to be applied to the anchor tag.
+        | If key 'href' is set in $attributes parameter:
 
-.. php:staticmethod:: url($params = array())
+        * if is a string, used for href attribute
+        * if is an array, used as argument of ->url() method
+
+        If key 'text' is set in $attributes parameter, its value replace page title
+    :returns: Returns an HTML anchor tag with, by default, page URL in href and page title in text.
+
+.. php:method:: url($params = array())
 
 	:param array $params:
 

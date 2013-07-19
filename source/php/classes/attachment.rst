@@ -87,6 +87,12 @@ Methods
     :param bool $absolute: Default true, if false return relative URL
     :returns: Get the resized url for the Attachment  or ``false`` if no file exists or it's not an image.
 
+.. php:method:: htmlAnchor($attributes = array())
+
+    :param array $attributes: | Array of attributes to be applied to the anchor tag.
+                              | If key 'text' is set in $attributes parameter, its value replace attachment filename
+    :returns: Returns an HTML anchor tag with, by default, attachment URL in href and attachment filename in text.
+
 .. php:method:: set($file, $filename = null)
 
 	:param array $file: File path

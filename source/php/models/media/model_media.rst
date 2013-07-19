@@ -35,14 +35,14 @@ Methods
 
 	:returns: Private absolute media file path.
 
-.. php:method:: getImgTag($params = array())
+.. php:method:: htmlImg($params = array())
 
     :param array $params: the attributes array
     :returns: If the media file is an image, return an html image tag of the media.
 
     Sets width, height, alt attributes is not supplied.
 
-.. php:method:: getImgTagResized($max_width = null, $max_height = null, $params = array())
+.. php:method:: htmlImgResized($max_width = null, $max_height = null, $params = array())
 
     :param array $max_width: Max width of the image.
     :param array $max_height: Max height of the image.
@@ -50,6 +50,12 @@ Methods
     :returns: If the media file is an image, return an html image tag of the media resized.
 
     Sets width, height, alt attributes is not supplied.
+
+.. php:method:: htmlAnchor($attributes = array())
+
+    :param array $attributes: | Array of attributes to be applied to the anchor tag.
+                              | If key 'text' is set in $attributes parameter, its value replace media title
+    :returns: Returns an HTML anchor tag with, by default, media URL in href and media title in text.
 
 .. php:method:: url($absolute = true)
 
