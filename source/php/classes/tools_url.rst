@@ -23,3 +23,11 @@ Tools_Url
 
 	:param string $context: A context ID. See :doc:`/php/configuration/software/multi_context`.
 	:returns: Home URL of the specified context.
+
+::encodePath()
+--------------
+
+.. php:staticmethod:: encodePath($url)
+
+	:param string $url:  Url to encode
+	:returns: Encode the path part of an URL.
