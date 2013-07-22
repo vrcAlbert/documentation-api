@@ -93,6 +93,10 @@ Methods
                               | If key 'text' is set in $attributes parameter, its value replace attachment filename
     :returns: Returns an HTML anchor tag with, by default, attachment URL in href and attachment filename in text.
 
+.. php:method:: getToolkitImage()
+
+    :returns: Returns a :php:class:`Nos\\Toolkit_Image` based on the attachment if is an image, ``False`` otherwise.
+
 .. php:method:: set($file, $filename = null)
 
 	:param array $file: File path

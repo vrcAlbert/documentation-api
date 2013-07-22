@@ -72,3 +72,7 @@ Methods
 .. php:method:: isImage()
 
 	:returns: ``True`` or ``false``, depend if media is an image.
+
+.. php:method:: getToolkitImage()
+
+    :returns: Returns a :php:class:`Nos\\Toolkit_Image` based on the media if is an image, ``False`` otherwise.

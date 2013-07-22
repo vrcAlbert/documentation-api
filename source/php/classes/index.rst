@@ -22,6 +22,7 @@ Classes
     migration
     nos
     permission
+    toolkit_image
     tools_context
     tools_rss
     tools_url
