@@ -106,11 +106,15 @@ Methods
 
 .. php:method:: save()
 
-	Save a new Attachment file
+    Save a new Attachment file
+
+    :returns: ``True`` if the Attachment have been saved, ``false`` otherwise.
 
 .. php:method:: delete()
 
-	Delete the Attachment file
+    Delete the Attachment file
+
+    :returns: ``True`` if the Attachment have been deleted, ``false`` otherwise.
 
 Example
 *******
