@@ -199,7 +199,7 @@ Full example
 	'data_mapping' => array(
 		'column_a' => array(
 			'title' => 'Column a'
-			'cellFormaters' => array(
+			'cellFormatters' => array(
 				'bold' => array(
 					'type' => 'bold',
 				),
@@ -213,7 +213,7 @@ Full example
 		),
 		'column_b' => array(
 			'title' => 'Column b'
-			'cellFormaters' => array(
+			'cellFormatters' => array(
 				'icon' => array(
 					'type' => 'icon',
 					'column' => 'column_icon',
