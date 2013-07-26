@@ -94,3 +94,57 @@ To set a configuration for a context, set a key with the context id in the array
 .. seealso::
 
 	`TinyMCE documentation <http://www.tinymce.com/wiki.php>`_ for details.
+
+Friendly slug
+#############
+
+All segments of URLs builded in Novius OS are cleaned by the friendly slug mechanism.
+
+By default :
+
+* all this characters are replaced by ``-``: ``?``, ``:``, ``\``, ``/``, ``#``, ``[``, ``]``, ``@``, ``&`` and space.
+* transform to lower case.
+* remove trailing ``-``.
+* replace multiple ``-`` by one.
+
+But you can use others rules or define your own rule.
+You can also have special rules for :doc:`contexts <multi_context>`.
+
+Four setups of rules are defined:
+
+* ``default`` setup (like describe above)
+* ``no_accent`` setup. All accent characters are replaced by the equivalent character without accent.
+* ``no_special`` setup. All characters that are not a word character, a ``-`` or a ``_`` are replaced by ``-``.
+* ``no_accent_and_special`` setup. Combination of ``no_accent`` and ``no_special`` setups.
+
+A sample configuration file is available in :file:`local/config/friendly_slug.config.php.sample`.
+Just rename (or copy) it to :file:`local/config/friendly_slug.config.php`, and update it to your case.
+
+To set a configuration for a context, set a key with the context id in the array ``setups``.
+
+.. code-block:: php
+
+    <?php
+    return array(
+        'always_last' => array(
+        ),
+
+        'active_setup' => 'my_default',
+
+        'setups' => array(
+            'my_default' => array(
+                // Use the 'no_accent' setup
+                'no_accent',
+
+                // Replace space by '_'
+                ' ' => '_',
+
+                 // All characters that are not a word character, a '-' or a '_' or a '*' are replaced by '-'.
+                '[^\w\*\-_]' => array('replacement' => '-', 'flags' => 'i'),
+            ),
+            'main::en_GB' => array(
+                //... Set here your specific rules for context main::en_GB
+            ),
+        ),
+    );
+

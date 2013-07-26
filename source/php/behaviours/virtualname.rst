@@ -25,9 +25,14 @@ Configuration
 Methods
 *******
 
-.. php:method:: virtual_name()
+.. php:method:: virtual_name($virtual_name = null)
 
-	:returns: Item slug.
+    Getter and setter for the virtual_name. Setter if a $slug is passed in parameters.
+
+    When use as setter, the new virtual name is transform to friendly slug.
+
+    :param string $virtual_name: The new virtual name
+    :returns: The item slug.
 
 .. php:method:: friendly_slug($slug)
 
