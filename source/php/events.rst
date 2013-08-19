@@ -338,6 +338,42 @@ front.404NotFound
         });
 
 
+Back-office
+***********
+
+admin.loginSuccess
+==================
+
+.. php:function:: admin.loginSuccess()
+
+    A user just successfully connected to the back-office.
+
+    .. code-block:: php
+
+        <?php
+
+        Event::register('admin.loginSuccess', function()
+        {
+            // ...
+        });
+
+admin.loginFail
+==================
+
+.. php:function:: admin.loginFail()
+
+    A user is trying to connect to the back office with an email or an invalid password.
+
+    .. code-block:: php
+
+        <?php
+
+        Event::register('admin.loginFail', function()
+        {
+            // ...
+        });
+
+
 .. _php/events/email:
 
 Emails
