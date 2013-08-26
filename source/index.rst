@@ -20,5 +20,6 @@ Summary
 
 	php/index
 	javascript/index
+	comments/index
 
 .. todolist::
