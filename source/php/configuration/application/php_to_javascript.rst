@@ -55,6 +55,8 @@ Common keys
 
 :type: The ``cellFormatter`` type. Can one of ``bold``, ``css``, ``icon``, ``iconClasses`` or ``link``.
 :replace: If ``true``, ``cellFormatter`` empties the current content.
+:ignore: Column name to check if we should ignore this cellFormatter for the current item.
+         If ``'1'`` (the string containing the digit ``1``), the cellFormatter will be ignored for this item.
 
 Types
 =====
