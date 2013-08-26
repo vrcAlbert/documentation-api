@@ -1,3 +1,5 @@
+.. _php/configuration/application/common:
+
 Common
 ######
 
