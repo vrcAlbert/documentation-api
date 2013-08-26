@@ -232,6 +232,8 @@ front.404NotFound
             // ...
         });
 
+.. _php/events/404.mediaFound:
+
 404.mediaFound
 =================
 
@@ -274,6 +276,8 @@ front.404NotFound
         {
             // ...
         });
+
+.. _php/events/404.attachmentFound:
 
 404.attachmentFound
 ===================
@@ -341,6 +345,8 @@ front.404NotFound
 Back-office
 ***********
 
+.. _php/events/admin.loginSuccess:
+
 admin.loginSuccess
 ==================
 
@@ -356,6 +362,8 @@ admin.loginSuccess
         {
             // ...
         });
+
+.. _php/events/admin.loginFail:
 
 admin.loginFail
 ==================
@@ -416,6 +424,36 @@ email.after_send
         {
             // ...
         }
+
+Deprecated
+**********
+
+.. _php/events/nos.deprecated:
+
+nos.deprecated
+==============
+
+.. php:function:: nos.deprecated($params)
+
+    A deprecated message will be write in log.
+
+    :param array $params:
+
+            :$message: The message to log.
+            :$since: The version since deprecation.
+            :$debug_backtrace: The debug_backtrace
+
+    .. code-block:: php
+
+        <?php
+
+        Event::register('nos.deprecated', function($params)
+        {
+            $message = $params['message'];
+            $since = $params['since'];
+            $debug_backtrace = $params['debug_backtrace'];
+            // ...
+        });
 
 
 Forms application

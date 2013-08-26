@@ -57,6 +57,8 @@ Behaviours
 * :php:class:`Sortable <Nos\\Orm_Behaviour_Sortable>`
 * :php:class:`Publishable <Nos\\Orm_Behaviour_Publishable>`
 
+.. _php/models/model_page/methods:
+
 Methods
 *******
 

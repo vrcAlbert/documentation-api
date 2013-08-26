@@ -34,6 +34,10 @@ Just rename (or copy) it to :file:`local/config/config.php`, and update it to yo
 
     ``Boolean`` for use of assets minified in back-office. By default is ``true``, except in DEVELOPMENT environment.
 
+.. php:global:: temp_dir
+
+    Path of a temp directory. Set to :file:`local/data/temp` by default.
+
 .. _php/configuration/software/db:
 
 Database
@@ -59,6 +63,8 @@ Just rename (or copy) it to :file:`local/config/email.config.php`, and update it
 .. seealso::
 
 	`FuelPHP email package documentation <http://fuelphp.com/docs/packages/email/introduction.html>`_ for details.
+
+.. _php/configuration/wysiwyg:
 
 WYSIWYG
 #######
@@ -94,6 +100,8 @@ To set a configuration for a context, set a key with the context id in the array
 .. seealso::
 
 	`TinyMCE documentation <http://www.tinymce.com/wiki.php>`_ for details.
+
+.. _php/configuration/friendly_slug:
 
 Friendly slug
 #############

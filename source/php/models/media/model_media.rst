@@ -20,6 +20,8 @@ Behaviours
 
 * :php:class:`Virtual path <Nos\\Orm_Behaviour_Virtualpath>`
 
+.. _php/models/media/model_media/methods:
+
 Methods
 *******
 

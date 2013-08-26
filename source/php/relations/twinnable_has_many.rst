@@ -1,3 +1,5 @@
+.. _php/relations/twinnable_has_many:
+
 Twinnable Has Many
 ##################
 

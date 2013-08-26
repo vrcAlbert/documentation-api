@@ -174,6 +174,7 @@ Wraps a link to the text (which performs an action upon click).
 		),
 	),
 
+.. _php/configuration/application/cellFormatters/custom:
 
 Custom cellFormatters
 ---------------------

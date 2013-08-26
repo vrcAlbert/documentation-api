@@ -1,3 +1,5 @@
+.. _php/relations/twinnable_belongs_to:
+
 Twinnable Belongs To
 ####################
 

@@ -1,3 +1,5 @@
+.. _php/relations/twinnable_has_one:
+
 Twinnable Has One
 #################
 

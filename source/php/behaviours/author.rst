@@ -1,3 +1,5 @@
+.. _php/behaviours/author:
+
 Author
 ######
 
