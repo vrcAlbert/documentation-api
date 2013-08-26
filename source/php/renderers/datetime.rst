@@ -1,3 +1,5 @@
+.. _php/renderers/datetime:
+
 Date Time Picker
 ################
 

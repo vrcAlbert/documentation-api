@@ -1,3 +1,5 @@
+.. _php/behaviours/behaviour_event:
+
 Behaviour events
 ################
 

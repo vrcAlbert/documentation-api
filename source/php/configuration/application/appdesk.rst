@@ -1,3 +1,5 @@
+.. _php/configuration/application/appdesk:
+
 Appdesk
 #######
 
@@ -157,6 +159,8 @@ Defines how the model tree is constructed on the appdesk. It is automatically fi
     :where:
 
 .. todo:: order_by but also other find parameters ?
+
+.. _php/configuration/application/appdesk/appdesk:
 
 appdesk
 *******

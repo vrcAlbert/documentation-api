@@ -1,3 +1,5 @@
+.. _php/relations/twinnable_many_many:
+
 Twinnable Many to Many
 ######################
 

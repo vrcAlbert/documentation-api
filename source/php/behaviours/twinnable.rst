@@ -16,6 +16,8 @@ Twinnable
         * :doc:`/php/configuration/software/multi_context`.
         * :php:class:`Nos\\Orm_Behaviour_Contextable` for configuration and methods.
 
+.. _php/behaviours/twinnable/configuration:
+
 Configuration
 *************
 
@@ -32,6 +34,8 @@ Configuration
 .. php:attr:: common_fields
 
 	Array of fields which are common to all context twins.
+
+.. _php/behaviours/twinnable/methods:
 
 Methods
 *******

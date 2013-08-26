@@ -19,6 +19,8 @@ Configuration
 
 	Listed :ref:`enhancers <metadata/enhancers>` must define a ``getUrlEnhanced($params)`` method.
 
+.. _php/behaviours/urlenhancer/methods:
+
 Methods
 *******
 

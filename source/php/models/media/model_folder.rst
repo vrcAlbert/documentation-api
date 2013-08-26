@@ -32,6 +32,8 @@ Behaviours
 * :php:class:`Tree <Nos\\Orm_Behaviour_Tree>`
 * :php:class:`Virtual path <Nos\\Orm_Behaviour_Virtualpath>`
 
+.. _php/models/media/model_folder/methods:
+
 Methods
 *******
 

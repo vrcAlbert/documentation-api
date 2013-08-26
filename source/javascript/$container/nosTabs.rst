@@ -120,6 +120,8 @@ nosTabs('update')
 			reload: true
 		});
 
+.. _javascript/$container/nosTabs:
+
 nosTabs('reload')
 *****************
 
