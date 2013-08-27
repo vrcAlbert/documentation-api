@@ -1,4 +1,4 @@
-Model_Comment
+Model Comment
 #############
 
 .. php:namespace:: Nos\Comments

@@ -1,7 +1,7 @@
-.. _comments/behaviours/commentable:
+.. _applications/noviusos_comments/behaviours/commentable:
 
-Commentable
-###########
+Behaviour Commentable
+#####################
 
 .. php:namespace:: Nos\Comments
 
