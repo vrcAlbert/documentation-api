@@ -26,7 +26,7 @@ Others
 
 * This behaviours adds a **Comments** action on the Model's App Desk, which will open a tab listing all the comments of the item.
 
-* This behaviours a **Comments** column in the App Desk, containing the number of comments for each item.
+* This behaviours adds a **Comments** column in the App Desk, containing the number of comments for each item.
 
 Example
 *******
