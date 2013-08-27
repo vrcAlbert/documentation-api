@@ -1,10 +1,10 @@
 Configuration
 *************
 
-To modify comments API configuration, extend the configuration file :file:`noviusos_comments::api`.
+To modify the comments API configuration, you need to extend the configuration file :file:`noviusos_comments::api`.
 
 :default:
-    :default_state: published or pending (if you want moderation)
+    :default_state: ``published`` or ``pending`` (if you want moderation)
     :use_recaptcha: false
     :anti_spam_identifier:
         :failed: 548
@@ -21,7 +21,7 @@ To modify comments API configuration, extend the configuration file :file:`noviu
         :size: 64
 :setups: Array. The setup id in key, array like ``default`` for the value.
 
-You can modify the ``default`` configuration, or add a setup for a model or a context.
+You can modify the ``default`` configuration, or add a setup for a specific model or a specific context.
 
 If you want to change configuration for all cases:
 
@@ -34,7 +34,7 @@ If you want to change configuration for all cases:
         ),
     );
 
-If you want to change configuration just for a class:
+If you want to change configuration only for a specific model:
 
 .. code-block:: php
 
@@ -47,7 +47,7 @@ If you want to change configuration just for a class:
         ),
     );
 
-If you want to change configuration for a context:
+If you want to change configuration only for a specific context:
 
 .. code-block:: php
 
