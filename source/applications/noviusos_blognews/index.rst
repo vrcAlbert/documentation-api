@@ -1,6 +1,8 @@
 Blog/News Application
 #####################
 
+To modify configuration of Blog or News, extend respectively configuration files :file:`noviusos_blog::config` or :file:`noviusos_news::config`.
+
 Configuration
 *************
 

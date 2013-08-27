@@ -6,5 +6,6 @@ Comments Application API
 
 	behaviours/commentable
 	classes/api
+	configuration/api
 	models/model_comment
 

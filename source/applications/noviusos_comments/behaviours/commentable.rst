@@ -12,7 +12,7 @@ Behaviour Commentable
 Methods
 *******
 
-.. php:method:: commentApi()
+.. php:staticmethod:: commentApi()
 
 	:returns: An instance of :class:`Nos\\Comments\\Api``, configured for this item.
 
