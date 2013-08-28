@@ -35,12 +35,10 @@ Example
 
 	<?php
 
-	// Yes/No state
 	class Model_Monkey extends \Nos\Orm\Model
 	{
 		protected static $_behaviours = array(
 			'Nos\Comments\Orm_Behaviour_Commentable' => array(
-				'publication_state_property' => 'page_published',
 			),
 		);
 	}

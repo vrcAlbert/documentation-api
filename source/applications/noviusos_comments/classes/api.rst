@@ -30,15 +30,15 @@ API Class
 
 .. php:method:: getRss($options = array())
 
-    :param array $options: If no key ``item``, return all comments of the model for the current context.
+    :param array $options: If no key ``item``, returns all comments of the model for the current context.
 
-        :item: A :php:class:`Nos\\Orm\\Model` instance. If set, return all comments of the item.
+        :item: A :php:class:`Nos\\Orm\\Model` instance. If set, returns all comments of the item.
 
     :returns: A :php:class:`Nos\\Tools_RSS` instance.
 
 .. php:method:: changeSubscriptionStatus($from, $email, $subscribe)
 
     :param string $from: A :php:class:`Nos\\Orm\\Model` instance
-    :param string $email: Password to check if it matches the user's password
-    :param boolean $subscribe: Password to check if it matches the user's password
+    :param string $email: Email of the commenter to change the subscription status
+    :param boolean $subscribe: New subscription status (true to receive notifications, false to disable)
 
