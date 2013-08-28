@@ -15,22 +15,22 @@ noviusos_form::rendering
 
     :param array $params:
 
-            :&$fields: Fields list
+        :&$fields: Fields list
 
-                :label: Callback used to generate the label
+            :label: Callback used to generate the label
 
-                    :callback: ``string`` Callback function name
+                :callback: ``string`` Callback function name
                 :args: ``array`` Callback function args
 
             :field: Callback used to generate the field
 
-                    :callback: ``string`` Callback function name
+                :callback: ``string`` Callback function name
                 :args: ``array`` Callback function args
 
             :instructions:  Callback used to generate the instructions
 
-                   :callback: ``string`` Callback function name
-               :args: ``array`` Callback function args
+                :callback: ``string`` Callback function name
+                :args: ``array`` Callback function args
 
             :new_row: ``bool`` Should the field be on a new row?
             :new_page: ``bool`` Should the field be on a new page?
@@ -97,18 +97,18 @@ Same as ``noviusos_form::rendering``, but only triggered for a form with the spe
 noviusos_form::data_validation
 ==============================
 
-**warning !** This function must return an array containing the detected validation errors.
+.. warning:: This function must return an array containing the detected validation errors.
 
 .. php:function:: noviusos_form::data_validation(&$data, $form)
 
     Additional data validation after submitting a form from the Form application.
 
     :param array &$data: Received data (roughly $_POST)
-        :param object $form: ``Model_Form`` Form instance
+    :param object $form: ``Model_Form`` Form instance
 
     :return array: List of validation errors
 
-        .. code-block:: php
+    .. code-block:: php
 
         <?php
 
@@ -140,12 +140,12 @@ noviusos_form::before_submission
     Before saving the answer in the database
 
     :param array &$data: Received data (to save in DB)
-        :param object $form: ``Model_Form`` Form instance
+    :param object $form: ``Model_Form`` Form instance
     :param array $enhancer_args: Enhancer configuration
 
-        :return bool: false to prevent saving the answer in the database
+    :return bool: false to prevent saving the answer in the database
 
-        .. code-block:: php
+    .. code-block:: php
 
         <?php
 
@@ -175,7 +175,7 @@ noviusos_form::after_submission
     :param object &$answer: ``Model_Answer`` Answer instance
     :param array $enhancer_args: Enhancer configuration
 
-        .. code-block:: php
+    .. code-block:: php
 
         <?php
 

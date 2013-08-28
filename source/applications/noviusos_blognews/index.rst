@@ -7,24 +7,24 @@ Configuration
 *************
 
 :categories:
-    :enabled:  Boolean, ``true`` to enabled categories. Default ``true`` for Blog and News.
+    :enabled:  Boolean, ``true`` to enable categories. Default ``true`` for Blog and News.
     :show:     Boolean, ``true`` to show categories in front. Default ``true`` for Blog and News.
 :tags:
-    :enabled:  Boolean, ``true`` to enabled tags. Default ``true`` for Blog and ``false`` for News.
+    :enabled:  Boolean, ``true`` to enable tags. Default ``true`` for Blog and ``false`` for News.
     :show:     Boolean, ``true`` to show tags in front. Default ``true`` for Blog and News.
 :authors:
-    :enabled:  Boolean, ``true`` to enabled authors. Default ``true`` for Blog and ``false`` for News.
+    :enabled:  Boolean, ``true`` to enable authors. Default ``true`` for Blog and ``false`` for News.
     :show:     Boolean, ``true`` to show authors in front. Default ``true`` for Blog and News.
 :summary:
-    :enabled:  Boolean, ``true`` to enabled summary. Default ``true`` for Blog and News.
+    :enabled:  Boolean, ``true`` to enable summary. Default ``true`` for Blog and News.
     :show:     Boolean, ``true`` to show summary in front. Default ``true`` for Blog and News.
 :comments:
-    :enabled:  Boolean, ``true`` to enabled comments. Default ``true`` for Blog and ``false`` for News.
+    :enabled:  Boolean, ``true`` to enable comments. Default ``true`` for Blog and ``false`` for News.
     :show:     Boolean, ``true`` to show comments in front. Default ``true`` for Blog and News.
     :show_nb:  Boolean, ``true`` to show the number of comments in front. Default ``true`` for Blog and News.
     :can_post: Boolean, ``true`` if user can post new comments. Default ``true`` for Blog and News.
 :publication_date:
-    :enabled:  Boolean, ``true`` to enabled publication dates. Default ``true`` for Blog and News.
+    :enabled:  Boolean, ``true`` to enable publication dates. Default ``true`` for Blog and News.
     :show:     Boolean, ``true`` to show publication dates in front. Default ``true`` for Blog and News.
 :thumbnail:
     :front:
