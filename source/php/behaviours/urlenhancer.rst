@@ -65,6 +65,9 @@ Methods
 
 	Alias for ``->url_canonical(array('preview' => true))``.
 
+.. php:method:: deleteCacheItem()
+
+    Delete the cache of the pages containing this item only (this will not delete the cache for the whole enhancer).
 
 .. php:method:: deleteCacheEnhancer()
 
