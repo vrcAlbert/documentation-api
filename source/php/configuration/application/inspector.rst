@@ -51,7 +51,6 @@ Model tree inspector
 Associative array:
 
 :model: Model class name
-:query: Optional. Additional informations about the query. See :ref:`query in appdesk configuration <php/configuration/application/appdesk/query>`.
 :data_mapping: Optional. Defines which data_mapping items are displayed. See :ref:`data_mapping in appdesk configuration <php/configuration/application/appdesk/data_mapping>`.
 :appdesk: Optional. Additional display information about the appdesk.
 :models: Optional. See :ref:`appdesk tree configuration <php/configuration/application/appdesk/tree>`.
