@@ -1,3 +1,5 @@
+.. _applications/noviusos_blognews:
+
 Blog/News Application
 #####################
 
