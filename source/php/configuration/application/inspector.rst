@@ -51,7 +51,6 @@ Model tree inspector
 Associative array:
 
 :model: Model class name
-:query: Optional. Additional informations about the query. See :ref:`query in appdesk configuration <php/configuration/application/appdesk/query>`.
 :data_mapping: Optional. Defines which data_mapping items are displayed. See :ref:`data_mapping in appdesk configuration <php/configuration/application/appdesk/data_mapping>`.
 :appdesk: Optional. Additional display information about the appdesk.
 :models: Optional. See :ref:`appdesk tree configuration <php/configuration/application/appdesk/tree>`.
@@ -73,29 +72,26 @@ Date inspector
 
 Associative array:
 
-:input_begin: Optional. Default value: `date_begin`.
-:input_end: Optional. Default value: `date_end`.
-:label_custom: Optional. Title used when custom dates can be selected. Default value: "Custom dates".
-:label_custom_inputs: Optional. Defines how the custom inputs are displayed. There is two placeholders: `begin` and `end`.
-:options: Optional. Main (root) options for date selector. For each option a key must exists which value is an associative array:
-
-    :since: Custom date we can filter since.
-
-        :optgroup: Label
-        :options: Associative array. Key is the date, `string is processed by <http://fuelphp.com/docs/classes/date.html>`__, value is the label of the date.
-
-    :month: Filter by month.
-
-        :optgroup: Label.
-        :first_month: Month to start list from.
-        :limit_type: Limit type where the list end (value can be "year" or "month").
-        :limit_value: Number of items to display. For example, if `limit_type` is "month" and `limit_value` is 5, it will display the last 5 months.
-
-    :year: Filter by year.
-
-        :optgroup: Label.
-        :first_year: Year to start list from.
-        :limit: Number of years to display.
+:input_begin: Name of the input for the begin date. Default value: ``date_begin``.
+:input_end: Name of the input for the end date. Default value: ``date_end``.
+:labels:
+    :Custom dates: Default value: ``Custom dates``.
+    :from begin to end: Default value: ``from {{begin}} to {{end}}``.
+    :until end: Default value: ``until {{end}}``.
+    :since begin: Default value: ``since {{begin}}``.
+:options: | Array of options displayed by inspector. Default value: ``array('custom', 'since', 'month', 'year')``.
+:since:
+    :optgroup: Label of this group in the inspector. Default value: ``Since``.
+    :options: Associative array. Key is the date, `string is processed by Date Class <http://fuelphp.com/docs/classes/date.html>`__, value is the label of the date.
+:month:
+    :optgroup: Label of this group in the inspector. Default value: ``Previous months``.
+    :first_month: Month to start list from. Default value: ``now``.
+    :limit_type: Limit type where the list end (value can be ``year`` or ``month``). Default value: ``year``.
+    :limit_value: Number of items to display. For example, if ``limit_type`` is ``month`` and ``limit_value`` is 5, it will display the last 5 months. Default value: ``1``.
+:year:
+    :optgroup: Label of this group in the inspector. Default value: ``Years``.
+    :first_year: Year to start list from. Default value: ``now``.
+    :limit: Number of years to display. Default value: ``4``.
 
 Plain data inspector
 ********************
