@@ -5,7 +5,8 @@ Virtual name
 
 .. php:class:: Renderer_Virtualname
 
-	This renderer is used for modify an item slug.
+    | Extends :php:class:`Nos\\Renderer`.
+    | This renderer is used for modify an item slug.
 
 	.. seealso::
 

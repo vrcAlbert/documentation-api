@@ -7,8 +7,9 @@ Date Time Picker
 
 .. php:class:: Renderer_Datetime_Picker
 
-	| This renderer is used to pick a date and time.
-	| It's based on `jQuery UI Date Time Picker addon <http://trentrichardson.com/examples/timepicker/>`__.
+    | Extends :php:class:`Nos\\Renderer`.
+    | This renderer is used to pick a date and time.
+    | It's based on `jQuery UI Date Time Picker addon <http://trentrichardson.com/examples/timepicker/>`__.
 
 
 .. image:: images/datetime_picker.png

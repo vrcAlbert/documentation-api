@@ -5,7 +5,8 @@ Set of radio buttons
 
 .. php:class:: Renderer_Radioset
 
-    This renderer is used to display a set of radio buttons.
+    | Extends :php:class:`Nos\\Renderer`.
+    | This renderer is used to display a set of radio buttons.
 
 
 .. image:: images/radioset.png

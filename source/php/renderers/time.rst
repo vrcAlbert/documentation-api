@@ -5,8 +5,9 @@ Time Picker
 
 .. php:class:: Renderer_Time_Picker
 
-	| This renderer is used to pick a time.
-	| It's based on `jQuery UI Time Picker <http://trentrichardson.com/examples/timepicker/>`__.
+    | Extends :php:class:`Nos\\Renderer`.
+    | This renderer is used to pick a time.
+    | It's based on `jQuery UI Time Picker <http://trentrichardson.com/examples/timepicker/>`__.
 
 
 .. image:: images/time_picker.png

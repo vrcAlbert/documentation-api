@@ -5,8 +5,9 @@ Tag
 
 .. php:class:: Renderer_Tag
 
-	| This renderer is used to add tags on an item.
-	| It's based on `jQuery UI Tag-it <http://aehlke.github.com/tag-it/>`__.
+    | Extends :php:class:`Nos\\Renderer`.
+    | This renderer is used to add tags on an item.
+    | It's based on `jQuery UI Tag-it <http://aehlke.github.com/tag-it/>`__.
 
 
 .. image:: images/tag.png

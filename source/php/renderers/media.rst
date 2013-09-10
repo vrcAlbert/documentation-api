@@ -7,8 +7,9 @@ Media Selector
 
 .. php:class:: Renderer_Media
 
-	| This renderer is used to pick a file from the media centre.
-	| It's based on the `jQuery UI input-file-thumb widget <http://www.novius-labs.com/contributions/jquery-plugin-inputfile/>`__.
+    | Extends :php:class:`Nos\\Renderer`.
+    | This renderer is used to pick a file from the media centre.
+    | It's based on the `jQuery UI input-file-thumb widget <http://www.novius-labs.com/contributions/jquery-plugin-inputfile/>`__.
 
 
 :Default UI:

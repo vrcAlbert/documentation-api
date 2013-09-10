@@ -5,8 +5,9 @@ Date Picker
 
 .. php:class:: Renderer_Date_Picker
 
-	| This renderer is used to pick a date.
-	| It's based on `jQuery UI Date Picker <http://jqueryui.com/datepicker/>`__.
+    | Extends :php:class:`Nos\\Renderer`.
+    | This renderer is used to pick a date.
+    | It's based on `jQuery UI Date Picker <http://jqueryui.com/datepicker/>`__.
 
 
 .. image:: images/date_picker.png

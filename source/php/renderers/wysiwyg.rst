@@ -5,8 +5,9 @@ WYSIWYG
 
 .. php:class:: Renderer_Wysiwyg
 
-	| This renderer is used to display a WYSIWYG editor.
-	| It's based on `TinyMCE <http://www.tinymce.com/>`__.
+    | Extends :php:class:`Nos\\Renderer`.
+    | This renderer is used to display a WYSIWYG editor.
+    | It's based on `TinyMCE <http://www.tinymce.com/>`__.
 
 
 .. image:: images/wysiwyg.png

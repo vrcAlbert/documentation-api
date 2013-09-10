@@ -5,8 +5,9 @@ Page Selector
 
 .. php:class:: Renderer_Selector
 
-	| This renderer is used to pick a page.
-	| It displays a tree of the pages with radio buttons.
+    | Extends :php:class:`Nos\\Renderer`.
+    | This renderer is used to pick a page.
+    | It displays a tree of the pages with radio buttons.
 
 
 .. image:: images/page_selector.png
