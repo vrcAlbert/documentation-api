@@ -29,19 +29,19 @@ Configuration
     :flexslider-small:
         :view: The view use to display the slideshow. Default :file:`noviusos_slideshow::flexslider/slideshow`.
         :label: The label of the format, displayed in enhancer popup.
-            :config:
+        :config:
             :slides_with_link: Boolean. Add a link on image if true and slide linked to a page. Default ``true``.
             :slides_preview: Boolean. Add a toolbar preview on the slideshow. Default ``true``.
             :width: Width in pixels of the slideshow. Default ``414``.
             :height: Height in pixels of the slideshow. Default ``300``.
             :class: CSS class add on the slideshow HTML container. Default ``slide-small``.
             :js:
-                    :jquery: Relative URL of jQuery script.
-                    :flexslider: Relative URL of Flexslider script.
-                    :flexpreview: Relative URL of Flexslider preview script.
-                :css:
-                    :flexslider: Relative URL of Flexslider CSS file.
-                    :flexpreview: Relative URL of Flexslider preview CSS file.
+                :jquery: Relative URL of jQuery script.
+                :flexslider: Relative URL of Flexslider script.
+                :flexpreview: Relative URL of Flexslider preview script.
+            :css:
+                :flexslider: Relative URL of Flexslider CSS file.
+                :flexpreview: Relative URL of Flexslider preview CSS file.
 
 You can add your own formats. Keys ``view`` and ``label`` are required in your format. If defined, the key ``config`` is passed to the displaying view.
 
