@@ -338,6 +338,9 @@ FuelPHP will automatically use the ``value`` as the button's text.
         ),
     );
 
+.. versionadded:: Chiba2.1
+
+The ``save`` key no longer required in CRUD fields configuration.
 
 Renderers (advanced fields)
 ---------------------------
