@@ -57,6 +57,25 @@ Configuration
             :firstDay: 1
             :showAnim: slideDown
 
+.. php:attr:: mysql_input_format
+
+	(Datetime default: %Y-%m-%d %H:%M:%S, Date default: %Y-%m-%d). Defines how to decode input value
+
+	.. versionadded:: chiba.2.1
+
+.. php:attr:: mysql_store_format
+
+	(Datetime default: mysql, Date default: mysql_date). Defines how to store value in the database
+
+	.. versionadded:: chiba.2.1
+
+.. php:attr:: plugin
+
+	(Datetime default: datetimepicker, Date default: datepicker). Defines which jquery ui plugin to call on the form
+	input
+
+	.. versionadded:: chiba.2.1
+
 
 Methods
 *******
