@@ -102,10 +102,10 @@ Session
 Added the static method **user()** to retrieve the current logged in user in the back-office.
 
 
-String
-------
+Str
+----
 
-Added the static methods **textToHtml**\($text) and **humanFileSize**\($bytes, $format);
+Added the static methods **textToHtml**\($text)
 
 
 View
