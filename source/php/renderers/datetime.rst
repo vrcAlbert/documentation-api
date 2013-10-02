@@ -23,6 +23,12 @@ Configuration
 
 	HTML string to wrap the ``<input>`` + the generated image to open the datetimepicker
 
+.. php:attr:: format
+
+	(Default: datetime). Format saved and displayed : date or datetime
+
+	.. versionadded:: chiba.2.1
+
 .. php:attr:: datetimepicker
 
 	Options for the datepicker widget used to render the UI. See the
