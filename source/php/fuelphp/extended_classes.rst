@@ -56,6 +56,7 @@ Fieldset and Fieldset_Field
 ---------------------------
 
 - Added the static method **Fieldset::build_from_config()**
+- Added the public method **$fieldset->getInstance()**: it gets the current model instance processed by the fieldset
 - Integration of :doc:`renderers </php/renderers/index>` in the methods of these two classes
 
 File
@@ -101,10 +102,10 @@ Session
 Added the static method **user()** to retrieve the current logged in user in the back-office.
 
 
-String
-------
+Str
+----
 
-Added the static methods **textToHtml**\($text) and **humanFileSize**\($bytes, $format);
+Added the static methods **textToHtml**\($text)
 
 
 View
