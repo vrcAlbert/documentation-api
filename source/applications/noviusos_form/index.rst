@@ -169,19 +169,23 @@ noviusos_form::after_submission
 ===============================
 
 
-.. php:function:: noviusos_form::after_submission($answer, $enhancer_args)
+.. php:function:: noviusos_form::after_submission($params)
 
     After the answer has been created (not saved in the DB yet)
 
-    :param object &$answer: ``Model_Answer`` Answer instance
-    :param array $enhancer_args: Enhancer configuration
+    :param array $params:
+
+        :$answer: ``Model_Answer`` Answer instance
+        :$enhancer_args: Array, enhancer configuration
 
     .. code-block:: php
 
         <?php
 
-        Event::register('noviusos_form::after_submission', function($answer, $enhancer_args) {
+        Event::register('noviusos_form::after_submission', function($params) {
 
+            $answer = $params['answer'];
+            $enhancer_args = $params['enhancer_args'];
             // ...
         });
 
