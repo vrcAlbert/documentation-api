@@ -99,11 +99,12 @@ noviusos_form::data_validation
 
 .. warning:: This function must return an array containing the detected validation errors.
 
-.. php:function:: noviusos_form::data_validation(&$data, $form)
+.. php:function:: noviusos_form::data_validation(&$data, $fields, $form)
 
     Additional data validation after submitting a form from the Form application.
 
     :param array &$data: Received data (roughly $_POST)
+    :param object $fields: Array of ``Model_Field`` Field instance, field names in keys
     :param object $form: ``Model_Form`` Form instance
 
     :return array: List of validation errors
@@ -112,7 +113,7 @@ noviusos_form::data_validation
 
         <?php
 
-        Event::register_function('noviusos_form::data_validation', function(&$data, $form) {
+        Event::register_function('noviusos_form::data_validation', function(&$data, $fields,$form) {
 
             $errors = array();
             // This will mark all fields as error
@@ -149,7 +150,7 @@ noviusos_form::before_submission
 
         <?php
 
-        Event::trigger_function('noviusos_form::before_submission', array(&$data, $form, $enhancer_args) {
+        Event::register_function('noviusos_form::before_submission', array(&$data, $form, $enhancer_args) {
 
             // You can alter $data before saving them into the database
 
@@ -179,7 +180,7 @@ noviusos_form::after_submission
 
         <?php
 
-        Event::trigger_function('noviusos_form::after_submission', array(&$answer, $enhancer_args) {
+        Event::register('noviusos_form::after_submission', array(&$answer, $enhancer_args) {
 
             // ...
         });
