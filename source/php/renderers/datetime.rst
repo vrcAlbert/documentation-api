@@ -27,7 +27,7 @@ Configuration
 
 	(Default: datetime). Format saved and displayed : date or datetime
 
-	.. versionadded:: chiba.2.1
+	.. versionadded:: chiba.2.2
 
 .. php:attr:: datetimepicker
 
@@ -61,20 +61,20 @@ Configuration
 
 	(Datetime default: %Y-%m-%d %H:%M:%S, Date default: %Y-%m-%d). Defines how to decode input value
 
-	.. versionadded:: chiba.2.1
+	.. versionadded:: chiba.2.2
 
 .. php:attr:: mysql_store_format
 
 	(Datetime default: mysql, Date default: mysql_date). Defines how to store value in the database
 
-	.. versionadded:: chiba.2.1
+	.. versionadded:: chiba.2.2
 
 .. php:attr:: plugin
 
 	(Datetime default: datetimepicker, Date default: datepicker). Defines which jquery ui plugin to call on the form
 	input
 
-	.. versionadded:: chiba.2.1
+	.. versionadded:: chiba.2.2
 
 
 Methods
