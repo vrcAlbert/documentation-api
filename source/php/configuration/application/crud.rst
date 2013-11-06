@@ -281,6 +281,35 @@ Configuration example:
             ),
             'validation' => array(),
     );
+    
+Advanced configuration example:
+
+.. code-block:: php
+
+    <?php
+    $options = array(
+        $value => $label
+        ...
+    );
+    return array(
+        'name' => array(
+            'label' => 'Text shown next to the field',
+            'form' => array(
+                'type' => 'select',
+                'options' => $options,
+            ),
+            'populate' => function($item) {
+                //example: returns the id of a related model
+                return $item->relation->rel_id;
+            },
+            'before_save' => function($item, $data) {
+                //example: set relation properly
+                unset($item->relation);
+                if (!empty($data['name']) {
+                    $item->relation = Model::find($data['name']);
+                }
+            }
+    );
 
 
 Standard fields
