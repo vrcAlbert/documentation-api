@@ -259,7 +259,8 @@ The field name is determined using the key. Then, for each field:
 :validation:       (optional) ``array`` rules used to validate the field.
 :expert:           (optional) ``boolean`` Should the field be visible only to expert users? Default ``false``.
 :show_when:        (optional) ``callable`` Custom callback function to alter the visibility of the field. Must return ``true`` for the field to be shown.
-
+:populate:         (optional) ``callable`` Custom callback function to set value(s) of the field. Takes the item as param.
+:before_save:      (optional) ``callable`` Custom callback function to perform changes on the field before saving it. Takes the item and validated POST content as params.
 
 To choose how the field is displayed, you only need to specify either ``form`` (a native HTML ``<input>``) or a
 ``renderer`` (like a date picker or a wysiwyg), you don't need both. If both keys are filled, the renderer
@@ -279,6 +280,35 @@ Configuration example:
                 'value' => 'Default value',
             ),
             'validation' => array(),
+    );
+    
+Advanced configuration example:
+
+.. code-block:: php
+
+    <?php
+    $options = array(
+        $value => $label
+        ...
+    );
+    return array(
+        'name' => array(
+            'label' => 'Text shown next to the field',
+            'form' => array(
+                'type' => 'select',
+                'options' => $options,
+            ),
+            'populate' => function($item) {
+                //example: returns the id of a related model
+                return $item->relation->rel_id;
+            },
+            'before_save' => function($item, $data) {
+                //example: set relation properly
+                unset($item->relation);
+                if (!empty($data['name']) {
+                    $item->relation = Model::find($data['name']);
+                }
+            }
     );
 
 
