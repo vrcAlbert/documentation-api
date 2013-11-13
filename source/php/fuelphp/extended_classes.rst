@@ -20,9 +20,14 @@ Added the static **recursive_filter**\($array, $callback) method.
 Autoloader
 ----------
 
-Allow for filename suffixes for *model* and *controller*, as follow: **model.model.php** and **controller.ctrl.php**.
-
-If you have a ``Controller_Admin_Page``, its filename can either be ``classes/controller/admin/page.php`` or ``classes/controller/admin/page.ctrl.php``.
+- Filename suffixes are available for *model*, *controller*, and *view*, as follow: **model.model.php**,
+  **controller.ctrl.php**, **view.view.php**.
+  For instance, if you have a ``Controller_Admin_Page`` controller, its filename can either be
+  ``classes/controller/admin/page.php`` or ``classes/controller/admin/page.ctrl.php``.
+- It is possible to add new class aliases and access existing aliases using the **addClassAlias** and
+  **getClassAliases** functions.
+- The **generateSuffixedNamespace** function allow to generate a customized namespace for files such as tasks or
+  migrations
 
 Cache_Storage_File
 ------------------
