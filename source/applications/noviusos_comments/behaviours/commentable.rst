@@ -16,6 +16,23 @@ Methods
 
 	:returns: An instance of :class:`Nos\\Comments\\Api``, configured for this item.
 
+.. php:method:: count_comments()
+
+    Returns and caches the number of comments related to one item
+	:returns: Number of comments
+
+.. php:method:: setNbComments($nb)
+
+    Allow to enter a custom cached number of comments related to the item. Can be
+    useful when adding or removing a comment for instance.
+	:param $nb: number of comments
+
+.. php:staticmethod:: count_multiple_comments($items)
+
+    From a items' list, retrieve the number of comments in an optimal way.
+	:param $items
+
+
 Relations
 *********
 

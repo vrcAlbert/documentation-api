@@ -5,6 +5,10 @@ API Class
 
 .. php:class:: Api
 
+.. php:method:: __construct($config)
+
+    :param array $config: API configuration
+
 .. php:method:: addComment($data)
 
     :param array $data:
@@ -27,6 +31,16 @@ API Class
 .. php:method:: sendNewCommentToCommenters(Model_Comment $comment)
 
     :param Model_Comment $comment: The new comment
+
+.. php:method:: getConfig()
+
+    :returns: the API configuration.
+
+.. php:method:: getRssComment($comment)
+
+    :param $comment: Comment item
+
+    :returns: An array (to be used with :php:class:`Nos\\Tools_RSS`)
 
 .. php:method:: getRss($options = array())
 
