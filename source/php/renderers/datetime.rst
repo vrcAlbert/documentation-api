@@ -25,9 +25,15 @@ Configuration
 
 .. php:attr:: format
 
-	(Default: datetime). Format saved and displayed : date or datetime
+	(Default: ``datetime``). Format saved and displayed : ``date`` or ``datetime``
 
 	.. versionadded:: chiba.2.2
+
+.. php:attr:: null_allowed
+
+	(Default: ``false``). Set to ``true`` if the date can be null.
+
+	.. versionadded:: chiba.2.3
 
 .. php:attr:: datetimepicker
 
