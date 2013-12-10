@@ -8,4 +8,5 @@ Applications
 	noviusos_slideshow/index
 	noviusos_blognews/index
 	noviusos_comments/index
+	noviusos_appwizard/index
 
