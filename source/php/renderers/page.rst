@@ -21,13 +21,18 @@ Configuration
 
 	Name for the radio input.
 
+.. php:attr:: multiple
+
+	Set to ``true`` if you want to select multiple pages. Default ``false``.
+
 .. php:attr:: selected
 
     .. Strange syntax here, we need a dummy text and double-indentation for :id: or it will write 'Id' (uppercase I)
 
-    ``Array``
+    An ``array``, or an ``array`` of ``array`` iff ``multiple`` is ``true``, containning:
 
         :id: Pre-selected page id (value).
+        :model: ``Nos\Page\Model_Page``
 
 .. php:attr:: treeOptions
 
@@ -35,7 +40,7 @@ Configuration
 
     ``Array``
 
-        :context: Context of the pages displayed in the page selector.
+    :context: Context of the pages displayed in the page selector.
 
 .. php:attr:: height
 
