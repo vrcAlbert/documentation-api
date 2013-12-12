@@ -66,6 +66,33 @@ I18n
 
 .. warning:: The dictionary must have been loaded manually before.
 
+::nget()
+--------
+
+.. php:staticmethod:: nget($singular, $plural, $n)
+
+    The plural version of :php:meth:`I18n::get`. Some languages have more than one form for plural messages dependent on the count.
+
+    :param string $singular: The singular form of the string to be converted. Used as the key for the search in the dictionary
+    :param string $plural: The plural form
+    :param string $n: Used to determine which plural form to used depending locale.
+    :returns: The translation or, if not founded, $singular is returned if n == 1, otherwise $plural
+
+::ngget()
+---------
+
+.. php:staticmethod:: gget($group, $singular, $plural, $n)
+
+    Retrieves a plural translation from a specific dictionary.
+
+    :param string $group: Which dictionary to look into.
+    :param string $singular: The singular form of the string to be converted. Used as the key for the search in the dictionary
+    :param string $plural: The plural form
+    :param string $n: Used to determine which plural form to used depending locale.
+    :returns: The translation or, if not founded, $singular is returned if n == 1, otherwise $plural
+
+.. warning:: The dictionary must have been loaded manually before.
+
 ::current_dictionary()
 ----------------------
 

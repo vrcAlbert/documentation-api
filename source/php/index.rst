@@ -7,6 +7,7 @@ PHP API
 	configuration/software/index
 	configuration/application/index
 	constants
+	i18n
 	models/index
 	behaviours/index
 	relations/index
