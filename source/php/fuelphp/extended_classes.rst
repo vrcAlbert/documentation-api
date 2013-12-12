@@ -131,9 +131,18 @@ ORM Package
 Model
 -----
 
-- Added a cache for ``Model::$_properties``
-- Added :ref:`behaviours <php/behaviours>`
-- Added somes :doc:`relations  </php/relations/index>`
+* Added a cache for ``Model::$_properties``
+* Added :ref:`behaviours <php/behaviours>`
+* Added somes :doc:`relations  </php/relations/index>`
+* Added two options in build options:
+
+    :before_where:
+        | An ``array``, ``search_column`` => ``$replace``, where ``$replace`` can be a string or a ``closure`` which takes the ``$condition`` array by parameter
+        | If ``$replace`` return null, the ``$condition`` will be remove from the ``where`` options
+
+    :before_order_by:
+        | An ``array``, ``search_column`` => ``$replace``, where ``$replace`` can be a string or a ``closure`` which takes the entry column by parameter
+        | If ``$replace`` return null, the column will be remove from the ``order_by`` options
 
 Query
 -----
