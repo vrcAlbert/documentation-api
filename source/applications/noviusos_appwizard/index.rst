@@ -5,5 +5,5 @@ Application Wizard API
 	:maxdepth: 2
 
 	classes/application_generator
-	config/application
+	configuration/application
 

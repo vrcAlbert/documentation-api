@@ -23,8 +23,10 @@ Application_Generator Class
                 :data: View data
                 :destination:
 
-        :category_types: Key => value array defining categories (fields group type). Key is the category identifier.
-        Value is an array containing:
+        :category_types:
+
+            | Key => value array defining categories (fields group type). Key is the category identifier.
+            | Value is an array containing:
 
             :label:
 
