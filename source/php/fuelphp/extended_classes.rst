@@ -83,6 +83,12 @@ Image
 Added the static method **shrink**\($max_width, $max_height = null, $keepar = true, $pad = false)
 
 
+Log
+---
+
+- Added the static method **Log::deprecated**\($message, $since)
+- Added the static method **Log::exception**\($e, $prefix)
+
 Module
 ------
 
