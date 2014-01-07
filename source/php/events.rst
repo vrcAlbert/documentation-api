@@ -454,3 +454,35 @@ nos.deprecated
             $debug_backtrace = $params['debug_backtrace'];
             // ...
         });
+
+Migration
+**********
+
+.. _php/events/migrate.exception:
+
+migrate.exception
+=================
+
+.. php:function:: migrate.exception($params)
+
+    A migration throw an exception. Exception propagation can be stopped.
+
+    :param array $params:
+
+        :$e: The exception object
+        :&$ignore: ``boolean`` If the event change is value to ``true``, the exception will not be propagated.
+        :$migration: ``array``  The migration array
+
+    .. code-block:: php
+
+        <?php
+
+        Event::register_function('migrate.exception', function($params)
+        {
+            $e = $params['e'];
+            $ignore = $params['ignore'];
+            $migration =& $params['migration'];
+            // ...
+
+            $ignore = true; // The exception will not be propagated
+        });
