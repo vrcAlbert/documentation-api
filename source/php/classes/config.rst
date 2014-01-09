@@ -35,16 +35,6 @@ Config
     :returns: Returns a two element array: first element is the class's application, and the second element is the
         relative path of the configuration file.
 
-::loadConfiguration($application_name, $file_name)
---------------------------------------------------
-
-.. php:staticmethod:: loadConfiguration($application_name, $file_name = null)
-
-    :param string $application_name: If `file_name` is not null, it application where we want to load the configuration.
-        Otherwise, it is the full path of the configuration file.
-    :param string $file_name: Relative path of the configuration file.
-    :returns: The configuration merged with the application extending the configuration's application.
-
 ::metadata($application_name)
 -----------------------------
 

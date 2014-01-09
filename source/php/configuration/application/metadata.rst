@@ -11,6 +11,7 @@ The most important keys are:
 :icons: In the 3 standard sizes 16*16, 32*32 and 64*64.
 :requires: Optional. Which applications does your application requires. Array or string (in the last case, considered as an array
     with a unique element).
+:extends: Optional. Application can extend other applications. Extend mechanism can extended config file, lang file and views.
 
 .. code-block:: php
 
@@ -54,15 +55,28 @@ The most important keys are:
 
 An application provides:
 
+.. _php/configuration/metadata/extends:
+
 Extends
 =======
 
-Application can extend other applications. The scope of the extension depends on the configuration you provide. The
-value of the `extends` key can be an associative array:
+An application can extend multiple others applications.
 
-:application: Application that is extended
-:extend_configuration: Optional, default value is true. Boolean defining if configuration files are extended (the
-    extended application's configuration files are recursively merged with those of the extending application).
+An application that extends an other application will be loaded when the extended application is loaded.
+
+Configuration and language files of an extended application can be extended by an application that extends.
+Views can be replaced.
+
+To proceed, put extended files in subdirectory :file:`apps/application_extended`.
+
+| **Example**: the ``app_a`` application extends ``app_b`` application, especially :file:`config/common.config.php`, :file:`lang/common.lang.php` and :file:`views/common.view.php`.
+| Files structure will be:
+
+* :file:`local/applications/app_a/`
+
+    * :file:`config/apps/app_b/common.config.php`
+    * :file:`lang/apps/app_b/common.lang.php`
+    * :file:`views/apps/app_b/common.view.php`
 
 .. _php/configuration/metadata/launchers:
 
