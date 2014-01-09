@@ -425,6 +425,29 @@ email.after_send
             // ...
         }
 
+email.error
+================
+
+.. php:function:: email.error($params)
+
+    On email send error.
+
+    :param object $params: Email_Driver instance
+
+        :$email: The email driver object
+        :$exception: The exception object
+
+        .. code-block:: php
+
+        <?php
+
+        Event::register('email.error', function($params)
+        {
+            $email = $params['email'];
+            $exception = $params['exception'];
+            // ...
+        }
+
 Deprecated
 **********
 
