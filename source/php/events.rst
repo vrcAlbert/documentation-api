@@ -370,13 +370,49 @@ admin.loginFail
 
 .. php:function:: admin.loginFail()
 
-    A user is trying to connect to the back office with an email or an invalid password.
+    A user is trying to connect to the back-office with an email or an invalid password.
 
     .. code-block:: php
 
         <?php
 
         Event::register('admin.loginFail', function()
+        {
+            // ...
+        });
+
+.. _php/events/admin.loginSuccessWithCookie:
+
+admin.loginSuccessWithCookie
+============================
+
+.. php:function:: admin.loginSuccessWithCookie()
+
+    A user just successfully re-connected to the back-office using the cookie.
+
+    .. code-block:: php
+
+        <?php
+
+        Event::register('admin.loginSuccessWithCookie', function()
+        {
+            // ...
+        });
+
+.. _php/events/admin.loginFailWithCookie:
+
+admin.loginFailWithCookie
+=========================
+
+.. php:function:: admin.loginFailWithCookie()
+
+    A user has failed to connect to the back-office using the cookie.
+
+    .. code-block:: php
+
+        <?php
+
+        Event::register('admin.loginFailWithCookie', function()
         {
             // ...
         });
@@ -439,14 +475,14 @@ email.error
 
         .. code-block:: php
 
-        <?php
+            <?php
 
-        Event::register('email.error', function($params)
-        {
-            $email = $params['email'];
-            $exception = $params['exception'];
-            // ...
-        }
+            Event::register('email.error', function($params)
+            {
+                $email = $params['email'];
+                $exception = $params['exception'];
+                // ...
+            }
 
 Deprecated
 **********
