@@ -94,7 +94,7 @@ Methods
 
 .. php:staticmethod:: findMainOrContext($context, array $options = array())
 
-	:param string $context: A context ID.
+	:param mixed $context: A context ID or array of context IDs.
 	:param array $options: Array of others options like in ``find()``.
 	:returns: Array of items, like ``find()``, either in the given context, either the main.
 
