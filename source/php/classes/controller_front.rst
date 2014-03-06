@@ -50,6 +50,23 @@ Methods
 	:returns: | Part of the URL processed by the :ref:`URL enhancer <metadata/enhancers>`.
 			  | ``False`` if no current :ref:`URL enhancer <metadata/enhancers>`.
 
+.. php:method:: getItemDisplayed()
+
+    :returns:  The current item displayed.
+
+    .. versionadded:: 4.1
+
+.. php:method:: setItemDisplayed(Orm\Model $item, array $properties = array(), array $templates = array())
+
+	:param Model $item: The current Model instance displayed.
+	:param array $properties: Array of properties
+	:param array $templates: Array of templates use to set properties
+
+    .. versionadded:: 4.1
+
+	Set de current item displayed, by default this item is the page displayed, but can be call by an URL enhancer.
+	This method set automatically ``title``, ``h1``, ``meta_description`` and ``meta_keywords`` for the current HTML.
+
 .. php:method:: setBaseHref($base_href)
 
 	:param string $base_href: Sets a new ``<base href="">`` for the current HTML output.
@@ -57,19 +74,29 @@ Methods
 .. php:method:: setTitle($title, $template = null)
 
 	:param string $title: Set a new ``title`` for the current HTML.
-	:param string $template: If set, use it to calculate the title. Placeholder ``:title`` will be replaced by ``$title``.
+	:param string $template: If set, use it to calculate the title. Placeholders ``:title`` will be replaced by ``$title``, ``:page_title`` will be replace by the curent page title.
 
-.. php:method:: setMetaDescription($meta_description)
+.. php:method:: setH1($title, $template = null)
 
-	:param string $meta_description: Set a meta description for the current HTML output.
+	:param string $title: Set a new ``H1`` for the current HTML.
+	:param string $template: If set, use it to calculate the H1. Placeholders ``:h1`` will be replaced by ``$h1``.
 
-.. php:method:: setMetaKeywords($meta_keywords)
+    .. versionadded:: 4.1
 
-	:param string $meta_keywords: Set a meta keywords for the current HTML output.
+.. php:method:: setMetaDescription($meta_description, $template = null)
 
-.. php:method:: setMetaRobots($meta_robots)
+    :param string $meta_description: Set a meta description for the current HTML output.
+    :param string $template: If set, use it to calculate the meta_description. Placeholders ``:meta_description`` will be replaced by ``$meta_description``, ``:page_meta_description`` will be replace by the curent page meta_description.
 
-	:param string $meta_robots: Set a meta robots for the current HTML output.
+.. php:method:: setMetaKeywords($meta_keywords, $template = null)
+
+    :param string $meta_keywords: Set a meta keywords for the current HTML output.
+    :param string $template: If set, use it to calculate the meta_keywords. Placeholders ``:meta_keywords`` will be replaced by ``$meta_keywords``, ``:page_meta_keywords`` will be replace by the curent page meta_keywords.
+
+.. php:method:: setMetaRobots($meta_robots, $template = null)
+
+    :param string $meta_robots: Set a meta robots for the current HTML output.
+    :param string $template: If set, use it to calculate the meta_robots. Placeholders ``:meta_robots`` will be replaced by ``$meta_robots``, ``:page_meta_robots`` will be replace by the curent page meta_robots.
 
 .. php:method:: addMeta($meta)
 

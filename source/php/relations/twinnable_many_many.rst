@@ -28,3 +28,18 @@ Configuration
 :column_context_to:             Calculated from the behaviour Twinnable.
 :column_context_is_main_to:     Calculated from the behaviour Twinnable.
 
+Use
+***
+
+When you use the relation in a find, you can add ``main context`` in conditions. If it's set to false, relation only retrieves related items of the same context.
+
+.. code-block:: php
+
+    <?php
+    Model_Example::find('all', array(
+        'related' => array(
+            'manymany_twinnable' => array(
+                'main_context' => false,
+            ),
+        ),
+    );

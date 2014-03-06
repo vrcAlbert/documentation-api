@@ -19,6 +19,10 @@ Configuration
 
 	``ASC`` (default) ou ``DESC``
 
+.. php:attr:: sort_twins
+
+	``True`` by default. If ``false`` and the model is twinnable, the sorting won't be common to all contexts.
+
 Methods
 *******
 

@@ -24,6 +24,7 @@ Associative array. All keys are optional:
 :reloadEvent: Event name that will reload the inspector?
 :vertical: Is the appdesk vertical or horizontal ?
 :inputName: Key on which selected values are sent.
+:multiContextHide: Hide inspector when appdesk filtered on more than one contexts.
 
 Model inspector
 ***************
