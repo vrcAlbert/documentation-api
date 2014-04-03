@@ -6,7 +6,10 @@ Twinnable Has One
 The ``twinnable_has_one`` relation is the equivalent of the FuelPHP native ``has_one`` relation (moreover, it extends ``has_one``).
 The difference is that the link is not made on the primary key but on the context common ID.
 
-If you use the ``twinnable_has_one`` relation, the model and the model linked must implement :doc:`Twinnable behaviour </php/behaviours/twinnable>`.
+If you use the ``twinnable_has_one`` relation, the model must implement :doc:`Twinnable behaviour </php/behaviours/twinnable>`.
+
+.. versionchanged:: 4.2
+    Before the ``4.2 (Dubrovka)`` version, the linked model also need to implement Twinnable behaviour.
 
 .. seealso::
 
@@ -19,8 +22,8 @@ Configuration
 
 :key_from:                  Calculated from the behaviour Twinnable.
 :model_to:                  The full class name of the target model. Calculated from alias.
-:key_to:                    The key used for the relation in the linked model.
-:column_context_from:       Calculated from the behaviour Twinnable.
-:column_context_to:         Calculated from the behaviour Twinnable.
-:column_context_is_main_to: Calculated from the behaviour Twinnable.
+:key_to:                    The key used for the relation in the linked model if ``model_to`` is twinnable.
+:column_context_from:       Calculated from the behaviour Twinnable if ``model_to`` is twinnable.
+:column_context_to:         Calculated from the behaviour Twinnable if ``model_to`` is twinnable.
+:column_context_is_main_to: Calculated from the behaviour Twinnable if ``model_to`` is twinnable.
 

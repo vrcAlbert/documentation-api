@@ -6,8 +6,11 @@ Twinnable Belongs To
 The ``twinnable_belongs_to`` relation is the equivalent of the FuelPHP native ``belongs_to`` relation (moreover, it extends ``belongs_to``).
 The difference is that the link is not made on the primary key but on the context common ID.
 
-If you use the ``twinnable_belongs_to`` relation, the model and the model linked must implement :doc:`Twinnable behaviour </php/behaviours/twinnable>`.
+If you use the ``twinnable_belongs_to`` relation, the model must implement :doc:`Twinnable behaviour </php/behaviours/twinnable>`.
 The field ``key_from`` must be declared common field in the twinnable behaviour.
+
+.. versionchanged:: 4.2
+    Before the ``4.2 (Dubrovka)`` version, the linked model also need to implement Twinnable behaviour.
 
 .. seealso::
 
@@ -20,10 +23,10 @@ Configuration
 
 :key_from:                  The key used for the relation in the current model.
 :model_to:                  The full class name of the target model. Calculated from alias.
-:key_to:                    Calculated from the behaviour Twinnable.
-:column_context_from:       Calculated from the behaviour Twinnable.
-:column_context_to:         Calculated from the behaviour Twinnable.
-:column_context_is_main_to: Calculated from the behaviour Twinnable.
+:key_to:                    Calculated from the behaviour Twinnable if ``model_to`` is twinnable.
+:column_context_from:       Calculated from the behaviour Twinnable if ``model_to`` is twinnable.
+:column_context_to:         Calculated from the behaviour Twinnable if ``model_to`` is twinnable.
+:column_context_is_main_to: Calculated from the behaviour Twinnable if ``model_to`` is twinnable.
 
 Examples
 ========
