@@ -345,6 +345,28 @@ front.404NotFound
 Back-office
 ***********
 
+.. _php/events/admin.launchers:
+
+admin.launchers
+===============
+
+.. php:function:: admin.launchers()
+
+    Triggered after recuperation and before parsing of installed launchers.
+
+    :param array $launchers: Associative array of installed launchers
+
+    .. code-block:: php
+
+        <?php
+
+        Event::register_function('admin.launchers', function(&$launchers)
+        {
+            // ...
+        });
+
+    .. versionadded:: 4.2
+
 .. _php/events/admin.loginSuccess:
 
 admin.loginSuccess

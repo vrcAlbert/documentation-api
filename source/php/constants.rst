@@ -13,6 +13,12 @@ All native constants of FuelPHP are available but links to specific Novius OS di
 
 	Path where Novius OS is installed.
 
+.. php:const:: PUBLIC_DIR
+
+    Contains the name of the public directory. Initialized to ``public`` if not set.
+
+    .. versionadded:: 4.2
+
 .. php:const:: NOSPATH
 
 	Path of Novius OS core: :file:`NOSROOT/novius-os/framework/`.
