@@ -40,6 +40,12 @@ Instance events
 Static events
 *************
 
+.. php:method:: gridQueryConfig(&$config)
+
+    Trigger when building a query configuration for a grid of model's items.
+
+    :param array $config: Configuration for the query.
+
 .. php:method:: gridQuery($config, &$query)
 
     Trigger when building a query for a grid of model's items.
