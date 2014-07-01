@@ -46,6 +46,8 @@ Static events
 
     :param array $config: Configuration for the query.
 
+    .. versionadded:: 4.3
+
 .. php:method:: gridQuery($config, &$query)
 
     Trigger when building a query for a grid of model's items.
